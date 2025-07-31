@@ -59,6 +59,12 @@
             "src_id": "11111111-1111-1111-1111-000000000006",
             "src_view_id": "output0"
         },
+        "link192": {
+            "dst_id": "11111111-1111-1111-1111-00000000000e",
+            "dst_view_id": "input0",
+            "src_id": "11111111-1111-1111-1111-000000000005",
+            "src_view_id": "output0"
+        },
         "link188": {
             "dst_id": "11111111-1111-1111-1111-000000000008",
             "dst_view_id": "input0",
@@ -250,6 +256,18 @@
                 "error": {},
                 "grid_x_int": 12,
                 "grid_y_int": 4,
+                "index": null,
+                "input": {},
+                "output": {},
+                "recommendation_id": null,
+                "rot_int": 0,
+                "rot_tail_int": 0,
+                "source": ""
+            },
+            "11111111-1111-1111-1111-00000000000e": {
+                "error": {},
+                "grid_x_int": 12,
+                "grid_y_int": 3,
                 "index": null,
                 "input": {},
                 "output": {},
@@ -642,7 +660,7 @@
                         "value": null
                     },
                     "editable_content": {
-                        "value": "You are the Retrieval Sub-Agent responsible for gathering information and generating responses for RFX questionnaires. Your sole focus is information retrieval and synthesis.\r\n\r\n## Available Tools:\r\n1. **RetrieverAnalystRFIsApi** - Analyst reports (Gartner, Aragon, etc.) *PRIORITY*\r\n2. **POST_RetrieverDocumentationApi** - Official technical documentation\r\n3. **POST_RetrieverLoopioTechApi** - Curated RFP answers database  \r\n4. **POST_RetrieverSigmaFrameworkApi** - Enterprise implementation guides\r\n5. **POST_RetrieverTechnicalBlogApi** - Implementation guides and technical content\r\n6. **GET_RetrieverSlackCrawlerApi** - Internal tribal knowledge database\r\n7. **CommentApi** - Score tracking and feedback system\r\n   - **Parameter**: `Input` (object containing the scoring data)\r\n\r\n## INPUT EXPECTED:\r\nYou will receive a question.\r\n\r\n## EXECUTION FLOW:\r\n\r\n### Step 1: Primary Search\r\n- Execute **RetrieverAnalystRFIsApi** using the question text as input\r\n- **Immediately after getting the response**, score it:\r\n  - **Relevance** (0-10): How well it answers the question\r\n  - **Completeness** (0-10): Depth and breadth of information  \r\n  - **Authority** (0-10): Credibility and external validation\r\n  - **Total**: relevance + completeness + authority\r\n- **Store these scores** - you will need them for Step 2\r\n\r\n### Step 2: Log Primary Results\r\n**MANDATORY**: Call **CommentApi** with parameter `Input` containing actual scores from Step 1:\r\n```json\r\nInput: {\r\n  \"retriever_scores\": {\r\n    \"RetrieverAnalystRFIsApi\": {\r\n      \"relevance\": [ACTUAL_SCORE_0_TO_10],\r\n      \"completeness\": [ACTUAL_SCORE_0_TO_10], \r\n      \"authority\": [ACTUAL_SCORE_0_TO_10],\r\n      \"total\": [ACTUAL_TOTAL_0_TO_30]\r\n    }\r\n  },\r\n  \"continue_processing\": \"YES\" | \"NO\",\r\n  \"execution_path\": \"analyst_first\"\r\n}\r\n```\r\n\r\n**Logic for continue_processing:**\r\n- If RetrieverAnalystRFIsApi total score is 25 or higher: `\"continue_processing\": \"NO\"`\r\n- If RetrieverAnalystRFIsApi total score is 24 or lower: `\"continue_processing\": \"YES\"`\r\n\r\n### Step 3: Decision Point\r\n- **If continue_processing value in Step 2 was \"NO\"**: Skip to Step 6\r\n- **If continue_processing value in Step 2 was \"YES\"**: Proceed to Step 4\r\n\r\n### Step 4: Execute Additional Retrievers\r\nExecute all 5 remaining retriever tools in parallel:\r\n- **POST_RetrieverDocumentationApi**\r\n- **POST_RetrieverLoopioTechApi** \r\n- **POST_RetrieverSigmaFrameworkApi**\r\n- **POST_RetrieverTechnicalBlogApi**\r\n- **GET_RetrieverSlackCrawlerApi**\r\n\r\n**After each tool responds**, score it using the same 0-10 criteria as Step 1.\r\n\r\n### Step 5: Log Complete Results\r\n**MANDATORY**: Call **CommentApi** with parameter `Input` containing all actual scores:\r\n```json\r\nInput: {\r\n  \"retriever_scores\": {\r\n    \"RetrieverAnalystRFIsApi\": {\"relevance\": X, \"completeness\": X, \"authority\": X, \"total\": X},\r\n    \"RetrieverDocumentationApi\": {\"relevance\": X, \"completeness\": X, \"authority\": X, \"total\": X},\r\n    \"RetrieverLoopioTechApi\": {\"relevance\": X, \"completeness\": X, \"authority\": X, \"total\": X},\r\n    \"RetrieverSigmaFrameworkApi\": {\"relevance\": X, \"completeness\": X, \"authority\": X, \"total\": X},\r\n    \"RetrieverTechnicalBlogApi\": {\"relevance\": X, \"completeness\": X, \"authority\": X, \"total\": X},\r\n    \"RetrieverSlackCrawlerApi\": {\"relevance\": X, \"completeness\": X, \"authority\": X, \"total\": X}\r\n  },\r\n  \"selected_sources\": [\"[LIST_HIGHEST_SCORING_TOOLS]\"],\r\n  \"execution_path\": \"full_search\"\r\n}\r\n```\r\n\r\n### Step 6: Generate Final Response\r\nRespond with JSON containing the synthesized answer:\r\n```json\r\n{\r\n  \"response_text\": \"Generated response\",\r\n  \"sources_used\": [\"[ACTUAL_SOURCES_USED]\"],\r\n  \"execution_path\": \"analyst_only\" | \"full_search\", \r\n  \"confidence_score\": [HIGHEST_TOTAL_SCORE_ACHIEVED]\r\n}\r\n```\r\n\r\n## KEY RULES:\r\n- **NEVER call CommentApi with placeholder values** - always use actual scores\r\n- If a retriever fails, assign it score 0 for all categories\r\n- Select highest-scoring sources for synthesis"
+                        "value": "You are the Retrieval Sub-Agent responsible for gathering information and generating responses for RFX questionnaires. Your sole focus is information retrieval and synthesis.\r\n\r\n## Available Tools:\r\n1. **RetrieverAnalystRFIsApi** - Analyst reports (Gartner, Aragon, etc.) *PRIORITY*\r\n2. **POST_RetrieverDocumentationApi** - Official technical documentation\r\n3. **POST_RetrieverLoopioTechApi** - Curated RFP answers database  \r\n4. **POST_RetrieverSigmaFrameworkApi** - Enterprise implementation guides\r\n5. **POST_RetrieverTechnicalBlogApi** - Implementation guides and technical content\r\n6. **GET_RetrieverSlackCrawlerApi** - Internal tribal knowledge database\r\n7. **CommentApi** - Score tracking and feedback system\r\n   - **Parameter**: `Input` (object containing the scoring data)\r\n8. **NotifyByEmail** - Send email notifications when user requests it\r\n   - **Parameters**: \r\n     - `recipient` (string, required): Email address of the recipient\r\n     - `subject` (string, required): Subject line for the email\r\n     - `body` (string, required): Main content/body of the email message\r\n\r\n## INPUT EXPECTED:\r\nYou will receive a question.\r\n\r\n## EXECUTION FLOW:\r\n\r\n### Step 1: Primary Search\r\n- Execute **RetrieverAnalystRFIsApi** using the question text as input\r\n- **Immediately after getting the response**, score it:\r\n  - **Relevance** (0-10): How well it answers the question\r\n  - **Completeness** (0-10): Depth and breadth of information  \r\n  - **Authority** (0-10): Credibility and external validation\r\n  - **Total**: relevance + completeness + authority\r\n- **Store these scores** - you will need them for Step 2\r\n\r\n### Step 2: Log Primary Results\r\n**MANDATORY**: Call **CommentApi** with parameter `Input` containing actual scores from Step 1:\r\n```json\r\nInput: {\r\n  \"retriever_scores\": {\r\n    \"RetrieverAnalystRFIsApi\": {\r\n      \"relevance\": [ACTUAL_SCORE_0_TO_10],\r\n      \"completeness\": [ACTUAL_SCORE_0_TO_10], \r\n      \"authority\": [ACTUAL_SCORE_0_TO_10],\r\n      \"total\": [ACTUAL_TOTAL_0_TO_30]\r\n    }\r\n  },\r\n  \"continue_processing\": \"YES\" | \"NO\",\r\n  \"execution_path\": \"analyst_first\"\r\n}\r\n```\r\n\r\n**Logic for continue_processing:**\r\n- If RetrieverAnalystRFIsApi total score is 25 or higher: `\"continue_processing\": \"NO\"`\r\n- If RetrieverAnalystRFIsApi total score is 24 or lower: `\"continue_processing\": \"YES\"`\r\n\r\n### Step 3: Decision Point\r\n- **If continue_processing value in Step 2 was \"NO\"**: Skip to Step 6\r\n- **If continue_processing value in Step 2 was \"YES\"**: Proceed to Step 4\r\n\r\n### Step 4: Execute Additional Retrievers\r\nExecute all 5 remaining retriever tools in parallel:\r\n- **POST_RetrieverDocumentationApi**\r\n- **POST_RetrieverLoopioTechApi** \r\n- **POST_RetrieverSigmaFrameworkApi**\r\n- **POST_RetrieverTechnicalBlogApi**\r\n- **GET_RetrieverSlackCrawlerApi**\r\n\r\n**After each tool responds**, score it using the same 0-10 criteria as Step 1.\r\n\r\n### Step 5: Log Complete Results\r\n**MANDATORY**: Call **CommentApi** with parameter `Input` containing all actual scores:\r\n```json\r\nInput: {\r\n  \"retriever_scores\": {\r\n    \"RetrieverAnalystRFIsApi\": {\"relevance\": X, \"completeness\": X, \"authority\": X, \"total\": X},\r\n    \"RetrieverDocumentationApi\": {\"relevance\": X, \"completeness\": X, \"authority\": X, \"total\": X},\r\n    \"RetrieverLoopioTechApi\": {\"relevance\": X, \"completeness\": X, \"authority\": X, \"total\": X},\r\n    \"RetrieverSigmaFrameworkApi\": {\"relevance\": X, \"completeness\": X, \"authority\": X, \"total\": X},\r\n    \"RetrieverTechnicalBlogApi\": {\"relevance\": X, \"completeness\": X, \"authority\": X, \"total\": X},\r\n    \"RetrieverSlackCrawlerApi\": {\"relevance\": X, \"completeness\": X, \"authority\": X, \"total\": X}\r\n  },\r\n  \"selected_sources\": [\"[LIST_HIGHEST_SCORING_TOOLS]\"],\r\n  \"execution_path\": \"full_search\"\r\n}\r\n```\r\n\r\n### Step 6: Generate Final Response\r\nRespond with JSON containing the synthesized answer:\r\n```json\r\n{\r\n  \"response_text\": \"Generated response\",\r\n  \"sources_used\": [\"[ACTUAL_SOURCES_USED]\"],\r\n  \"execution_path\": \"analyst_only\" | \"full_search\", \r\n  \"confidence_score\": [HIGHEST_TOTAL_SCORE_ACHIEVED]\r\n}\r\n```\r\n\r\n## KEY RULES:\r\n- **NEVER call CommentApi with placeholder values** - always use actual scores\r\n- If a retriever fails, assign it score 0 for all categories\r\n- Select highest-scoring sources for synthesis\r\n- **Email Notifications**: Use **NotifyByEmail** when the user explicitly requests email notifications, asks to \"send this via email\", or mentions specific recipients. Include the generated response in the email body and use a descriptive subject line."
                     },
                     "execution_mode": {
                         "value": "Validate & Execute"
@@ -1144,6 +1162,185 @@
                                 "paramName": {
                                     "expression": false,
                                     "value": "Input"
+                                },
+                                "paramRequired": {
+                                    "value": true
+                                },
+                                "paramType": {
+                                    "value": "STRING"
+                                }
+                            }
+                        ]
+                    },
+                    "strictMode": {
+                        "value": false
+                    },
+                    "toolPayload": {
+                        "expression": true,
+                        "value": null
+                    }
+                },
+                "view_serial": 100
+            }
+        },
+        "11111111-1111-1111-1111-00000000000e": {
+            "class_id": "com-snaplogic-snaps-awsbedrock-awsconversefunctiongenerator",
+            "class_version": 1,
+            "instance_id": "11111111-1111-1111-1111-00000000000e",
+            "property_map": {
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "Email Notifier"
+                    },
+                    "notes": {}
+                },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "settings": {
+                    "advancedPromptConfiguration": {
+                        "value": {
+                            "systemPrompt": {
+                                "expression": true,
+                                "value": null
+                            }
+                        }
+                    },
+                    "advancedToolConfiguration": {
+                        "value": {
+                            "functionName": {
+                                "expression": true,
+                                "value": null
+                            },
+                            "toolChoice": {
+                                "expression": false,
+                                "value": "SPECIFY A FUNCTION"
+                            }
+                        }
+                    },
+                    "description": {
+                        "expression": false,
+                        "value": "Sends email notifications to specified recipients with custom subject and body content"
+                    },
+                    "execution_mode": {
+                        "value": "Validate & Execute"
+                    },
+                    "messagePayload": {
+                        "expression": true,
+                        "value": null
+                    },
+                    "modelName": {
+                        "expression": false,
+                        "value": null
+                    },
+                    "modelParameters": {
+                        "value": {
+                            "maximumTokens": {
+                                "expression": false,
+                                "value": null
+                            },
+                            "stopSequences": {
+                                "expression": false,
+                                "value": null
+                            },
+                            "temperature": {
+                                "expression": false,
+                                "value": null
+                            },
+                            "topP": {
+                                "expression": false,
+                                "value": null
+                            }
+                        }
+                    },
+                    "name": {
+                        "expression": false,
+                        "value": "NotifyByEmail"
+                    },
+                    "parameters": {
+                        "value": [
+                            {
+                                "paramDescription": {
+                                    "expression": false,
+                                    "value": "Email address of the recipient"
+                                },
+                                "paramEnum": {
+                                    "expression": true,
+                                    "value": null
+                                },
+                                "paramName": {
+                                    "expression": false,
+                                    "value": "recipient"
+                                },
+                                "paramRequired": {
+                                    "value": true
+                                },
+                                "paramType": {
+                                    "value": "STRING"
+                                }
+                            },
+                            {
+                                "paramDescription": {
+                                    "expression": false,
+                                    "value": "Subject line for the email"
+                                },
+                                "paramEnum": {
+                                    "expression": true,
+                                    "value": null
+                                },
+                                "paramName": {
+                                    "expression": false,
+                                    "value": "subject"
+                                },
+                                "paramRequired": {
+                                    "value": true
+                                },
+                                "paramType": {
+                                    "value": "STRING"
+                                }
+                            },
+                            {
+                                "paramDescription": {
+                                    "expression": false,
+                                    "value": "Main content/body of the email message"
+                                },
+                                "paramEnum": {
+                                    "expression": true,
+                                    "value": null
+                                },
+                                "paramName": {
+                                    "expression": false,
+                                    "value": "body"
                                 },
                                 "paramRequired": {
                                     "value": true
