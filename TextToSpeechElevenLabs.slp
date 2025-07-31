@@ -44,12 +44,12 @@
             }
         },
         "output": {
-            "33333333-3333-3333-3333-000000000001_output0": {
+            "33333333-3333-3333-3333-000000000001_outputResponse": {
                 "label": {
-                    "value": "API Payload Ready"
+                    "value": "Audio File"
                 },
                 "view_type": {
-                    "value": "document"
+                    "value": "binary"
                 }
             }
         },
