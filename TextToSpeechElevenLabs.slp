@@ -10,12 +10,6 @@
             "dst_view_id": "input0",
             "src_id": "33333333-3333-3333-3333-000000000000",
             "src_view_id": "output0"
-        },
-        "link302": {
-            "dst_id": "33333333-3333-3333-3333-000000000002",
-            "dst_view_id": "input0",
-            "src_id": "33333333-3333-3333-3333-000000000001",
-            "src_view_id": "output0"
         }
     },
     "property_map": {
@@ -30,13 +24,13 @@
             },
             "label": {},
             "notes": {
-                "value": "Text-to-Speech pipeline using ElevenLabs API - Converts text to audio and saves to control plane storage"
+                "value": "Text-to-Speech pipeline using ElevenLabs API - Sample payload preparation for TTS conversion"
             },
             "pipeline_doc_uri": {
                 "value": null
             },
             "purpose": {
-                "value": "Generate speech audio from text using ElevenLabs API"
+                "value": "Generate ElevenLabs API payload for text-to-speech conversion"
             }
         },
         "input": {
@@ -50,9 +44,9 @@
             }
         },
         "output": {
-            "33333333-3333-3333-3333-000000000002_output0": {
+            "33333333-3333-3333-3333-000000000001_output0": {
                 "label": {
-                    "value": "Audio File Created"
+                    "value": "API Payload Ready"
                 },
                 "view_type": {
                     "value": "document"
@@ -151,18 +145,6 @@
                 "rot_int": 0,
                 "rot_tail_int": 0,
                 "source": "snap catagory"
-            },
-            "33333333-3333-3333-3333-000000000002": {
-                "error": {},
-                "grid_x_int": 9,
-                "grid_y_int": 5,
-                "index": null,
-                "input": {},
-                "output": {},
-                "recommendation_id": null,
-                "rot_int": 0,
-                "rot_tail_int": 0,
-                "source": "snap catagory"
             }
         },
         "pan_x_num": 0,
@@ -190,7 +172,7 @@
                 },
                 "info": {
                     "label": {
-                        "value": "TTS Sample Data"
+                        "value": "ElevenLabs Payload Generator"
                     },
                     "notes": {}
                 },
@@ -210,7 +192,7 @@
                         "value": true
                     },
                     "editable_content": {
-                        "value": "[\n    {\n        \"text\": \"Welcome to SnapLogic's advanced integration platform. This is a demonstration of text-to-speech capabilities using ElevenLabs API. Our platform enables seamless data integration across enterprise systems with powerful AI-driven workflows.\",\n        \"model_id\": \"eleven_multilingual_v2\",\n        \"voice_settings\": {\n            \"stability\": 0.5,\n            \"similarity_boost\": 0.8,\n            \"style\": 0.0,\n            \"use_speaker_boost\": true\n        },\n        \"pronunciation_dictionary_locators\": [],\n        \"seed\": null,\n        \"previous_text\": null,\n        \"next_text\": null,\n        \"previous_request_ids\": [],\n        \"next_request_ids\": []\n    }\n]"
+                        "value": "[\n    {\n        \"api_endpoint\": \"https://api.elevenlabs.io/v1/text-to-speech/21m00Tcm4TlvDq8ikWAM\",\n        \"method\": \"POST\",\n        \"headers\": {\n            \"Content-Type\": \"application/json\",\n            \"Accept\": \"audio/mpeg\",\n            \"xi-api-key\": \"[ADD_YOUR_ELEVENLABS_API_KEY_HERE]\"\n        },\n        \"payload\": {\n            \"text\": \"Welcome to SnapLogic's advanced integration platform. This text-to-speech demonstration showcases our ability to integrate with AI services like ElevenLabs. Our platform enables seamless data transformation and API orchestration across enterprise systems with powerful workflow automation capabilities.\",\n            \"model_id\": \"eleven_multilingual_v2\",\n            \"voice_settings\": {\n                \"stability\": 0.5,\n                \"similarity_boost\": 0.8,\n                \"style\": 0.0,\n                \"use_speaker_boost\": true\n            },\n            \"pronunciation_dictionary_locators\": [],\n            \"seed\": null,\n            \"previous_text\": null,\n            \"next_text\": null,\n            \"previous_request_ids\": [],\n            \"next_request_ids\": []\n        },\n        \"voice_options\": {\n            \"Rachel\": \"21m00Tcm4TlvDq8ikWAM\",\n            \"Drew\": \"29vD33N1CtxCmqQRPOHJ\",\n            \"Clyde\": \"2EiwWnXFnvU5JabPnv8n\",\n            \"Paul\": \"5Q0t7uMcjvnagumLfvZi\",\n            \"Domi\": \"AZnzlk1XvdvUeBnXmlld\",\n            \"Dave\": \"CYw3kZ02Hs0563khs1Fj\",\n            \"Fin\": \"D38z5RcWu1voky8qkItS\",\n            \"Sarah\": \"EXAVITQu4vr4xnSDxMaL\",\n            \"Antoni\": \"ErXwobaYiN019PkySvjV\",\n            \"Thomas\": \"GBv7mTt0atIp3Br8iCZE\"\n        },\n        \"response_format\": \"audio/mpeg\",\n        \"expected_output\": \"Binary MP3 audio file\",\n        \"notes\": \"Ready-to-use payload for ElevenLabs Text-to-Speech API. Add your API key and use with HTTP Client snap.\"\n    }\n]"
                     },
                     "execution_mode": {
                         "value": "Validate & Execute"
@@ -226,7 +208,7 @@
             }
         },
         "33333333-3333-3333-3333-000000000001": {
-            "class_id": "com-snaplogic-snaps-httpclient-post",
+            "class_id": "com-snaplogic-snaps-transform-datatransform",
             "class_version": 1,
             "instance_id": "33333333-3333-3333-3333-000000000001",
             "property_map": {
@@ -245,7 +227,7 @@
                 },
                 "info": {
                     "label": {
-                        "value": "ElevenLabs TTS API"
+                        "value": "API Request Formatter"
                     },
                     "notes": {}
                 },
@@ -273,102 +255,88 @@
                     "execution_mode": {
                         "value": "Validate & Execute"
                     },
-                    "http_entity": {
-                        "expression": true,
-                        "value": "JSON.stringify({\n  \"text\": $text,\n  \"model_id\": $model_id,\n  \"voice_settings\": $voice_settings\n})"
-                    },
-                    "request_headers": {
-                        "value": [
-                            {
-                                "key": {
-                                    "value": "Content-Type"
-                                },
-                                "value": {
-                                    "value": "application/json"
-                                }
+                    "transformations": {
+                        "value": {
+                            "mappingRoot": {
+                                "value": "$"
                             },
-                            {
-                                "key": {
-                                    "value": "Accept"
-                                },
-                                "value": {
-                                    "value": "audio/mpeg"
-                                }
+                            "mappingTable": {
+                                "value": [
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "$api_endpoint"
+                                        },
+                                        "targetPath": {
+                                            "value": "elevenlabs_url"
+                                        }
+                                    },
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "$method"
+                                        },
+                                        "targetPath": {
+                                            "value": "http_method"
+                                        }
+                                    },
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "$headers"
+                                        },
+                                        "targetPath": {
+                                            "value": "request_headers"
+                                        }
+                                    },
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "JSON.stringify($payload)"
+                                        },
+                                        "targetPath": {
+                                            "value": "json_body"
+                                        }
+                                    },
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "$payload.text"
+                                        },
+                                        "targetPath": {
+                                            "value": "text_to_convert"
+                                        }
+                                    },
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "$payload.model_id"
+                                        },
+                                        "targetPath": {
+                                            "value": "tts_model"
+                                        }
+                                    },
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "$voice_options"
+                                        },
+                                        "targetPath": {
+                                            "value": "available_voices"
+                                        }
+                                    },
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "'Use this formatted data with an HTTP Client snap to call ElevenLabs API'"
+                                        },
+                                        "targetPath": {
+                                            "value": "usage_instructions"
+                                        }
+                                    }
+                                ]
                             }
-                        ]
-                    },
-                    "response_type": {
-                        "value": "BINARY"
-                    },
-                    "service_url": {
-                        "expression": true,
-                        "value": "'https://api.elevenlabs.io/v1/text-to-speech/' + (_voice_id || '21m00Tcm4TlvDq8ikWAM')"
-                    },
-                    "timeout": {
-                        "value": 30
-                    }
-                },
-                "view_serial": 100
-            }
-        },
-        "33333333-3333-3333-3333-000000000002": {
-            "class_id": "com-snaplogic-snaps-binary-filewriter",
-            "class_version": 1,
-            "instance_id": "33333333-3333-3333-3333-000000000002",
-            "property_map": {
-                "error": {
-                    "error0": {
-                        "label": {
-                            "value": "error0"
-                        },
-                        "view_type": {
-                            "value": "document"
                         }
-                    },
-                    "error_behavior": {
-                        "value": "fail"
-                    }
-                },
-                "info": {
-                    "label": {
-                        "value": "Audio File Writer"
-                    },
-                    "notes": {}
-                },
-                "input": {
-                    "input0": {
-                        "label": {
-                            "value": "input0"
-                        },
-                        "view_type": {
-                            "value": "document"
-                        }
-                    }
-                },
-                "output": {
-                    "output0": {
-                        "label": {
-                            "value": "output0"
-                        },
-                        "view_type": {
-                            "value": "document"
-                        }
-                    }
-                },
-                "settings": {
-                    "execution_mode": {
-                        "value": "Validate & Execute"
-                    },
-                    "filename": {
-                        "expression": true,
-                        "value": "'snaplogic-tts-audio-' + Date.now() + '.mp3'"
-                    },
-                    "output_field": {
-                        "value": "content"
-                    },
-                    "url": {
-                        "expression": true,
-                        "value": "'sldb:///tts-audio/' + 'snaplogic-tts-audio-' + Date.now() + '.mp3'"
                     }
                 },
                 "view_serial": 100
