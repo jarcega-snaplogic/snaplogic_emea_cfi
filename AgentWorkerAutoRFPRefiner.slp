@@ -6,171 +6,171 @@
     "class_version": 9,
     "link_map": {
         "link174": {
-            "dst_id": "11111111-1111-1111-1111-000000000014",
+            "dst_id": "11111111-1111-1111-1111-000000000017",
             "dst_view_id": "input0",
-            "src_id": "11111111-1111-1111-1111-000000000002",
+            "src_id": "11111111-1111-1111-1111-000000000005",
             "src_view_id": "output0"
         },
         "link175": {
-            "dst_id": "11111111-1111-1111-1111-000000000003",
+            "dst_id": "11111111-1111-1111-1111-000000000006",
             "dst_view_id": "input0",
-            "src_id": "11111111-1111-1111-1111-000000000001",
+            "src_id": "11111111-1111-1111-1111-000000000004",
             "src_view_id": "output1"
         },
         "link176": {
-            "dst_id": "11111111-1111-1111-1111-000000000002",
+            "dst_id": "11111111-1111-1111-1111-000000000005",
             "dst_view_id": "input0",
-            "src_id": "11111111-1111-1111-1111-000000000001",
+            "src_id": "11111111-1111-1111-1111-000000000004",
             "src_view_id": "output0"
         },
         "link177": {
-            "dst_id": "11111111-1111-1111-1111-000000000001",
+            "dst_id": "11111111-1111-1111-1111-000000000004",
             "dst_view_id": "input0",
             "src_id": "11111111-1111-1111-1111-000000000000",
             "src_view_id": "output0"
         },
         "link183": {
-            "dst_id": "11111111-1111-1111-1111-000000000011",
+            "dst_id": "11111111-1111-1111-1111-000000000014",
             "dst_view_id": "input0",
-            "src_id": "11111111-1111-1111-1111-000000000009",
-            "src_view_id": "outputResponse"
-        },
-        "link185": {
-            "dst_id": "11111111-1111-1111-1111-000000000012",
-            "dst_view_id": "input0",
-            "src_id": "11111111-1111-1111-1111-000000000011",
-            "src_view_id": "output0"
-        },
-        "link187": {
-            "dst_id": "11111111-1111-1111-1111-000000000011",
-            "dst_view_id": "input105",
-            "src_id": "11111111-1111-1111-1111-00000000000f",
-            "src_view_id": "outputResponse"
-        },
-        "link188": {
-            "dst_id": "11111111-1111-1111-1111-00000000000f",
-            "dst_view_id": "input0",
-            "src_id": "11111111-1111-1111-1111-000000000007",
-            "src_view_id": "output1"
-        },
-        "link190": {
-            "dst_id": "11111111-1111-1111-1111-000000000011",
-            "dst_view_id": "input104",
-            "src_id": "11111111-1111-1111-1111-00000000000e",
-            "src_view_id": "outputResponse"
-        },
-        "link191": {
-            "dst_id": "11111111-1111-1111-1111-00000000000e",
-            "dst_view_id": "input0",
-            "src_id": "11111111-1111-1111-1111-000000000007",
-            "src_view_id": "output0"
-        },
-        "link192": {
-            "dst_id": "11111111-1111-1111-1111-000000000011",
-            "dst_view_id": "input1",
-            "src_id": "11111111-1111-1111-1111-00000000000a",
-            "src_view_id": "outputResponse"
-        },
-        "link193": {
-            "dst_id": "11111111-1111-1111-1111-000000000011",
-            "dst_view_id": "input101",
-            "src_id": "11111111-1111-1111-1111-00000000000b",
-            "src_view_id": "outputResponse"
-        },
-        "link194": {
-            "dst_id": "11111111-1111-1111-1111-000000000011",
-            "dst_view_id": "input102",
             "src_id": "11111111-1111-1111-1111-00000000000c",
             "src_view_id": "outputResponse"
         },
-        "link195": {
+        "link185": {
+            "dst_id": "11111111-1111-1111-1111-000000000015",
+            "dst_view_id": "input0",
+            "src_id": "11111111-1111-1111-1111-000000000014",
+            "src_view_id": "output0"
+        },
+        "link187": {
+            "dst_id": "11111111-1111-1111-1111-000000000014",
+            "dst_view_id": "input105",
+            "src_id": "11111111-1111-1111-1111-000000000012",
+            "src_view_id": "outputResponse"
+        },
+        "link188": {
+            "dst_id": "11111111-1111-1111-1111-000000000012",
+            "dst_view_id": "input0",
+            "src_id": "11111111-1111-1111-1111-00000000000a",
+            "src_view_id": "output1"
+        },
+        "link190": {
+            "dst_id": "11111111-1111-1111-1111-000000000014",
+            "dst_view_id": "input104",
+            "src_id": "11111111-1111-1111-1111-000000000011",
+            "src_view_id": "outputResponse"
+        },
+        "link191": {
             "dst_id": "11111111-1111-1111-1111-000000000011",
-            "dst_view_id": "input103",
+            "dst_view_id": "input0",
+            "src_id": "11111111-1111-1111-1111-00000000000a",
+            "src_view_id": "output0"
+        },
+        "link192": {
+            "dst_id": "11111111-1111-1111-1111-000000000014",
+            "dst_view_id": "input1",
             "src_id": "11111111-1111-1111-1111-00000000000d",
             "src_view_id": "outputResponse"
         },
+        "link193": {
+            "dst_id": "11111111-1111-1111-1111-000000000014",
+            "dst_view_id": "input101",
+            "src_id": "11111111-1111-1111-1111-00000000000e",
+            "src_view_id": "outputResponse"
+        },
+        "link194": {
+            "dst_id": "11111111-1111-1111-1111-000000000014",
+            "dst_view_id": "input102",
+            "src_id": "11111111-1111-1111-1111-00000000000f",
+            "src_view_id": "outputResponse"
+        },
+        "link195": {
+            "dst_id": "11111111-1111-1111-1111-000000000014",
+            "dst_view_id": "input103",
+            "src_id": "11111111-1111-1111-1111-000000000010",
+            "src_view_id": "outputResponse"
+        },
         "link196": {
-            "dst_id": "11111111-1111-1111-1111-00000000000a",
+            "dst_id": "11111111-1111-1111-1111-00000000000d",
             "dst_view_id": "input0",
-            "src_id": "11111111-1111-1111-1111-000000000006",
+            "src_id": "11111111-1111-1111-1111-000000000009",
             "src_view_id": "output1"
         },
         "link197": {
+            "dst_id": "11111111-1111-1111-1111-00000000000c",
+            "dst_view_id": "input0",
+            "src_id": "11111111-1111-1111-1111-000000000009",
+            "src_view_id": "output0"
+        },
+        "link198": {
+            "dst_id": "11111111-1111-1111-1111-00000000000e",
+            "dst_view_id": "input0",
+            "src_id": "11111111-1111-1111-1111-000000000009",
+            "src_view_id": "output101"
+        },
+        "link199": {
+            "dst_id": "11111111-1111-1111-1111-00000000000f",
+            "dst_view_id": "input0",
+            "src_id": "11111111-1111-1111-1111-000000000009",
+            "src_view_id": "output102"
+        },
+        "link200": {
+            "dst_id": "11111111-1111-1111-1111-000000000010",
+            "dst_view_id": "input0",
+            "src_id": "11111111-1111-1111-1111-000000000009",
+            "src_view_id": "output103"
+        },
+        "link201": {
             "dst_id": "11111111-1111-1111-1111-000000000009",
             "dst_view_id": "input0",
             "src_id": "11111111-1111-1111-1111-000000000006",
             "src_view_id": "output0"
         },
-        "link198": {
-            "dst_id": "11111111-1111-1111-1111-00000000000b",
-            "dst_view_id": "input0",
-            "src_id": "11111111-1111-1111-1111-000000000006",
-            "src_view_id": "output101"
-        },
-        "link199": {
-            "dst_id": "11111111-1111-1111-1111-00000000000c",
-            "dst_view_id": "input0",
-            "src_id": "11111111-1111-1111-1111-000000000006",
-            "src_view_id": "output102"
-        },
-        "link200": {
-            "dst_id": "11111111-1111-1111-1111-00000000000d",
-            "dst_view_id": "input0",
-            "src_id": "11111111-1111-1111-1111-000000000006",
-            "src_view_id": "output103"
-        },
-        "link201": {
-            "dst_id": "11111111-1111-1111-1111-000000000006",
-            "dst_view_id": "input0",
-            "src_id": "11111111-1111-1111-1111-000000000003",
-            "src_view_id": "output0"
-        },
         "link203": {
-            "dst_id": "11111111-1111-1111-1111-000000000007",
+            "dst_id": "11111111-1111-1111-1111-00000000000a",
             "dst_view_id": "input0",
-            "src_id": "11111111-1111-1111-1111-000000000004",
+            "src_id": "11111111-1111-1111-1111-000000000007",
             "src_view_id": "output0"
         },
         "link204": {
-            "dst_id": "11111111-1111-1111-1111-000000000004",
+            "dst_id": "11111111-1111-1111-1111-000000000007",
             "dst_view_id": "input0",
-            "src_id": "11111111-1111-1111-1111-000000000003",
+            "src_id": "11111111-1111-1111-1111-000000000006",
             "src_view_id": "output1"
         },
         "link208": {
-            "dst_id": "11111111-1111-1111-1111-000000000010",
+            "dst_id": "11111111-1111-1111-1111-000000000013",
             "dst_view_id": "input0",
-            "src_id": "11111111-1111-1111-1111-000000000008",
+            "src_id": "11111111-1111-1111-1111-00000000000b",
             "src_view_id": "output0"
         },
         "link209": {
-            "dst_id": "11111111-1111-1111-1111-000000000014",
+            "dst_id": "11111111-1111-1111-1111-000000000017",
+            "dst_view_id": "input1",
+            "src_id": "11111111-1111-1111-1111-000000000016",
+            "src_view_id": "output0"
+        },
+        "link210": {
+            "dst_id": "11111111-1111-1111-1111-000000000016",
+            "dst_view_id": "input0",
+            "src_id": "11111111-1111-1111-1111-000000000015",
+            "src_view_id": "output0"
+        },
+        "link211": {
+            "dst_id": "11111111-1111-1111-1111-000000000016",
             "dst_view_id": "input1",
             "src_id": "11111111-1111-1111-1111-000000000013",
             "src_view_id": "output0"
         },
-        "link210": {
-            "dst_id": "11111111-1111-1111-1111-000000000013",
-            "dst_view_id": "input0",
-            "src_id": "11111111-1111-1111-1111-000000000012",
-            "src_view_id": "output0"
-        },
-        "link211": {
-            "dst_id": "11111111-1111-1111-1111-000000000013",
-            "dst_view_id": "input1",
-            "src_id": "11111111-1111-1111-1111-000000000010",
-            "src_view_id": "output0"
-        },
         "link212": {
-            "dst_id": "11111111-1111-1111-1111-000000000008",
+            "dst_id": "11111111-1111-1111-1111-00000000000b",
             "dst_view_id": "input0",
-            "src_id": "11111111-1111-1111-1111-000000000005",
+            "src_id": "11111111-1111-1111-1111-000000000008",
             "src_view_id": "output0"
         },
         "link213": {
-            "dst_id": "11111111-1111-1111-1111-000000000005",
+            "dst_id": "11111111-1111-1111-1111-000000000008",
             "dst_view_id": "input0",
-            "src_id": "11111111-1111-1111-1111-000000000003",
+            "src_id": "11111111-1111-1111-1111-000000000006",
             "src_view_id": "output106"
         }
     },
@@ -206,7 +206,7 @@
             }
         },
         "output": {
-            "11111111-1111-1111-1111-000000000014_output0": {
+            "11111111-1111-1111-1111-000000000017_output0": {
                 "label": {
                     "value": "Message Appender - output0"
                 },
@@ -298,6 +298,42 @@
             },
             "11111111-1111-1111-1111-000000000001": {
                 "error": {},
+                "grid_x_int": 4,
+                "grid_y_int": 2,
+                "index": null,
+                "input": {},
+                "output": {},
+                "recommendation_id": null,
+                "rot_int": 0,
+                "rot_tail_int": 0,
+                "source": "snap catagory"
+            },
+            "11111111-1111-1111-1111-000000000002": {
+                "error": {},
+                "grid_x_int": 4,
+                "grid_y_int": 3,
+                "index": null,
+                "input": {},
+                "output": {},
+                "recommendation_id": null,
+                "rot_int": 0,
+                "rot_tail_int": 0,
+                "source": ""
+            },
+            "11111111-1111-1111-1111-000000000003": {
+                "error": {},
+                "grid_x_int": 4,
+                "grid_y_int": 4,
+                "index": null,
+                "input": {},
+                "output": {},
+                "recommendation_id": null,
+                "rot_int": 0,
+                "rot_tail_int": 0,
+                "source": ""
+            },
+            "11111111-1111-1111-1111-000000000004": {
+                "error": {},
                 "grid_x_int": 5,
                 "grid_y_int": 1,
                 "index": null,
@@ -314,7 +350,7 @@
                 "rot_tail_int": 0,
                 "source": "snap catagory"
             },
-            "11111111-1111-1111-1111-000000000002": {
+            "11111111-1111-1111-1111-000000000005": {
                 "error": {},
                 "grid_x_int": 6,
                 "grid_y_int": 1,
@@ -326,7 +362,7 @@
                 "rot_tail_int": 0,
                 "source": ""
             },
-            "11111111-1111-1111-1111-000000000003": {
+            "11111111-1111-1111-1111-000000000006": {
                 "error": {},
                 "grid_x_int": 6,
                 "grid_y_int": 2,
@@ -349,7 +385,7 @@
                 "rot_tail_int": 0,
                 "source": "snap catagory"
             },
-            "11111111-1111-1111-1111-000000000004": {
+            "11111111-1111-1111-1111-000000000007": {
                 "error": {},
                 "grid_x_int": 7,
                 "grid_y_int": 7,
@@ -361,7 +397,7 @@
                 "rot_tail_int": 0,
                 "source": "snap catagory"
             },
-            "11111111-1111-1111-1111-000000000005": {
+            "11111111-1111-1111-1111-000000000008": {
                 "error": {},
                 "grid_x_int": 7,
                 "grid_y_int": 9,
@@ -373,7 +409,7 @@
                 "rot_tail_int": 0,
                 "source": "snap catagory"
             },
-            "11111111-1111-1111-1111-000000000006": {
+            "11111111-1111-1111-1111-000000000009": {
                 "error": {},
                 "grid_x_int": 8,
                 "grid_y_int": 2,
@@ -406,7 +442,7 @@
                 "rot_tail_int": 0,
                 "source": ""
             },
-            "11111111-1111-1111-1111-000000000007": {
+            "11111111-1111-1111-1111-00000000000a": {
                 "error": {},
                 "grid_x_int": 8,
                 "grid_y_int": 7,
@@ -424,7 +460,7 @@
                 "rot_tail_int": 0,
                 "source": "snap catagory"
             },
-            "11111111-1111-1111-1111-000000000008": {
+            "11111111-1111-1111-1111-00000000000b": {
                 "error": {},
                 "grid_x_int": 8,
                 "grid_y_int": 9,
@@ -436,7 +472,7 @@
                 "rot_tail_int": 0,
                 "source": "snap catagory"
             },
-            "11111111-1111-1111-1111-000000000009": {
+            "11111111-1111-1111-1111-00000000000c": {
                 "error": {},
                 "grid_x_int": 9,
                 "grid_y_int": 2,
@@ -448,7 +484,7 @@
                 "rot_tail_int": 0,
                 "source": ""
             },
-            "11111111-1111-1111-1111-00000000000a": {
+            "11111111-1111-1111-1111-00000000000d": {
                 "error": {},
                 "grid_x_int": 9,
                 "grid_y_int": 3,
@@ -460,7 +496,7 @@
                 "rot_tail_int": 0,
                 "source": ""
             },
-            "11111111-1111-1111-1111-00000000000b": {
+            "11111111-1111-1111-1111-00000000000e": {
                 "error": {},
                 "grid_x_int": 9,
                 "grid_y_int": 4,
@@ -472,7 +508,7 @@
                 "rot_tail_int": 0,
                 "source": ""
             },
-            "11111111-1111-1111-1111-00000000000c": {
+            "11111111-1111-1111-1111-00000000000f": {
                 "error": {},
                 "grid_x_int": 9,
                 "grid_y_int": 5,
@@ -484,7 +520,7 @@
                 "rot_tail_int": 0,
                 "source": ""
             },
-            "11111111-1111-1111-1111-00000000000d": {
+            "11111111-1111-1111-1111-000000000010": {
                 "error": {},
                 "grid_x_int": 9,
                 "grid_y_int": 6,
@@ -496,7 +532,7 @@
                 "rot_tail_int": 0,
                 "source": ""
             },
-            "11111111-1111-1111-1111-00000000000e": {
+            "11111111-1111-1111-1111-000000000011": {
                 "error": {},
                 "grid_x_int": 9,
                 "grid_y_int": 7,
@@ -508,7 +544,7 @@
                 "rot_tail_int": 0,
                 "source": ""
             },
-            "11111111-1111-1111-1111-00000000000f": {
+            "11111111-1111-1111-1111-000000000012": {
                 "error": {},
                 "grid_x_int": 9,
                 "grid_y_int": 8,
@@ -520,7 +556,7 @@
                 "rot_tail_int": 0,
                 "source": ""
             },
-            "11111111-1111-1111-1111-000000000010": {
+            "11111111-1111-1111-1111-000000000013": {
                 "error": {},
                 "grid_x_int": 9,
                 "grid_y_int": 9,
@@ -532,7 +568,7 @@
                 "rot_tail_int": 0,
                 "source": ""
             },
-            "11111111-1111-1111-1111-000000000011": {
+            "11111111-1111-1111-1111-000000000014": {
                 "error": {},
                 "grid_x_int": 10,
                 "grid_y_int": 2,
@@ -575,7 +611,7 @@
                 "rot_tail_int": 0,
                 "source": "snap catagory"
             },
-            "11111111-1111-1111-1111-000000000012": {
+            "11111111-1111-1111-1111-000000000015": {
                 "error": {},
                 "grid_x_int": 11,
                 "grid_y_int": 2,
@@ -587,7 +623,7 @@
                 "rot_tail_int": 0,
                 "source": "snap catagory"
             },
-            "11111111-1111-1111-1111-000000000013": {
+            "11111111-1111-1111-1111-000000000016": {
                 "error": {},
                 "grid_x_int": 12,
                 "grid_y_int": 2,
@@ -605,7 +641,7 @@
                 "rot_tail_int": 0,
                 "source": "snap catagory"
             },
-            "11111111-1111-1111-1111-000000000014": {
+            "11111111-1111-1111-1111-000000000017": {
                 "error": {},
                 "grid_x_int": 13,
                 "grid_y_int": 1,
@@ -684,9 +720,209 @@
             }
         },
         "11111111-1111-1111-1111-000000000001": {
+            "class_id": "com-snaplogic-snaps-transform-jsongenerator",
+            "class_version": 2,
+            "instance_id": "11111111-1111-1111-1111-000000000001",
+            "property_map": {
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "JSON Generator"
+                    },
+                    "notes": {}
+                },
+                "input": {},
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "settings": {
+                    "arrayElementsAsDocuments": {
+                        "value": true
+                    },
+                    "editable_content": {
+                        "value": "[\n    {\n        \"messages\": [\n            {\n                \"content\": \"You are the planner of a multi-agent system that helps complete RFX questionnaires for SnapLogic by processing requirements one at a time using parallel search capabilities for optimal responses. Your name is RFP Planning Agent.\\r\\n\\r\\n\\r\\n**Search Tools (run in parallel):**\\r\\n1. **RetrieverDocumentationApi** - Official technical documentation\\r\\n2. **RetrieverLoopioTechApi** - Curated RFP answers database \\r\\n3. **RetrieverSigmaFrameworkApi** - Enterprise implementation guides\\r\\n4. **RetrieverTechnicalBlogApi** - Implementation guides and technical content\\r\\n5. **RetrieverSlackCrawlerApi** - Internal tribal knowledge database\\r\\n6. **RetrieverAnalystRFIsApi** - Analyst reports (Gartner, Aragon, etc.) *PRIORITY*\\r\\n\\r\\n**Processing Tools:**\\r\\n7. **ApiSnapGPT** - Response enhancement (backup if all search tools score \u226425)\\r\\n8. **UpdateLoopioEntry** - Update Loopio entries\\r\\n - Input:\\r\\n * id: INTEGER (Loopio entry ID)\\r\\n * question: STRING (requirement text)\\r\\n * text: STRING (answer text)\\r\\n * complianceAnswers: ARRAY (compliance details)\\r\\n9. **GetComplianceOptions** - Retrieve compliance question options\\r\\n\\r\\n\\r\\n- Validate input parameters (project details, user info)\\r\\n- Parse preprocessing guidance for contextual insights\\r\\n- **Execute ALL 6 search tools in parallel** using the requirement as input:\\r\\n - RetrieverDocumentationApi\\r\\n - RetrieverLoopioTechApi\\r\\n - RetrieverSigmaFrameworkApi\\r\\n - RetrieverTechnicalBlogApi\\r\\n - RetrieverSlackCrawlerApi\\r\\n - RetrieverAnalystRFIsApi\\r\\n\\r\\nFor each tool's output, assign scores:\\r\\n- **Relevance score (0-10)**: How well the output answers the requirement\\r\\n- **Completeness score (0-10)**: Depth and breadth of information provided\\r\\n- **Authority score (0-10)**: Credibility and external validation of the source\\r\\n- **Total score**: relevance + completeness + authority\\r\\n\\r\\n**Source Prioritization:**\\r\\n1. **RetrieverAnalystRFIsApi**: Always highest priority - prefer if score >25 for any requirement type\\r\\n2. **RetrieverDocumentationApi**: High authority for technical specifications\\r\\n3. **RetrieverSigmaFrameworkApi**: High authority for best practices and architectural knowledge\\r\\n4. **RetrieverLoopioTechApi**: High relevance for proven RFP responses\\r\\n5. **RetrieverTechnicalBlogApi**: Medium authority for technical insights\\r\\n6. **RetrieverSlackCrawlerApi**: Good for niche requirements and tribal knowledge, but lower priority overall\\r\\n\\r\\n- For each object in compliance_answers array:\\r\\n * Call GetComplianceOptions with project and set IDs\\r\\n * Analyze requirement and options\\r\\n * Select most appropriate option based on requirement context\\r\\n * Store selected option for final update\\r\\n- Skip ONLY if compliance_answers array is empty\\r\\n\\r\\n- **Primary Strategy**: Select and synthesize information from highest-scoring search tools\\r\\n- **Always prioritize RetrieverAnalystRFIsApi if score >25** regardless of requirement type\\r\\n- Use highest-scoring outputs as primary sources, synthesize multiple high-scoring outputs when beneficial\\r\\n- Apply preprocessing guidance to inform response approach and strategic positioning\\r\\n- **Backup Strategy**: Use ApiSnapGPT only if ALL retriever tools score 25 or below individually\\r\\n- Compare outputs and select/combine the best information to create the optimal answer\\r\\n- Format according to requirements with proper HTML formatting (not markdown)\\r\\n- Include all relevant source references\\r\\n- Maintain sufficient indentation and spacing for readability\\r\\n- Include compliance decisions in response structure\\r\\n\\r\\n- **ALWAYS Update Loopio using UpdateLoopioEntry** - this is the primary objective\\r\\n- Include:\\r\\n * Entry ID\\r\\n * Question text (requirement text)\\r\\n * Enhanced response (use HTML, not markdown)\\r\\n * Processed compliance_answers array:\\r\\n - If input array not empty: Include selected options using the same object structure for each item in complianceAnswers as in this example: {\\\"complianceSetId\\\": 0,\\\"option\\\": \\\"string\\\"}\\r\\n - If input array empty: Pass empty array\\r\\n\\r\\nFor any failure:\\r\\n- Retry failed search tools once for data-related failures\\r\\n- Continue processing even if some tools fail\\r\\n\\r\\nAfter completing the Loopio update, respond with:\\r\\n\\\"Loopio update completed\\\"\\r\\n\\r\\nThis confirms the primary objective has been achieved.\\r\\n\\r\\n- Apply guidance during response synthesis to inform content approach and tone\\r\\n- Use guidance to shape strategic positioning of SnapLogic's capabilities\\r\\n- Let guidance influence competitive advantages and market positioning\\r\\n- Maintain flexibility - guidance informs but doesn't rigidly constrain\\r\\n\\r\\n- Process compliance only if input array contains objects\\r\\n- Select options based on requirement context and search insights\\r\\n- Include processed compliance in Loopio update\\r\\n- Skip compliance processing ONLY if array is empty\\r\\n\\r\\n- **ALWAYS execute all 6 search tools in parallel** regardless of requirement type\\r\\n- **PRIORITIZE RetrieverAnalystRFIsApi** outputs for analyst questionnaires\\r\\n- Complete ALL steps through Loopio update even if individual tools fail\\r\\n- Use HTML formatting (not markdown) for Loopio compatibility\\r\\n- Include comprehensive source attribution\\r\\n- Maintain scoring transparency for tool performance analysis\\r\\n- Apply preprocessing guidance throughout synthesis process\",\n                \"sl_role\": \"SYSTEM\"\n            },\n            {\n                \"content\": \"<ruuid></ruuid>\\r\\n<input_parameters>\\r\\n <requirement>\\r\\n <text>What mocking and sandbox environment capabilities are available for early development, testing, and third-party integration (if any)?</text>\\r\\n <id>67612981</id>\\r\\n <compliance_answers>[{id=1373986, label=, option=null}]</compliance_answers>\\r\\n </requirement>\\r\\n <user>\\r\\n <name>Jocelyn Arcega</name>\\r\\n <email>jarcega@snaplogic.com</email>\\r\\n </user>\\r\\n <project>\\r\\n <id>1126549</id>\\r\\n <name>sandbox 3</name>\\r\\n </project>\\r\\n <preprocessing_guidance>Keep this response concise and focus on mocking/sandbox capabilities. Reference but don't repeat testing information already covered.</preprocessing_guidance>\\r\\n</input_parameters>\\r\\n\\r\\nPlease process the following RFX requirement considering all context provided in the input parameters, including the preprocessing guidance to ensure response uniqueness and strategic alignment. Generate a comprehensive response using appropriate retrievers and ensure proper Loopio entry updating with the provided ID.\\r\\n\\r\\nRequirement ID: 67612981\\r\\nRequirement: \\\"What mocking and sandbox environment capabilities are available for early development, testing, and third-party integration (if any)?\\\"\\r\\n\\r\\n**Important**: Use the preprocessing guidance to inform your response generation approach, content focus, and strategic positioning.\",\n                \"sl_role\": \"USER\"\n            }\n        ],\n        \"stopReason\": \"tool_calls\",\n        \"tools\": [\n            {\n                \"sl_type\": \"function\",\n                \"name\": \"POST_AskSnapGptApi\",\n                \"description\": \"Searches technical documentation and specifications in snapGPT\",\n                \"strict\": false,\n                \"sl_tool_metadata\": {\n                    \"path\": \"/ConnectFasterInc/snapLogic4snapLogic/ToolsAsApi/Tools/6.0\",\n                    \"security\": [],\n                    \"service_version_name\": \"6.0\",\n                    \"tool_type\": \"APIM\",\n                    \"method\": \"POST\",\n                    \"service_name\": \"Tools\",\n                    \"endpoint_name\": \"AskSnapGptApi\",\n                    \"header\": {\n                        \"Content-Type\": \"application/json\"\n                    },\n                    \"title\": \"Tools\",\n                    \"url\": \"https://prodeu-connectfasterinc-cloud-fm.emea.snaplogic.io/service/snapLogic4snapLogic/6.0/AskSnapGptApi\",\n                    \"tags\": [\n                        \"Search & Retrieval - technical\",\n                        \"Search & Retrieval\"\n                    ]\n                },\n                \"json_schema\": {\n                    \"type\": \"object\",\n                    \"properties\": {\n                        \"body\": {\n                            \"required\": [\n                                \"prompt\"\n                            ],\n                            \"type\": \"object\",\n                            \"properties\": {\n                                \"prompt\": {\n                                    \"type\": \"string\",\n                                    \"description\": \"An RFX Question about snapLogic\"\n                                }\n                            }\n                        }\n                    },\n                    \"required\": [\n                        \"body\"\n                    ]\n                }\n            },\n            {\n                \"sl_type\": \"function\",\n                \"name\": \"POST_RetrieverDocumentationApi\",\n                \"description\": \"Searches technical documentation and specifications\",\n                \"strict\": false,\n                \"sl_tool_metadata\": {\n                    \"path\": \"/ConnectFasterInc/snapLogic4snapLogic/ToolsAsApi/Tools/6.0\",\n                    \"security\": [],\n                    \"service_version_name\": \"6.0\",\n                    \"tool_type\": \"APIM\",\n                    \"method\": \"POST\",\n                    \"service_name\": \"Tools\",\n                    \"endpoint_name\": \"RetrieverDocumentationApi\",\n                    \"header\": {\n                        \"Content-Type\": \"application/json\"\n                    },\n                    \"title\": \"Tools\",\n                    \"url\": \"https://prodeu-connectfasterinc-cloud-fm.emea.snaplogic.io/service/snapLogic4snapLogic/6.0/RetrieverDocumentationApi\",\n                    \"tags\": [\n                        \"Search & Retrieval - technical\",\n                        \"Search & Retrieval\"\n                    ]\n                },\n                \"json_schema\": {\n                    \"type\": \"object\",\n                    \"properties\": {\n                        \"body\": {\n                            \"required\": [\n                                \"Requirement\"\n                            ],\n                            \"type\": \"object\",\n                            \"properties\": {\n                                \"Requirement\": {\n                                    \"type\": \"string\",\n                                    \"description\": \"An RFX Question about snapLogic\"\n                                }\n                            }\n                        }\n                    },\n                    \"required\": [\n                        \"body\"\n                    ]\n                }\n            },\n            {\n                \"sl_type\": \"function\",\n                \"name\": \"POST_RetrieverLoopioTechApi\",\n                \"description\": \"Searches a library of curated RFP answers\",\n                \"strict\": false,\n                \"sl_tool_metadata\": {\n                    \"path\": \"/ConnectFasterInc/snapLogic4snapLogic/ToolsAsApi/Tools/6.0\",\n                    \"security\": [],\n                    \"service_version_name\": \"6.0\",\n                    \"tool_type\": \"APIM\",\n                    \"method\": \"POST\",\n                    \"service_name\": \"Tools\",\n                    \"endpoint_name\": \"RetrieverLoopioTechApi\",\n                    \"header\": {\n                        \"Content-Type\": \"application/json\"\n                    },\n                    \"title\": \"Tools\",\n                    \"url\": \"https://prodeu-connectfasterinc-cloud-fm.emea.snaplogic.io/service/snapLogic4snapLogic/6.0/RetrieverLoopioTechApi\",\n                    \"tags\": [\n                        \"Search & Retrieval - technical\",\n                        \"Search & Retrieval\"\n                    ]\n                },\n                \"json_schema\": {\n                    \"type\": \"object\",\n                    \"properties\": {\n                        \"body\": {\n                            \"required\": [\n                                \"Requirement\"\n                            ],\n                            \"type\": \"object\",\n                            \"properties\": {\n                                \"Requirement\": {\n                                    \"type\": \"string\",\n                                    \"description\": \"An RFX Question about snapLogic\"\n                                }\n                            }\n                        }\n                    },\n                    \"required\": [\n                        \"body\"\n                    ]\n                }\n            },\n            {\n                \"sl_type\": \"function\",\n                \"name\": \"POST_RetrieverSigmaFrameworkApi\",\n                \"description\": \"Searches SnapLogic's Sigma Framework library containing enterprise implementation guides, security protocols, and operational best practices\",\n                \"strict\": false,\n                \"sl_tool_metadata\": {\n                    \"path\": \"/ConnectFasterInc/snapLogic4snapLogic/ToolsAsApi/Tools/6.0\",\n                    \"security\": [],\n                    \"service_version_name\": \"6.0\",\n                    \"tool_type\": \"APIM\",\n                    \"method\": \"POST\",\n                    \"service_name\": \"Tools\",\n                    \"endpoint_name\": \"RetrieverSigmaFrameworkApi\",\n                    \"header\": {\n                        \"Content-Type\": \"application/json\"\n                    },\n                    \"title\": \"Tools\",\n                    \"url\": \"https://prodeu-connectfasterinc-cloud-fm.emea.snaplogic.io/service/snapLogic4snapLogic/6.0/RetrieverSigmaFrameworkApi\",\n                    \"tags\": [\n                        \"Search & Retrieval - technical\",\n                        \"Search & Retrieval\",\n                        \"Search & Retrieval - sales\"\n                    ]\n                },\n                \"json_schema\": {\n                    \"type\": \"object\",\n                    \"properties\": {\n                        \"body\": {\n                            \"required\": [\n                                \"Requirement\"\n                            ],\n                            \"type\": \"object\",\n                            \"properties\": {\n                                \"Requirement\": {\n                                    \"type\": \"string\",\n                                    \"description\": \"An RFX Question about snapLogic\"\n                                }\n                            }\n                        }\n                    },\n                    \"required\": [\n                        \"body\"\n                    ]\n                }\n            },\n            {\n                \"sl_type\": \"function\",\n                \"name\": \"GET_RetrieverSlackCrawlerApi\",\n                \"strict\": false,\n                \"sl_tool_metadata\": {\n                    \"path\": \"/ConnectFasterInc/snapLogic4snapLogic/ToolsAsApi/Tools/6.0\",\n                    \"security\": [],\n                    \"service_version_name\": \"6.0\",\n                    \"tool_type\": \"APIM\",\n                    \"method\": \"GET\",\n                    \"service_name\": \"Tools\",\n                    \"endpoint_name\": \"RetrieverSlackCrawlerApi\",\n                    \"header\": {},\n                    \"title\": \"Tools\",\n                    \"url\": \"https://prodeu-connectfasterinc-cloud-fm.emea.snaplogic.io/service/snapLogic4snapLogic/6.0/RetrieverSlackCrawlerApi\",\n                    \"tags\": [\n                        \"Search & Retrieval - technical\",\n                        \"Search & Retrieval\",\n                        \"Search & Retrieval - sales\"\n                    ]\n                },\n                \"json_schema\": {\n                    \"type\": \"object\",\n                    \"properties\": {\n                        \"query\": {\n                            \"type\": \"object\",\n                            \"properties\": {\n                                \"type\": {\n                                    \"type\": \"string\",\n                                    \"description\": \"sales or technical\"\n                                },\n                                \"prompt\": {\n                                    \"type\": \"string\",\n                                    \"description\": \"the user query\"\n                                }\n                            },\n                            \"required\": [\n                                \"type\",\n                                \"prompt\"\n                            ]\n                        }\n                    },\n                    \"required\": [\n                        \"query\"\n                    ]\n                }\n            },\n            {\n                \"sl_type\": \"function\",\n                \"name\": \"POST_RetrieverTechnicalBlogApi\",\n                \"description\": \"Extract maximum value from your SnapLogic investment with a standardized and holistic set of cross-disciplinary best practices\",\n                \"strict\": false,\n                \"sl_tool_metadata\": {\n                    \"path\": \"/ConnectFasterInc/snapLogic4snapLogic/ToolsAsApi/Tools/6.0\",\n                    \"security\": [],\n                    \"service_version_name\": \"6.0\",\n                    \"tool_type\": \"APIM\",\n                    \"method\": \"POST\",\n                    \"service_name\": \"Tools\",\n                    \"endpoint_name\": \"RetrieverTechnicalBlogApi\",\n                    \"header\": {\n                        \"Content-Type\": \"application/json\"\n                    },\n                    \"title\": \"Tools\",\n                    \"url\": \"https://prodeu-connectfasterinc-cloud-fm.emea.snaplogic.io/service/snapLogic4snapLogic/6.0/RetrieverTechnicalBlogApi\",\n                    \"tags\": [\n                        \"Search & Retrieval - technical\",\n                        \"Search & Retrieval\"\n                    ]\n                },\n                \"json_schema\": {\n                    \"type\": \"object\",\n                    \"properties\": {\n                        \"body\": {\n                            \"required\": [\n                                \"Requirement\"\n                            ],\n                            \"type\": \"object\",\n                            \"properties\": {\n                                \"Requirement\": {\n                                    \"type\": \"string\",\n                                    \"description\": \"An RFX Question about snapLogic\"\n                                }\n                            }\n                        }\n                    },\n                    \"required\": [\n                        \"body\"\n                    ]\n                }\n            },\n            {\n                \"sl_type\": \"function\",\n                \"name\": \"RetrieverCuratedRfiIndexApi\",\n                \"description\": \"Searches a library of curated RFP answers from previous RFI submissions\",\n                \"parameters\": [\n                    {\n                        \"name\": \"Requirement\",\n                        \"type\": \"STRING\",\n                        \"description\": \"An RFX Question about snapLogic\",\n                        \"required\": true\n                    }\n                ]\n            },\n            {\n                \"sl_type\": \"function\",\n                \"name\": \"RetrieverAnalystRFIsApi\",\n                \"description\": \"Searches a library of curated RFP answers from previous analyst submissions\",\n                \"parameters\": [\n                    {\n                        \"name\": \"Requirement\",\n                        \"type\": \"STRING\",\n                        \"description\": \"An RFX Question about snapLogic\",\n                        \"required\": true\n                    }\n                ]\n            },\n            {\n                \"sl_type\": \"function\",\n                \"name\": \"LoopioUpdateEntryApi\",\n                \"description\": \"Update a Loopio entry identified by an id, which will include a question and a text response and may include one or several compliance answers.\",\n                \"parameters\": [\n                    {\n                        \"name\": \"id\",\n                        \"type\": \"INTEGER\",\n                        \"description\": \"the loopio entry id\",\n                        \"required\": true\n                    },\n                    {\n                        \"name\": \"question\",\n                        \"type\": \"STRING\",\n                        \"description\": \"the requirement that needs answering\",\n                        \"required\": true\n                    },\n                    {\n                        \"name\": \"text\",\n                        \"type\": \"STRING\",\n                        \"description\": \"the answer to the requirement as text, it can be enriched with code for new lines, bold text and lists.\",\n                        \"required\": true\n                    },\n                    {\n                        \"name\": \"complianceAnswers\",\n                        \"type\": \"STRING\",\n                        \"description\": \"An array with the details of the compliance answer\",\n                        \"required\": true\n                    }\n                ]\n            },\n            {\n                \"sl_type\": \"function\",\n                \"name\": \"LoopioGetComplianceOptionsApi\",\n                \"description\": \"A loopio question might include a compliance array with one or more objects, this API will retrieve the options for each which can be used to prepare the response.\",\n                \"parameters\": [\n                    {\n                        \"name\": \"projectId\",\n                        \"type\": \"STRING\",\n                        \"description\": \"the loopio entry id\",\n                        \"required\": true\n                    },\n                    {\n                        \"name\": \"complianceSetId\",\n                        \"type\": \"STRING\",\n                        \"description\": \"the loopio entry compliance set id\",\n                        \"required\": true\n                    }\n                ]\n            }\n        ]\n    }\n]"
+                    },
+                    "execution_mode": {
+                        "value": "Disabled"
+                    },
+                    "passThroughProp": {
+                        "value": false
+                    },
+                    "supportTypeExts": {
+                        "value": false
+                    }
+                },
+                "view_serial": 100
+            }
+        },
+        "11111111-1111-1111-1111-000000000002": {
+            "class_id": "com-snaplogic-snaps-mongo-execute",
+            "class_version": 1,
+            "instance_id": "11111111-1111-1111-1111-000000000002",
+            "property_map": {
+                "account": {
+                    "account_ref": {
+                        "value": {
+                            "label": {
+                                "expression": false,
+                                "label": "../../shared/mongodb atlas ja",
+                                "value": "mongodb atlas ja"
+                            },
+                            "ref_class_id": {
+                                "value": "com-snaplogic-snaps-mongo-replicasetmongoaccount"
+                            },
+                            "ref_id": {
+                                "expression": false,
+                                "value": null
+                            }
+                        }
+                    }
+                },
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "MongoDB - Execute"
+                    },
+                    "notes": {}
+                },
+                "input": {
+                    "input101": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "output": {},
+                "settings": {
+                    "executable_during_suggest": {
+                        "value": false
+                    },
+                    "execution_mode": {
+                        "value": "Disabled"
+                    },
+                    "queryDB": {
+                        "expression": false,
+                        "value": "snaplogic"
+                    },
+                    "retries": {
+                        "expression": false,
+                        "value": 0
+                    },
+                    "retryInt": {
+                        "expression": false,
+                        "value": 1
+                    },
+                    "runCommand": {
+                        "expression": true,
+                        "value": "'{' +\n    '\"update\": \"AgentFlow\",' + // This is the MongoDB command name, and the collection\n    '\"updates\": [' +\n        '{' +\n            '\"q\": {' +\n                '\"_id\": \"' + $_id + '\"' +\n            '},' +\n            '\"u\": {' +\n                '\"$set\": {' +\n                    '\"messages\": ' + JSON.stringify($messages) + ',' +\n                    '\"agentName\": \"' + $agentName + '\",' +\n                    '\"projectPath\": \"' + $projectPath + '\",' +\n                    '\"plexPath\": \"' + $plexPath + '\"' +\n                    // If you have other fields, remember to add them here\n                    // e.g., ',\"anotherField\": \"' + $anotherField + '\"'\n                '}' +\n            '},' +\n            '\"upsert\": true' + // upsert flag for this specific update operation\n        '}' +\n    '],' +\n    '\"ordered\": true' + // Specifies if MongoDB should execute operations in order. Good default for one op.\n    // You can also add a writeConcern if needed:\n    // ',\"writeConcern\": { \"w\": \"majority\" }' +\n'}'"
+                    },
+                    "timeZoneOffset": {
+                        "value": {
+                            "hoursOffset": {
+                                "value": 0
+                            },
+                            "minutesOffset": {
+                                "value": 0
+                            }
+                        }
+                    }
+                },
+                "view_serial": 102
+            }
+        },
+        "11111111-1111-1111-1111-000000000003": {
+            "class_id": "com-snaplogic-snaps-transform-jsongenerator",
+            "class_version": 2,
+            "instance_id": "11111111-1111-1111-1111-000000000003",
+            "property_map": {
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "JSON Generator"
+                    },
+                    "notes": {}
+                },
+                "input": {},
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "settings": {
+                    "arrayElementsAsDocuments": {
+                        "value": true
+                    },
+                    "editable_content": {
+                        "value": "[\n    {\n        \"messages\": [\n            {\n                \"content\": \"You are the Retrieval Sub-Agent responsible for gathering information and generating responses for RFX questionnaires. Your sole focus is information retrieval and synthesis.\\r\\n\\r\\n1. **RetrieverAnalystRFIsApi** - Analyst reports (Gartner, Aragon, etc.) *PRIORITY*\\r\\n2. **RetrieverDocumentationApi** - Official technical documentation\\r\\n3. **RetrieverLoopioTechApi** - Curated RFP answers database \\r\\n4. **RetrieverSigmaFrameworkApi** - Enterprise implementation guides\\r\\n5. **RetrieverTechnicalBlogApi** - Implementation guides and technical content\\r\\n6. **RetrieverSlackCrawlerApi** - Internal tribal knowledge database\\r\\n7. **CommentApi** - Score tracking and feedback system\\r\\n - **Parameter**: `Input` (object containing the scoring data)\\r\\n\\r\\nYou will receive a question.\\r\\n\\r\\n\\r\\n- Execute **RetrieverAnalystRFIsApi** using the question text as input\\r\\n- **Immediately after getting the response**, score it:\\r\\n - **Relevance** (0-10): How well it answers the question\\r\\n - **Completeness** (0-10): Depth and breadth of information \\r\\n - **Authority** (0-10): Credibility and external validation\\r\\n - **Total**: relevance + completeness + authority\\r\\n- **Store these scores** - you will need them for Step 2\\r\\n\\r\\n**MANDATORY**: Call **CommentApi** with parameter `Input` containing actual scores from Step 1:\\r\\n```json\\r\\nInput: {\\r\\n \\\"retriever_scores\\\": {\\r\\n \\\"RetrieverAnalystRFIsApi\\\": {\\r\\n \\\"relevance\\\": [ACTUAL_SCORE_0_TO_10],\\r\\n \\\"completeness\\\": [ACTUAL_SCORE_0_TO_10], \\r\\n \\\"authority\\\": [ACTUAL_SCORE_0_TO_10],\\r\\n \\\"total\\\": [ACTUAL_TOTAL_0_TO_30]\\r\\n }\\r\\n },\\r\\n \\\"continue_processing\\\": \\\"YES\\\" | \\\"NO\\\",\\r\\n \\\"execution_path\\\": \\\"analyst_first\\\"\\r\\n}\\r\\n```\\r\\n\\r\\n**Logic for continue_processing:**\\r\\n- If RetrieverAnalystRFIsApi total score is 25 or higher: `\\\"continue_processing\\\": \\\"NO\\\"`\\r\\n- If RetrieverAnalystRFIsApi total score is 24 or lower: `\\\"continue_processing\\\": \\\"YES\\\"`\\r\\n\\r\\n- **If continue_processing value in Step 2 was \\\"NO\\\"**: Skip to Step 6\\r\\n- **If continue_processing value in Step 2 was \\\"YES\\\"**: Proceed to Step 4\\r\\n\\r\\nExecute all 5 remaining retriever tools in parallel:\\r\\n- **RetrieverDocumentationApi**\\r\\n- **RetrieverLoopioTechApi** \\r\\n- **RetrieverSigmaFrameworkApi**\\r\\n- **RetrieverTechnicalBlogApi**\\r\\n- **RetrieverSlackCrawlerApi**\\r\\n\\r\\n**After each tool responds**, score it using the same 0-10 criteria as Step 1.\\r\\n\\r\\n**MANDATORY**: Call **CommentApi** with parameter `Input` containing all actual scores:\\r\\n```json\\r\\nInput: {\\r\\n \\\"retriever_scores\\\": {\\r\\n \\\"RetrieverAnalystRFIsApi\\\": {\\\"relevance\\\": X, \\\"completeness\\\": X, \\\"authority\\\": X, \\\"total\\\": X},\\r\\n \\\"RetrieverDocumentationApi\\\": {\\\"relevance\\\": X, \\\"completeness\\\": X, \\\"authority\\\": X, \\\"total\\\": X},\\r\\n \\\"RetrieverLoopioTechApi\\\": {\\\"relevance\\\": X, \\\"completeness\\\": X, \\\"authority\\\": X, \\\"total\\\": X},\\r\\n \\\"RetrieverSigmaFrameworkApi\\\": {\\\"relevance\\\": X, \\\"completeness\\\": X, \\\"authority\\\": X, \\\"total\\\": X},\\r\\n \\\"RetrieverTechnicalBlogApi\\\": {\\\"relevance\\\": X, \\\"completeness\\\": X, \\\"authority\\\": X, \\\"total\\\": X},\\r\\n \\\"RetrieverSlackCrawlerApi\\\": {\\\"relevance\\\": X, \\\"completeness\\\": X, \\\"authority\\\": X, \\\"total\\\": X}\\r\\n },\\r\\n \\\"selected_sources\\\": [\\\"[LIST_HIGHEST_SCORING_TOOLS]\\\"],\\r\\n \\\"execution_path\\\": \\\"full_search\\\"\\r\\n}\\r\\n```\\r\\n\\r\\nRespond with JSON containing the synthesized answer:\\r\\n```json\\r\\n{\\r\\n \\\"response_text\\\": \\\"Generated response\\\",\\r\\n \\\"sources_used\\\": [\\\"[ACTUAL_SOURCES_USED]\\\"],\\r\\n \\\"execution_path\\\": \\\"analyst_only\\\" | \\\"full_search\\\", \\r\\n \\\"confidence_score\\\": [HIGHEST_TOTAL_SCORE_ACHIEVED]\\r\\n}\\r\\n```\\r\\n\\r\\n- **NEVER call CommentApi with placeholder values** - always use actual scores\\r\\n- If a retriever fails, assign it score 0 for all categories\\r\\n- Select highest-scoring sources for synthesis\",\n                \"sl_role\": \"SYSTEM\"\n            },\n            {\n                \"content\": \"Requirement: \\\"Please list any patents your company was awarded over the past 3 years for innovations applicable to this product/service area.\\\"\",\n                \"sl_role\": \"USER\"\n            },\n            {\n                \"annotations\": [],\n                \"content\": null,\n                \"refusal\": null,\n                \"role\": \"assistant\",\n                \"tool_calls\": [\n                    {\n                        \"function\": {\n                            \"arguments\": \"{\\\"Requirement\\\":\\\"Please list any patents your company was awarded over the past 3 years for innovations applicable to this product/service area.\\\"}\",\n                            \"name\": \"RetrieverAnalystRFIsApi\"\n                        },\n                        \"id\": \"call_EIlgXKep7KF0tJC3PwouUYeD\",\n                        \"type\": \"function\"\n                    }\n                ]\n            },\n            {\n                \"sl_role\": \"TOOL\",\n                \"function_id\": \"call_EIlgXKep7KF0tJC3PwouUYeD\",\n                \"content\": {\n                    \"response\": {\n                        \"answer\": \"SnapLogic was awarded multiple patents over the past three years related to innovations in data integration and intelligent automation within its product offerings. These patents cover novel methods and systems enhancing intelligent data pipelines, AI-driven integration, and advanced API management capabilities, reinforcing SnapLogic's leadership in the iPaaS and data integration space.\",\n                        \"confidence\": \"medium\",\n                        \"source\": \"Most recent curated submissions including Magic Quadrant and IDC MarketScape RFIs dated July 2025\"\n                    }\n                }\n            },\n            {\n                \"annotations\": [],\n                \"content\": null,\n                \"refusal\": null,\n                \"role\": \"assistant\",\n                \"tool_calls\": [\n                    {\n                        \"function\": {\n                            \"arguments\": \"{\\\"Input\\\":{\\\"retriever_scores\\\":{\\\"RetrieverAnalystRFIsApi\\\":{\\\"relevance\\\":9,\\\"completeness\\\":8,\\\"authority\\\":7,\\\"total\\\":24}},\\\"continue_processing\\\":\\\"YES\\\",\\\"execution_path\\\":\\\"analyst_first\\\"}}\",\n                            \"name\": \"CommentApi\"\n                        },\n                        \"id\": \"call_MEVrZdp9HaBjcvTfgOg46pEI\",\n                        \"type\": \"function\"\n                    }\n                ]\n            },\n            {\n                \"sl_role\": \"TOOL\",\n                \"function_id\": \"call_MEVrZdp9HaBjcvTfgOg46pEI\",\n                \"content\": {\n                    \"response\": {\n                        \"message\": \"job done\"\n                    }\n                }\n            }\n        ],\n        \"stopReason\": \"tool_calls\",\n        \"tools\": [\n            {\n                \"sl_type\": \"function\",\n                \"name\": \"POST_AskSnapGptApi\",\n                \"description\": \"Searches technical documentation and specifications in snapGPT\",\n                \"strict\": false,\n                \"sl_tool_metadata\": {\n                    \"path\": \"/ConnectFasterInc/snapLogic4snapLogic/ToolsAsApi/Tools/6.0\",\n                    \"security\": [],\n                    \"service_version_name\": \"6.0\",\n                    \"tool_type\": \"APIM\",\n                    \"method\": \"POST\",\n                    \"service_name\": \"Tools\",\n                    \"endpoint_name\": \"AskSnapGptApi\",\n                    \"header\": {\n                        \"Content-Type\": \"application/json\"\n                    },\n                    \"title\": \"Tools\",\n                    \"url\": \"https://prodeu-connectfasterinc-cloud-fm.emea.snaplogic.io/service/snapLogic4snapLogic/6.0/AskSnapGptApi\",\n                    \"tags\": [\n                        \"Search & Retrieval - technical\",\n                        \"Search & Retrieval\"\n                    ]\n                },\n                \"json_schema\": {\n                    \"type\": \"object\",\n                    \"properties\": {\n                        \"body\": {\n                            \"required\": [\n                                \"prompt\"\n                            ],\n                            \"type\": \"object\",\n                            \"properties\": {\n                                \"prompt\": {\n                                    \"type\": \"string\",\n                                    \"description\": \"An RFX Question about snapLogic\"\n                                }\n                            }\n                        }\n                    },\n                    \"required\": [\n                        \"body\"\n                    ]\n                }\n            },\n            {\n                \"sl_type\": \"function\",\n                \"name\": \"POST_RetrieverDocumentationApi\",\n                \"description\": \"Searches technical documentation and specifications\",\n                \"strict\": false,\n                \"sl_tool_metadata\": {\n                    \"path\": \"/ConnectFasterInc/snapLogic4snapLogic/ToolsAsApi/Tools/6.0\",\n                    \"security\": [],\n                    \"service_version_name\": \"6.0\",\n                    \"tool_type\": \"APIM\",\n                    \"method\": \"POST\",\n                    \"service_name\": \"Tools\",\n                    \"endpoint_name\": \"RetrieverDocumentationApi\",\n                    \"header\": {\n                        \"Content-Type\": \"application/json\"\n                    },\n                    \"title\": \"Tools\",\n                    \"url\": \"https://prodeu-connectfasterinc-cloud-fm.emea.snaplogic.io/service/snapLogic4snapLogic/6.0/RetrieverDocumentationApi\",\n                    \"tags\": [\n                        \"Search & Retrieval - technical\",\n                        \"Search & Retrieval\"\n                    ]\n                },\n                \"json_schema\": {\n                    \"type\": \"object\",\n                    \"properties\": {\n                        \"body\": {\n                            \"required\": [\n                                \"Requirement\"\n                            ],\n                            \"type\": \"object\",\n                            \"properties\": {\n                                \"Requirement\": {\n                                    \"type\": \"string\",\n                                    \"description\": \"An RFX Question about snapLogic\"\n                                }\n                            }\n                        }\n                    },\n                    \"required\": [\n                        \"body\"\n                    ]\n                }\n            },\n            {\n                \"sl_type\": \"function\",\n                \"name\": \"POST_RetrieverLoopioTechApi\",\n                \"description\": \"Searches a library of curated RFP answers\",\n                \"strict\": false,\n                \"sl_tool_metadata\": {\n                    \"path\": \"/ConnectFasterInc/snapLogic4snapLogic/ToolsAsApi/Tools/6.0\",\n                    \"security\": [],\n                    \"service_version_name\": \"6.0\",\n                    \"tool_type\": \"APIM\",\n                    \"method\": \"POST\",\n                    \"service_name\": \"Tools\",\n                    \"endpoint_name\": \"RetrieverLoopioTechApi\",\n                    \"header\": {\n                        \"Content-Type\": \"application/json\"\n                    },\n                    \"title\": \"Tools\",\n                    \"url\": \"https://prodeu-connectfasterinc-cloud-fm.emea.snaplogic.io/service/snapLogic4snapLogic/6.0/RetrieverLoopioTechApi\",\n                    \"tags\": [\n                        \"Search & Retrieval - technical\",\n                        \"Search & Retrieval\"\n                    ]\n                },\n                \"json_schema\": {\n                    \"type\": \"object\",\n                    \"properties\": {\n                        \"body\": {\n                            \"required\": [\n                                \"Requirement\"\n                            ],\n                            \"type\": \"object\",\n                            \"properties\": {\n                                \"Requirement\": {\n                                    \"type\": \"string\",\n                                    \"description\": \"An RFX Question about snapLogic\"\n                                }\n                            }\n                        }\n                    },\n                    \"required\": [\n                        \"body\"\n                    ]\n                }\n            },\n            {\n                \"sl_type\": \"function\",\n                \"name\": \"POST_RetrieverSigmaFrameworkApi\",\n                \"description\": \"Searches SnapLogic's Sigma Framework library containing enterprise implementation guides, security protocols, and operational best practices\",\n                \"strict\": false,\n                \"sl_tool_metadata\": {\n                    \"path\": \"/ConnectFasterInc/snapLogic4snapLogic/ToolsAsApi/Tools/6.0\",\n                    \"security\": [],\n                    \"service_version_name\": \"6.0\",\n                    \"tool_type\": \"APIM\",\n                    \"method\": \"POST\",\n                    \"service_name\": \"Tools\",\n                    \"endpoint_name\": \"RetrieverSigmaFrameworkApi\",\n                    \"header\": {\n                        \"Content-Type\": \"application/json\"\n                    },\n                    \"title\": \"Tools\",\n                    \"url\": \"https://prodeu-connectfasterinc-cloud-fm.emea.snaplogic.io/service/snapLogic4snapLogic/6.0/RetrieverSigmaFrameworkApi\",\n                    \"tags\": [\n                        \"Search & Retrieval - technical\",\n                        \"Search & Retrieval\",\n                        \"Search & Retrieval - sales\"\n                    ]\n                },\n                \"json_schema\": {\n                    \"type\": \"object\",\n                    \"properties\": {\n                        \"body\": {\n                            \"required\": [\n                                \"Requirement\"\n                            ],\n                            \"type\": \"object\",\n                            \"properties\": {\n                                \"Requirement\": {\n                                    \"type\": \"string\",\n                                    \"description\": \"An RFX Question about snapLogic\"\n                                }\n                            }\n                        }\n                    },\n                    \"required\": [\n                        \"body\"\n                    ]\n                }\n            },\n            {\n                \"sl_type\": \"function\",\n                \"name\": \"GET_RetrieverSlackCrawlerApi\",\n                \"strict\": false,\n                \"sl_tool_metadata\": {\n                    \"path\": \"/ConnectFasterInc/snapLogic4snapLogic/ToolsAsApi/Tools/6.0\",\n                    \"security\": [],\n                    \"service_version_name\": \"6.0\",\n                    \"tool_type\": \"APIM\",\n                    \"method\": \"GET\",\n                    \"service_name\": \"Tools\",\n                    \"endpoint_name\": \"RetrieverSlackCrawlerApi\",\n                    \"header\": {},\n                    \"title\": \"Tools\",\n                    \"url\": \"https://prodeu-connectfasterinc-cloud-fm.emea.snaplogic.io/service/snapLogic4snapLogic/6.0/RetrieverSlackCrawlerApi\",\n                    \"tags\": [\n                        \"Search & Retrieval - technical\",\n                        \"Search & Retrieval\",\n                        \"Search & Retrieval - sales\"\n                    ]\n                },\n                \"json_schema\": {\n                    \"type\": \"object\",\n                    \"properties\": {\n                        \"query\": {\n                            \"type\": \"object\",\n                            \"properties\": {\n                                \"type\": {\n                                    \"type\": \"string\",\n                                    \"description\": \"sales or technical\"\n                                },\n                                \"prompt\": {\n                                    \"type\": \"string\",\n                                    \"description\": \"the user query\"\n                                }\n                            },\n                            \"required\": [\n                                \"type\",\n                                \"prompt\"\n                            ]\n                        }\n                    },\n                    \"required\": [\n                        \"query\"\n                    ]\n                }\n            },\n            {\n                \"sl_type\": \"function\",\n                \"name\": \"POST_RetrieverTechnicalBlogApi\",\n                \"description\": \"Extract maximum value from your SnapLogic investment with a standardized and holistic set of cross-disciplinary best practices\",\n                \"strict\": false,\n                \"sl_tool_metadata\": {\n                    \"path\": \"/ConnectFasterInc/snapLogic4snapLogic/ToolsAsApi/Tools/6.0\",\n                    \"security\": [],\n                    \"service_version_name\": \"6.0\",\n                    \"tool_type\": \"APIM\",\n                    \"method\": \"POST\",\n                    \"service_name\": \"Tools\",\n                    \"endpoint_name\": \"RetrieverTechnicalBlogApi\",\n                    \"header\": {\n                        \"Content-Type\": \"application/json\"\n                    },\n                    \"title\": \"Tools\",\n                    \"url\": \"https://prodeu-connectfasterinc-cloud-fm.emea.snaplogic.io/service/snapLogic4snapLogic/6.0/RetrieverTechnicalBlogApi\",\n                    \"tags\": [\n                        \"Search & Retrieval - technical\",\n                        \"Search & Retrieval\"\n                    ]\n                },\n                \"json_schema\": {\n                    \"type\": \"object\",\n                    \"properties\": {\n                        \"body\": {\n                            \"required\": [\n                                \"Requirement\"\n                            ],\n                            \"type\": \"object\",\n                            \"properties\": {\n                                \"Requirement\": {\n                                    \"type\": \"string\",\n                                    \"description\": \"An RFX Question about snapLogic\"\n                                }\n                            }\n                        }\n                    },\n                    \"required\": [\n                        \"body\"\n                    ]\n                }\n            },\n            {\n                \"sl_type\": \"function\",\n                \"name\": \"RetrieverAnalystRFIsApi\",\n                \"description\": \"Searches a library of curated RFP answers from previous analyst submissions\",\n                \"parameters\": [\n                    {\n                        \"name\": \"Requirement\",\n                        \"type\": \"STRING\",\n                        \"description\": \"An RFX Question about snapLogic\",\n                        \"required\": true\n                    }\n                ]\n            },\n            {\n                \"sl_type\": \"function\",\n                \"name\": \"CommentApi\",\n                \"description\": \"Help your agent self reflect!\",\n                \"parameters\": [\n                    {\n                        \"name\": \"Input\",\n                        \"type\": \"STRING\",\n                        \"description\": \"whatever you'd like\",\n                        \"required\": true\n                    }\n                ]\n            }\n        ]\n    }\n]"
+                    },
+                    "execution_mode": {
+                        "value": "Disabled"
+                    },
+                    "passThroughProp": {
+                        "value": false
+                    },
+                    "supportTypeExts": {
+                        "value": false
+                    }
+                },
+                "view_serial": 100
+            }
+        },
+        "11111111-1111-1111-1111-000000000004": {
             "class_id": "com-snaplogic-snaps-azureopenai-azureopenaitoolcalling",
             "class_version": 1,
-            "instance_id": "11111111-1111-1111-1111-000000000001",
+            "instance_id": "11111111-1111-1111-1111-000000000004",
             "property_map": {
                 "account": {
                     "account_ref": {
@@ -817,10 +1053,10 @@
                 "view_serial": 100
             }
         },
-        "11111111-1111-1111-1111-000000000002": {
+        "11111111-1111-1111-1111-000000000005": {
             "class_id": "com-snaplogic-snaps-transform-datatransform",
             "class_version": 4,
-            "instance_id": "11111111-1111-1111-1111-000000000002",
+            "instance_id": "11111111-1111-1111-1111-000000000005",
             "property_map": {
                 "error": {
                     "error0": {
@@ -913,10 +1149,10 @@
                 "view_serial": 100
             }
         },
-        "11111111-1111-1111-1111-000000000003": {
+        "11111111-1111-1111-1111-000000000006": {
             "class_id": "com-snaplogic-snaps-flow-router",
             "class_version": 2,
-            "instance_id": "11111111-1111-1111-1111-000000000003",
+            "instance_id": "11111111-1111-1111-1111-000000000006",
             "property_map": {
                 "error": {
                     "error0": {
@@ -1015,10 +1251,10 @@
                 "view_serial": 106
             }
         },
-        "11111111-1111-1111-1111-000000000004": {
+        "11111111-1111-1111-1111-000000000007": {
             "class_id": "com-snaplogic-snaps-transform-conditional",
             "class_version": 1,
-            "instance_id": "11111111-1111-1111-1111-000000000004",
+            "instance_id": "11111111-1111-1111-1111-000000000007",
             "property_map": {
                 "error": {
                     "error0": {
@@ -1101,10 +1337,10 @@
                 "view_serial": 100
             }
         },
-        "11111111-1111-1111-1111-000000000005": {
+        "11111111-1111-1111-1111-000000000008": {
             "class_id": "com-snaplogic-snaps-transform-structuraltransform",
             "class_version": 1,
-            "instance_id": "11111111-1111-1111-1111-000000000005",
+            "instance_id": "11111111-1111-1111-1111-000000000008",
             "property_map": {
                 "error": {
                     "error0": {
@@ -1199,10 +1435,10 @@
                 "view_serial": 100
             }
         },
-        "11111111-1111-1111-1111-000000000006": {
+        "11111111-1111-1111-1111-000000000009": {
             "class_id": "com-snaplogic-snaps-flow-router",
             "class_version": 2,
-            "instance_id": "11111111-1111-1111-1111-000000000006",
+            "instance_id": "11111111-1111-1111-1111-000000000009",
             "property_map": {
                 "error": {
                     "error0": {
@@ -1335,10 +1571,10 @@
                 "view_serial": 103
             }
         },
-        "11111111-1111-1111-1111-000000000007": {
+        "11111111-1111-1111-1111-00000000000a": {
             "class_id": "com-snaplogic-snaps-flow-router",
             "class_version": 2,
-            "instance_id": "11111111-1111-1111-1111-000000000007",
+            "instance_id": "11111111-1111-1111-1111-00000000000a",
             "property_map": {
                 "error": {
                     "error0": {
@@ -1417,10 +1653,10 @@
                 "view_serial": 100
             }
         },
-        "11111111-1111-1111-1111-000000000008": {
+        "11111111-1111-1111-1111-00000000000b": {
             "class_id": "com-snaplogic-snaps-flow-pipeexec",
             "class_version": 1,
-            "instance_id": "11111111-1111-1111-1111-000000000008",
+            "instance_id": "11111111-1111-1111-1111-00000000000b",
             "property_map": {
                 "error": {
                     "error0": {
@@ -1510,969 +1746,6 @@
                     "timeout": {
                         "expression": false,
                         "value": 600
-                    }
-                },
-                "view_serial": 100
-            }
-        },
-        "11111111-1111-1111-1111-000000000009": {
-            "class_id": "com-snaplogic-snaps-apisuite-httpclient",
-            "class_version": 1,
-            "instance_id": "11111111-1111-1111-1111-000000000009",
-            "property_map": {
-                "account": {
-                    "account_ref": {
-                        "value": {
-                            "label": {
-                                "expression": false,
-                                "label": "../shared/ToolsAsApi",
-                                "value": "ToolsAsApi"
-                            },
-                            "ref_class_id": {
-                                "value": "com-snaplogic-snaps-apisuite-accounts-headerauthaccount"
-                            },
-                            "ref_id": {
-                                "expression": false,
-                                "value": null
-                            }
-                        }
-                    }
-                },
-                "error": {
-                    "error0": {
-                        "label": {
-                            "value": "error0"
-                        },
-                        "view_type": {
-                            "value": "document"
-                        }
-                    },
-                    "error_behavior": {
-                        "value": "fail"
-                    }
-                },
-                "info": {
-                    "label": {
-                        "value": "HTTP Client"
-                    },
-                    "notes": {}
-                },
-                "input": {
-                    "input0": {
-                        "label": {
-                            "value": "input0"
-                        },
-                        "view_type": {
-                            "value": "document"
-                        }
-                    }
-                },
-                "output": {
-                    "outputResponse": {
-                        "label": {
-                            "value": "Response"
-                        },
-                        "view_type": {
-                            "value": "document"
-                        }
-                    }
-                },
-                "settings": {
-                    "batchSize": {
-                        "expression": false,
-                        "value": 1
-                    },
-                    "clientProperties": {
-                        "value": {
-                            "connection": {
-                                "value": {
-                                    "connTimeout": {
-                                        "value": 30
-                                    },
-                                    "cookiePolicy": {
-                                        "value": "RFC Lax"
-                                    },
-                                    "diskStagingProp": {
-                                        "value": false
-                                    },
-                                    "readTimeout": {
-                                        "value": 900
-                                    },
-                                    "trustAllCerts": {
-                                        "value": false
-                                    }
-                                }
-                            },
-                            "outputProps": {
-                                "value": {
-                                    "errorRespToErrorview": {
-                                        "value": true
-                                    },
-                                    "extractEntity": {
-                                        "value": false
-                                    },
-                                    "extractEntityPath": {
-                                        "expression": true,
-                                        "value": "$.entity"
-                                    },
-                                    "includeCookies": {
-                                        "value": false
-                                    },
-                                    "responseType": {
-                                        "value": "JSON"
-                                    }
-                                }
-                            },
-                            "redirects": {
-                                "value": {
-                                    "allowCircularRedirect": {
-                                        "value": false
-                                    },
-                                    "allowRelativeRedirect": {
-                                        "value": true
-                                    },
-                                    "followOriginalMethod": {
-                                        "value": false
-                                    },
-                                    "followRedirection": {
-                                        "value": true
-                                    },
-                                    "maxRedirect": {
-                                        "expression": false,
-                                        "value": 10
-                                    }
-                                }
-                            },
-                            "retry": {
-                                "value": {
-                                    "autoRetry429": {
-                                        "value": true
-                                    },
-                                    "maxRetry": {
-                                        "value": 5
-                                    },
-                                    "retryCondition": {
-                                        "value": "Connection Errors"
-                                    },
-                                    "retryInterval": {
-                                        "value": 3
-                                    },
-                                    "useRetryAfterHeader": {
-                                        "value": true
-                                    }
-                                }
-                            }
-                        }
-                    },
-                    "enableDebug": {
-                        "value": true
-                    },
-                    "execLabel": {
-                        "expression": true,
-                        "value": null
-                    },
-                    "execution_mode": {
-                        "value": "Validate & Execute"
-                    },
-                    "formEncodeSpace": {
-                        "value": false
-                    },
-                    "header": {
-                        "value": [
-                            {
-                                "headerNameProp": {
-                                    "expression": false,
-                                    "value": "Content-Type"
-                                },
-                                "headerValProp": {
-                                    "expression": false,
-                                    "value": "application/json"
-                                }
-                            }
-                        ]
-                    },
-                    "httpEntity": {
-                        "value": {
-                            "binaryFile": {
-                                "expression": false,
-                                "value": null
-                            },
-                            "entityType": {
-                                "value": "raw"
-                            },
-                            "multipartForm": {
-                                "value": [
-                                    {
-                                        "partContentType": {
-                                            "expression": false,
-                                            "value": null
-                                        },
-                                        "partKey": {
-                                            "expression": false,
-                                            "value": null
-                                        },
-                                        "partType": {
-                                            "value": "Text"
-                                        },
-                                        "partValue": {
-                                            "expression": false,
-                                            "value": null
-                                        }
-                                    }
-                                ]
-                            },
-                            "multipartSubtype": {
-                                "expression": false,
-                                "value": "form-data"
-                            },
-                            "rawEntity": {
-                                "expression": true,
-                                "value": "$function.json_arguments.hasPath(\"body\")?$function.json_arguments.body:null"
-                            },
-                            "urlEncodedForm": {
-                                "value": []
-                            }
-                        }
-                    },
-                    "httpMethod": {
-                        "expression": true,
-                        "value": "$sl_tool_metadata.method"
-                    },
-                    "pagination": {
-                        "value": {
-                            "hasNext": {
-                                "expression": true,
-                                "value": null
-                            },
-                            "maxPage": {
-                                "expression": false,
-                                "value": null
-                            },
-                            "nextUrl": {
-                                "expression": true,
-                                "value": null
-                            },
-                            "overrideHeaders": {
-                                "value": [
-                                    {
-                                        "overrideHeaderName": {
-                                            "expression": false,
-                                            "value": null
-                                        },
-                                        "overrideHeaderValue": {
-                                            "expression": true,
-                                            "value": null
-                                        }
-                                    }
-                                ]
-                            },
-                            "overrideParams": {
-                                "value": [
-                                    {
-                                        "overrideParamName": {
-                                            "expression": false,
-                                            "value": null
-                                        },
-                                        "overrideParamValue": {
-                                            "expression": true,
-                                            "value": null
-                                        }
-                                    }
-                                ]
-                            },
-                            "overrideURI": {
-                                "value": false
-                            },
-                            "paginationInterval": {
-                                "value": 0
-                            },
-                            "reuseParamsForPagination": {
-                                "value": false
-                            }
-                        }
-                    },
-                    "params": {
-                        "value": []
-                    },
-                    "pipeline": {
-                        "expression": false
-                    },
-                    "poolSize": {
-                        "expression": false,
-                        "value": 1
-                    },
-                    "preventURLEncoding": {
-                        "value": false
-                    },
-                    "queryParam": {
-                        "value": []
-                    },
-                    "retryInterval": {
-                        "expression": false,
-                        "value": null
-                    },
-                    "retryLimit": {
-                        "expression": false,
-                        "value": null
-                    },
-                    "reuse": {
-                        "value": false
-                    },
-                    "snaplex": {
-                        "expression": false
-                    },
-                    "snaplexGovernor": {
-                        "value": "SNAPLEX_WITH_PATH"
-                    },
-                    "timeout": {
-                        "expression": false,
-                        "value": null
-                    },
-                    "uri": {
-                        "expression": true,
-                        "value": "$sl_tool_metadata.resolved_url"
-                    }
-                },
-                "view_serial": 100
-            }
-        },
-        "11111111-1111-1111-1111-00000000000a": {
-            "class_id": "com-snaplogic-snaps-apisuite-httpclient",
-            "class_version": 1,
-            "instance_id": "11111111-1111-1111-1111-00000000000a",
-            "property_map": {
-                "account": {
-                    "account_ref": {
-                        "value": {
-                            "label": {
-                                "expression": false,
-                                "label": "../shared/ToolsAsApi",
-                                "value": "ToolsAsApi"
-                            },
-                            "ref_class_id": {
-                                "value": "com-snaplogic-snaps-apisuite-accounts-headerauthaccount"
-                            },
-                            "ref_id": {
-                                "expression": false,
-                                "value": null
-                            }
-                        }
-                    }
-                },
-                "error": {
-                    "error0": {
-                        "label": {
-                            "value": "error0"
-                        },
-                        "view_type": {
-                            "value": "document"
-                        }
-                    },
-                    "error_behavior": {
-                        "value": "fail"
-                    }
-                },
-                "info": {
-                    "label": {
-                        "value": "HTTP Client"
-                    },
-                    "notes": {}
-                },
-                "input": {
-                    "input0": {
-                        "label": {
-                            "value": "input0"
-                        },
-                        "view_type": {
-                            "value": "document"
-                        }
-                    }
-                },
-                "output": {
-                    "outputResponse": {
-                        "label": {
-                            "value": "Response"
-                        },
-                        "view_type": {
-                            "value": "document"
-                        }
-                    }
-                },
-                "settings": {
-                    "batchSize": {
-                        "expression": false,
-                        "value": 1
-                    },
-                    "clientProperties": {
-                        "value": {
-                            "connection": {
-                                "value": {
-                                    "connTimeout": {
-                                        "value": 30
-                                    },
-                                    "cookiePolicy": {
-                                        "value": "RFC Lax"
-                                    },
-                                    "diskStagingProp": {
-                                        "value": false
-                                    },
-                                    "readTimeout": {
-                                        "value": 900
-                                    },
-                                    "trustAllCerts": {
-                                        "value": false
-                                    }
-                                }
-                            },
-                            "outputProps": {
-                                "value": {
-                                    "errorRespToErrorview": {
-                                        "value": true
-                                    },
-                                    "extractEntity": {
-                                        "value": false
-                                    },
-                                    "extractEntityPath": {
-                                        "expression": true,
-                                        "value": "$.entity"
-                                    },
-                                    "includeCookies": {
-                                        "value": false
-                                    },
-                                    "responseType": {
-                                        "value": "JSON"
-                                    }
-                                }
-                            },
-                            "redirects": {
-                                "value": {
-                                    "allowCircularRedirect": {
-                                        "value": false
-                                    },
-                                    "allowRelativeRedirect": {
-                                        "value": true
-                                    },
-                                    "followOriginalMethod": {
-                                        "value": false
-                                    },
-                                    "followRedirection": {
-                                        "value": true
-                                    },
-                                    "maxRedirect": {
-                                        "expression": false,
-                                        "value": 10
-                                    }
-                                }
-                            },
-                            "retry": {
-                                "value": {
-                                    "autoRetry429": {
-                                        "value": true
-                                    },
-                                    "maxRetry": {
-                                        "value": 5
-                                    },
-                                    "retryCondition": {
-                                        "value": "Connection Errors"
-                                    },
-                                    "retryInterval": {
-                                        "value": 3
-                                    },
-                                    "useRetryAfterHeader": {
-                                        "value": true
-                                    }
-                                }
-                            }
-                        }
-                    },
-                    "enableDebug": {
-                        "value": true
-                    },
-                    "execLabel": {
-                        "expression": true,
-                        "value": null
-                    },
-                    "execution_mode": {
-                        "value": "Validate & Execute"
-                    },
-                    "formEncodeSpace": {
-                        "value": false
-                    },
-                    "header": {
-                        "value": [
-                            {
-                                "headerNameProp": {
-                                    "expression": false,
-                                    "value": "Content-Type"
-                                },
-                                "headerValProp": {
-                                    "expression": false,
-                                    "value": "application/json"
-                                }
-                            }
-                        ]
-                    },
-                    "httpEntity": {
-                        "value": {
-                            "binaryFile": {
-                                "expression": false,
-                                "value": null
-                            },
-                            "entityType": {
-                                "value": "raw"
-                            },
-                            "multipartForm": {
-                                "value": [
-                                    {
-                                        "partContentType": {
-                                            "expression": false,
-                                            "value": null
-                                        },
-                                        "partKey": {
-                                            "expression": false,
-                                            "value": null
-                                        },
-                                        "partType": {
-                                            "value": "Text"
-                                        },
-                                        "partValue": {
-                                            "expression": false,
-                                            "value": null
-                                        }
-                                    }
-                                ]
-                            },
-                            "multipartSubtype": {
-                                "expression": false,
-                                "value": "form-data"
-                            },
-                            "rawEntity": {
-                                "expression": true,
-                                "value": "$function.json_arguments.hasPath(\"body\")?$function.json_arguments.body:null"
-                            },
-                            "urlEncodedForm": {
-                                "value": []
-                            }
-                        }
-                    },
-                    "httpMethod": {
-                        "expression": true,
-                        "value": "$sl_tool_metadata.method"
-                    },
-                    "pagination": {
-                        "value": {
-                            "hasNext": {
-                                "expression": true,
-                                "value": null
-                            },
-                            "maxPage": {
-                                "expression": false,
-                                "value": null
-                            },
-                            "nextUrl": {
-                                "expression": true,
-                                "value": null
-                            },
-                            "overrideHeaders": {
-                                "value": [
-                                    {
-                                        "overrideHeaderName": {
-                                            "expression": false,
-                                            "value": null
-                                        },
-                                        "overrideHeaderValue": {
-                                            "expression": true,
-                                            "value": null
-                                        }
-                                    }
-                                ]
-                            },
-                            "overrideParams": {
-                                "value": [
-                                    {
-                                        "overrideParamName": {
-                                            "expression": false,
-                                            "value": null
-                                        },
-                                        "overrideParamValue": {
-                                            "expression": true,
-                                            "value": null
-                                        }
-                                    }
-                                ]
-                            },
-                            "overrideURI": {
-                                "value": false
-                            },
-                            "paginationInterval": {
-                                "value": 0
-                            },
-                            "reuseParamsForPagination": {
-                                "value": false
-                            }
-                        }
-                    },
-                    "params": {
-                        "value": []
-                    },
-                    "pipeline": {
-                        "expression": false
-                    },
-                    "poolSize": {
-                        "expression": false,
-                        "value": 1
-                    },
-                    "preventURLEncoding": {
-                        "value": false
-                    },
-                    "queryParam": {
-                        "value": []
-                    },
-                    "retryInterval": {
-                        "expression": false,
-                        "value": null
-                    },
-                    "retryLimit": {
-                        "expression": false,
-                        "value": null
-                    },
-                    "reuse": {
-                        "value": false
-                    },
-                    "snaplex": {
-                        "expression": false
-                    },
-                    "snaplexGovernor": {
-                        "value": "SNAPLEX_WITH_PATH"
-                    },
-                    "timeout": {
-                        "expression": false,
-                        "value": null
-                    },
-                    "uri": {
-                        "expression": true,
-                        "value": "$sl_tool_metadata.resolved_url"
-                    }
-                },
-                "view_serial": 100
-            }
-        },
-        "11111111-1111-1111-1111-00000000000b": {
-            "class_id": "com-snaplogic-snaps-apisuite-httpclient",
-            "class_version": 1,
-            "instance_id": "11111111-1111-1111-1111-00000000000b",
-            "property_map": {
-                "account": {
-                    "account_ref": {
-                        "value": {
-                            "label": {
-                                "expression": false,
-                                "label": "../shared/ToolsAsApi",
-                                "value": "ToolsAsApi"
-                            },
-                            "ref_class_id": {
-                                "value": "com-snaplogic-snaps-apisuite-accounts-headerauthaccount"
-                            },
-                            "ref_id": {
-                                "expression": false,
-                                "value": null
-                            }
-                        }
-                    }
-                },
-                "error": {
-                    "error0": {
-                        "label": {
-                            "value": "error0"
-                        },
-                        "view_type": {
-                            "value": "document"
-                        }
-                    },
-                    "error_behavior": {
-                        "value": "fail"
-                    }
-                },
-                "info": {
-                    "label": {
-                        "value": "HTTP Client"
-                    },
-                    "notes": {}
-                },
-                "input": {
-                    "input0": {
-                        "label": {
-                            "value": "input0"
-                        },
-                        "view_type": {
-                            "value": "document"
-                        }
-                    }
-                },
-                "output": {
-                    "outputResponse": {
-                        "label": {
-                            "value": "Response"
-                        },
-                        "view_type": {
-                            "value": "document"
-                        }
-                    }
-                },
-                "settings": {
-                    "batchSize": {
-                        "expression": false,
-                        "value": 1
-                    },
-                    "clientProperties": {
-                        "value": {
-                            "connection": {
-                                "value": {
-                                    "connTimeout": {
-                                        "value": 30
-                                    },
-                                    "cookiePolicy": {
-                                        "value": "RFC Lax"
-                                    },
-                                    "diskStagingProp": {
-                                        "value": false
-                                    },
-                                    "readTimeout": {
-                                        "value": 900
-                                    },
-                                    "trustAllCerts": {
-                                        "value": false
-                                    }
-                                }
-                            },
-                            "outputProps": {
-                                "value": {
-                                    "errorRespToErrorview": {
-                                        "value": true
-                                    },
-                                    "extractEntity": {
-                                        "value": false
-                                    },
-                                    "extractEntityPath": {
-                                        "expression": true,
-                                        "value": "$.entity"
-                                    },
-                                    "includeCookies": {
-                                        "value": false
-                                    },
-                                    "responseType": {
-                                        "value": "JSON"
-                                    }
-                                }
-                            },
-                            "redirects": {
-                                "value": {
-                                    "allowCircularRedirect": {
-                                        "value": false
-                                    },
-                                    "allowRelativeRedirect": {
-                                        "value": true
-                                    },
-                                    "followOriginalMethod": {
-                                        "value": false
-                                    },
-                                    "followRedirection": {
-                                        "value": true
-                                    },
-                                    "maxRedirect": {
-                                        "expression": false,
-                                        "value": 10
-                                    }
-                                }
-                            },
-                            "retry": {
-                                "value": {
-                                    "autoRetry429": {
-                                        "value": true
-                                    },
-                                    "maxRetry": {
-                                        "value": 5
-                                    },
-                                    "retryCondition": {
-                                        "value": "Connection Errors"
-                                    },
-                                    "retryInterval": {
-                                        "value": 3
-                                    },
-                                    "useRetryAfterHeader": {
-                                        "value": true
-                                    }
-                                }
-                            }
-                        }
-                    },
-                    "enableDebug": {
-                        "value": true
-                    },
-                    "execLabel": {
-                        "expression": true,
-                        "value": null
-                    },
-                    "execution_mode": {
-                        "value": "Validate & Execute"
-                    },
-                    "formEncodeSpace": {
-                        "value": false
-                    },
-                    "header": {
-                        "value": [
-                            {
-                                "headerNameProp": {
-                                    "expression": false,
-                                    "value": "Content-Type"
-                                },
-                                "headerValProp": {
-                                    "expression": false,
-                                    "value": "application/json"
-                                }
-                            }
-                        ]
-                    },
-                    "httpEntity": {
-                        "value": {
-                            "binaryFile": {
-                                "expression": false,
-                                "value": null
-                            },
-                            "entityType": {
-                                "value": "raw"
-                            },
-                            "multipartForm": {
-                                "value": [
-                                    {
-                                        "partContentType": {
-                                            "expression": false,
-                                            "value": null
-                                        },
-                                        "partKey": {
-                                            "expression": false,
-                                            "value": null
-                                        },
-                                        "partType": {
-                                            "value": "Text"
-                                        },
-                                        "partValue": {
-                                            "expression": false,
-                                            "value": null
-                                        }
-                                    }
-                                ]
-                            },
-                            "multipartSubtype": {
-                                "expression": false,
-                                "value": "form-data"
-                            },
-                            "rawEntity": {
-                                "expression": true,
-                                "value": "$function.json_arguments.hasPath(\"body\")?$function.json_arguments.body:null"
-                            },
-                            "urlEncodedForm": {
-                                "value": []
-                            }
-                        }
-                    },
-                    "httpMethod": {
-                        "expression": true,
-                        "value": "$sl_tool_metadata.method"
-                    },
-                    "pagination": {
-                        "value": {
-                            "hasNext": {
-                                "expression": true,
-                                "value": null
-                            },
-                            "maxPage": {
-                                "expression": false,
-                                "value": null
-                            },
-                            "nextUrl": {
-                                "expression": true,
-                                "value": null
-                            },
-                            "overrideHeaders": {
-                                "value": [
-                                    {
-                                        "overrideHeaderName": {
-                                            "expression": false,
-                                            "value": null
-                                        },
-                                        "overrideHeaderValue": {
-                                            "expression": true,
-                                            "value": null
-                                        }
-                                    }
-                                ]
-                            },
-                            "overrideParams": {
-                                "value": [
-                                    {
-                                        "overrideParamName": {
-                                            "expression": false,
-                                            "value": null
-                                        },
-                                        "overrideParamValue": {
-                                            "expression": true,
-                                            "value": null
-                                        }
-                                    }
-                                ]
-                            },
-                            "overrideURI": {
-                                "value": false
-                            },
-                            "paginationInterval": {
-                                "value": 0
-                            },
-                            "reuseParamsForPagination": {
-                                "value": false
-                            }
-                        }
-                    },
-                    "params": {
-                        "value": []
-                    },
-                    "pipeline": {
-                        "expression": false
-                    },
-                    "poolSize": {
-                        "expression": false,
-                        "value": 1
-                    },
-                    "preventURLEncoding": {
-                        "value": false
-                    },
-                    "queryParam": {
-                        "value": []
-                    },
-                    "retryInterval": {
-                        "expression": false,
-                        "value": null
-                    },
-                    "retryLimit": {
-                        "expression": false,
-                        "value": null
-                    },
-                    "reuse": {
-                        "value": false
-                    },
-                    "snaplex": {
-                        "expression": false
-                    },
-                    "snaplexGovernor": {
-                        "value": "SNAPLEX_WITH_PATH"
-                    },
-                    "timeout": {
-                        "expression": false,
-                        "value": null
-                    },
-                    "uri": {
-                        "expression": true,
-                        "value": "$sl_tool_metadata.resolved_url"
                     }
                 },
                 "view_serial": 100
@@ -3332,7 +2605,7 @@
                             },
                             "rawEntity": {
                                 "expression": true,
-                                "value": "$function.hasPath(\"json_arguments\")?$function.json_arguments:null"
+                                "value": "$function.json_arguments.hasPath(\"body\")?$function.json_arguments.body:null"
                             },
                             "urlEncodedForm": {
                                 "value": []
@@ -3340,8 +2613,8 @@
                         }
                     },
                     "httpMethod": {
-                        "expression": false,
-                        "value": "POST"
+                        "expression": true,
+                        "value": "$sl_tool_metadata.method"
                     },
                     "pagination": {
                         "value": {
@@ -3435,7 +2708,7 @@
                     },
                     "uri": {
                         "expression": true,
-                        "value": "\"https://prodeu-connectfasterinc-cloud-fm.emea.snaplogic.io/api/1/rest/feed-master/queue/ConnectFasterInc/snapLogic4snapLogic/ToolsAsApi/\"+($.hasPath(\"toolUse\")? $toolUse.name:($.hasPath(\"functionCall\")? $functionCall.name:$function.name))"
+                        "value": "$sl_tool_metadata.resolved_url"
                     }
                 },
                 "view_serial": 100
@@ -3445,6 +2718,648 @@
             "class_id": "com-snaplogic-snaps-apisuite-httpclient",
             "class_version": 1,
             "instance_id": "11111111-1111-1111-1111-00000000000f",
+            "property_map": {
+                "account": {
+                    "account_ref": {
+                        "value": {
+                            "label": {
+                                "expression": false,
+                                "label": "../shared/ToolsAsApi",
+                                "value": "ToolsAsApi"
+                            },
+                            "ref_class_id": {
+                                "value": "com-snaplogic-snaps-apisuite-accounts-headerauthaccount"
+                            },
+                            "ref_id": {
+                                "expression": false,
+                                "value": null
+                            }
+                        }
+                    }
+                },
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "HTTP Client"
+                    },
+                    "notes": {}
+                },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "output": {
+                    "outputResponse": {
+                        "label": {
+                            "value": "Response"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "settings": {
+                    "batchSize": {
+                        "expression": false,
+                        "value": 1
+                    },
+                    "clientProperties": {
+                        "value": {
+                            "connection": {
+                                "value": {
+                                    "connTimeout": {
+                                        "value": 30
+                                    },
+                                    "cookiePolicy": {
+                                        "value": "RFC Lax"
+                                    },
+                                    "diskStagingProp": {
+                                        "value": false
+                                    },
+                                    "readTimeout": {
+                                        "value": 900
+                                    },
+                                    "trustAllCerts": {
+                                        "value": false
+                                    }
+                                }
+                            },
+                            "outputProps": {
+                                "value": {
+                                    "errorRespToErrorview": {
+                                        "value": true
+                                    },
+                                    "extractEntity": {
+                                        "value": false
+                                    },
+                                    "extractEntityPath": {
+                                        "expression": true,
+                                        "value": "$.entity"
+                                    },
+                                    "includeCookies": {
+                                        "value": false
+                                    },
+                                    "responseType": {
+                                        "value": "JSON"
+                                    }
+                                }
+                            },
+                            "redirects": {
+                                "value": {
+                                    "allowCircularRedirect": {
+                                        "value": false
+                                    },
+                                    "allowRelativeRedirect": {
+                                        "value": true
+                                    },
+                                    "followOriginalMethod": {
+                                        "value": false
+                                    },
+                                    "followRedirection": {
+                                        "value": true
+                                    },
+                                    "maxRedirect": {
+                                        "expression": false,
+                                        "value": 10
+                                    }
+                                }
+                            },
+                            "retry": {
+                                "value": {
+                                    "autoRetry429": {
+                                        "value": true
+                                    },
+                                    "maxRetry": {
+                                        "value": 5
+                                    },
+                                    "retryCondition": {
+                                        "value": "Connection Errors"
+                                    },
+                                    "retryInterval": {
+                                        "value": 3
+                                    },
+                                    "useRetryAfterHeader": {
+                                        "value": true
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "enableDebug": {
+                        "value": true
+                    },
+                    "execLabel": {
+                        "expression": true,
+                        "value": null
+                    },
+                    "execution_mode": {
+                        "value": "Validate & Execute"
+                    },
+                    "formEncodeSpace": {
+                        "value": false
+                    },
+                    "header": {
+                        "value": [
+                            {
+                                "headerNameProp": {
+                                    "expression": false,
+                                    "value": "Content-Type"
+                                },
+                                "headerValProp": {
+                                    "expression": false,
+                                    "value": "application/json"
+                                }
+                            }
+                        ]
+                    },
+                    "httpEntity": {
+                        "value": {
+                            "binaryFile": {
+                                "expression": false,
+                                "value": null
+                            },
+                            "entityType": {
+                                "value": "raw"
+                            },
+                            "multipartForm": {
+                                "value": [
+                                    {
+                                        "partContentType": {
+                                            "expression": false,
+                                            "value": null
+                                        },
+                                        "partKey": {
+                                            "expression": false,
+                                            "value": null
+                                        },
+                                        "partType": {
+                                            "value": "Text"
+                                        },
+                                        "partValue": {
+                                            "expression": false,
+                                            "value": null
+                                        }
+                                    }
+                                ]
+                            },
+                            "multipartSubtype": {
+                                "expression": false,
+                                "value": "form-data"
+                            },
+                            "rawEntity": {
+                                "expression": true,
+                                "value": "$function.json_arguments.hasPath(\"body\")?$function.json_arguments.body:null"
+                            },
+                            "urlEncodedForm": {
+                                "value": []
+                            }
+                        }
+                    },
+                    "httpMethod": {
+                        "expression": true,
+                        "value": "$sl_tool_metadata.method"
+                    },
+                    "pagination": {
+                        "value": {
+                            "hasNext": {
+                                "expression": true,
+                                "value": null
+                            },
+                            "maxPage": {
+                                "expression": false,
+                                "value": null
+                            },
+                            "nextUrl": {
+                                "expression": true,
+                                "value": null
+                            },
+                            "overrideHeaders": {
+                                "value": [
+                                    {
+                                        "overrideHeaderName": {
+                                            "expression": false,
+                                            "value": null
+                                        },
+                                        "overrideHeaderValue": {
+                                            "expression": true,
+                                            "value": null
+                                        }
+                                    }
+                                ]
+                            },
+                            "overrideParams": {
+                                "value": [
+                                    {
+                                        "overrideParamName": {
+                                            "expression": false,
+                                            "value": null
+                                        },
+                                        "overrideParamValue": {
+                                            "expression": true,
+                                            "value": null
+                                        }
+                                    }
+                                ]
+                            },
+                            "overrideURI": {
+                                "value": false
+                            },
+                            "paginationInterval": {
+                                "value": 0
+                            },
+                            "reuseParamsForPagination": {
+                                "value": false
+                            }
+                        }
+                    },
+                    "params": {
+                        "value": []
+                    },
+                    "pipeline": {
+                        "expression": false
+                    },
+                    "poolSize": {
+                        "expression": false,
+                        "value": 1
+                    },
+                    "preventURLEncoding": {
+                        "value": false
+                    },
+                    "queryParam": {
+                        "value": []
+                    },
+                    "retryInterval": {
+                        "expression": false,
+                        "value": null
+                    },
+                    "retryLimit": {
+                        "expression": false,
+                        "value": null
+                    },
+                    "reuse": {
+                        "value": false
+                    },
+                    "snaplex": {
+                        "expression": false
+                    },
+                    "snaplexGovernor": {
+                        "value": "SNAPLEX_WITH_PATH"
+                    },
+                    "timeout": {
+                        "expression": false,
+                        "value": null
+                    },
+                    "uri": {
+                        "expression": true,
+                        "value": "$sl_tool_metadata.resolved_url"
+                    }
+                },
+                "view_serial": 100
+            }
+        },
+        "11111111-1111-1111-1111-000000000010": {
+            "class_id": "com-snaplogic-snaps-apisuite-httpclient",
+            "class_version": 1,
+            "instance_id": "11111111-1111-1111-1111-000000000010",
+            "property_map": {
+                "account": {
+                    "account_ref": {
+                        "value": {
+                            "label": {
+                                "expression": false,
+                                "label": "../shared/ToolsAsApi",
+                                "value": "ToolsAsApi"
+                            },
+                            "ref_class_id": {
+                                "value": "com-snaplogic-snaps-apisuite-accounts-headerauthaccount"
+                            },
+                            "ref_id": {
+                                "expression": false,
+                                "value": null
+                            }
+                        }
+                    }
+                },
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "HTTP Client"
+                    },
+                    "notes": {}
+                },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "output": {
+                    "outputResponse": {
+                        "label": {
+                            "value": "Response"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "settings": {
+                    "batchSize": {
+                        "expression": false,
+                        "value": 1
+                    },
+                    "clientProperties": {
+                        "value": {
+                            "connection": {
+                                "value": {
+                                    "connTimeout": {
+                                        "value": 30
+                                    },
+                                    "cookiePolicy": {
+                                        "value": "RFC Lax"
+                                    },
+                                    "diskStagingProp": {
+                                        "value": false
+                                    },
+                                    "readTimeout": {
+                                        "value": 900
+                                    },
+                                    "trustAllCerts": {
+                                        "value": false
+                                    }
+                                }
+                            },
+                            "outputProps": {
+                                "value": {
+                                    "errorRespToErrorview": {
+                                        "value": true
+                                    },
+                                    "extractEntity": {
+                                        "value": false
+                                    },
+                                    "extractEntityPath": {
+                                        "expression": true,
+                                        "value": "$.entity"
+                                    },
+                                    "includeCookies": {
+                                        "value": false
+                                    },
+                                    "responseType": {
+                                        "value": "JSON"
+                                    }
+                                }
+                            },
+                            "redirects": {
+                                "value": {
+                                    "allowCircularRedirect": {
+                                        "value": false
+                                    },
+                                    "allowRelativeRedirect": {
+                                        "value": true
+                                    },
+                                    "followOriginalMethod": {
+                                        "value": false
+                                    },
+                                    "followRedirection": {
+                                        "value": true
+                                    },
+                                    "maxRedirect": {
+                                        "expression": false,
+                                        "value": 10
+                                    }
+                                }
+                            },
+                            "retry": {
+                                "value": {
+                                    "autoRetry429": {
+                                        "value": true
+                                    },
+                                    "maxRetry": {
+                                        "value": 5
+                                    },
+                                    "retryCondition": {
+                                        "value": "Connection Errors"
+                                    },
+                                    "retryInterval": {
+                                        "value": 3
+                                    },
+                                    "useRetryAfterHeader": {
+                                        "value": true
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "enableDebug": {
+                        "value": true
+                    },
+                    "execLabel": {
+                        "expression": true,
+                        "value": null
+                    },
+                    "execution_mode": {
+                        "value": "Validate & Execute"
+                    },
+                    "formEncodeSpace": {
+                        "value": false
+                    },
+                    "header": {
+                        "value": [
+                            {
+                                "headerNameProp": {
+                                    "expression": false,
+                                    "value": "Content-Type"
+                                },
+                                "headerValProp": {
+                                    "expression": false,
+                                    "value": "application/json"
+                                }
+                            }
+                        ]
+                    },
+                    "httpEntity": {
+                        "value": {
+                            "binaryFile": {
+                                "expression": false,
+                                "value": null
+                            },
+                            "entityType": {
+                                "value": "raw"
+                            },
+                            "multipartForm": {
+                                "value": [
+                                    {
+                                        "partContentType": {
+                                            "expression": false,
+                                            "value": null
+                                        },
+                                        "partKey": {
+                                            "expression": false,
+                                            "value": null
+                                        },
+                                        "partType": {
+                                            "value": "Text"
+                                        },
+                                        "partValue": {
+                                            "expression": false,
+                                            "value": null
+                                        }
+                                    }
+                                ]
+                            },
+                            "multipartSubtype": {
+                                "expression": false,
+                                "value": "form-data"
+                            },
+                            "rawEntity": {
+                                "expression": true,
+                                "value": "$function.json_arguments.hasPath(\"body\")?$function.json_arguments.body:null"
+                            },
+                            "urlEncodedForm": {
+                                "value": []
+                            }
+                        }
+                    },
+                    "httpMethod": {
+                        "expression": true,
+                        "value": "$sl_tool_metadata.method"
+                    },
+                    "pagination": {
+                        "value": {
+                            "hasNext": {
+                                "expression": true,
+                                "value": null
+                            },
+                            "maxPage": {
+                                "expression": false,
+                                "value": null
+                            },
+                            "nextUrl": {
+                                "expression": true,
+                                "value": null
+                            },
+                            "overrideHeaders": {
+                                "value": [
+                                    {
+                                        "overrideHeaderName": {
+                                            "expression": false,
+                                            "value": null
+                                        },
+                                        "overrideHeaderValue": {
+                                            "expression": true,
+                                            "value": null
+                                        }
+                                    }
+                                ]
+                            },
+                            "overrideParams": {
+                                "value": [
+                                    {
+                                        "overrideParamName": {
+                                            "expression": false,
+                                            "value": null
+                                        },
+                                        "overrideParamValue": {
+                                            "expression": true,
+                                            "value": null
+                                        }
+                                    }
+                                ]
+                            },
+                            "overrideURI": {
+                                "value": false
+                            },
+                            "paginationInterval": {
+                                "value": 0
+                            },
+                            "reuseParamsForPagination": {
+                                "value": false
+                            }
+                        }
+                    },
+                    "params": {
+                        "value": []
+                    },
+                    "pipeline": {
+                        "expression": false
+                    },
+                    "poolSize": {
+                        "expression": false,
+                        "value": 1
+                    },
+                    "preventURLEncoding": {
+                        "value": false
+                    },
+                    "queryParam": {
+                        "value": []
+                    },
+                    "retryInterval": {
+                        "expression": false,
+                        "value": null
+                    },
+                    "retryLimit": {
+                        "expression": false,
+                        "value": null
+                    },
+                    "reuse": {
+                        "value": false
+                    },
+                    "snaplex": {
+                        "expression": false
+                    },
+                    "snaplexGovernor": {
+                        "value": "SNAPLEX_WITH_PATH"
+                    },
+                    "timeout": {
+                        "expression": false,
+                        "value": null
+                    },
+                    "uri": {
+                        "expression": true,
+                        "value": "$sl_tool_metadata.resolved_url"
+                    }
+                },
+                "view_serial": 100
+            }
+        },
+        "11111111-1111-1111-1111-000000000011": {
+            "class_id": "com-snaplogic-snaps-apisuite-httpclient",
+            "class_version": 1,
+            "instance_id": "11111111-1111-1111-1111-000000000011",
             "property_map": {
                 "account": {
                     "account_ref": {
@@ -3762,10 +3677,331 @@
                 "view_serial": 100
             }
         },
-        "11111111-1111-1111-1111-000000000010": {
+        "11111111-1111-1111-1111-000000000012": {
+            "class_id": "com-snaplogic-snaps-apisuite-httpclient",
+            "class_version": 1,
+            "instance_id": "11111111-1111-1111-1111-000000000012",
+            "property_map": {
+                "account": {
+                    "account_ref": {
+                        "value": {
+                            "label": {
+                                "expression": false,
+                                "label": "../shared/ToolsAsApi",
+                                "value": "ToolsAsApi"
+                            },
+                            "ref_class_id": {
+                                "value": "com-snaplogic-snaps-apisuite-accounts-headerauthaccount"
+                            },
+                            "ref_id": {
+                                "expression": false,
+                                "value": null
+                            }
+                        }
+                    }
+                },
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "HTTP Client"
+                    },
+                    "notes": {}
+                },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "output": {
+                    "outputResponse": {
+                        "label": {
+                            "value": "Response"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "settings": {
+                    "batchSize": {
+                        "expression": false,
+                        "value": 1
+                    },
+                    "clientProperties": {
+                        "value": {
+                            "connection": {
+                                "value": {
+                                    "connTimeout": {
+                                        "value": 30
+                                    },
+                                    "cookiePolicy": {
+                                        "value": "RFC Lax"
+                                    },
+                                    "diskStagingProp": {
+                                        "value": false
+                                    },
+                                    "readTimeout": {
+                                        "value": 900
+                                    },
+                                    "trustAllCerts": {
+                                        "value": false
+                                    }
+                                }
+                            },
+                            "outputProps": {
+                                "value": {
+                                    "errorRespToErrorview": {
+                                        "value": true
+                                    },
+                                    "extractEntity": {
+                                        "value": false
+                                    },
+                                    "extractEntityPath": {
+                                        "expression": true,
+                                        "value": "$.entity"
+                                    },
+                                    "includeCookies": {
+                                        "value": false
+                                    },
+                                    "responseType": {
+                                        "value": "JSON"
+                                    }
+                                }
+                            },
+                            "redirects": {
+                                "value": {
+                                    "allowCircularRedirect": {
+                                        "value": false
+                                    },
+                                    "allowRelativeRedirect": {
+                                        "value": true
+                                    },
+                                    "followOriginalMethod": {
+                                        "value": false
+                                    },
+                                    "followRedirection": {
+                                        "value": true
+                                    },
+                                    "maxRedirect": {
+                                        "expression": false,
+                                        "value": 10
+                                    }
+                                }
+                            },
+                            "retry": {
+                                "value": {
+                                    "autoRetry429": {
+                                        "value": true
+                                    },
+                                    "maxRetry": {
+                                        "value": 5
+                                    },
+                                    "retryCondition": {
+                                        "value": "Connection Errors"
+                                    },
+                                    "retryInterval": {
+                                        "value": 3
+                                    },
+                                    "useRetryAfterHeader": {
+                                        "value": true
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "enableDebug": {
+                        "value": true
+                    },
+                    "execLabel": {
+                        "expression": true,
+                        "value": null
+                    },
+                    "execution_mode": {
+                        "value": "Validate & Execute"
+                    },
+                    "formEncodeSpace": {
+                        "value": false
+                    },
+                    "header": {
+                        "value": [
+                            {
+                                "headerNameProp": {
+                                    "expression": false,
+                                    "value": "Content-Type"
+                                },
+                                "headerValProp": {
+                                    "expression": false,
+                                    "value": "application/json"
+                                }
+                            }
+                        ]
+                    },
+                    "httpEntity": {
+                        "value": {
+                            "binaryFile": {
+                                "expression": false,
+                                "value": null
+                            },
+                            "entityType": {
+                                "value": "raw"
+                            },
+                            "multipartForm": {
+                                "value": [
+                                    {
+                                        "partContentType": {
+                                            "expression": false,
+                                            "value": null
+                                        },
+                                        "partKey": {
+                                            "expression": false,
+                                            "value": null
+                                        },
+                                        "partType": {
+                                            "value": "Text"
+                                        },
+                                        "partValue": {
+                                            "expression": false,
+                                            "value": null
+                                        }
+                                    }
+                                ]
+                            },
+                            "multipartSubtype": {
+                                "expression": false,
+                                "value": "form-data"
+                            },
+                            "rawEntity": {
+                                "expression": true,
+                                "value": "$function.hasPath(\"json_arguments\")?$function.json_arguments:null"
+                            },
+                            "urlEncodedForm": {
+                                "value": []
+                            }
+                        }
+                    },
+                    "httpMethod": {
+                        "expression": false,
+                        "value": "POST"
+                    },
+                    "pagination": {
+                        "value": {
+                            "hasNext": {
+                                "expression": true,
+                                "value": null
+                            },
+                            "maxPage": {
+                                "expression": false,
+                                "value": null
+                            },
+                            "nextUrl": {
+                                "expression": true,
+                                "value": null
+                            },
+                            "overrideHeaders": {
+                                "value": [
+                                    {
+                                        "overrideHeaderName": {
+                                            "expression": false,
+                                            "value": null
+                                        },
+                                        "overrideHeaderValue": {
+                                            "expression": true,
+                                            "value": null
+                                        }
+                                    }
+                                ]
+                            },
+                            "overrideParams": {
+                                "value": [
+                                    {
+                                        "overrideParamName": {
+                                            "expression": false,
+                                            "value": null
+                                        },
+                                        "overrideParamValue": {
+                                            "expression": true,
+                                            "value": null
+                                        }
+                                    }
+                                ]
+                            },
+                            "overrideURI": {
+                                "value": false
+                            },
+                            "paginationInterval": {
+                                "value": 0
+                            },
+                            "reuseParamsForPagination": {
+                                "value": false
+                            }
+                        }
+                    },
+                    "params": {
+                        "value": []
+                    },
+                    "pipeline": {
+                        "expression": false
+                    },
+                    "poolSize": {
+                        "expression": false,
+                        "value": 1
+                    },
+                    "preventURLEncoding": {
+                        "value": false
+                    },
+                    "queryParam": {
+                        "value": []
+                    },
+                    "retryInterval": {
+                        "expression": false,
+                        "value": null
+                    },
+                    "retryLimit": {
+                        "expression": false,
+                        "value": null
+                    },
+                    "reuse": {
+                        "value": false
+                    },
+                    "snaplex": {
+                        "expression": false
+                    },
+                    "snaplexGovernor": {
+                        "value": "SNAPLEX_WITH_PATH"
+                    },
+                    "timeout": {
+                        "expression": false,
+                        "value": null
+                    },
+                    "uri": {
+                        "expression": true,
+                        "value": "\"https://prodeu-connectfasterinc-cloud-fm.emea.snaplogic.io/api/1/rest/feed-master/queue/ConnectFasterInc/snapLogic4snapLogic/ToolsAsApi/\"+($.hasPath(\"toolUse\")? $toolUse.name:($.hasPath(\"functionCall\")? $functionCall.name:$function.name))"
+                    }
+                },
+                "view_serial": 100
+            }
+        },
+        "11111111-1111-1111-1111-000000000013": {
             "class_id": "com-snaplogic-snaps-awsbedrock-awsconversefunctionresultgenerator",
             "class_version": 1,
-            "instance_id": "11111111-1111-1111-1111-000000000010",
+            "instance_id": "11111111-1111-1111-1111-000000000013",
             "property_map": {
                 "error": {
                     "error0": {
@@ -3832,10 +4068,10 @@
                 "view_serial": 100
             }
         },
-        "11111111-1111-1111-1111-000000000011": {
+        "11111111-1111-1111-1111-000000000014": {
             "class_id": "com-snaplogic-snaps-flow-union",
             "class_version": 2,
-            "instance_id": "11111111-1111-1111-1111-000000000011",
+            "instance_id": "11111111-1111-1111-1111-000000000014",
             "property_map": {
                 "error": {
                     "error0": {
@@ -3932,10 +4168,10 @@
                 "view_serial": 105
             }
         },
-        "11111111-1111-1111-1111-000000000012": {
+        "11111111-1111-1111-1111-000000000015": {
             "class_id": "com-snaplogic-snaps-azureopenai-azureopenaifunctionresultgenerator",
             "class_version": 1,
-            "instance_id": "11111111-1111-1111-1111-000000000012",
+            "instance_id": "11111111-1111-1111-1111-000000000015",
             "property_map": {
                 "error": {
                     "error0": {
@@ -4002,10 +4238,10 @@
                 "view_serial": 100
             }
         },
-        "11111111-1111-1111-1111-000000000013": {
+        "11111111-1111-1111-1111-000000000016": {
             "class_id": "com-snaplogic-snaps-flow-union",
             "class_version": 2,
-            "instance_id": "11111111-1111-1111-1111-000000000013",
+            "instance_id": "11111111-1111-1111-1111-000000000016",
             "property_map": {
                 "error": {
                     "error0": {
@@ -4061,10 +4297,10 @@
                 "view_serial": 100
             }
         },
-        "11111111-1111-1111-1111-000000000014": {
+        "11111111-1111-1111-1111-000000000017": {
             "class_id": "com-snaplogic-snaps-llmutils-messageappender",
             "class_version": 1,
-            "instance_id": "11111111-1111-1111-1111-000000000014",
+            "instance_id": "11111111-1111-1111-1111-000000000017",
             "property_map": {
                 "error": {
                     "error0": {

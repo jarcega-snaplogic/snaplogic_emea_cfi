@@ -354,7 +354,7 @@
                 },
                 "info": {
                     "label": {
-                        "value": "Record Replay"
+                        "value": "Test Data Recorder"
                     },
                     "notes": {}
                 },
@@ -416,7 +416,7 @@
                 },
                 "info": {
                     "label": {
-                        "value": "JSON Generator"
+                        "value": "Sample Question Generator"
                     },
                     "notes": {}
                 },
@@ -471,7 +471,7 @@
                 },
                 "info": {
                     "label": {
-                        "value": "Retriever Curated RFI Index"
+                        "value": "Curated RFI Search Tool"
                     },
                     "notes": {}
                 },
@@ -610,7 +610,7 @@
                 },
                 "info": {
                     "label": {
-                        "value": "System prompt"
+                        "value": "Agent System Prompt"
                     }
                 },
                 "input": {
@@ -682,7 +682,7 @@
                 },
                 "info": {
                     "label": {
-                        "value": "User prompt"
+                        "value": "Question Formatter"
                     },
                     "notes": {}
                 },
@@ -755,7 +755,7 @@
                 },
                 "info": {
                     "label": {
-                        "value": "APIM Function Generator"
+                        "value": "Multi-Retriever API Gen"
                     },
                     "notes": {}
                 },
@@ -907,7 +907,7 @@
                 },
                 "info": {
                     "label": {
-                        "value": "Retriever Analyst RFIs"
+                        "value": "Analyst RFI Search"
                     },
                     "notes": {}
                 },
@@ -1046,7 +1046,7 @@
                 },
                 "info": {
                     "label": {
-                        "value": "Comment"
+                        "value": "Score Logger"
                     },
                     "notes": {}
                 },
@@ -1185,7 +1185,7 @@
                 },
                 "info": {
                     "label": {
-                        "value": "Structure"
+                        "value": "Data Restructurer"
                     },
                     "notes": {}
                 },
@@ -1272,7 +1272,7 @@
                 },
                 "info": {
                     "label": {
-                        "value": "PipeLoop"
+                        "value": "Agent Worker Loop"
                     },
                     "notes": {}
                 },
@@ -1431,7 +1431,7 @@
                 },
                 "info": {
                     "label": {
-                        "value": "Mapper"
+                        "value": "Session Data Mapper"
                     },
                     "notes": {}
                 },
@@ -1527,7 +1527,7 @@
                 },
                 "info": {
                     "label": {
-                        "value": "Payload prep"
+                        "value": "Response Extractor"
                     },
                     "notes": {}
                 },
@@ -1623,7 +1623,7 @@
                 },
                 "info": {
                     "label": {
-                        "value": "MongoDB - Insert"
+                        "value": "Conversation Logger"
                     },
                     "notes": {}
                 },
