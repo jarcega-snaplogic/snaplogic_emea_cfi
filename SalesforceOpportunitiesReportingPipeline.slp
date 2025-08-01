@@ -298,7 +298,7 @@
                     },
                     "soqlQuery": {
                         "expression": true,
-                        "value": "SELECT Id, Name, AccountId, Account.Name, OwnerId, Owner.Name, StageName, Amount, CloseDate, CreatedDate, LastModifiedDate, Region__c, Type, LeadSource, Probability, ForecastCategoryName, Description, NextStep, CampaignId, Campaign.Name FROM Opportunity WHERE StageName = 'Closed Won' AND CloseDate >= LAST_N_DAYS:" + $days_back + " AND Region__c LIKE 'EMEA_%' ORDER BY CloseDate DESC"
+                        "value": "\"SELECT Id, Name, AccountId, Account.Name, OwnerId, Owner.Name, StageName, Amount, CloseDate, CreatedDate, LastModifiedDate, Region__c, Type, LeadSource, Probability, ForecastCategoryName, Description, NextStep, CampaignId, Campaign.Name FROM Opportunity WHERE StageName = 'Closed Won' AND CloseDate >= LAST_N_DAYS:\" + $days_back + \" AND Region__c LIKE 'EMEA_%' ORDER BY CloseDate DESC\""
                     }
                 },
                 "view_serial": 100
@@ -809,7 +809,7 @@
                     },
                     "filename": {
                         "expression": true,
-                        "value": "/tmp/emea_opportunities_dashboard_" + Date.now().toISOString().substring(0,10).replace(/-/g,'') + ".html"
+                        "value": "\"/tmp/emea_opportunities_dashboard_\" + Date.now().toLocaleDateString().replace(/\\//g,'') + \".html\""
                     },
                     "flushIntervalKb": {
                         "value": -1
