@@ -1,0 +1,386 @@
+{
+  "class_id": "com-snaplogic-pipeline",
+  "class_version": 9,
+  "link_map": {
+    "link100": {
+      "dst_id": "csv-formatter-snap-id",
+      "dst_view_id": "input0",
+      "src_id": "csv-generator-snap-id",
+      "src_view_id": "output0"
+    },
+    "link200": {
+      "dst_id": "file-writer-snap-id",
+      "dst_view_id": "input0",
+      "src_id": "csv-formatter-snap-id",
+      "src_view_id": "output0"
+    }
+  },
+  "property_map": {
+    "error": {
+      "error_behavior": {
+        "value": "none"
+      }
+    },
+    "info": {
+      "author": {
+        "value": "claude-mcp-generated"
+      },
+      "label": {},
+      "notes": {
+        "value": "CSV data generation pipeline: generates sample data, formats as CSV, and writes to file - Created using MCP SnapLogic Schema Tool"
+      },
+      "pipeline_doc_uri": {
+        "value": null
+      },
+      "purpose": {
+        "value": "Generate and export sample CSV dataset using schema-validated snaps"
+      }
+    },
+    "input": {},
+    "output": {},
+    "settings": {
+      "cache_pipelines": {
+        "value": []
+      },
+      "error_param_table": {
+        "value": []
+      },
+      "error_pipeline": {
+        "expression": false,
+        "value": null
+      },
+      "imports": {
+        "value": []
+      },
+      "param_table": {
+        "value": [
+          {
+            "capture": {
+              "value": false
+            },
+            "data_type": {
+              "value": "string"
+            },
+            "description": {
+              "value": "Output file path for the generated CSV file"
+            },
+            "key": {
+              "value": "output_file_path"
+            },
+            "required": {
+              "value": false
+            },
+            "value": {
+              "value": "/tmp/sample_data.csv"
+            }
+          }
+        ]
+      },
+      "suspendable": {
+        "value": false
+      },
+      "test_pipeline": {
+        "value": false
+      }
+    }
+  },
+  "render_map": {
+    "default_snaplex": null,
+    "detail_map": {
+      "csv-generator-snap-id": {
+        "error": {},
+        "grid_x_int": 2,
+        "grid_y_int": 4,
+        "index": null,
+        "input": {},
+        "output": {},
+        "recommendation_id": null,
+        "rot_int": 0,
+        "rot_tail_int": 0,
+        "source": "snap category"
+      },
+      "csv-formatter-snap-id": {
+        "error": {},
+        "grid_x_int": 4,
+        "grid_y_int": 4,
+        "index": null,
+        "input": {},
+        "output": {},
+        "recommendation_id": null,
+        "rot_int": 0,
+        "rot_tail_int": 0,
+        "source": "snap category"
+      },
+      "file-writer-snap-id": {
+        "error": {},
+        "grid_x_int": 6,
+        "grid_y_int": 4,
+        "index": null,
+        "input": {},
+        "output": {},
+        "recommendation_id": null,
+        "rot_int": 0,
+        "rot_tail_int": 0,
+        "source": "snap category"
+      }
+    },
+    "pan_x_num": 0,
+    "pan_y_num": 0,
+    "scale_ratio": 1
+  },
+  "snap_map": {
+    "csv-generator-snap-id": {
+      "class_id": "com-snaplogic-snaps-transform-csvgenerator",
+      "class_version": 1,
+      "instance_id": "csv-generator-snap-id",
+      "property_map": {
+        "view_serial": 100,
+        "settings": {
+          "execution_mode": {
+            "value": "Validate & Execute"
+          },
+          "editable_content": {
+            "value": "Product ID,Product Name,Category,Price,Stock Quantity,Supplier,Date Added\\n1001,Wireless Headphones,Electronics,99.99,150,TechCorp,2024-01-15\\n1002,Coffee Maker,Appliances,79.99,75,HomeGoods Inc,2024-01-18\\n1003,Running Shoes,Sports,129.99,200,SportMax,2024-01-20\\n1004,Desk Lamp,Furniture,45.99,120,LightCorp,2024-01-22\\n1005,Smartphone Case,Electronics,19.99,300,AccessoryPro,2024-01-25\\n1006,Yoga Mat,Sports,29.99,180,FitnessPro,2024-01-28\\n1007,Blender,Appliances,149.99,60,KitchenMaster,2024-02-01\\n1008,Office Chair,Furniture,299.99,45,OfficeMax,2024-02-05\\n1009,Bluetooth Speaker,Electronics,59.99,220,AudioTech,2024-02-08\\n1010,Water Bottle,Sports,24.99,350,HydroFlow,2024-02-12"
+          }
+        },
+        "output": {
+          "output0": {
+            "view_type": {
+              "value": "document"
+            },
+            "label": {
+              "value": "output0"
+            }
+          }
+        },
+        "error": {
+          "error0": {
+            "view_type": {
+              "value": "document"
+            },
+            "label": {
+              "value": "error0"
+            }
+          },
+          "error_behavior": {
+            "value": "fail"
+          }
+        },
+        "info": {
+          "label": {
+            "value": "CSV Generator - Product Catalog"
+          },
+          "notes": {
+            "value": "Generates sample product catalog data with 10 records"
+          }
+        }
+      }
+    },
+    "csv-formatter-snap-id": {
+      "class_id": "com-snaplogic-snaps-transform-csvformatter",
+      "class_version": 3,
+      "instance_id": "csv-formatter-snap-id",
+      "property_map": {
+        "view_serial": 100,
+        "settings": {
+          "execution_mode": {
+            "value": "Validate & Execute"
+          },
+          "outputHeader": {
+            "value": [
+              {
+                "expression": {
+                  "value": "\"text/csv; charset=UTF-8\"",
+                  "expression": true
+                },
+                "targetPath": {
+                  "value": "$['content-type']"
+                }
+              }
+            ]
+          },
+          "quoteCharacter": {
+            "value": "\""
+          },
+          "quoteMode": {
+            "value": "MINIMAL"
+          },
+          "delimiter": {
+            "value": ",",
+            "expression": false
+          },
+          "useDefinedHeader": {
+            "value": false
+          },
+          "userDefinedHeader": {
+            "value": []
+          },
+          "writeHeader": {
+            "value": true
+          },
+          "errorPolicy": {
+            "value": "Default"
+          },
+          "ignoreEmptyStream": {
+            "value": false
+          },
+          "charset": {
+            "value": "UTF-8"
+          },
+          "writeBOM": {
+            "value": false
+          },
+          "newlineCharacter": {
+            "value": "LF"
+          },
+          "escapeChar": {
+            "value": "\\"
+          }
+        },
+        "input": {
+          "input0": {
+            "view_type": {
+              "value": "document"
+            },
+            "label": {
+              "value": "input0"
+            }
+          }
+        },
+        "output": {
+          "output0": {
+            "view_type": {
+              "value": "binary"
+            },
+            "label": {
+              "value": "output0"
+            }
+          }
+        },
+        "error": {
+          "error0": {
+            "view_type": {
+              "value": "document"
+            },
+            "label": {
+              "value": "error0"
+            }
+          },
+          "error_behavior": {
+            "value": "fail"
+          }
+        },
+        "info": {
+          "label": {
+            "value": "CSV Formatter"
+          },
+          "notes": {
+            "value": "Formats document data into CSV binary format with proper encoding"
+          }
+        }
+      }
+    },
+    "file-writer-snap-id": {
+      "class_id": "com-snaplogic-snaps-binary-write",
+      "class_version": 3,
+      "instance_id": "file-writer-snap-id",
+      "property_map": {
+        "view_serial": 100,
+        "settings": {
+          "execution_mode": {
+            "value": "Execute only"
+          },
+          "executable_during_suggest": {
+            "value": false
+          },
+          "filename": {
+            "value": "$output_file_path",
+            "expression": true
+          },
+          "preventURLEncoding": {
+            "value": false
+          },
+          "fileAction": {
+            "value": "OVERWRITE"
+          },
+          "writeEmptyFile": {
+            "value": false
+          },
+          "writeHeader": {
+            "value": false
+          },
+          "validate": {
+            "value": true
+          },
+          "retries": {
+            "value": 0
+          },
+          "retryInterval": {
+            "value": 1
+          },
+          "UserPermissionsKey": {
+            "value": []
+          },
+          "createDir": {
+            "value": true
+          },
+          "flushIntervalKb": {
+            "value": -1
+          },
+          "advancedProperties": {
+            "value": []
+          },
+          "cannedAcls": {
+            "value": "None"
+          }
+        },
+        "account": {
+          "account_ref": {
+            "value": {}
+          }
+        },
+        "input": {
+          "input0": {
+            "view_type": {
+              "value": "binary"
+            },
+            "label": {
+              "value": "input0"
+            }
+          }
+        },
+        "output": {
+          "output0": {
+            "view_type": {
+              "value": "document"
+            },
+            "label": {
+              "value": "output0"
+            }
+          }
+        },
+        "error": {
+          "error0": {
+            "view_type": {
+              "value": "document"
+            },
+            "label": {
+              "value": "error0"
+            }
+          },
+          "error_behavior": {
+            "value": "fail"
+          }
+        },
+        "info": {
+          "label": {
+            "value": "File Writer - CSV Export"
+          },
+          "notes": {
+            "value": "Writes formatted CSV binary data to specified file with validation"
+          }
+        }
+      }
+    }
+  }
+}
