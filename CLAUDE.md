@@ -320,6 +320,43 @@ When creating pipelines for optimal SnapLogic Designer canvas rendering and visu
 **Correct Approach**: Use actual newline characters for proper parsing and display
 **Impact**: Ensures content displays correctly in Designer canvas and validates without errors
 
+#### Expression Field Syntax Requirements
+**CRITICAL**: SnapLogic has strict requirements for expression field syntax that can prevent pipeline recognition:
+
+- **String Literals Must Be Quoted**: All string literals in expressions must be wrapped in double quotes
+- **String Concatenation**: Use proper SnapLogic concatenation with quoted string segments
+- **Date Functions**: Use SnapLogic-compatible date methods, not JavaScript equivalents
+
+**Examples of Correct Expression Syntax**:
+
+**SOQL Query with Dynamic Parameters**:
+```json
+"soqlQuery": {
+  "expression": true,
+  "value": "\"SELECT Id, Name FROM Opportunity WHERE CloseDate >= LAST_N_DAYS:\" + $days_back + \" AND Region__c LIKE 'EMEA_%'\""
+}
+```
+
+**Dynamic Filename Generation**:
+```json
+"filename": {
+  "expression": true,
+  "value": "\"/tmp/dashboard_\" + Date.now().toLocaleDateString().replace(/\\//g,'') + \".html\""
+}
+```
+
+**Common Errors That Break Pipeline Recognition**:
+- ❌ `"SELECT ... LAST_N_DAYS:" + $days_back + " AND ..."` (unquoted strings)
+- ❌ `Date.now().toISOString().substring(0,10)` (JavaScript methods)
+- ❌ Missing escape characters in regex patterns
+
+**Correct Approaches**:
+- ✅ `"\"SELECT ... LAST_N_DAYS:\" + $days_back + \" AND ...\""` (quoted string segments)
+- ✅ `Date.now().toLocaleDateString().replace(/\\//g,'')` (SnapLogic date methods)
+- ✅ Properly escaped backslashes in regex: `replace(/\\//g,'')`
+
+**Impact**: Incorrect expression syntax prevents SnapLogic from recognizing .slp files as valid pipelines, treating them as generic files instead. This issue was discovered when a pipeline with invalid expressions appeared as a file rather than a pipeline in SnapLogic Designer.
+
 #### Connection Optimization
 - **Short Paths**: Position snaps to minimize connection line length
 - **Avoid Crossovers**: Layout snaps to prevent connection lines from crossing
