@@ -1,0 +1,391 @@
+{
+    "class_id": "com-snaplogic-pipeline",
+    "class_version": 9,
+    "link_map": {
+        "link100": {
+            "dst_id": "11111111-1111-1111-1111-000000000001",
+            "dst_view_id": "input0",
+            "src_id": "11111111-1111-1111-1111-000000000000",
+            "src_view_id": "output0"
+        },
+        "link200": {
+            "dst_id": "11111111-1111-1111-1111-000000000002",
+            "dst_view_id": "input0",
+            "src_id": "11111111-1111-1111-1111-000000000001",
+            "src_view_id": "output0"
+        }
+    },
+    "property_map": {
+        "error": {
+            "error_behavior": {
+                "value": "none"
+            }
+        },
+        "info": {
+            "author": {
+                "value": "jarcega@snaplogic.com"
+            },
+            "label": {},
+            "notes": {
+                "value": "Sales opportunities data pipeline: generates sample sales opportunity data, formats as JSON, and writes to salesopps.json - Created using SnapLogic Designer guidelines"
+            },
+            "pipeline_doc_uri": {
+                "value": null
+            },
+            "purpose": {
+                "value": "Generate and export sales opportunities dataset using schema-validated snaps"
+            }
+        },
+        "input": {},
+        "output": {
+            "11111111-1111-1111-1111-000000000002_output0": {
+                "label": {
+                    "value": "File Writer - Sales Opportunities Export - output0"
+                },
+                "view_type": {
+                    "value": "document"
+                }
+            }
+        },
+        "settings": {
+            "cache_pipelines": {
+                "value": []
+            },
+            "error_param_table": {
+                "value": []
+            },
+            "error_pipeline": {
+                "expression": false,
+                "value": null
+            },
+            "imports": {
+                "value": []
+            },
+            "param_table": {
+                "value": [
+                    {
+                        "capture": {
+                            "value": false
+                        },
+                        "data_type": {
+                            "value": "string"
+                        },
+                        "description": {
+                            "value": "Output file path for the sales opportunities JSON file"
+                        },
+                        "key": {
+                            "value": "output_file_path"
+                        },
+                        "required": {
+                            "value": false
+                        },
+                        "value": {
+                            "value": "/tmp/salesopps.json"
+                        }
+                    }
+                ]
+            },
+            "suspendable": {
+                "value": false
+            },
+            "test_pipeline": {
+                "value": false
+            }
+        }
+    },
+    "render_map": {
+        "default_snaplex": null,
+        "detail_map": {
+            "11111111-1111-1111-1111-000000000000": {
+                "error": {},
+                "grid_x_int": 4,
+                "grid_y_int": 1,
+                "index": null,
+                "input": {},
+                "output": {},
+                "recommendation_id": null,
+                "rot_int": 0,
+                "rot_tail_int": 0,
+                "source": "snap category"
+            },
+            "11111111-1111-1111-1111-000000000001": {
+                "error": {},
+                "grid_x_int": 5,
+                "grid_y_int": 1,
+                "index": null,
+                "input": {},
+                "output": {},
+                "recommendation_id": null,
+                "rot_int": 0,
+                "rot_tail_int": 0,
+                "source": "snap category"
+            },
+            "11111111-1111-1111-1111-000000000002": {
+                "error": {},
+                "grid_x_int": 6,
+                "grid_y_int": 1,
+                "index": null,
+                "input": {},
+                "output": {},
+                "recommendation_id": null,
+                "rot_int": 0,
+                "rot_tail_int": 0,
+                "source": "snap category"
+            }
+        },
+        "pan_x_num": 0,
+        "pan_y_num": 0,
+        "scale_ratio": 1
+    },
+    "snap_map": {
+        "11111111-1111-1111-1111-000000000000": {
+            "class_id": "com-snaplogic-snaps-transform-jsongenerator",
+            "class_version": 2,
+            "instance_id": "11111111-1111-1111-1111-000000000000",
+            "property_map": {
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "JSON Generator - Sales Opportunities"
+                    },
+                    "notes": {
+                        "value": "Generates sample sales opportunity data with prospect information, deal values, and pipeline stages"
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "settings": {
+                    "editable_content": {
+                        "value": "[\\n  {\\n    \"opportunity_id\": \"OPP-2024-001\",\\n    \"account_name\": \"TechCorp Solutions\",\\n    \"contact_name\": \"Sarah Johnson\",\\n    \"contact_email\": \"sarah.johnson@techcorp.com\",\\n    \"opportunity_title\": \"Enterprise Software License Renewal\",\\n    \"deal_value\": 125000,\\n    \"currency\": \"USD\",\\n    \"stage\": \"Negotiation\",\\n    \"probability\": 75,\\n    \"expected_close_date\": \"2024-03-15\",\\n    \"created_date\": \"2024-01-10\",\\n    \"last_modified\": \"2024-02-28\",\\n    \"sales_rep\": \"Michael Chen\",\\n    \"region\": \"North America\",\\n    \"industry\": \"Technology\",\\n    \"source\": \"Referral\"\\n  },\\n  {\\n    \"opportunity_id\": \"OPP-2024-002\",\\n    \"account_name\": \"Global Manufacturing Inc\",\\n    \"contact_name\": \"Robert Martinez\",\\n    \"contact_email\": \"r.martinez@globalmfg.com\",\\n    \"opportunity_title\": \"Supply Chain Optimization Platform\",\\n    \"deal_value\": 450000,\\n    \"currency\": \"USD\",\\n    \"stage\": \"Proposal\",\\n    \"probability\": 60,\\n    \"expected_close_date\": \"2024-04-30\",\\n    \"created_date\": \"2024-01-15\",\\n    \"last_modified\": \"2024-02-25\",\\n    \"sales_rep\": \"Jennifer Lee\",\\n    \"region\": \"North America\",\\n    \"industry\": \"Manufacturing\",\\n    \"source\": \"Website\"\\n  },\\n  {\\n    \"opportunity_id\": \"OPP-2024-003\",\\n    \"account_name\": \"HealthFirst Medical\",\\n    \"contact_name\": \"Dr. Emily Davis\",\\n    \"contact_email\": \"e.davis@healthfirst.com\",\\n    \"opportunity_title\": \"Patient Management System Integration\",\\n    \"deal_value\": 275000,\\n    \"currency\": \"USD\",\\n    \"stage\": \"Discovery\",\\n    \"probability\": 40,\\n    \"expected_close_date\": \"2024-05-15\",\\n    \"created_date\": \"2024-02-01\",\\n    \"last_modified\": \"2024-02-29\",\\n    \"sales_rep\": \"David Wilson\",\\n    \"region\": \"North America\",\\n    \"industry\": \"Healthcare\",\\n    \"source\": \"Cold Outreach\"\\n  },\\n  {\\n    \"opportunity_id\": \"OPP-2024-004\",\\n    \"account_name\": \"European Retail Group\",\\n    \"contact_name\": \"Anna Schmidt\",\\n    \"contact_email\": \"a.schmidt@eurretail.eu\",\\n    \"opportunity_title\": \"Multi-Channel E-commerce Platform\",\\n    \"deal_value\": 320000,\\n    \"currency\": \"EUR\",\\n    \"stage\": \"Qualification\",\\n    \"probability\": 35,\\n    \"expected_close_date\": \"2024-06-30\",\\n    \"created_date\": \"2024-02-10\",\\n    \"last_modified\": \"2024-02-27\",\\n    \"sales_rep\": \"James Brown\",\\n    \"region\": \"Europe\",\\n    \"industry\": \"Retail\",\\n    \"source\": \"Trade Show\"\\n  },\\n  {\\n    \"opportunity_id\": \"OPP-2024-005\",\\n    \"account_name\": \"Pacific Financial Services\",\\n    \"contact_name\": \"Lisa Wang\",\\n    \"contact_email\": \"l.wang@pacificfs.com\",\\n    \"opportunity_title\": \"Risk Management Analytics Suite\",\\n    \"deal_value\": 675000,\\n    \"currency\": \"USD\",\\n    \"stage\": \"Closed Won\",\\n    \"probability\": 100,\\n    \"expected_close_date\": \"2024-02-29\",\\n    \"created_date\": \"2023-11-15\",\\n    \"last_modified\": \"2024-02-29\",\\n    \"sales_rep\": \"Patricia White\",\\n    \"region\": \"Asia Pacific\",\\n    \"industry\": \"Financial Services\",\\n    \"source\": \"Partner Referral\"\\n  }\\n]"
+                    },
+                    "execution_mode": {
+                        "value": "Validate & Execute"
+                    },
+                    "arrayElementsAsDocuments": {
+                        "value": true
+                    },
+                    "passThroughProp": {
+                        "value": false
+                    },
+                    "supportTypeExts": {
+                        "value": false
+                    }
+                },
+                "view_serial": 100
+            }
+        },
+        "11111111-1111-1111-1111-000000000001": {
+            "class_id": "com-snaplogic-snaps-transform-jsonformatter",
+            "class_version": 2,
+            "instance_id": "11111111-1111-1111-1111-000000000001",
+            "property_map": {
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "JSON Formatter"
+                    },
+                    "notes": {
+                        "value": "Formats document data into JSON binary format with pretty printing for readability"
+                    }
+                },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "binary"
+                        }
+                    }
+                },
+                "settings": {
+                    "execution_mode": {
+                        "value": "Validate & Execute"
+                    },
+                    "schema": {
+                        "value": ""
+                    },
+                    "header": {
+                        "value": [
+                            {
+                                "expression": {
+                                    "value": "\"application/json; charset=UTF-8\"",
+                                    "expression": true
+                                },
+                                "targetPath": {
+                                    "value": "$['content-type']"
+                                }
+                            }
+                        ]
+                    },
+                    "contentPath": {
+                        "value": "$"
+                    },
+                    "ignoreEmptyStream": {
+                        "value": false
+                    },
+                    "formatSingleDocument": {
+                        "value": false
+                    },
+                    "jsonLines": {
+                        "value": false
+                    },
+                    "prettyPrint": {
+                        "value": true
+                    },
+                    "deriveSchemaLimit": {
+                        "value": "None"
+                    },
+                    "supportTypeExts": {
+                        "value": false
+                    }
+                },
+                "view_serial": 100
+            }
+        },
+        "11111111-1111-1111-1111-000000000002": {
+            "class_id": "com-snaplogic-snaps-binary-write",
+            "class_version": 3,
+            "instance_id": "11111111-1111-1111-1111-000000000002",
+            "property_map": {
+                "account": {
+                    "account_ref": {
+                        "value": {}
+                    }
+                },
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "File Writer - Sales Opportunities Export"
+                    },
+                    "notes": {
+                        "value": "Writes formatted JSON binary data to salesopps.json with validation"
+                    }
+                },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "binary"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "settings": {
+                    "UserPermissionsKey": {
+                        "value": []
+                    },
+                    "advancedProperties": {
+                        "value": []
+                    },
+                    "cannedAcls": {
+                        "value": "None"
+                    },
+                    "createDir": {
+                        "value": true
+                    },
+                    "executable_during_suggest": {
+                        "value": false
+                    },
+                    "execution_mode": {
+                        "value": "Execute only"
+                    },
+                    "fileAction": {
+                        "value": "OVERWRITE"
+                    },
+                    "filename": {
+                        "expression": true,
+                        "value": "$output_file_path"
+                    },
+                    "flushIntervalKb": {
+                        "value": -1
+                    },
+                    "preventURLEncoding": {
+                        "value": false
+                    },
+                    "retries": {
+                        "value": 0
+                    },
+                    "retryInterval": {
+                        "value": 1
+                    },
+                    "validate": {
+                        "value": true
+                    },
+                    "writeEmptyFile": {
+                        "value": false
+                    },
+                    "writeHeader": {
+                        "value": false
+                    }
+                },
+                "view_serial": 100
+            }
+        }
+    }
+}
