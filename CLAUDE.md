@@ -357,6 +357,116 @@ When creating pipelines for optimal SnapLogic Designer canvas rendering and visu
 
 **Impact**: Incorrect expression syntax prevents SnapLogic from recognizing .slp files as valid pipelines, treating them as generic files instead. This issue was discovered when a pipeline with invalid expressions appeared as a file rather than a pipeline in SnapLogic Designer.
 
+### Pipeline Parameter and Data Reference Guidelines
+
+#### Pipeline Parameter References
+When referencing pipeline parameters in expressions, use underscore prefix syntax:
+- **Correct**: `_parameterName` 
+- **Incorrect**: `$parameterName`
+
+**Example**:
+```json
+"soqlQuery": {
+  "expression": true,
+  "value": "\"SELECT Id, Name FROM Opportunity WHERE CloseDate >= LAST_N_DAYS:\" + _days_back + \" AND Region__c LIKE 'EMEA_%'\""
+}
+```
+
+#### Document Grouping for Aggregate Processing
+When processing multiple documents with AI/LLM snaps, use the Group By N snap to collect documents:
+- **Group By N Configuration**: Set `groupSize: 0` to collect all documents
+- **Target Field**: Set `targetField` to desired array name (e.g., "opportunities")
+- **Purpose**: Enables AI processing of all documents at once instead of individually
+
+**Pattern**:
+```
+Data Source → Mapper → Filter → Group By N → Prompt → AI/LLM → Output
+```
+
+#### Prompt Template Data References
+In prompt snaps, use mustache template syntax to reference grouped data:
+- **Correct**: `{{opportunities}}` or `{{$opportunities}}`
+- **Context**: References the array created by Group By N snap
+- **Usage**: Allows AI to process entire dataset for comprehensive analysis
+
+**Example Prompt Content**:
+```
+Analyze the following opportunity data: {{$opportunities}}
+Generate insights and recommendations based on all opportunities.
+```
+
+### AWS Bedrock Snap Configuration
+
+#### System Prompt Configuration
+For hardcoded system prompts in AWS Bedrock Converse API snap:
+- **Expression Mode**: Disable expression for static text
+- **Alternative**: Wrap text in quotes if using expression mode
+- **Purpose**: Prevents unnecessary expression evaluation for static content
+
+**Example - Non-Expression Mode**:
+```json
+"systemPrompt": {
+  "expression": false,
+  "value": "You are an expert solutions engineer analyst."
+}
+```
+
+**Example - Expression Mode with Quotes**:
+```json
+"systemPrompt": {
+  "expression": true,
+  "value": "\"You are an expert solutions engineer analyst.\""
+}
+```
+
+#### AWS Bedrock Prompt Generator to Converse API Data Flow
+Based on SnapLogic snap schemas, the data flow between Prompt Generator and Converse API follows this pattern:
+
+**Prompt Generator Output Structure**:
+```json
+{
+  "messages": [
+    {
+      "role": "USER",
+      "content": [
+        {
+          "type": "text",
+          "text": "Generated prompt content with data: {{$opportunities}}"
+        }
+      ]
+    }
+  ]
+}
+```
+
+**Converse API Configuration**:
+- **useMessages**: Set to `true` to enable message payload mode
+- **messages**: Reference Prompt Generator output via `$messages`
+- **Advanced Mode**: Enable in Prompt Generator for proper message array output
+
+**Key Technical Details**:
+1. **Field Mapping**: Prompt Generator `messages` output → Converse API `messages` input
+2. **Message Format**: Array of message objects with role, content structure
+3. **Content Blocks**: Text content wrapped in content block format with type specification
+4. **Expression References**: Use `$messages` to reference the complete message payload
+
+**Pipeline Configuration Example**:
+```json
+// Prompt Generator
+{
+  "advancedMode": true,
+  "role": "USER",
+  "content": "$input_data"
+}
+
+// Converse API  
+{
+  "useMessages": true,
+  "messages": "$messages",
+  "model": "_bedrock_model"
+}
+```
+
 #### Connection Optimization
 - **Short Paths**: Position snaps to minimize connection line length
 - **Avoid Crossovers**: Layout snaps to prevent connection lines from crossing
