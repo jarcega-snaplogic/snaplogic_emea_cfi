@@ -1,0 +1,837 @@
+{
+    "class_id": "com-snaplogic-pipeline",
+    "class_version": 9,
+    "link_map": {
+        "link100": {
+            "dst_id": "22222222-2222-2222-2222-000000000001",
+            "dst_view_id": "input0",
+            "src_id": "22222222-2222-2222-2222-000000000000",
+            "src_view_id": "output0"
+        },
+        "link200": {
+            "dst_id": "22222222-2222-2222-2222-000000000002",
+            "dst_view_id": "input0",
+            "src_id": "22222222-2222-2222-2222-000000000001",
+            "src_view_id": "output0"
+        },
+        "link300": {
+            "dst_id": "22222222-2222-2222-2222-000000000003",
+            "dst_view_id": "input0",
+            "src_id": "22222222-2222-2222-2222-000000000002",
+            "src_view_id": "output0"
+        },
+        "link400": {
+            "dst_id": "22222222-2222-2222-2222-000000000004",
+            "dst_view_id": "input0",
+            "src_id": "22222222-2222-2222-2222-000000000003",
+            "src_view_id": "output0"
+        },
+        "link500": {
+            "dst_id": "22222222-2222-2222-2222-000000000005",
+            "dst_view_id": "input0",
+            "src_id": "22222222-2222-2222-2222-000000000004",
+            "src_view_id": "output0"
+        }
+    },
+    "property_map": {
+        "error": {
+            "error_behavior": {
+                "value": "none"
+            }
+        },
+        "info": {
+            "author": {
+                "value": "jarcega@snaplogic.com"
+            },
+            "label": {},
+            "notes": {
+                "value": "AI-powered Salesforce opportunities reporting pipeline: queries closed won opportunities from last 31 days, filters by EMEA region, selects key fields, and generates HTML dashboard via AWS Bedrock Claude for solutions engineer insights"
+            },
+            "pipeline_doc_uri": {
+                "value": null
+            },
+            "purpose": {
+                "value": "Generate intelligent HTML dashboard for EMEA closed won opportunities analysis using AI-powered insights"
+            }
+        },
+        "input": {},
+        "output": {
+            "22222222-2222-2222-2222-000000000005_output0": {
+                "label": {
+                    "value": "AWS Bedrock Claude - HTML Dashboard Response - output0"
+                },
+                "view_type": {
+                    "value": "document"
+                }
+            }
+        },
+        "settings": {
+            "cache_pipelines": {
+                "value": []
+            },
+            "error_param_table": {
+                "value": []
+            },
+            "error_pipeline": {
+                "expression": false,
+                "value": null
+            },
+            "imports": {
+                "value": []
+            },
+            "param_table": {
+                "value": [
+                    {
+                        "capture": {
+                            "value": false
+                        },
+                        "data_type": {
+                            "value": "string"
+                        },
+                        "description": {
+                            "value": "AWS Bedrock Claude model for dashboard generation (e.g., anthropic.claude-3-sonnet-20240229-v1:0)"
+                        },
+                        "key": {
+                            "value": "bedrock_model"
+                        },
+                        "required": {
+                            "value": false
+                        },
+                        "value": {
+                            "value": "anthropic.claude-3-sonnet-20240229-v1:0"
+                        }
+                    },
+                    {
+                        "capture": {
+                            "value": false
+                        },
+                        "data_type": {
+                            "value": "integer"
+                        },
+                        "description": {
+                            "value": "Days to look back for opportunities (default: 31)"
+                        },
+                        "key": {
+                            "value": "days_back"
+                        },
+                        "required": {
+                            "value": false
+                        },
+                        "value": {
+                            "value": "31"
+                        }
+                    }
+                ]
+            },
+            "suspendable": {
+                "value": false
+            },
+            "test_pipeline": {
+                "value": false
+            }
+        }
+    },
+    "render_map": {
+        "default_snaplex": null,
+        "detail_map": {
+            "22222222-2222-2222-2222-000000000000": {
+                "error": {},
+                "grid_x_int": 2,
+                "grid_y_int": 1,
+                "index": null,
+                "input": {},
+                "output": {},
+                "recommendation_id": null,
+                "rot_int": 0,
+                "rot_tail_int": 0,
+                "source": "snap category"
+            },
+            "22222222-2222-2222-2222-000000000001": {
+                "error": {},
+                "grid_x_int": 3,
+                "grid_y_int": 1,
+                "index": null,
+                "input": {},
+                "output": {},
+                "recommendation_id": null,
+                "rot_int": 0,
+                "rot_tail_int": 0,
+                "source": "snap category"
+            },
+            "22222222-2222-2222-2222-000000000002": {
+                "error": {},
+                "grid_x_int": 4,
+                "grid_y_int": 1,
+                "index": null,
+                "input": {},
+                "output": {},
+                "recommendation_id": null,
+                "rot_int": 0,
+                "rot_tail_int": 0,
+                "source": "snap category"
+            },
+            "22222222-2222-2222-2222-000000000003": {
+                "error": {},
+                "grid_x_int": 5,
+                "grid_y_int": 1,
+                "index": null,
+                "input": {},
+                "output": {},
+                "recommendation_id": null,
+                "rot_int": 0,
+                "rot_tail_int": 0,
+                "source": "snap category"
+            },
+            "22222222-2222-2222-2222-000000000004": {
+                "error": {},
+                "grid_x_int": 6,
+                "grid_y_int": 1,
+                "index": null,
+                "input": {},
+                "output": {},
+                "recommendation_id": null,
+                "rot_int": 0,
+                "rot_tail_int": 0,
+                "source": "snap category"
+            },
+            "22222222-2222-2222-2222-000000000005": {
+                "error": {},
+                "grid_x_int": 7,
+                "grid_y_int": 1,
+                "index": null,
+                "input": {},
+                "output": {},
+                "recommendation_id": null,
+                "rot_int": 0,
+                "rot_tail_int": 0,
+                "source": "snap category"
+            }
+        },
+        "pan_x_num": 0,
+        "pan_y_num": 0,
+        "scale_ratio": 1
+    },
+    "snap_map": {
+        "22222222-2222-2222-2222-000000000000": {
+            "class_id": "com-snaplogic-snaps-salesforce-query",
+            "class_version": 1,
+            "instance_id": "22222222-2222-2222-2222-000000000000",
+            "property_map": {
+                "account": {
+                    "account_ref": {
+                        "value": {}
+                    }
+                },
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "Salesforce SOQL - EMEA Closed Won Opportunities"
+                    },
+                    "notes": {
+                        "value": "Queries Salesforce for closed won opportunities from the last 31 days with EMEA region filter for solutions engineer analysis"
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "settings": {
+                    "batchSize": {
+                        "value": 2000
+                    },
+                    "contentType": {
+                        "value": "JSON"
+                    },
+                    "escapeSingleQuotes": {
+                        "value": true
+                    },
+                    "execution_mode": {
+                        "value": "Validate & Execute"
+                    },
+                    "ignoreEmptyResult": {
+                        "value": true
+                    },
+                    "numberOfRetries": {
+                        "value": 1
+                    },
+                    "objectType": {
+                        "value": "Opportunity"
+                    },
+                    "passThrough": {
+                        "value": false
+                    },
+                    "pollingInterval": {
+                        "value": 5
+                    },
+                    "pollingTimeout": {
+                        "value": 3000
+                    },
+                    "retryInterval": {
+                        "value": 1
+                    },
+                    "salesforceApi": {
+                        "value": "REST API"
+                    },
+                    "serviceVersion": {
+                        "value": "52.0"
+                    },
+                    "soqlQuery": {
+                        "expression": true,
+                        "value": "SELECT Id, Name, AccountId, Account.Name, OwnerId, Owner.Name, StageName, Amount, CloseDate, CreatedDate, LastModifiedDate, Region__c, Type, LeadSource, Probability, ForecastCategoryName, Description, NextStep, CampaignId, Campaign.Name FROM Opportunity WHERE StageName = 'Closed Won' AND CloseDate >= LAST_N_DAYS:" + $days_back + " AND Region__c LIKE 'EMEA_%' ORDER BY CloseDate DESC"
+                    }
+                },
+                "view_serial": 100
+            }
+        },
+        "22222222-2222-2222-2222-000000000001": {
+            "class_id": "com-snaplogic-snaps-transform-datatransform",
+            "class_version": 4,
+            "instance_id": "22222222-2222-2222-2222-000000000001",
+            "property_map": {
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "Mapper - Select Key Opportunity Fields"
+                    },
+                    "notes": {
+                        "value": "Selects and formats key opportunity fields for solutions engineer reporting: opportunity details, account info, financial data, and timeline"
+                    }
+                },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "settings": {
+                    "execution_mode": {
+                        "value": "Validate & Execute"
+                    },
+                    "nullSafeAccess": {
+                        "value": true
+                    },
+                    "passThrough": {
+                        "value": false
+                    },
+                    "transformations": {
+                        "value": {
+                            "mappingRoot": {
+                                "value": "$"
+                            },
+                            "mappingTable": {
+                                "value": [
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "$Id"
+                                        },
+                                        "targetPath": {
+                                            "value": "$opportunity_id"
+                                        }
+                                    },
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "$Name"
+                                        },
+                                        "targetPath": {
+                                            "value": "$opportunity_name"
+                                        }
+                                    },
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "$Account.Name"
+                                        },
+                                        "targetPath": {
+                                            "value": "$account_name"
+                                        }
+                                    },
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "$Owner.Name"
+                                        },
+                                        "targetPath": {
+                                            "value": "$owner_name"
+                                        }
+                                    },
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "$Amount"
+                                        },
+                                        "targetPath": {
+                                            "value": "$amount"
+                                        }
+                                    },
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "$CloseDate"
+                                        },
+                                        "targetPath": {
+                                            "value": "$close_date"
+                                        }
+                                    },
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "$Region__c"
+                                        },
+                                        "targetPath": {
+                                            "value": "$region"
+                                        }
+                                    },
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "$Type"
+                                        },
+                                        "targetPath": {
+                                            "value": "$opportunity_type"
+                                        }
+                                    },
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "$LeadSource"
+                                        },
+                                        "targetPath": {
+                                            "value": "$lead_source"
+                                        }
+                                    },
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "$Description"
+                                        },
+                                        "targetPath": {
+                                            "value": "$description"
+                                        }
+                                    },
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "$Campaign.Name"
+                                        },
+                                        "targetPath": {
+                                            "value": "$campaign_name"
+                                        }
+                                    },
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "$CreatedDate"
+                                        },
+                                        "targetPath": {
+                                            "value": "$created_date"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "view_serial": 100
+            }
+        },
+        "22222222-2222-2222-2222-000000000002": {
+            "class_id": "com-snaplogic-snaps-flow-filter",
+            "class_version": 2,
+            "instance_id": "22222222-2222-2222-2222-000000000002",
+            "property_map": {
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "Filter - EMEA Region Validation"
+                    },
+                    "notes": {
+                        "value": "Additional filter to ensure only opportunities with region starting with 'EMEA_' are processed for reporting accuracy"
+                    }
+                },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "settings": {
+                    "execution_mode": {
+                        "value": "Validate & Execute"
+                    },
+                    "filterExpression": {
+                        "expression": true,
+                        "value": "$region != null && $region.startsWith('EMEA_')"
+                    },
+                    "nullSafeAccess": {
+                        "value": true
+                    }
+                },
+                "view_serial": 100
+            }
+        },
+        "22222222-2222-2222-2222-000000000003": {
+            "class_id": "com-snaplogic-snaps-awsbedrock-awsbedrockpromptgenerator",
+            "class_version": 1,
+            "instance_id": "22222222-2222-2222-2222-000000000003",
+            "property_map": {
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "AWS Bedrock Prompt Generator - Dashboard Creation"
+                    },
+                    "notes": {
+                        "value": "Generates specialized prompt for AWS Bedrock Claude to create HTML dashboard for solutions engineer analysis of closed won opportunities"
+                    }
+                },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "settings": {
+                    "advancedMode": {
+                        "value": false
+                    },
+                    "content": {
+                        "expression": true,
+                        "value": "$"
+                    },
+                    "editable_content": {
+                        "expression": true,
+                        "value": "You are a solutions engineer analyst creating an HTML dashboard for EMEA closed won opportunities.\n\nAnalyze the following opportunity data and create a comprehensive HTML dashboard that includes:\n\n1. **Executive Summary Section**:\n   - Total revenue and deal count\n   - Average deal size\n   - Top performing regions within EMEA\n   - Key performance trends\n\n2. **Detailed Analytics**:\n   - Revenue by month/quarter\n   - Deal size distribution\n   - Lead source analysis\n   - Campaign effectiveness\n   - Sales cycle analysis\n\n3. **Solutions Engineer Insights**:\n   - Technical solution types driving revenue\n   - Customer segment analysis\n   - Competitive wins and positioning\n   - Implementation complexity correlation with deal size\n\n4. **Interactive Elements**:\n   - Sortable tables with opportunity details\n   - Visual charts (use Chart.js or similar)\n   - Drill-down capabilities for detailed analysis\n   - Export functionality for further analysis\n\n5. **Action Items & Recommendations**:\n   - Opportunities for replication\n   - Process improvements\n   - Resource allocation suggestions\n   - Risk mitigation strategies\n\nThe dashboard should be professional, visually appealing, and provide actionable insights for solutions engineering leadership.\n\nUse modern CSS frameworks (Bootstrap or similar) and ensure mobile responsiveness.\n\nData to analyze: {{opportunities}}\n\nGenerate a complete, standalone HTML file with embedded CSS and JavaScript."
+                    },
+                    "execution_mode": {
+                        "value": "Validate & Execute"
+                    },
+                    "promptTemplate": {
+                        "value": "Context Q & A"
+                    },
+                    "role": {
+                        "value": "USER"
+                    }
+                },
+                "view_serial": 100
+            }
+        },
+        "22222222-2222-2222-2222-000000000004": {
+            "class_id": "com-snaplogic-snaps-awsbedrock-awsbedrockconverseapi",
+            "class_version": 1,
+            "instance_id": "22222222-2222-2222-2222-000000000004",
+            "property_map": {
+                "account": {
+                    "account_ref": {
+                        "value": {}
+                    }
+                },
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "AWS Bedrock Converse API - Claude Dashboard Generation"
+                    },
+                    "notes": {
+                        "value": "Calls AWS Bedrock Claude model to generate comprehensive HTML dashboard with solutions engineer insights and interactive analytics"
+                    }
+                },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "settings": {
+                    "advancedPromptConfiguration": {
+                        "value": {
+                            "cacheSystem": {
+                                "value": false
+                            },
+                            "jsonMode": {
+                                "value": false
+                            },
+                            "systemPrompt": {
+                                "expression": true,
+                                "value": "You are an expert solutions engineer analyst and web developer. Create professional, interactive HTML dashboards with advanced analytics and actionable business insights. Focus on data-driven recommendations and clear visual presentations suitable for executive and technical audiences."
+                            }
+                        }
+                    },
+                    "advancedResponseConfiguration": {
+                        "value": {
+                            "continuationRequests": {
+                                "value": true
+                            },
+                            "continuationRequestLimit": {
+                                "value": 3
+                            },
+                            "debugMode": {
+                                "value": false
+                            },
+                            "simplifyResponse": {
+                                "value": false
+                            }
+                        }
+                    },
+                    "execution_mode": {
+                        "value": "Validate & Execute"
+                    },
+                    "includeCrossRegionModels": {
+                        "value": true
+                    },
+                    "messages": {
+                        "expression": true,
+                        "value": "$"
+                    },
+                    "model": {
+                        "expression": true,
+                        "value": "$bedrock_model"
+                    },
+                    "modelParameters": {
+                        "value": {
+                            "maximumTokens": {
+                                "value": 8000
+                            },
+                            "temperature": {
+                                "value": 0.3
+                            },
+                            "thinking": {
+                                "value": false
+                            },
+                            "topP": {
+                                "value": 0.9
+                            }
+                        }
+                    },
+                    "useMessages": {
+                        "value": true
+                    }
+                },
+                "view_serial": 100
+            }
+        },
+        "22222222-2222-2222-2222-000000000005": {
+            "class_id": "com-snaplogic-snaps-binary-write",
+            "class_version": 3,
+            "instance_id": "22222222-2222-2222-2222-000000000005",
+            "property_map": {
+                "account": {
+                    "account_ref": {
+                        "value": {}
+                    }
+                },
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "File Writer - HTML Dashboard Export"
+                    },
+                    "notes": {
+                        "value": "Exports the generated HTML dashboard to file for distribution and viewing by solutions engineering teams"
+                    }
+                },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "settings": {
+                    "UserPermissionsKey": {
+                        "value": []
+                    },
+                    "advancedProperties": {
+                        "value": []
+                    },
+                    "cannedAcls": {
+                        "value": "None"
+                    },
+                    "createDir": {
+                        "value": true
+                    },
+                    "executable_during_suggest": {
+                        "value": false
+                    },
+                    "execution_mode": {
+                        "value": "Execute only"
+                    },
+                    "fileAction": {
+                        "value": "OVERWRITE"
+                    },
+                    "filename": {
+                        "expression": true,
+                        "value": "/tmp/emea_opportunities_dashboard_" + Date.now().toISOString().substring(0,10).replace(/-/g,'') + ".html"
+                    },
+                    "flushIntervalKb": {
+                        "value": -1
+                    },
+                    "preventURLEncoding": {
+                        "value": false
+                    },
+                    "retries": {
+                        "value": 0
+                    },
+                    "retryInterval": {
+                        "value": 1
+                    },
+                    "validate": {
+                        "value": true
+                    },
+                    "writeEmptyFile": {
+                        "value": false
+                    },
+                    "writeHeader": {
+                        "value": false
+                    }
+                },
+                "view_serial": 100
+            }
+        }
+    }
+}
