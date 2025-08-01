@@ -217,6 +217,43 @@ git push
 - **Pipeline Parameters**: Use expressions for dynamic configuration
 - **Account Management**: Proper authentication and authorization setup
 
+### File Writer Configuration Guidelines
+
+#### File Path Rules
+**CRITICAL**: Unless specifically prompted otherwise, always write files to SLDB (SnapLogic Database) using filename only:
+- **Correct**: `"dashboard.html"`, `"report.csv"`, `"data.json"`
+- **Incorrect**: `"/tmp/dashboard.html"`, `"/path/to/file.csv"`
+- **Purpose**: SLDB provides managed storage without path complexity
+- **Exception**: Only use full paths when explicitly requested by user
+
+#### Binary Input Requirement
+**File Writer (Binary Write) Snap Requirements**:
+- **Input View Type**: Must be **binary** (not document)
+- **Common Error**: Connecting document output directly to File Writer
+- **Solution**: Use Document to Binary conversion snap when needed
+
+#### Document to Binary Conversion Pattern
+When LLM/AI snaps output document format but File Writer needs binary:
+
+**Pipeline Pattern**:
+```
+AI/LLM Snap (document) → [Mapper] → Document to Binary → File Writer (binary)
+```
+
+**Key Snap**: `com-snaplogic-snaps-transform-documenttobinary`
+- **Purpose**: Converts document `content` field to binary data
+- **Configuration**: Set appropriate codec (usually `NONE` for plain text)
+- **Field Requirement**: Input document must have `content` field
+
+**Mapper Configuration** (if needed to extract LLM response):
+```json
+{
+  "content": "$output.message.content[0].text"  // Extract text from LLM response
+}
+```
+
+**AWS Bedrock Specific**: Enable `simplifyResponse` for cleaner field structure
+
 ### 4. Integration Patterns
 
 **Common Integration Scenarios**:
