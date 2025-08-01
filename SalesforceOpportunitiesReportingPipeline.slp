@@ -31,6 +31,12 @@
             "dst_view_id": "input0",
             "src_id": "22222222-2222-2222-2222-000000000004",
             "src_view_id": "output0"
+        },
+        "link600": {
+            "dst_id": "22222222-2222-2222-2222-000000000006",
+            "dst_view_id": "input0",
+            "src_id": "22222222-2222-2222-2222-000000000005",
+            "src_view_id": "output0"
         }
     },
     "property_map": {
@@ -45,20 +51,20 @@
             },
             "label": {},
             "notes": {
-                "value": "AI-powered Salesforce opportunities reporting pipeline: queries closed won opportunities from last 31 days, filters by EMEA region, selects key fields, and generates HTML dashboard via AWS Bedrock Claude for solutions engineer insights"
+                "value": "AI-powered Salesforce opportunities reporting pipeline: queries closed won opportunities from last 31 days, filters by EMEA region, groups all documents, selects key fields, and generates HTML dashboard via AWS Bedrock Claude for solutions engineer insights"
             },
             "pipeline_doc_uri": {
                 "value": null
             },
             "purpose": {
-                "value": "Generate intelligent HTML dashboard for EMEA closed won opportunities analysis using AI-powered insights"
+                "value": "Generate intelligent HTML dashboard for EMEA closed won opportunities analysis using AI-powered insights with proper document grouping"
             }
         },
         "input": {},
         "output": {
-            "22222222-2222-2222-2222-000000000005_output0": {
+            "22222222-2222-2222-2222-000000000006_output0": {
                 "label": {
-                    "value": "AWS Bedrock Claude - HTML Dashboard Response - output0"
+                    "value": "File Writer - HTML Dashboard Export - output0"
                 },
                 "view_type": {
                     "value": "document"
@@ -205,6 +211,18 @@
                 "rot_int": 0,
                 "rot_tail_int": 0,
                 "source": "snap category"
+            },
+            "22222222-2222-2222-2222-000000000006": {
+                "error": {},
+                "grid_x_int": 8,
+                "grid_y_int": 1,
+                "index": null,
+                "input": {},
+                "output": {},
+                "recommendation_id": null,
+                "rot_int": 0,
+                "rot_tail_int": 0,
+                "source": "snap category"
             }
         },
         "pan_x_num": 0,
@@ -295,7 +313,7 @@
                     },
                     "soqlQuery": {
                         "expression": true,
-                        "value": "\"SELECT Id, Name, AccountId, Account.Name, OwnerId, Owner.Name, StageName, Amount, CloseDate, CreatedDate, LastModifiedDate, Region__c, Type, LeadSource, Probability, ForecastCategoryName, Description, NextStep, CampaignId, Campaign.Name FROM Opportunity WHERE StageName = 'Closed Won' AND CloseDate >= LAST_N_DAYS:\" + $days_back + \" AND Region__c LIKE 'EMEA_%' ORDER BY CloseDate DESC\""
+                        "value": "\"SELECT Id, Name, AccountId, Account.Name, OwnerId, Owner.Name, StageName, Amount, CloseDate, CreatedDate, LastModifiedDate, Region__c, Type, LeadSource, Probability, ForecastCategoryName, Description, NextStep, CampaignId, Campaign.Name FROM Opportunity WHERE StageName = 'Closed Won' AND CloseDate >= LAST_N_DAYS:\" + _days_back + \" AND Region__c LIKE 'EMEA_%' ORDER BY CloseDate DESC\""
                     }
                 },
                 "view_serial": 100
@@ -542,9 +560,84 @@
             }
         },
         "22222222-2222-2222-2222-000000000003": {
-            "class_id": "com-snaplogic-snaps-awsbedrock-awsbedrockpromptgenerator",
+            "class_id": "com-snaplogic-snaps-transform-groupbyn",
             "class_version": 1,
             "instance_id": "22222222-2222-2222-2222-000000000003",
+            "property_map": {
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "Group By N - Collect All Opportunities"
+                    },
+                    "notes": {
+                        "value": "Groups all opportunity documents into a single document with 'opportunities' array for prompt processing"
+                    }
+                },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "settings": {
+                    "execution_mode": {
+                        "value": "Validate & Execute"
+                    },
+                    "flushTimeoutSecs": {
+                        "value": 0
+                    },
+                    "groupSize": {
+                        "value": 0
+                    },
+                    "memorySensitivity": {
+                        "value": "None"
+                    },
+                    "minimumMemory": {
+                        "value": 500
+                    },
+                    "minGroupSize": {
+                        "value": 1
+                    },
+                    "outOfResourceTimeout": {
+                        "value": 30
+                    },
+                    "targetField": {
+                        "value": "opportunities"
+                    }
+                },
+                "view_serial": 100
+            }
+        },
+        "22222222-2222-2222-2222-000000000004": {
+            "class_id": "com-snaplogic-snaps-awsbedrock-awsbedrockpromptgenerator",
+            "class_version": 1,
+            "instance_id": "22222222-2222-2222-2222-000000000004",
             "property_map": {
                 "error": {
                     "error0": {
@@ -564,7 +657,7 @@
                         "value": "AWS Bedrock Prompt Generator - Dashboard Creation"
                     },
                     "notes": {
-                        "value": "Generates specialized prompt for AWS Bedrock Claude to create HTML dashboard for solutions engineer analysis of closed won opportunities"
+                        "value": "Generates specialized prompt for AWS Bedrock Claude to create HTML dashboard for solutions engineer analysis of grouped opportunities"
                     }
                 },
                 "input": {
@@ -597,7 +690,7 @@
                     },
                     "editable_content": {
                         "expression": true,
-                        "value": "You are a solutions engineer analyst creating an HTML dashboard for EMEA closed won opportunities.\n\nAnalyze the following opportunity data and create a comprehensive HTML dashboard that includes:\n\n1. **Executive Summary Section**:\n   - Total revenue and deal count\n   - Average deal size\n   - Top performing regions within EMEA\n   - Key performance trends\n\n2. **Detailed Analytics**:\n   - Revenue by month/quarter\n   - Deal size distribution\n   - Lead source analysis\n   - Campaign effectiveness\n   - Sales cycle analysis\n\n3. **Solutions Engineer Insights**:\n   - Technical solution types driving revenue\n   - Customer segment analysis\n   - Competitive wins and positioning\n   - Implementation complexity correlation with deal size\n\n4. **Interactive Elements**:\n   - Sortable tables with opportunity details\n   - Visual charts (use Chart.js or similar)\n   - Drill-down capabilities for detailed analysis\n   - Export functionality for further analysis\n\n5. **Action Items & Recommendations**:\n   - Opportunities for replication\n   - Process improvements\n   - Resource allocation suggestions\n   - Risk mitigation strategies\n\nThe dashboard should be professional, visually appealing, and provide actionable insights for solutions engineering leadership.\n\nUse modern CSS frameworks (Bootstrap or similar) and ensure mobile responsiveness.\n\nData to analyze: {{opportunities}}\n\nGenerate a complete, standalone HTML file with embedded CSS and JavaScript."
+                        "value": "You are a solutions engineer analyst creating an HTML dashboard for EMEA closed won opportunities.\n\nAnalyze the following opportunity data and create a comprehensive HTML dashboard that includes:\n\n1. **Executive Summary Section**:\n   - Total revenue and deal count\n   - Average deal size\n   - Top performing regions within EMEA\n   - Key performance trends\n\n2. **Detailed Analytics**:\n   - Revenue by month/quarter\n   - Deal size distribution\n   - Lead source analysis\n   - Campaign effectiveness\n   - Sales cycle analysis\n\n3. **Solutions Engineer Insights**:\n   - Technical solution types driving revenue\n   - Customer segment analysis\n   - Competitive wins and positioning\n   - Implementation complexity correlation with deal size\n\n4. **Interactive Elements**:\n   - Sortable tables with opportunity details\n   - Visual charts (use Chart.js or similar)\n   - Drill-down capabilities for detailed analysis\n   - Export functionality for further analysis\n\n5. **Action Items & Recommendations**:\n   - Opportunities for replication\n   - Process improvements\n   - Resource allocation suggestions\n   - Risk mitigation strategies\n\nThe dashboard should be professional, visually appealing, and provide actionable insights for solutions engineering leadership.\n\nUse modern CSS frameworks (Bootstrap or similar) and ensure mobile responsiveness.\n\nData to analyze: {{$opportunities}}\n\nGenerate a complete, standalone HTML file with embedded CSS and JavaScript."
                     },
                     "execution_mode": {
                         "value": "Validate & Execute"
@@ -612,10 +705,10 @@
                 "view_serial": 100
             }
         },
-        "22222222-2222-2222-2222-000000000004": {
+        "22222222-2222-2222-2222-000000000005": {
             "class_id": "com-snaplogic-snaps-awsbedrock-awsbedrockconverseapi",
             "class_version": 1,
-            "instance_id": "22222222-2222-2222-2222-000000000004",
+            "instance_id": "22222222-2222-2222-2222-000000000005",
             "property_map": {
                 "account": {
                     "account_ref": {
@@ -706,7 +799,7 @@
                     },
                     "model": {
                         "expression": true,
-                        "value": "$bedrock_model"
+                        "value": "_bedrock_model"
                     },
                     "modelParameters": {
                         "value": {
@@ -731,10 +824,10 @@
                 "view_serial": 100
             }
         },
-        "22222222-2222-2222-2222-000000000005": {
+        "22222222-2222-2222-2222-000000000006": {
             "class_id": "com-snaplogic-snaps-binary-write",
             "class_version": 3,
-            "instance_id": "22222222-2222-2222-2222-000000000005",
+            "instance_id": "22222222-2222-2222-2222-000000000006",
             "property_map": {
                 "account": {
                     "account_ref": {
