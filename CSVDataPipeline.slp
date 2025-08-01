@@ -179,7 +179,7 @@
                 },
                 "settings": {
                     "editable_content": {
-                        "value": "Product ID,Product Name,Category,Price,Stock Quantity,Supplier,Date Added\\n1001,Wireless Headphones,Electronics,99.99,150,TechCorp,2024-01-15\\n1002,Coffee Maker,Appliances,79.99,75,HomeGoods Inc,2024-01-18\\n1003,Running Shoes,Sports,129.99,200,SportMax,2024-01-20\\n1004,Desk Lamp,Furniture,45.99,120,LightCorp,2024-01-22\\n1005,Smartphone Case,Electronics,19.99,300,AccessoryPro,2024-01-25\\n1006,Yoga Mat,Sports,29.99,180,FitnessPro,2024-01-28\\n1007,Blender,Appliances,149.99,60,KitchenMaster,2024-02-01\\n1008,Office Chair,Furniture,299.99,45,OfficeMax,2024-02-05\\n1009,Bluetooth Speaker,Electronics,59.99,220,AudioTech,2024-02-08\\n1010,Water Bottle,Sports,24.99,350,HydroFlow,2024-02-12"
+                        "value": "Product ID,Product Name,Category,Price,Stock Quantity,Supplier,Date Added\n1001,Wireless Headphones,Electronics,99.99,150,TechCorp,2024-01-15\n1002,Coffee Maker,Appliances,79.99,75,HomeGoods Inc,2024-01-18\n1003,Running Shoes,Sports,129.99,200,SportMax,2024-01-20\n1004,Desk Lamp,Furniture,45.99,120,LightCorp,2024-01-22\n1005,Smartphone Case,Electronics,19.99,300,AccessoryPro,2024-01-25\n1006,Yoga Mat,Sports,29.99,180,FitnessPro,2024-01-28\n1007,Blender,Appliances,149.99,60,KitchenMaster,2024-02-01\n1008,Office Chair,Furniture,299.99,45,OfficeMax,2024-02-05\n1009,Bluetooth Speaker,Electronics,59.99,220,AudioTech,2024-02-08\n1010,Water Bottle,Sports,24.99,350,HydroFlow,2024-02-12"
                     },
                     "execution_mode": {
                         "value": "Validate & Execute"
