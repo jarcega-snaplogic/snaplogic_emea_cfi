@@ -6,9 +6,9 @@
     "class_version": 9,
     "link_map": {
         "link301": {
-            "dst_id": "33333333-3333-3333-3333-000000000001",
+            "dst_id": "11111111-1111-1111-1111-000000000001",
             "dst_view_id": "input0",
-            "src_id": "33333333-3333-3333-3333-000000000000",
+            "src_id": "11111111-1111-1111-1111-000000000000",
             "src_view_id": "output0"
         }
     },
@@ -34,7 +34,7 @@
             }
         },
         "input": {
-            "33333333-3333-3333-3333-000000000000_input0": {
+            "11111111-1111-1111-1111-000000000000_input0": {
                 "label": {
                     "value": "Text Input"
                 },
@@ -44,7 +44,7 @@
             }
         },
         "output": {
-            "33333333-3333-3333-3333-000000000001_outputResponse": {
+            "11111111-1111-1111-1111-000000000001_outputResponse": {
                 "label": {
                     "value": "Audio File"
                 },
@@ -122,7 +122,7 @@
     "render_map": {
         "default_snaplex": null,
         "detail_map": {
-            "33333333-3333-3333-3333-000000000000": {
+            "11111111-1111-1111-1111-000000000000": {
                 "error": {},
                 "grid_x_int": 5,
                 "grid_y_int": 5,
@@ -134,7 +134,7 @@
                 "rot_tail_int": 0,
                 "source": "snap catagory"
             },
-            "33333333-3333-3333-3333-000000000001": {
+            "11111111-1111-1111-1111-000000000001": {
                 "error": {},
                 "grid_x_int": 7,
                 "grid_y_int": 5,
@@ -152,10 +152,10 @@
         "scale_ratio": 1
     },
     "snap_map": {
-        "33333333-3333-3333-3333-000000000000": {
+        "11111111-1111-1111-1111-000000000000": {
             "class_id": "com-snaplogic-snaps-transform-jsongenerator",
-            "class_version": 1,
-            "instance_id": "33333333-3333-3333-3333-000000000000",
+            "class_version": 2,
+            "instance_id": "11111111-1111-1111-1111-000000000000",
             "property_map": {
                 "error": {
                     "error0": {
@@ -207,10 +207,10 @@
                 "view_serial": 100
             }
         },
-        "33333333-3333-3333-3333-000000000001": {
+        "11111111-1111-1111-1111-000000000001": {
             "class_id": "com-snaplogic-snaps-transform-datatransform",
-            "class_version": 1,
-            "instance_id": "33333333-3333-3333-3333-000000000001",
+            "class_version": 4,
+            "instance_id": "11111111-1111-1111-1111-000000000001",
             "property_map": {
                 "error": {
                     "error0": {
@@ -255,87 +255,15 @@
                     "execution_mode": {
                         "value": "Validate & Execute"
                     },
+                    "passThrough": {
+                        "value": true
+                    },
                     "transformations": {
                         "value": {
                             "mappingRoot": {
                                 "value": "$"
                             },
-                            "mappingTable": {
-                                "value": [
-                                    {
-                                        "expression": {
-                                            "expression": true,
-                                            "value": "$api_endpoint"
-                                        },
-                                        "targetPath": {
-                                            "value": "elevenlabs_url"
-                                        }
-                                    },
-                                    {
-                                        "expression": {
-                                            "expression": true,
-                                            "value": "$method"
-                                        },
-                                        "targetPath": {
-                                            "value": "http_method"
-                                        }
-                                    },
-                                    {
-                                        "expression": {
-                                            "expression": true,
-                                            "value": "$headers"
-                                        },
-                                        "targetPath": {
-                                            "value": "request_headers"
-                                        }
-                                    },
-                                    {
-                                        "expression": {
-                                            "expression": true,
-                                            "value": "JSON.stringify($payload)"
-                                        },
-                                        "targetPath": {
-                                            "value": "json_body"
-                                        }
-                                    },
-                                    {
-                                        "expression": {
-                                            "expression": true,
-                                            "value": "$payload.text"
-                                        },
-                                        "targetPath": {
-                                            "value": "text_to_convert"
-                                        }
-                                    },
-                                    {
-                                        "expression": {
-                                            "expression": true,
-                                            "value": "$payload.model_id"
-                                        },
-                                        "targetPath": {
-                                            "value": "tts_model"
-                                        }
-                                    },
-                                    {
-                                        "expression": {
-                                            "expression": true,
-                                            "value": "$voice_options"
-                                        },
-                                        "targetPath": {
-                                            "value": "available_voices"
-                                        }
-                                    },
-                                    {
-                                        "expression": {
-                                            "expression": true,
-                                            "value": "'Use this formatted data with an HTTP Client snap to call ElevenLabs API'"
-                                        },
-                                        "targetPath": {
-                                            "value": "usage_instructions"
-                                        }
-                                    }
-                                ]
-                            }
+                            "mappingTable": {}
                         }
                     }
                 },

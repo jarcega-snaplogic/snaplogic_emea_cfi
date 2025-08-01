@@ -6,81 +6,81 @@
     "class_version": 9,
     "link_map": {
         "link201": {
-            "dst_id": "22222222-2222-2222-2222-000000000002",
+            "dst_id": "11111111-1111-1111-1111-000000000002",
             "dst_view_id": "input0",
-            "src_id": "22222222-2222-2222-2222-000000000001",
+            "src_id": "11111111-1111-1111-1111-000000000001",
             "src_view_id": "output0"
         },
         "link202": {
-            "dst_id": "22222222-2222-2222-2222-000000000003",
+            "dst_id": "11111111-1111-1111-1111-000000000003",
             "dst_view_id": "input0",
-            "src_id": "22222222-2222-2222-2222-000000000000",
+            "src_id": "11111111-1111-1111-1111-000000000000",
             "src_view_id": "output0"
         },
         "link203": {
-            "dst_id": "22222222-2222-2222-2222-000000000004",
+            "dst_id": "11111111-1111-1111-1111-000000000004",
             "dst_view_id": "input0",
-            "src_id": "22222222-2222-2222-2222-000000000003",
+            "src_id": "11111111-1111-1111-1111-000000000003",
             "src_view_id": "output0"
         },
         "link204": {
-            "dst_id": "22222222-2222-2222-2222-000000000005",
+            "dst_id": "11111111-1111-1111-1111-000000000005",
             "dst_view_id": "input0",
-            "src_id": "22222222-2222-2222-2222-000000000004",
+            "src_id": "11111111-1111-1111-1111-000000000004",
             "src_view_id": "output0"
         },
         "link205": {
-            "dst_id": "22222222-2222-2222-2222-000000000006",
+            "dst_id": "11111111-1111-1111-1111-000000000006",
             "dst_view_id": "input0",
-            "src_id": "22222222-2222-2222-2222-000000000004",
+            "src_id": "11111111-1111-1111-1111-000000000004",
             "src_view_id": "output0"
         },
         "link206": {
-            "dst_id": "22222222-2222-2222-2222-000000000007",
+            "dst_id": "11111111-1111-1111-1111-000000000007",
             "dst_view_id": "input0",
-            "src_id": "22222222-2222-2222-2222-000000000004",
+            "src_id": "11111111-1111-1111-1111-000000000004",
             "src_view_id": "output0"
         },
         "link207": {
-            "dst_id": "22222222-2222-2222-2222-000000000008",
+            "dst_id": "11111111-1111-1111-1111-000000000008",
             "dst_view_id": "input0",
-            "src_id": "22222222-2222-2222-2222-000000000004",
+            "src_id": "11111111-1111-1111-1111-000000000004",
             "src_view_id": "output0"
         },
         "link208": {
-            "dst_id": "22222222-2222-2222-2222-000000000009",
+            "dst_id": "11111111-1111-1111-1111-000000000009",
             "dst_view_id": "input0",
-            "src_id": "22222222-2222-2222-2222-000000000004",
+            "src_id": "11111111-1111-1111-1111-000000000004",
             "src_view_id": "output0"
         },
         "link209": {
-            "dst_id": "22222222-2222-2222-2222-00000000000a",
+            "dst_id": "11111111-1111-1111-1111-00000000000a",
             "dst_view_id": "input0",
-            "src_id": "22222222-2222-2222-2222-000000000004",
+            "src_id": "11111111-1111-1111-1111-000000000004",
             "src_view_id": "output0"
         },
         "link210": {
-            "dst_id": "22222222-2222-2222-2222-00000000000b",
+            "dst_id": "11111111-1111-1111-1111-00000000000b",
             "dst_view_id": "input0",
-            "src_id": "22222222-2222-2222-2222-00000000000a",
+            "src_id": "11111111-1111-1111-1111-00000000000a",
             "src_view_id": "output0"
         },
         "link211": {
-            "dst_id": "22222222-2222-2222-2222-00000000000c",
+            "dst_id": "11111111-1111-1111-1111-00000000000c",
             "dst_view_id": "input0",
-            "src_id": "22222222-2222-2222-2222-00000000000b",
+            "src_id": "11111111-1111-1111-1111-00000000000b",
             "src_view_id": "output0"
         },
         "link212": {
-            "dst_id": "22222222-2222-2222-2222-00000000000d",
+            "dst_id": "11111111-1111-1111-1111-00000000000d",
             "dst_view_id": "input0",
-            "src_id": "22222222-2222-2222-2222-00000000000c",
+            "src_id": "11111111-1111-1111-1111-00000000000c",
             "src_view_id": "output0"
         },
         "link213": {
-            "dst_id": "22222222-2222-2222-2222-00000000000e",
+            "dst_id": "11111111-1111-1111-1111-00000000000e",
             "dst_view_id": "input0",
-            "src_id": "22222222-2222-2222-2222-00000000000d",
+            "src_id": "11111111-1111-1111-1111-00000000000d",
             "src_view_id": "output0"
         }
     },
@@ -106,7 +106,7 @@
             }
         },
         "input": {
-            "22222222-2222-2222-2222-000000000000_input0": {
+            "11111111-1111-1111-1111-000000000000_input0": {
                 "label": {
                     "value": "Employee Data Input"
                 },
@@ -116,7 +116,7 @@
             }
         },
         "output": {
-            "22222222-2222-2222-2222-00000000000e_output0": {
+            "11111111-1111-1111-1111-00000000000e_output0": {
                 "label": {
                     "value": "Onboarding Complete"
                 },
@@ -174,7 +174,7 @@
     "render_map": {
         "default_snaplex": null,
         "detail_map": {
-            "22222222-2222-2222-2222-000000000000": {
+            "11111111-1111-1111-1111-000000000000": {
                 "error": {},
                 "grid_x_int": 1,
                 "grid_y_int": 5,
@@ -186,7 +186,7 @@
                 "rot_tail_int": 0,
                 "source": "snap catagory"
             },
-            "22222222-2222-2222-2222-000000000001": {
+            "11111111-1111-1111-1111-000000000001": {
                 "error": {},
                 "grid_x_int": 2,
                 "grid_y_int": 5,
@@ -198,7 +198,7 @@
                 "rot_tail_int": 0,
                 "source": "snap catagory"
             },
-            "22222222-2222-2222-2222-000000000002": {
+            "11111111-1111-1111-1111-000000000002": {
                 "error": {},
                 "grid_x_int": 3,
                 "grid_y_int": 5,
@@ -210,7 +210,7 @@
                 "rot_tail_int": 0,
                 "source": ""
             },
-            "22222222-2222-2222-2222-000000000003": {
+            "11111111-1111-1111-1111-000000000003": {
                 "error": {},
                 "grid_x_int": 4,
                 "grid_y_int": 5,
@@ -222,7 +222,7 @@
                 "rot_tail_int": 0,
                 "source": ""
             },
-            "22222222-2222-2222-2222-000000000004": {
+            "11111111-1111-1111-1111-000000000004": {
                 "error": {},
                 "grid_x_int": 5,
                 "grid_y_int": 5,
@@ -234,7 +234,7 @@
                 "rot_tail_int": 0,
                 "source": ""
             },
-            "22222222-2222-2222-2222-000000000005": {
+            "11111111-1111-1111-1111-000000000005": {
                 "error": {},
                 "grid_x_int": 6,
                 "grid_y_int": 3,
@@ -246,7 +246,7 @@
                 "rot_tail_int": 0,
                 "source": ""
             },
-            "22222222-2222-2222-2222-000000000006": {
+            "11111111-1111-1111-1111-000000000006": {
                 "error": {},
                 "grid_x_int": 6,
                 "grid_y_int": 4,
@@ -258,7 +258,7 @@
                 "rot_tail_int": 0,
                 "source": ""
             },
-            "22222222-2222-2222-2222-000000000007": {
+            "11111111-1111-1111-1111-000000000007": {
                 "error": {},
                 "grid_x_int": 6,
                 "grid_y_int": 5,
@@ -270,7 +270,7 @@
                 "rot_tail_int": 0,
                 "source": ""
             },
-            "22222222-2222-2222-2222-000000000008": {
+            "11111111-1111-1111-1111-000000000008": {
                 "error": {},
                 "grid_x_int": 6,
                 "grid_y_int": 6,
@@ -282,7 +282,7 @@
                 "rot_tail_int": 0,
                 "source": ""
             },
-            "22222222-2222-2222-2222-000000000009": {
+            "11111111-1111-1111-1111-000000000009": {
                 "error": {},
                 "grid_x_int": 6,
                 "grid_y_int": 7,
@@ -294,7 +294,7 @@
                 "rot_tail_int": 0,
                 "source": ""
             },
-            "22222222-2222-2222-2222-00000000000a": {
+            "11111111-1111-1111-1111-00000000000a": {
                 "error": {},
                 "grid_x_int": 7,
                 "grid_y_int": 5,
@@ -306,7 +306,7 @@
                 "rot_tail_int": 0,
                 "source": ""
             },
-            "22222222-2222-2222-2222-00000000000b": {
+            "11111111-1111-1111-1111-00000000000b": {
                 "error": {},
                 "grid_x_int": 8,
                 "grid_y_int": 5,
@@ -318,7 +318,7 @@
                 "rot_tail_int": 0,
                 "source": ""
             },
-            "22222222-2222-2222-2222-00000000000c": {
+            "11111111-1111-1111-1111-00000000000c": {
                 "error": {},
                 "grid_x_int": 9,
                 "grid_y_int": 5,
@@ -336,7 +336,7 @@
                 "rot_tail_int": 0,
                 "source": ""
             },
-            "22222222-2222-2222-2222-00000000000d": {
+            "11111111-1111-1111-1111-00000000000d": {
                 "error": {},
                 "grid_x_int": 10,
                 "grid_y_int": 5,
@@ -348,7 +348,7 @@
                 "rot_tail_int": 0,
                 "source": ""
             },
-            "22222222-2222-2222-2222-00000000000e": {
+            "11111111-1111-1111-1111-00000000000e": {
                 "error": {},
                 "grid_x_int": 11,
                 "grid_y_int": 5,
@@ -366,10 +366,10 @@
         "scale_ratio": 1
     },
     "snap_map": {
-        "22222222-2222-2222-2222-000000000000": {
+        "11111111-1111-1111-1111-000000000000": {
             "class_id": "com-snaplogic-snaps-transform-recordreplay",
             "class_version": 1,
-            "instance_id": "22222222-2222-2222-2222-000000000000",
+            "instance_id": "11111111-1111-1111-1111-000000000000",
             "property_map": {
                 "error": {
                     "error_behavior": {
@@ -417,10 +417,10 @@
                 "view_serial": 100
             }
         },
-        "22222222-2222-2222-2222-000000000001": {
+        "11111111-1111-1111-1111-000000000001": {
             "class_id": "com-snaplogic-snaps-transform-jsongenerator",
-            "class_version": 1,
-            "instance_id": "22222222-2222-2222-2222-000000000001",
+            "class_version": 2,
+            "instance_id": "11111111-1111-1111-1111-000000000001",
             "property_map": {
                 "error": {
                     "error0": {
@@ -472,10 +472,10 @@
                 "view_serial": 100
             }
         },
-        "22222222-2222-2222-2222-000000000002": {
+        "11111111-1111-1111-1111-000000000002": {
             "class_id": "com-snaplogic-snaps-azureopenai-azureopenaipromptgenerator",
             "class_version": 1,
-            "instance_id": "22222222-2222-2222-2222-000000000002",
+            "instance_id": "11111111-1111-1111-1111-000000000002",
             "property_map": {
                 "error": {
                     "error0": {
@@ -524,7 +524,7 @@
                         "value": null
                     },
                     "editable_content": {
-                        "value": "You are the Employee Onboarding Automation Agent responsible for orchestrating the complete onboarding process for new employees. Your role is to provision accounts, setup access, and coordinate notifications across multiple enterprise systems.\r\n\r\n## Available Tools:\r\n1. **ActiveDirectoryProvisioningApi** - Create AD user accounts with proper groups and permissions\r\n   - **Parameters**: \r\n     - `username` (string, required): Active Directory username\r\n     - `email` (string, required): Employee email address\r\n     - `first_name` (string, required): Employee first name\r\n     - `last_name` (string, required): Employee last name\r\n     - `department` (string, required): Department for group assignment\r\n     - `role` (string, required): Role for permission assignment\r\n     - `manager_email` (string, required): Manager email for approval workflow\r\n\r\n2. **SalesforceProvisioningApi** - Create Salesforce user with appropriate profile and permissions\r\n   - **Parameters**:\r\n     - `email` (string, required): Email address (serves as username)\r\n     - `first_name` (string, required): Employee first name\r\n     - `last_name` (string, required): Employee last name\r\n     - `role` (string, required): Salesforce role assignment\r\n     - `profile` (string, required): Permission profile\r\n     - `department` (string, required): Department for territory assignment\r\n\r\n3. **ServiceNowProvisioningApi** - Create onboarding ticket and workflow\r\n   - **Parameters**:\r\n     - `employee_name` (string, required): Full employee name\r\n     - `employee_email` (string, required): Employee email address\r\n     - `department` (string, required): Employee department\r\n     - `manager_email` (string, required): Manager email for approvals\r\n     - `start_date` (string, required): Employment start date\r\n     - `equipment_list` (string, required): Required equipment list\r\n\r\n4. **SlackNotificationApi** - Send notifications to teams and managers\r\n   - **Parameters**:\r\n     - `channel` (string, required): Slack channel or user ID\r\n     - `message` (string, required): Notification message content\r\n     - `mention_users` (string, optional): Users to mention (@manager, @team)\r\n\r\n5. **EmailNotificationApi** - Send welcome and notification emails\r\n   - **Parameters**:\r\n     - `recipient` (string, required): Email recipient address\r\n     - `subject` (string, required): Email subject line\r\n     - `body` (string, required): Email body content\r\n     - `template_type` (string, required): Email template (welcome, notification, manager_alert)\r\n\r\n## ONBOARDING WORKFLOW:\r\n\r\n### Phase 1: Account Provisioning (Sequential)\r\n1. **Execute ActiveDirectoryProvisioningApi FIRST**\r\n   - Create base AD account with proper username format\r\n   - Assign to department groups and security groups\r\n   - Set manager relationship for approval workflows\r\n   - **CRITICAL**: Wait for AD account creation before proceeding\r\n\r\n2. **Execute SalesforceProvisioningApi SECOND**\r\n   - Create Salesforce user account\r\n   - Assign appropriate profile based on role\r\n   - Set territory and permissions based on department\r\n   - Link to manager for data access hierarchy\r\n\r\n3. **Execute ServiceNowProvisioningApi THIRD**\r\n   - Create comprehensive onboarding ticket\r\n   - Include equipment provisioning requests\r\n   - Set up approval workflows with manager\r\n   - Track onboarding task completion\r\n\r\n### Phase 2: Notifications (Parallel)\r\n4. **Execute SlackNotificationApi** - Team Notification\r\n   - Send notification to team channel\r\n   - Mention manager and team leads\r\n   - Include employee details and start date\r\n\r\n5. **Execute EmailNotificationApi** - Welcome Email\r\n   - Send welcome email to new employee\r\n   - Include first day instructions and contacts\r\n   - Attach onboarding checklist and resources\r\n\r\n6. **Execute EmailNotificationApi** - Manager Notification\r\n   - Send detailed notification to manager\r\n   - Include account creation status and next steps\r\n   - Provide onboarding task checklist\r\n\r\n## ERROR HANDLING:\r\n- If AD provisioning fails, **STOP** - cannot proceed without base account\r\n- If Salesforce/ServiceNow fail, continue with notifications but flag issues\r\n- If notifications fail, log errors but complete core provisioning\r\n- Always provide status summary with success/failure details\r\n\r\n## RESPONSE FORMAT:\r\nProvide JSON response with onboarding status:\r\n```json\r\n{\r\n  \"onboarding_status\": \"completed\" | \"partial\" | \"failed\",\r\n  \"employee_name\": \"Full Name\",\r\n  \"accounts_created\": {\r\n    \"active_directory\": \"success\" | \"failed\",\r\n    \"salesforce\": \"success\" | \"failed\", \r\n    \"servicenow\": \"success\" | \"failed\"\r\n  },\r\n  \"notifications_sent\": {\r\n    \"slack_team\": \"success\" | \"failed\",\r\n    \"email_welcome\": \"success\" | \"failed\",\r\n    \"email_manager\": \"success\" | \"failed\"\r\n  },\r\n  \"next_steps\": [\"List of manual tasks or follow-up items\"],\r\n  \"errors\": [\"Any errors encountered during process\"]\r\n}\r\n```\r\n\r\n## KEY RULES:\r\n- **Sequential provisioning**: AD → Salesforce → ServiceNow (in that order)\r\n- **Parallel notifications**: Slack and Email can run simultaneously after provisioning\r\n- **Fail-fast on AD**: If Active Directory fails, abort entire process\r\n- **Continue on notification failures**: Core provisioning is more important\r\n- **Comprehensive logging**: Document all actions and results\r\n- **Manager involvement**: Include manager in all approval workflows and notifications"
+                        "value": "You are the Employee Onboarding Automation Agent responsible for orchestrating the complete onboarding process for new employees. Your role is to provision accounts, setup access, and coordinate notifications across multiple enterprise systems.\r\n\r\n## Available Tools:\r\n1. **ActiveDirectoryProvisioningApi** - Create AD user accounts with proper groups and permissions\r\n   - **Parameters**: \r\n     - `username` (string, required): Active Directory username\r\n     - `email` (string, required): Employee email address\r\n     - `first_name` (string, required): Employee first name\r\n     - `last_name` (string, required): Employee last name\r\n     - `department` (string, required): Department for group assignment\r\n     - `role` (string, required): Role for permission assignment\r\n     - `manager_email` (string, required): Manager email for approval workflow\r\n\r\n2. **SalesforceProvisioningApi** - Create Salesforce user with appropriate profile and permissions\r\n   - **Parameters**:\r\n     - `email` (string, required): Email address (serves as username)\r\n     - `first_name` (string, required): Employee first name\r\n     - `last_name` (string, required): Employee last name\r\n     - `role` (string, required): Salesforce role assignment\r\n     - `profile` (string, required): Permission profile\r\n     - `department` (string, required): Department for territory assignment\r\n\r\n3. **ServiceNowProvisioningApi** - Create onboarding ticket and workflow\r\n   - **Parameters**:\r\n     - `employee_name` (string, required): Full employee name\r\n     - `employee_email` (string, required): Employee email address\r\n     - `department` (string, required): Employee department\r\n     - `manager_email` (string, required): Manager email for approvals\r\n     - `start_date` (string, required): Employment start date\r\n     - `equipment_list` (string, required): Required equipment list\r\n\r\n4. **SlackNotificationApi** - Send notifications to teams and managers\r\n   - **Parameters**:\r\n     - `channel` (string, required): Slack channel or user ID\r\n     - `message` (string, required): Notification message content\r\n     - `mention_users` (string, optional): Users to mention (@manager, @team)\r\n\r\n5. **EmailNotificationApi** - Send welcome and notification emails\r\n   - **Parameters**:\r\n     - `recipient` (string, required): Email recipient address\r\n     - `subject` (string, required): Email subject line\r\n     - `body` (string, required): Email body content\r\n     - `template_type` (string, required): Email template (welcome, notification, manager_alert)\r\n\r\n## ONBOARDING WORKFLOW:\r\n\r\n### Phase 1: Account Provisioning (Sequential)\r\n1. **Execute ActiveDirectoryProvisioningApi FIRST**\r\n   - Create base AD account with proper username format\r\n   - Assign to department groups and security groups\r\n   - Set manager relationship for approval workflows\r\n   - **CRITICAL**: Wait for AD account creation before proceeding\r\n\r\n2. **Execute SalesforceProvisioningApi SECOND**\r\n   - Create Salesforce user account\r\n   - Assign appropriate profile based on role\r\n   - Set territory and permissions based on department\r\n   - Link to manager for data access hierarchy\r\n\r\n3. **Execute ServiceNowProvisioningApi THIRD**\r\n   - Create comprehensive onboarding ticket\r\n   - Include equipment provisioning requests\r\n   - Set up approval workflows with manager\r\n   - Track onboarding task completion\r\n\r\n### Phase 2: Notifications (Parallel)\r\n4. **Execute SlackNotificationApi** - Team Notification\r\n   - Send notification to team channel\r\n   - Mention manager and team leads\r\n   - Include employee details and start date\r\n\r\n5. **Execute EmailNotificationApi** - Welcome Email\r\n   - Send welcome email to new employee\r\n   - Include first day instructions and contacts\r\n   - Attach onboarding checklist and resources\r\n\r\n6. **Execute EmailNotificationApi** - Manager Notification\r\n   - Send detailed notification to manager\r\n   - Include account creation status and next steps\r\n   - Provide onboarding task checklist\r\n\r\n## ERROR HANDLING:\r\n- If AD provisioning fails, **STOP** - cannot proceed without base account\r\n- If Salesforce/ServiceNow fail, continue with notifications but flag issues\r\n- If notifications fail, log errors but complete core provisioning\r\n- Always provide status summary with success/failure details\r\n\r\n## RESPONSE FORMAT:\r\nProvide JSON response with onboarding status:\r\n```json\r\n{\r\n  \"onboarding_status\": \"completed\" | \"partial\" | \"failed\",\r\n  \"employee_name\": \"Full Name\",\r\n  \"accounts_created\": {\r\n    \"active_directory\": \"success\" | \"failed\",\r\n    \"salesforce\": \"success\" | \"failed\", \r\n    \"servicenow\": \"success\" | \"failed\"\r\n  },\r\n  \"notifications_sent\": {\r\n    \"slack_team\": \"success\" | \"failed\",\r\n    \"email_welcome\": \"success\" | \"failed\",\r\n    \"email_manager\": \"success\" | \"failed\"\r\n  },\r\n  \"next_steps\": [\"List of manual tasks or follow-up items\"],\r\n  \"errors\": [\"Any errors encountered during process\"]\r\n}\r\n```\r\n\r\n## KEY RULES:\r\n- **Sequential provisioning**: AD \u2192 Salesforce \u2192 ServiceNow (in that order)\r\n- **Parallel notifications**: Slack and Email can run simultaneously after provisioning\r\n- **Fail-fast on AD**: If Active Directory fails, abort entire process\r\n- **Continue on notification failures**: Core provisioning is more important\r\n- **Comprehensive logging**: Document all actions and results\r\n- **Manager involvement**: Include manager in all approval workflows and notifications"
                     },
                     "execution_mode": {
                         "value": "Validate & Execute"
@@ -544,10 +544,10 @@
                 "view_serial": 100
             }
         },
-        "22222222-2222-2222-2222-000000000003": {
+        "11111111-1111-1111-1111-000000000003": {
             "class_id": "com-snaplogic-snaps-azureopenai-azureopenaipromptgenerator",
             "class_version": 1,
-            "instance_id": "22222222-2222-2222-2222-000000000003",
+            "instance_id": "11111111-1111-1111-1111-000000000003",
             "property_map": {
                 "error": {
                     "error0": {
@@ -617,10 +617,10 @@
                 "view_serial": 100
             }
         },
-        "22222222-2222-2222-2222-000000000004": {
+        "11111111-1111-1111-1111-000000000004": {
             "class_id": "com-snaplogic-snaps-llmutils-apimfunctiongenerator",
             "class_version": 1,
-            "instance_id": "22222222-2222-2222-2222-000000000004",
+            "instance_id": "11111111-1111-1111-1111-000000000004",
             "property_map": {
                 "error": {
                     "error0": {
@@ -734,10 +734,10 @@
                 "view_serial": 100
             }
         },
-        "22222222-2222-2222-2222-000000000005": {
+        "11111111-1111-1111-1111-000000000005": {
             "class_id": "com-snaplogic-snaps-awsbedrock-awsconversefunctiongenerator",
             "class_version": 1,
-            "instance_id": "22222222-2222-2222-2222-000000000005",
+            "instance_id": "11111111-1111-1111-1111-000000000005",
             "property_map": {
                 "error": {
                     "error0": {
@@ -782,6 +782,9 @@
                     "description": {
                         "expression": false,
                         "value": "Creates Active Directory user accounts with proper groups, permissions, and manager relationships for new employee onboarding"
+                    },
+                    "execution_mode": {
+                        "value": "Validate & Execute"
                     },
                     "name": {
                         "expression": false,
@@ -902,18 +905,15 @@
                                 }
                             }
                         ]
-                    },
-                    "execution_mode": {
-                        "value": "Validate & Execute"
                     }
                 },
                 "view_serial": 100
             }
         },
-        "22222222-2222-2222-2222-000000000006": {
+        "11111111-1111-1111-1111-000000000006": {
             "class_id": "com-snaplogic-snaps-awsbedrock-awsconversefunctiongenerator",
             "class_version": 1,
-            "instance_id": "22222222-2222-2222-2222-000000000006",
+            "instance_id": "11111111-1111-1111-1111-000000000006",
             "property_map": {
                 "error": {
                     "error0": {
@@ -958,6 +958,9 @@
                     "description": {
                         "expression": false,
                         "value": "Creates Salesforce user accounts with appropriate profiles, roles, and permissions based on department and role requirements"
+                    },
+                    "execution_mode": {
+                        "value": "Validate & Execute"
                     },
                     "name": {
                         "expression": false,
@@ -1062,18 +1065,15 @@
                                 }
                             }
                         ]
-                    },
-                    "execution_mode": {
-                        "value": "Validate & Execute"
                     }
                 },
                 "view_serial": 100
             }
         },
-        "22222222-2222-2222-2222-000000000007": {
+        "11111111-1111-1111-1111-000000000007": {
             "class_id": "com-snaplogic-snaps-awsbedrock-awsconversefunctiongenerator",
             "class_version": 1,
-            "instance_id": "22222222-2222-2222-2222-000000000007",
+            "instance_id": "11111111-1111-1111-1111-000000000007",
             "property_map": {
                 "error": {
                     "error0": {
@@ -1118,6 +1118,9 @@
                     "description": {
                         "expression": false,
                         "value": "Creates comprehensive ServiceNow onboarding tickets with equipment requests, task assignments, and approval workflows"
+                    },
+                    "execution_mode": {
+                        "value": "Validate & Execute"
                     },
                     "name": {
                         "expression": false,
@@ -1222,18 +1225,15 @@
                                 }
                             }
                         ]
-                    },
-                    "execution_mode": {
-                        "value": "Validate & Execute"
                     }
                 },
                 "view_serial": 100
             }
         },
-        "22222222-2222-2222-2222-000000000008": {
+        "11111111-1111-1111-1111-000000000008": {
             "class_id": "com-snaplogic-snaps-awsbedrock-awsconversefunctiongenerator",
             "class_version": 1,
-            "instance_id": "22222222-2222-2222-2222-000000000008",
+            "instance_id": "11111111-1111-1111-1111-000000000008",
             "property_map": {
                 "error": {
                     "error0": {
@@ -1278,6 +1278,9 @@
                     "description": {
                         "expression": false,
                         "value": "Sends onboarding notifications to Slack channels and team members with employee details and welcome messages"
+                    },
+                    "execution_mode": {
+                        "value": "Validate & Execute"
                     },
                     "name": {
                         "expression": false,
@@ -1334,18 +1337,15 @@
                                 }
                             }
                         ]
-                    },
-                    "execution_mode": {
-                        "value": "Validate & Execute"
                     }
                 },
                 "view_serial": 100
             }
         },
-        "22222222-2222-2222-2222-000000000009": {
+        "11111111-1111-1111-1111-000000000009": {
             "class_id": "com-snaplogic-snaps-awsbedrock-awsconversefunctiongenerator",
             "class_version": 1,
-            "instance_id": "22222222-2222-2222-2222-000000000009",
+            "instance_id": "11111111-1111-1111-1111-000000000009",
             "property_map": {
                 "error": {
                     "error0": {
@@ -1390,6 +1390,9 @@
                     "description": {
                         "expression": false,
                         "value": "Sends welcome emails to new employees and notification emails to managers with onboarding status and next steps"
+                    },
+                    "execution_mode": {
+                        "value": "Validate & Execute"
                     },
                     "name": {
                         "expression": false,
@@ -1462,18 +1465,15 @@
                                 }
                             }
                         ]
-                    },
-                    "execution_mode": {
-                        "value": "Validate & Execute"
                     }
                 },
                 "view_serial": 100
             }
         },
-        "22222222-2222-2222-2222-00000000000a": {
+        "11111111-1111-1111-1111-00000000000a": {
             "class_id": "com-snaplogic-snaps-transform-structuraltransform",
             "class_version": 1,
-            "instance_id": "22222222-2222-2222-2222-00000000000a",
+            "instance_id": "11111111-1111-1111-1111-00000000000a",
             "property_map": {
                 "error": {
                     "error0": {
@@ -1548,10 +1548,10 @@
                 "view_serial": 100
             }
         },
-        "22222222-2222-2222-2222-00000000000b": {
+        "11111111-1111-1111-1111-00000000000b": {
             "class_id": "com-snaplogic-snaps-flow-pipeloop",
             "class_version": 1,
-            "instance_id": "22222222-2222-2222-2222-00000000000b",
+            "instance_id": "11111111-1111-1111-1111-00000000000b",
             "property_map": {
                 "error": {
                     "error0": {
@@ -1615,10 +1615,10 @@
                 "view_serial": 100
             }
         },
-        "22222222-2222-2222-2222-00000000000c": {
+        "11111111-1111-1111-1111-00000000000c": {
             "class_id": "com-snaplogic-snaps-experimental-llmutils-agentvisualizer",
             "class_version": 1,
-            "instance_id": "22222222-2222-2222-2222-00000000000c",
+            "instance_id": "11111111-1111-1111-1111-00000000000c",
             "property_map": {
                 "error": {
                     "error0": {
@@ -1678,10 +1678,10 @@
                 "view_serial": 100
             }
         },
-        "22222222-2222-2222-2222-00000000000d": {
+        "11111111-1111-1111-1111-00000000000d": {
             "class_id": "com-snaplogic-snaps-transform-datatransform",
-            "class_version": 1,
-            "instance_id": "22222222-2222-2222-2222-00000000000d",
+            "class_version": 4,
+            "instance_id": "11111111-1111-1111-1111-00000000000d",
             "property_map": {
                 "error": {
                     "error0": {
@@ -1726,61 +1726,25 @@
                     "execution_mode": {
                         "value": "Validate & Execute"
                     },
+                    "passThrough": {
+                        "value": true
+                    },
                     "transformations": {
                         "value": {
                             "mappingRoot": {
                                 "value": "$"
                             },
-                            "mappingTable": {
-                                "value": [
-                                    {
-                                        "expression": {
-                                            "expression": true,
-                                            "value": "$messages"
-                                        },
-                                        "targetPath": {
-                                            "value": "onboarding_conversation"
-                                        }
-                                    },
-                                    {
-                                        "expression": {
-                                            "expression": true,
-                                            "value": "pipe.ruuid"
-                                        },
-                                        "targetPath": {
-                                            "value": "session_id"
-                                        }
-                                    },
-                                    {
-                                        "expression": {
-                                            "expression": true,
-                                            "value": "pipe.label"
-                                        },
-                                        "targetPath": {
-                                            "value": "pipeline_name"
-                                        }
-                                    },
-                                    {
-                                        "expression": {
-                                            "expression": true,
-                                            "value": "Date.now()"
-                                        },
-                                        "targetPath": {
-                                            "value": "completion_timestamp"
-                                        }
-                                    }
-                                ]
-                            }
+                            "mappingTable": {}
                         }
                     }
                 },
                 "view_serial": 100
             }
         },
-        "22222222-2222-2222-2222-00000000000e": {
+        "11111111-1111-1111-1111-00000000000e": {
             "class_id": "com-snaplogic-snaps-transform-datatransform",
-            "class_version": 1,
-            "instance_id": "22222222-2222-2222-2222-00000000000e",
+            "class_version": 4,
+            "instance_id": "11111111-1111-1111-1111-00000000000e",
             "property_map": {
                 "error": {
                     "error0": {
@@ -1825,42 +1789,15 @@
                     "execution_mode": {
                         "value": "Validate & Execute"
                     },
+                    "passThrough": {
+                        "value": true
+                    },
                     "transformations": {
                         "value": {
                             "mappingRoot": {
                                 "value": "$"
                             },
-                            "mappingTable": {
-                                "value": [
-                                    {
-                                        "expression": {
-                                            "expression": true,
-                                            "value": "$onboarding_conversation.length > 0 ? $onboarding_conversation[$onboarding_conversation.length-1].content : 'No onboarding response'"
-                                        },
-                                        "targetPath": {
-                                            "value": "final_onboarding_status"
-                                        }
-                                    },
-                                    {
-                                        "expression": {
-                                            "expression": true,
-                                            "value": "$session_id"
-                                        },
-                                        "targetPath": {
-                                            "value": "session_id"
-                                        }
-                                    },
-                                    {
-                                        "expression": {
-                                            "expression": true,
-                                            "value": "$completion_timestamp"
-                                        },
-                                        "targetPath": {
-                                            "value": "completed_at"
-                                        }
-                                    }
-                                ]
-                            }
+                            "mappingTable": {}
                         }
                     }
                 },
