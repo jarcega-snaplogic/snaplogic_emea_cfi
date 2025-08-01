@@ -420,35 +420,35 @@ For hardcoded system prompts in AWS Bedrock Converse API snap:
 ```
 
 #### AWS Bedrock Prompt Generator to Converse API Data Flow
-Based on SnapLogic snap schemas, the data flow between Prompt Generator and Converse API follows this pattern:
+**CRITICAL**: The Prompt Generator's `advancedMode` setting determines the output format and required Converse API configuration.
 
-**Prompt Generator Output Structure**:
+### Configuration Pattern 1: Simple Mode (advancedMode = false)
+**Prompt Generator Output**: Simple text string in `$prompt` field
+**Converse API Configuration**:
+- **useMessages**: Set to `false` (unchecked)
+- **prompt**: Reference Prompt Generator output via `$prompt`
+
+**Pipeline Configuration Example**:
 ```json
+// Prompt Generator
 {
-  "messages": [
-    {
-      "role": "USER",
-      "content": [
-        {
-          "type": "text",
-          "text": "Generated prompt content with data: {{$opportunities}}"
-        }
-      ]
-    }
-  ]
+  "advancedMode": false,
+  "content": "$input_data"
+}
+
+// Converse API  
+{
+  "useMessages": false,
+  "prompt": "$prompt",
+  "model": "_bedrock_model"
 }
 ```
 
+### Configuration Pattern 2: Advanced Mode (advancedMode = true)
+**Prompt Generator Output**: Complete message array structure in `$messages` field
 **Converse API Configuration**:
-- **useMessages**: Set to `true` to enable message payload mode
+- **useMessages**: Set to `true` (checked)
 - **messages**: Reference Prompt Generator output via `$messages`
-- **Advanced Mode**: Enable in Prompt Generator for proper message array output
-
-**Key Technical Details**:
-1. **Field Mapping**: Prompt Generator `messages` output → Converse API `messages` input
-2. **Message Format**: Array of message objects with role, content structure
-3. **Content Blocks**: Text content wrapped in content block format with type specification
-4. **Expression References**: Use `$messages` to reference the complete message payload
 
 **Pipeline Configuration Example**:
 ```json
@@ -466,6 +466,20 @@ Based on SnapLogic snap schemas, the data flow between Prompt Generator and Conv
   "model": "_bedrock_model"
 }
 ```
+
+### Field Reference Rules
+**CRITICAL FIELD REFERENCES**:
+- **Simple Mode Output**: `$prompt` (contains the generated prompt text)
+- **Advanced Mode Output**: `$messages` (contains the complete message array)
+- **Never Use**: `$` alone - this references the entire document, not the specific prompt output
+
+### Key Technical Details
+1. **Field Mapping**: 
+   - Simple Mode: Prompt Generator `$prompt` → Converse API `prompt` field
+   - Advanced Mode: Prompt Generator `$messages` → Converse API `messages` field
+2. **Mode Matching**: Prompt Generator `advancedMode` must match Converse API `useMessages` setting
+3. **Automatic Translation**: SnapLogic automatically formats advanced mode output for LLM compatibility
+4. **Expression References**: Always use the specific field name (`$prompt` or `$messages`), not generic `$`
 
 #### Connection Optimization
 - **Short Paths**: Position snaps to minimize connection line length

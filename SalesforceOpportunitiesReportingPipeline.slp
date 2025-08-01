@@ -793,9 +793,9 @@
                     "includeCrossRegionModels": {
                         "value": true
                     },
-                    "messages": {
+                    "prompt": {
                         "expression": true,
-                        "value": "$"
+                        "value": "$prompt"
                     },
                     "model": {
                         "expression": true,
@@ -818,7 +818,7 @@
                         }
                     },
                     "useMessages": {
-                        "value": true
+                        "value": false
                     }
                 },
                 "view_serial": 100
