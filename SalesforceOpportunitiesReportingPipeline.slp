@@ -236,7 +236,13 @@
                 "grid_y_int": 5,
                 "index": null,
                 "input": {},
-                "output": {},
+                "output": {
+                    "output1": {
+                        "dx_int": 0,
+                        "dy_int": 1,
+                        "rot_int": 0
+                    }
+                },
                 "recommendation_id": null,
                 "rot_int": 0,
                 "rot_tail_int": 0,
@@ -711,13 +717,47 @@
             "class_version": 1,
             "instance_id": "11111111-1111-1111-1111-000000000003",
             "property_map": {
-                "error": {
-                    "error0": {
-                        "label": {
-                            "value": "error0"
-                        },
+                "view_serial": 100,
+                "settings": {
+                    "execution_mode": {
+                        "value": "Validate & Execute"
+                    }
+                },
+                "input": {
+                    "input0": {
                         "view_type": {
                             "value": "document"
+                        },
+                        "label": {
+                            "value": "input0"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "view_type": {
+                            "value": "document"
+                        },
+                        "label": {
+                            "value": "output0"
+                        }
+                    },
+                    "output1": {
+                        "view_type": {
+                            "value": "document"
+                        },
+                        "label": {
+                            "value": "output1"
+                        }
+                    }
+                },
+                "error": {
+                    "error0": {
+                        "view_type": {
+                            "value": "document"
+                        },
+                        "label": {
+                            "value": "error0"
                         }
                     },
                     "error_behavior": {
@@ -731,41 +771,7 @@
                     "notes": {
                         "value": "Splits individual opportunity records for potential dual processing paths"
                     }
-                },
-                "input": {
-                    "input0": {
-                        "label": {
-                            "value": "input0"
-                        },
-                        "view_type": {
-                            "value": "document"
-                        }
-                    }
-                },
-                "output": {
-                    "output0": {
-                        "label": {
-                            "value": "output0"
-                        },
-                        "view_type": {
-                            "value": "document"
-                        }
-                    },
-                    "output1": {
-                        "label": {
-                            "value": "output1"
-                        },
-                        "view_type": {
-                            "value": "document"
-                        }
-                    }
-                },
-                "settings": {
-                    "execution_mode": {
-                        "value": "Validate & Execute"
-                    }
-                },
-                "view_serial": 100
+                }
             }
         },
         "11111111-1111-1111-1111-000000000004": {
@@ -773,13 +779,47 @@
             "class_version": 1,
             "instance_id": "11111111-1111-1111-1111-000000000004",
             "property_map": {
-                "error": {
-                    "error0": {
-                        "label": {
-                            "value": "error0"
-                        },
+                "view_serial": 100,
+                "settings": {
+                    "execution_mode": {
+                        "value": "Validate & Execute"
+                    }
+                },
+                "input": {
+                    "input0": {
                         "view_type": {
                             "value": "document"
+                        },
+                        "label": {
+                            "value": "input0"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "view_type": {
+                            "value": "document"
+                        },
+                        "label": {
+                            "value": "output0"
+                        }
+                    },
+                    "output1": {
+                        "view_type": {
+                            "value": "document"
+                        },
+                        "label": {
+                            "value": "output1"
+                        }
+                    }
+                },
+                "error": {
+                    "error0": {
+                        "view_type": {
+                            "value": "document"
+                        },
+                        "label": {
+                            "value": "error0"
                         }
                     },
                     "error_behavior": {
@@ -790,41 +830,7 @@
                     "label": {
                         "value": "Copy"
                     }
-                },
-                "input": {
-                    "input0": {
-                        "label": {
-                            "value": "input0"
-                        },
-                        "view_type": {
-                            "value": "document"
-                        }
-                    }
-                },
-                "output": {
-                    "output0": {
-                        "label": {
-                            "value": "output0"
-                        },
-                        "view_type": {
-                            "value": "document"
-                        }
-                    },
-                    "output1": {
-                        "label": {
-                            "value": "output1"
-                        },
-                        "view_type": {
-                            "value": "document"
-                        }
-                    }
-                },
-                "settings": {
-                    "execution_mode": {
-                        "value": "Validate & Execute"
-                    }
-                },
-                "view_serial": 100
+                }
             }
         },
         "11111111-1111-1111-1111-000000000005": {
