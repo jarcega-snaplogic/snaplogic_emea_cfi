@@ -41,18 +41,6 @@
             "src_id": "11111111-1111-1111-1111-00000000000b",
             "src_view_id": "output0"
         },
-        "link802": {
-            "dst_id": "11111111-1111-1111-1111-000000000003",
-            "dst_view_id": "input0",
-            "src_id": "11111111-1111-1111-1111-000000000002",
-            "src_view_id": "output0"
-        },
-        "link803": {
-            "dst_id": "11111111-1111-1111-1111-000000000002",
-            "dst_view_id": "input0",
-            "src_id": "11111111-1111-1111-1111-000000000001",
-            "src_view_id": "output0"
-        },
         "link900": {
             "dst_id": "11111111-1111-1111-1111-000000000004",
             "dst_view_id": "input0",
@@ -75,6 +63,12 @@
             "dst_id": "11111111-1111-1111-1111-000000000006",
             "dst_view_id": "input0",
             "src_id": "11111111-1111-1111-1111-000000000004",
+            "src_view_id": "output0"
+        },
+        "link904": {
+            "dst_id": "11111111-1111-1111-1111-000000000003",
+            "dst_view_id": "input0",
+            "src_id": "11111111-1111-1111-1111-000000000001",
             "src_view_id": "output0"
         }
     },
@@ -101,17 +95,17 @@
         },
         "input": {},
         "output": {
-            "11111111-1111-1111-1111-000000000007_output0": {
+            "11111111-1111-1111-1111-000000000003_output0": {
                 "label": {
-                    "value": "File Writer - JSON Export - output0"
+                    "value": "Copy - Split Data Flow - output0"
                 },
                 "view_type": {
                     "value": "document"
                 }
             },
-            "11111111-1111-1111-1111-00000000000c_output0": {
+            "11111111-1111-1111-1111-000000000007_output0": {
                 "label": {
-                    "value": "File Writer - HTML Dashboard Export - output0"
+                    "value": "File Writer - JSON Export - output0"
                 },
                 "view_type": {
                     "value": "document"
@@ -710,7 +704,7 @@
                 },
                 "settings": {
                     "execution_mode": {
-                        "value": "Validate & Execute"
+                        "value": "Disabled"
                     },
                     "filterExpression": {
                         "expression": true,
@@ -833,7 +827,7 @@
                 },
                 "settings": {
                     "execution_mode": {
-                        "value": "Validate & Execute"
+                        "value": "Disabled"
                     },
                     "numberOfDocs": {
                         "expression": false,
