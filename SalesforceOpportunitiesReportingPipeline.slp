@@ -12,33 +12,33 @@
             "src_view_id": "output0"
         },
         "link400": {
-            "dst_id": "11111111-1111-1111-1111-000000000006",
-            "dst_view_id": "input0",
-            "src_id": "11111111-1111-1111-1111-000000000005",
-            "src_view_id": "output0"
-        },
-        "link500": {
-            "dst_id": "11111111-1111-1111-1111-000000000007",
+            "dst_id": "11111111-1111-1111-1111-000000000008",
             "dst_view_id": "input0",
             "src_id": "11111111-1111-1111-1111-000000000006",
             "src_view_id": "output0"
         },
-        "link600": {
-            "dst_id": "11111111-1111-1111-1111-000000000008",
-            "dst_view_id": "input0",
-            "src_id": "11111111-1111-1111-1111-000000000007",
-            "src_view_id": "output0"
-        },
-        "link700": {
+        "link500": {
             "dst_id": "11111111-1111-1111-1111-000000000009",
             "dst_view_id": "input0",
             "src_id": "11111111-1111-1111-1111-000000000008",
             "src_view_id": "output0"
         },
-        "link800": {
+        "link600": {
             "dst_id": "11111111-1111-1111-1111-00000000000a",
             "dst_view_id": "input0",
             "src_id": "11111111-1111-1111-1111-000000000009",
+            "src_view_id": "output0"
+        },
+        "link700": {
+            "dst_id": "11111111-1111-1111-1111-00000000000b",
+            "dst_view_id": "input0",
+            "src_id": "11111111-1111-1111-1111-00000000000a",
+            "src_view_id": "output0"
+        },
+        "link800": {
+            "dst_id": "11111111-1111-1111-1111-00000000000c",
+            "dst_view_id": "input0",
+            "src_id": "11111111-1111-1111-1111-00000000000b",
             "src_view_id": "output0"
         },
         "link802": {
@@ -54,25 +54,25 @@
             "src_view_id": "output0"
         },
         "link900": {
-            "dst_id": "11111111-1111-1111-1111-00000000000c",
+            "dst_id": "11111111-1111-1111-1111-000000000004",
             "dst_view_id": "input0",
             "src_id": "11111111-1111-1111-1111-000000000003",
             "src_view_id": "output0"
         },
-        "link903": {
-            "dst_id": "11111111-1111-1111-1111-000000000005",
-            "dst_view_id": "input0",
-            "src_id": "11111111-1111-1111-1111-00000000000c",
-            "src_view_id": "output0"
-        },
         "link901": {
-            "dst_id": "11111111-1111-1111-1111-000000000004",
+            "dst_id": "11111111-1111-1111-1111-000000000005",
             "dst_view_id": "input0",
             "src_id": "11111111-1111-1111-1111-000000000003",
             "src_view_id": "output1"
         },
         "link902": {
-            "dst_id": "11111111-1111-1111-1111-00000000000b",
+            "dst_id": "11111111-1111-1111-1111-000000000007",
+            "dst_view_id": "input0",
+            "src_id": "11111111-1111-1111-1111-000000000005",
+            "src_view_id": "output0"
+        },
+        "link903": {
+            "dst_id": "11111111-1111-1111-1111-000000000006",
             "dst_view_id": "input0",
             "src_id": "11111111-1111-1111-1111-000000000004",
             "src_view_id": "output0"
@@ -99,26 +99,9 @@
                 "value": "Generate intelligent HTML dashboard for EMEA closed won opportunities analysis using AI-powered insights with proper document grouping"
             }
         },
-        "input": {
-            "11111111-1111-1111-1111-000000000004_input0": {
-                "label": {
-                    "value": "Copy - input0"
-                },
-                "view_type": {
-                    "value": "document"
-                }
-            }
-        },
+        "input": {},
         "output": {
-            "11111111-1111-1111-1111-000000000003_output1": {
-                "label": {
-                    "value": "Copy - Split Data Flow - output1"
-                },
-                "view_type": {
-                    "value": "document"
-                }
-            },
-            "11111111-1111-1111-1111-000000000004_output0": {
+            "11111111-1111-1111-1111-000000000007_output0": {
                 "label": {
                     "value": "File Writer - JSON Export - output0"
                 },
@@ -126,7 +109,7 @@
                     "value": "document"
                 }
             },
-            "11111111-1111-1111-1111-00000000000a_output0": {
+            "11111111-1111-1111-1111-00000000000c_output0": {
                 "label": {
                     "value": "File Writer - HTML Dashboard Export - output0"
                 },
@@ -207,7 +190,7 @@
             "11111111-1111-1111-1111-000000000000": {
                 "error": {},
                 "grid_x_int": 1,
-                "grid_y_int": 5,
+                "grid_y_int": 6,
                 "index": null,
                 "input": {},
                 "output": {},
@@ -219,7 +202,7 @@
             "11111111-1111-1111-1111-000000000001": {
                 "error": {},
                 "grid_x_int": 2,
-                "grid_y_int": 5,
+                "grid_y_int": 6,
                 "index": null,
                 "input": {},
                 "output": {},
@@ -231,7 +214,7 @@
             "11111111-1111-1111-1111-000000000002": {
                 "error": {},
                 "grid_x_int": 3,
-                "grid_y_int": 5,
+                "grid_y_int": 6,
                 "index": null,
                 "input": {},
                 "output": {},
@@ -243,7 +226,7 @@
             "11111111-1111-1111-1111-000000000003": {
                 "error": {},
                 "grid_x_int": 4,
-                "grid_y_int": 5,
+                "grid_y_int": 6,
                 "index": null,
                 "input": {},
                 "output": {
@@ -270,34 +253,10 @@
                 "rot_tail_int": 0,
                 "source": "snap category"
             },
-            "11111111-1111-1111-1111-00000000000b": {
-                "error": {},
-                "grid_x_int": 6,
-                "grid_y_int": 6,
-                "index": null,
-                "input": {},
-                "output": {},
-                "recommendation_id": null,
-                "rot_int": 0,
-                "rot_tail_int": 0,
-                "source": "snap category"
-            },
-            "11111111-1111-1111-1111-00000000000c": {
-                "error": {},
-                "grid_x_int": 4,
-                "grid_y_int": 4,
-                "index": null,
-                "input": {},
-                "output": {},
-                "recommendation_id": null,
-                "rot_int": 0,
-                "rot_tail_int": 0,
-                "source": "snap category"
-            },
             "11111111-1111-1111-1111-000000000005": {
                 "error": {},
                 "grid_x_int": 5,
-                "grid_y_int": 5,
+                "grid_y_int": 7,
                 "index": null,
                 "input": {},
                 "output": {},
@@ -309,7 +268,7 @@
             "11111111-1111-1111-1111-000000000006": {
                 "error": {},
                 "grid_x_int": 6,
-                "grid_y_int": 5,
+                "grid_y_int": 6,
                 "index": null,
                 "input": {},
                 "output": {},
@@ -320,8 +279,8 @@
             },
             "11111111-1111-1111-1111-000000000007": {
                 "error": {},
-                "grid_x_int": 7,
-                "grid_y_int": 5,
+                "grid_x_int": 6,
+                "grid_y_int": 7,
                 "index": null,
                 "input": {},
                 "output": {},
@@ -332,8 +291,8 @@
             },
             "11111111-1111-1111-1111-000000000008": {
                 "error": {},
-                "grid_x_int": 8,
-                "grid_y_int": 5,
+                "grid_x_int": 7,
+                "grid_y_int": 6,
                 "index": null,
                 "input": {},
                 "output": {},
@@ -344,8 +303,8 @@
             },
             "11111111-1111-1111-1111-000000000009": {
                 "error": {},
-                "grid_x_int": 9,
-                "grid_y_int": 5,
+                "grid_x_int": 8,
+                "grid_y_int": 6,
                 "index": null,
                 "input": {},
                 "output": {},
@@ -356,8 +315,32 @@
             },
             "11111111-1111-1111-1111-00000000000a": {
                 "error": {},
+                "grid_x_int": 9,
+                "grid_y_int": 6,
+                "index": null,
+                "input": {},
+                "output": {},
+                "recommendation_id": null,
+                "rot_int": 0,
+                "rot_tail_int": 0,
+                "source": "snap category"
+            },
+            "11111111-1111-1111-1111-00000000000b": {
+                "error": {},
                 "grid_x_int": 10,
-                "grid_y_int": 5,
+                "grid_y_int": 6,
+                "index": null,
+                "input": {},
+                "output": {},
+                "recommendation_id": null,
+                "rot_int": 0,
+                "rot_tail_int": 0,
+                "source": "snap category"
+            },
+            "11111111-1111-1111-1111-00000000000c": {
+                "error": {},
+                "grid_x_int": 11,
+                "grid_y_int": 6,
                 "index": null,
                 "input": {},
                 "output": {},
@@ -745,47 +728,13 @@
             "class_version": 1,
             "instance_id": "11111111-1111-1111-1111-000000000003",
             "property_map": {
-                "view_serial": 100,
-                "settings": {
-                    "execution_mode": {
-                        "value": "Validate & Execute"
-                    }
-                },
-                "input": {
-                    "input0": {
-                        "view_type": {
-                            "value": "document"
-                        },
-                        "label": {
-                            "value": "input0"
-                        }
-                    }
-                },
-                "output": {
-                    "output0": {
-                        "view_type": {
-                            "value": "document"
-                        },
-                        "label": {
-                            "value": "output0"
-                        }
-                    },
-                    "output1": {
-                        "view_type": {
-                            "value": "document"
-                        },
-                        "label": {
-                            "value": "output1"
-                        }
-                    }
-                },
                 "error": {
                     "error0": {
-                        "view_type": {
-                            "value": "document"
-                        },
                         "label": {
                             "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
                         }
                     },
                     "error_behavior": {
@@ -799,18 +748,163 @@
                     "notes": {
                         "value": "Splits individual opportunity records for potential dual processing paths"
                     }
-                }
-            }
-        },
-        "11111111-1111-1111-1111-000000000004": {
-            "class_id": "com-snaplogic-snaps-transform-jsonformatter",
-            "class_version": 2,
-            "instance_id": "11111111-1111-1111-1111-000000000004",
-            "property_map": {
-                "view_serial": 100,
+                },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "output1": {
+                        "label": {
+                            "value": "output1"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
                 "settings": {
                     "execution_mode": {
                         "value": "Validate & Execute"
+                    }
+                },
+                "view_serial": 100
+            }
+        },
+        "11111111-1111-1111-1111-000000000004": {
+            "class_id": "com-snaplogic-snaps-flow-head",
+            "class_version": 1,
+            "instance_id": "11111111-1111-1111-1111-000000000004",
+            "property_map": {
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "Head - Sample 15 Opportunities"
+                    },
+                    "notes": {
+                        "value": "Limits flow to first 15 opportunity records for AI analysis while full dataset exports to JSON"
+                    }
+                },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "settings": {
+                    "execution_mode": {
+                        "value": "Validate & Execute"
+                    },
+                    "numberOfDocs": {
+                        "expression": false,
+                        "value": 15
+                    },
+                    "offset": {
+                        "expression": false,
+                        "value": 0
+                    }
+                },
+                "view_serial": 100
+            }
+        },
+        "11111111-1111-1111-1111-000000000005": {
+            "class_id": "com-snaplogic-snaps-transform-jsonformatter",
+            "class_version": 2,
+            "instance_id": "11111111-1111-1111-1111-000000000005",
+            "property_map": {
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "JSON Formatter - Opportunities Export"
+                    },
+                    "notes": {
+                        "value": "Formats opportunity documents into JSON binary format for file export"
+                    }
+                },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "binary"
+                        }
+                    }
+                },
+                "settings": {
+                    "contentPath": {
+                        "value": "$"
+                    },
+                    "deriveSchemaLimit": {
+                        "value": "None"
+                    },
+                    "execution_mode": {
+                        "value": "Validate & Execute"
+                    },
+                    "formatSingleDocument": {
+                        "value": false
                     },
                     "header": {
                         "value": [
@@ -825,13 +919,7 @@
                             }
                         ]
                     },
-                    "contentPath": {
-                        "value": "$"
-                    },
                     "ignoreEmptyStream": {
-                        "value": false
-                    },
-                    "formatSingleDocument": {
                         "value": false
                     },
                     "jsonLines": {
@@ -840,162 +928,17 @@
                     "prettyPrint": {
                         "value": true
                     },
-                    "deriveSchemaLimit": {
-                        "value": "None"
-                    },
                     "supportTypeExts": {
                         "value": false
                     }
                 },
-                "input": {
-                    "input0": {
-                        "view_type": {
-                            "value": "document"
-                        },
-                        "label": {
-                            "value": "input0"
-                        }
-                    }
-                },
-                "output": {
-                    "output0": {
-                        "view_type": {
-                            "value": "binary"
-                        },
-                        "label": {
-                            "value": "output0"
-                        }
-                    }
-                },
-                "error": {
-                    "error0": {
-                        "view_type": {
-                            "value": "document"
-                        },
-                        "label": {
-                            "value": "error0"
-                        }
-                    },
-                    "error_behavior": {
-                        "value": "fail"
-                    }
-                },
-                "info": {
-                    "label": {
-                        "value": "JSON Formatter - Opportunities Export"
-                    },
-                    "notes": {
-                        "value": "Formats opportunity documents into JSON binary format for file export"
-                    }
-                }
+                "view_serial": 100
             }
         },
-        "11111111-1111-1111-1111-00000000000b": {
-            "class_id": "com-snaplogic-snaps-binary-write",
-            "class_version": 3,
-            "instance_id": "11111111-1111-1111-1111-00000000000b",
-            "property_map": {
-                "view_serial": 100,
-                "settings": {
-                    "UserPermissionsKey": {
-                        "value": []
-                    },
-                    "advancedProperties": {
-                        "value": []
-                    },
-                    "cannedAcls": {
-                        "value": "None"
-                    },
-                    "createDir": {
-                        "value": true
-                    },
-                    "executable_during_suggest": {
-                        "value": false
-                    },
-                    "execution_mode": {
-                        "value": "Execute only"
-                    },
-                    "fileAction": {
-                        "value": "OVERWRITE"
-                    },
-                    "filename": {
-                        "expression": false,
-                        "value": "opportunities.json"
-                    },
-                    "flushIntervalKb": {
-                        "value": -1
-                    },
-                    "preventURLEncoding": {
-                        "value": false
-                    },
-                    "retries": {
-                        "value": 0
-                    },
-                    "retryInterval": {
-                        "value": 1
-                    },
-                    "validate": {
-                        "value": true
-                    },
-                    "writeEmptyFile": {
-                        "value": false
-                    },
-                    "writeHeader": {
-                        "value": false
-                    }
-                },
-                "account": {
-                    "account_ref": {
-                        "value": {}
-                    }
-                },
-                "input": {
-                    "input0": {
-                        "view_type": {
-                            "value": "binary"
-                        },
-                        "label": {
-                            "value": "input0"
-                        }
-                    }
-                },
-                "output": {
-                    "output0": {
-                        "view_type": {
-                            "value": "document"
-                        },
-                        "label": {
-                            "value": "output0"
-                        }
-                    }
-                },
-                "error": {
-                    "error0": {
-                        "view_type": {
-                            "value": "document"
-                        },
-                        "label": {
-                            "value": "error0"
-                        }
-                    },
-                    "error_behavior": {
-                        "value": "fail"
-                    }
-                },
-                "info": {
-                    "label": {
-                        "value": "File Writer - JSON Export"
-                    },
-                    "notes": {
-                        "value": "Writes JSON binary data to opportunities.json file in SLDB storage"
-                    }
-                }
-            }
-        },
-        "11111111-1111-1111-1111-000000000005": {
+        "11111111-1111-1111-1111-000000000006": {
             "class_id": "com-snaplogic-snaps-transform-groupbyn",
             "class_version": 1,
-            "instance_id": "11111111-1111-1111-1111-000000000005",
+            "instance_id": "11111111-1111-1111-1111-000000000006",
             "property_map": {
                 "error": {
                     "error0": {
@@ -1067,10 +1010,112 @@
                 "view_serial": 100
             }
         },
-        "11111111-1111-1111-1111-000000000006": {
+        "11111111-1111-1111-1111-000000000007": {
+            "class_id": "com-snaplogic-snaps-binary-write",
+            "class_version": 3,
+            "instance_id": "11111111-1111-1111-1111-000000000007",
+            "property_map": {
+                "account": {
+                    "account_ref": {
+                        "value": {}
+                    }
+                },
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "File Writer - JSON Export"
+                    },
+                    "notes": {
+                        "value": "Writes JSON binary data to opportunities.json file in SLDB storage"
+                    }
+                },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "binary"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "settings": {
+                    "UserPermissionsKey": {
+                        "value": []
+                    },
+                    "advancedProperties": {
+                        "value": []
+                    },
+                    "cannedAcls": {
+                        "value": "None"
+                    },
+                    "createDir": {
+                        "value": true
+                    },
+                    "executable_during_suggest": {
+                        "value": false
+                    },
+                    "execution_mode": {
+                        "value": "Execute only"
+                    },
+                    "fileAction": {
+                        "value": "OVERWRITE"
+                    },
+                    "filename": {
+                        "expression": false,
+                        "value": "opportunities.json"
+                    },
+                    "flushIntervalKb": {
+                        "value": -1
+                    },
+                    "preventURLEncoding": {
+                        "value": false
+                    },
+                    "retries": {
+                        "value": 0
+                    },
+                    "retryInterval": {
+                        "value": 1
+                    },
+                    "validate": {
+                        "value": true
+                    },
+                    "writeEmptyFile": {
+                        "value": false
+                    },
+                    "writeHeader": {
+                        "value": false
+                    }
+                },
+                "view_serial": 100
+            }
+        },
+        "11111111-1111-1111-1111-000000000008": {
             "class_id": "com-snaplogic-snaps-awsbedrock-awsbedrockpromptgenerator",
             "class_version": 1,
-            "instance_id": "11111111-1111-1111-1111-000000000006",
+            "instance_id": "11111111-1111-1111-1111-000000000008",
             "property_map": {
                 "error": {
                     "error0": {
@@ -1137,10 +1182,10 @@
                 "view_serial": 100
             }
         },
-        "11111111-1111-1111-1111-000000000007": {
+        "11111111-1111-1111-1111-000000000009": {
             "class_id": "com-snaplogic-snaps-awsbedrock-awsbedrockconverseapi",
             "class_version": 1,
-            "instance_id": "11111111-1111-1111-1111-000000000007",
+            "instance_id": "11111111-1111-1111-1111-000000000009",
             "property_map": {
                 "account": {
                     "account_ref": {
@@ -1249,8 +1294,8 @@
                         "value": null
                     },
                     "model": {
-                        "expression": true,
-                        "value": "_bedrock_model"
+                        "expression": false,
+                        "value": "us.anthropic.claude-sonnet-4-20250514-v1:0"
                     },
                     "modelParameters": {
                         "value": {
@@ -1291,10 +1336,10 @@
                 "view_serial": 100
             }
         },
-        "11111111-1111-1111-1111-000000000008": {
+        "11111111-1111-1111-1111-00000000000a": {
             "class_id": "com-snaplogic-snaps-transform-datatransform",
             "class_version": 4,
-            "instance_id": "11111111-1111-1111-1111-000000000008",
+            "instance_id": "11111111-1111-1111-1111-00000000000a",
             "property_map": {
                 "error": {
                     "error0": {
@@ -1371,10 +1416,10 @@
                 "view_serial": 100
             }
         },
-        "11111111-1111-1111-1111-000000000009": {
+        "11111111-1111-1111-1111-00000000000b": {
             "class_id": "com-snaplogic-snaps-transform-documenttobinary",
             "class_version": 1,
-            "instance_id": "11111111-1111-1111-1111-000000000009",
+            "instance_id": "11111111-1111-1111-1111-00000000000b",
             "property_map": {
                 "error": {
                     "error0": {
@@ -1441,10 +1486,10 @@
                 "view_serial": 100
             }
         },
-        "11111111-1111-1111-1111-00000000000a": {
+        "11111111-1111-1111-1111-00000000000c": {
             "class_id": "com-snaplogic-snaps-binary-write",
             "class_version": 3,
-            "instance_id": "11111111-1111-1111-1111-00000000000a",
+            "instance_id": "11111111-1111-1111-1111-00000000000c",
             "property_map": {
                 "account": {
                     "account_ref": {
@@ -1541,69 +1586,6 @@
                     }
                 },
                 "view_serial": 100
-            }
-        }
-,
-        "11111111-1111-1111-1111-00000000000c": {
-            "class_id": "com-snaplogic-snaps-flow-head",
-            "class_version": 1,
-            "instance_id": "11111111-1111-1111-1111-00000000000c",
-            "property_map": {
-                "view_serial": 100,
-                "settings": {
-                    "execution_mode": {
-                        "value": "Validate & Execute"
-                    },
-                    "numberOfDocs": {
-                        "expression": false,
-                        "value": 15
-                    },
-                    "offset": {
-                        "expression": false,
-                        "value": 0
-                    }
-                },
-                "input": {
-                    "input0": {
-                        "view_type": {
-                            "value": "document"
-                        },
-                        "label": {
-                            "value": "input0"
-                        }
-                    }
-                },
-                "output": {
-                    "output0": {
-                        "view_type": {
-                            "value": "document"
-                        },
-                        "label": {
-                            "value": "output0"
-                        }
-                    }
-                },
-                "error": {
-                    "error0": {
-                        "view_type": {
-                            "value": "document"
-                        },
-                        "label": {
-                            "value": "error0"
-                        }
-                    },
-                    "error_behavior": {
-                        "value": "fail"
-                    }
-                },
-                "info": {
-                    "label": {
-                        "value": "Head - Sample 15 Opportunities"
-                    },
-                    "notes": {
-                        "value": "Limits flow to first 15 opportunity records for AI analysis while full dataset exports to JSON"
-                    }
-                }
             }
         }
     }
