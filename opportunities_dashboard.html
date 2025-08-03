@@ -286,11 +286,12 @@
         </div>
     </div>
     
-    <div class="version">v1.2.1</div>
+    <div class="version">v1.2.2</div>
     
     <script>
         let opportunitiesData = [];
         let filteredData = [];
+        let allSolutionsEngineers = [];
         
         // Load and initialize data
         async function loadData() {
@@ -298,6 +299,12 @@
                 const response = await fetch('opportunities.json');
                 opportunitiesData = await response.json();
                 filteredData = [...opportunitiesData];
+                
+                // Cache unique Solutions Engineers on load
+                allSolutionsEngineers = [...new Set(opportunitiesData
+                    .map(o => o.Solutions_Engineer)
+                    .filter(Boolean))]
+                    .sort();
                 
                 initializeFilters();
                 renderTable();
@@ -415,22 +422,15 @@
             const currentValue = cell.textContent.trim();
             const currentSE = currentValue === 'Unassigned' ? '' : currentValue;
             
-            // Get unique SEs from data
-            const allSEs = [...new Set(opportunitiesData
-                .map(o => o.Solutions_Engineer)
-                .filter(Boolean))]
-                .sort();
-            
+            // Create select with cached SEs
             const select = document.createElement('select');
             select.className = 'se-editor';
             
-            // Add options
-            const unassignedOption = document.createElement('option');
-            unassignedOption.value = '';
-            unassignedOption.textContent = 'Unassigned';
-            select.appendChild(unassignedOption);
+            // Add Unassigned option
+            select.innerHTML = '<option value="">Unassigned</option>';
             
-            allSEs.forEach(se => {
+            // Add all cached SEs
+            allSolutionsEngineers.forEach(se => {
                 const option = document.createElement('option');
                 option.value = se;
                 option.textContent = se;
@@ -440,12 +440,13 @@
                 select.appendChild(option);
             });
             
+            // Replace cell content with select
             cell.innerHTML = '';
             cell.appendChild(select);
-            select.focus();
             
-            function saveEdit() {
-                const newValue = select.value;
+            // Simple event handling - just save on change
+            select.addEventListener('change', function() {
+                const newValue = this.value;
                 const displayValue = newValue || 'Unassigned';
                 
                 // Update data
@@ -454,17 +455,12 @@
                     opp.Solutions_Engineer = newValue || null;
                 }
                 
+                // Update cell display
                 cell.textContent = displayValue;
                 updateSEAggregation();
-            }
-            
-            // Save on selection change
-            select.addEventListener('change', saveEdit);
-            
-            // Save when losing focus, but with a small delay to allow for selection
-            select.addEventListener('blur', () => {
-                setTimeout(saveEdit, 150);
             });
+            
+            // Don't auto-focus to avoid flickering
         }
         
         // Update SE aggregation
