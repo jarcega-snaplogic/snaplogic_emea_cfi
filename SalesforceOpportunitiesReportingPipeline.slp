@@ -12,51 +12,51 @@
             "src_view_id": "output0"
         },
         "link400": {
-            "dst_id": "11111111-1111-1111-1111-000000000004",
-            "dst_view_id": "input0",
-            "src_id": "11111111-1111-1111-1111-000000000003",
-            "src_view_id": "output0"
-        },
-        "link500": {
-            "dst_id": "11111111-1111-1111-1111-000000000005",
-            "dst_view_id": "input0",
-            "src_id": "11111111-1111-1111-1111-000000000004",
-            "src_view_id": "output0"
-        },
-        "link600": {
             "dst_id": "11111111-1111-1111-1111-000000000006",
             "dst_view_id": "input0",
             "src_id": "11111111-1111-1111-1111-000000000005",
             "src_view_id": "output0"
         },
-        "link700": {
+        "link500": {
             "dst_id": "11111111-1111-1111-1111-000000000007",
             "dst_view_id": "input0",
             "src_id": "11111111-1111-1111-1111-000000000006",
             "src_view_id": "output0"
         },
-        "link800": {
+        "link600": {
             "dst_id": "11111111-1111-1111-1111-000000000008",
             "dst_view_id": "input0",
             "src_id": "11111111-1111-1111-1111-000000000007",
             "src_view_id": "output0"
         },
-        "link802": {
+        "link700": {
             "dst_id": "11111111-1111-1111-1111-000000000009",
             "dst_view_id": "input0",
-            "src_id": "11111111-1111-1111-1111-000000000002",
+            "src_id": "11111111-1111-1111-1111-000000000008",
             "src_view_id": "output0"
         },
-        "link900": {
-            "dst_id": "11111111-1111-1111-1111-000000000003",
+        "link800": {
+            "dst_id": "11111111-1111-1111-1111-00000000000a",
             "dst_view_id": "input0",
             "src_id": "11111111-1111-1111-1111-000000000009",
+            "src_view_id": "output0"
+        },
+        "link802": {
+            "dst_id": "11111111-1111-1111-1111-000000000003",
+            "dst_view_id": "input0",
+            "src_id": "11111111-1111-1111-1111-000000000002",
             "src_view_id": "output0"
         },
         "link803": {
             "dst_id": "11111111-1111-1111-1111-000000000002",
             "dst_view_id": "input0",
             "src_id": "11111111-1111-1111-1111-000000000001",
+            "src_view_id": "output0"
+        },
+        "link900": {
+            "dst_id": "11111111-1111-1111-1111-000000000005",
+            "dst_view_id": "input0",
+            "src_id": "11111111-1111-1111-1111-000000000003",
             "src_view_id": "output0"
         }
     },
@@ -81,9 +81,42 @@
                 "value": "Generate intelligent HTML dashboard for EMEA closed won opportunities analysis using AI-powered insights with proper document grouping"
             }
         },
-        "input": {},
+        "input": {
+            "11111111-1111-1111-1111-000000000004_input0": {
+                "label": {
+                    "value": "Copy - input0"
+                },
+                "view_type": {
+                    "value": "document"
+                }
+            }
+        },
         "output": {
-            "11111111-1111-1111-1111-000000000008_output0": {
+            "11111111-1111-1111-1111-000000000003_output1": {
+                "label": {
+                    "value": "Copy - Split Data Flow - output1"
+                },
+                "view_type": {
+                    "value": "document"
+                }
+            },
+            "11111111-1111-1111-1111-000000000004_output0": {
+                "label": {
+                    "value": "Copy - output0"
+                },
+                "view_type": {
+                    "value": "document"
+                }
+            },
+            "11111111-1111-1111-1111-000000000004_output1": {
+                "label": {
+                    "value": "Copy - output1"
+                },
+                "view_type": {
+                    "value": "document"
+                }
+            },
+            "11111111-1111-1111-1111-00000000000a_output0": {
                 "label": {
                     "value": "File Writer - HTML Dashboard Export - output0"
                 },
@@ -164,7 +197,7 @@
             "11111111-1111-1111-1111-000000000000": {
                 "error": {},
                 "grid_x_int": 1,
-                "grid_y_int": 4,
+                "grid_y_int": 5,
                 "index": null,
                 "input": {},
                 "output": {},
@@ -176,7 +209,7 @@
             "11111111-1111-1111-1111-000000000001": {
                 "error": {},
                 "grid_x_int": 2,
-                "grid_y_int": 4,
+                "grid_y_int": 5,
                 "index": null,
                 "input": {},
                 "output": {},
@@ -188,7 +221,7 @@
             "11111111-1111-1111-1111-000000000002": {
                 "error": {},
                 "grid_x_int": 3,
-                "grid_y_int": 4,
+                "grid_y_int": 5,
                 "index": null,
                 "input": {},
                 "output": {},
@@ -199,8 +232,8 @@
             },
             "11111111-1111-1111-1111-000000000003": {
                 "error": {},
-                "grid_x_int": 5,
-                "grid_y_int": 4,
+                "grid_x_int": 4,
+                "grid_y_int": 5,
                 "index": null,
                 "input": {},
                 "output": {},
@@ -211,20 +244,26 @@
             },
             "11111111-1111-1111-1111-000000000004": {
                 "error": {},
-                "grid_x_int": 6,
-                "grid_y_int": 4,
+                "grid_x_int": 4,
+                "grid_y_int": 6,
                 "index": null,
                 "input": {},
-                "output": {},
+                "output": {
+                    "output1": {
+                        "dx_int": 0,
+                        "dy_int": 1,
+                        "rot_int": 0
+                    }
+                },
                 "recommendation_id": null,
                 "rot_int": 0,
                 "rot_tail_int": 0,
-                "source": "snap category"
+                "source": "snap catagory"
             },
             "11111111-1111-1111-1111-000000000005": {
                 "error": {},
-                "grid_x_int": 7,
-                "grid_y_int": 4,
+                "grid_x_int": 5,
+                "grid_y_int": 5,
                 "index": null,
                 "input": {},
                 "output": {},
@@ -235,8 +274,8 @@
             },
             "11111111-1111-1111-1111-000000000006": {
                 "error": {},
-                "grid_x_int": 8,
-                "grid_y_int": 4,
+                "grid_x_int": 6,
+                "grid_y_int": 5,
                 "index": null,
                 "input": {},
                 "output": {},
@@ -247,8 +286,8 @@
             },
             "11111111-1111-1111-1111-000000000007": {
                 "error": {},
-                "grid_x_int": 9,
-                "grid_y_int": 4,
+                "grid_x_int": 7,
+                "grid_y_int": 5,
                 "index": null,
                 "input": {},
                 "output": {},
@@ -259,8 +298,8 @@
             },
             "11111111-1111-1111-1111-000000000008": {
                 "error": {},
-                "grid_x_int": 10,
-                "grid_y_int": 4,
+                "grid_x_int": 8,
+                "grid_y_int": 5,
                 "index": null,
                 "input": {},
                 "output": {},
@@ -271,8 +310,20 @@
             },
             "11111111-1111-1111-1111-000000000009": {
                 "error": {},
-                "grid_x_int": 4,
-                "grid_y_int": 4,
+                "grid_x_int": 9,
+                "grid_y_int": 5,
+                "index": null,
+                "input": {},
+                "output": {},
+                "recommendation_id": null,
+                "rot_int": 0,
+                "rot_tail_int": 0,
+                "source": "snap category"
+            },
+            "11111111-1111-1111-1111-00000000000a": {
+                "error": {},
+                "grid_x_int": 10,
+                "grid_y_int": 5,
                 "index": null,
                 "input": {},
                 "output": {},
@@ -656,9 +707,130 @@
             }
         },
         "11111111-1111-1111-1111-000000000003": {
-            "class_id": "com-snaplogic-snaps-transform-groupbyn",
+            "class_id": "com-snaplogic-snaps-flow-copy",
             "class_version": 1,
             "instance_id": "11111111-1111-1111-1111-000000000003",
+            "property_map": {
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "Copy - Split Data Flow"
+                    },
+                    "notes": {
+                        "value": "Splits individual opportunity records for potential dual processing paths"
+                    }
+                },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "output1": {
+                        "label": {
+                            "value": "output1"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "settings": {
+                    "execution_mode": {
+                        "value": "Validate & Execute"
+                    }
+                },
+                "view_serial": 100
+            }
+        },
+        "11111111-1111-1111-1111-000000000004": {
+            "class_id": "com-snaplogic-snaps-flow-copy",
+            "class_version": 1,
+            "instance_id": "11111111-1111-1111-1111-000000000004",
+            "property_map": {
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "Copy"
+                    }
+                },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "output1": {
+                        "label": {
+                            "value": "output1"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "settings": {
+                    "execution_mode": {
+                        "value": "Validate & Execute"
+                    }
+                },
+                "view_serial": 100
+            }
+        },
+        "11111111-1111-1111-1111-000000000005": {
+            "class_id": "com-snaplogic-snaps-transform-groupbyn",
+            "class_version": 1,
+            "instance_id": "11111111-1111-1111-1111-000000000005",
             "property_map": {
                 "error": {
                     "error0": {
@@ -730,10 +902,10 @@
                 "view_serial": 100
             }
         },
-        "11111111-1111-1111-1111-000000000004": {
+        "11111111-1111-1111-1111-000000000006": {
             "class_id": "com-snaplogic-snaps-awsbedrock-awsbedrockpromptgenerator",
             "class_version": 1,
-            "instance_id": "11111111-1111-1111-1111-000000000004",
+            "instance_id": "11111111-1111-1111-1111-000000000006",
             "property_map": {
                 "error": {
                     "error0": {
@@ -800,10 +972,10 @@
                 "view_serial": 100
             }
         },
-        "11111111-1111-1111-1111-000000000005": {
+        "11111111-1111-1111-1111-000000000007": {
             "class_id": "com-snaplogic-snaps-awsbedrock-awsbedrockconverseapi",
             "class_version": 1,
-            "instance_id": "11111111-1111-1111-1111-000000000005",
+            "instance_id": "11111111-1111-1111-1111-000000000007",
             "property_map": {
                 "account": {
                     "account_ref": {
@@ -954,10 +1126,10 @@
                 "view_serial": 100
             }
         },
-        "11111111-1111-1111-1111-000000000006": {
+        "11111111-1111-1111-1111-000000000008": {
             "class_id": "com-snaplogic-snaps-transform-datatransform",
             "class_version": 4,
-            "instance_id": "11111111-1111-1111-1111-000000000006",
+            "instance_id": "11111111-1111-1111-1111-000000000008",
             "property_map": {
                 "error": {
                     "error0": {
@@ -1034,10 +1206,10 @@
                 "view_serial": 100
             }
         },
-        "11111111-1111-1111-1111-000000000007": {
+        "11111111-1111-1111-1111-000000000009": {
             "class_id": "com-snaplogic-snaps-transform-documenttobinary",
             "class_version": 1,
-            "instance_id": "11111111-1111-1111-1111-000000000007",
+            "instance_id": "11111111-1111-1111-1111-000000000009",
             "property_map": {
                 "error": {
                     "error0": {
@@ -1104,10 +1276,10 @@
                 "view_serial": 100
             }
         },
-        "11111111-1111-1111-1111-000000000008": {
+        "11111111-1111-1111-1111-00000000000a": {
             "class_id": "com-snaplogic-snaps-binary-write",
             "class_version": 3,
-            "instance_id": "11111111-1111-1111-1111-000000000008",
+            "instance_id": "11111111-1111-1111-1111-00000000000a",
             "property_map": {
                 "account": {
                     "account_ref": {
@@ -1204,68 +1376,6 @@
                     }
                 },
                 "view_serial": 100
-            }
-        },
-        "11111111-1111-1111-1111-000000000009": {
-            "class_id": "com-snaplogic-snaps-flow-copy",
-            "class_version": 1,
-            "instance_id": "11111111-1111-1111-1111-000000000009",
-            "property_map": {
-                "view_serial": 100,
-                "settings": {
-                    "execution_mode": {
-                        "value": "Validate & Execute"
-                    }
-                },
-                "input": {
-                    "input0": {
-                        "view_type": {
-                            "value": "document"
-                        },
-                        "label": {
-                            "value": "input0"
-                        }
-                    }
-                },
-                "output": {
-                    "output0": {
-                        "view_type": {
-                            "value": "document"
-                        },
-                        "label": {
-                            "value": "output0"
-                        }
-                    },
-                    "output1": {
-                        "view_type": {
-                            "value": "document"
-                        },
-                        "label": {
-                            "value": "output1"
-                        }
-                    }
-                },
-                "error": {
-                    "error0": {
-                        "view_type": {
-                            "value": "document"
-                        },
-                        "label": {
-                            "value": "error0"
-                        }
-                    },
-                    "error_behavior": {
-                        "value": "fail"
-                    }
-                },
-                "info": {
-                    "label": {
-                        "value": "Copy - Split Data Flow"
-                    },
-                    "notes": {
-                        "value": "Splits individual opportunity records for potential dual processing paths"
-                    }
-                }
             }
         }
     }
