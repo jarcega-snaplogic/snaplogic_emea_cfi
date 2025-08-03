@@ -1,53 +1,50 @@
 {
+    "ai_map": {
+        "footprint": "H4sIAAAAAAAAA8srzckBAE/8yyUEAAAA"
+    },
     "class_id": "com-snaplogic-pipeline",
     "class_version": 9,
     "link_map": {
         "link100": {
-            "dst_id": "22222222-2222-2222-2222-000000000001",
+            "dst_id": "11111111-1111-1111-1111-000000000001",
             "dst_view_id": "input0",
-            "src_id": "22222222-2222-2222-2222-000000000000",
-            "src_view_id": "output0"
-        },
-        "link200": {
-            "dst_id": "22222222-2222-2222-2222-000000000002",
-            "dst_view_id": "input0",
-            "src_id": "22222222-2222-2222-2222-000000000001",
-            "src_view_id": "output0"
-        },
-        "link300": {
-            "dst_id": "22222222-2222-2222-2222-000000000003",
-            "dst_view_id": "input0",
-            "src_id": "22222222-2222-2222-2222-000000000002",
+            "src_id": "11111111-1111-1111-1111-000000000000",
             "src_view_id": "output0"
         },
         "link400": {
-            "dst_id": "22222222-2222-2222-2222-000000000004",
+            "dst_id": "11111111-1111-1111-1111-000000000004",
             "dst_view_id": "input0",
-            "src_id": "22222222-2222-2222-2222-000000000003",
+            "src_id": "11111111-1111-1111-1111-000000000003",
             "src_view_id": "output0"
         },
         "link500": {
-            "dst_id": "22222222-2222-2222-2222-000000000005",
+            "dst_id": "11111111-1111-1111-1111-000000000005",
             "dst_view_id": "input0",
-            "src_id": "22222222-2222-2222-2222-000000000004",
+            "src_id": "11111111-1111-1111-1111-000000000004",
             "src_view_id": "output0"
         },
         "link600": {
-            "dst_id": "22222222-2222-2222-2222-000000000007",
+            "dst_id": "11111111-1111-1111-1111-000000000006",
             "dst_view_id": "input0",
-            "src_id": "22222222-2222-2222-2222-000000000005",
+            "src_id": "11111111-1111-1111-1111-000000000005",
             "src_view_id": "output0"
         },
         "link700": {
-            "dst_id": "22222222-2222-2222-2222-000000000008",
+            "dst_id": "11111111-1111-1111-1111-000000000007",
             "dst_view_id": "input0",
-            "src_id": "22222222-2222-2222-2222-000000000007",
+            "src_id": "11111111-1111-1111-1111-000000000006",
             "src_view_id": "output0"
         },
         "link800": {
-            "dst_id": "22222222-2222-2222-2222-000000000006",
+            "dst_id": "11111111-1111-1111-1111-000000000008",
             "dst_view_id": "input0",
-            "src_id": "22222222-2222-2222-2222-000000000008",
+            "src_id": "11111111-1111-1111-1111-000000000007",
+            "src_view_id": "output0"
+        },
+        "link801": {
+            "dst_id": "11111111-1111-1111-1111-000000000003",
+            "dst_view_id": "input0",
+            "src_id": "11111111-1111-1111-1111-000000000001",
             "src_view_id": "output0"
         }
     },
@@ -74,7 +71,7 @@
         },
         "input": {},
         "output": {
-            "22222222-2222-2222-2222-000000000006_output0": {
+            "11111111-1111-1111-1111-000000000008_output0": {
                 "label": {
                     "value": "File Writer - HTML Dashboard Export - output0"
                 },
@@ -124,7 +121,7 @@
                             "value": false
                         },
                         "data_type": {
-                            "value": "integer"
+                            "value": "string"
                         },
                         "description": {
                             "value": "Days to look back for opportunities (default: 31)"
@@ -136,7 +133,7 @@
                             "value": false
                         },
                         "value": {
-                            "value": "31"
+                            "value": "3111"
                         }
                     }
                 ]
@@ -152,10 +149,22 @@
     "render_map": {
         "default_snaplex": null,
         "detail_map": {
-            "22222222-2222-2222-2222-000000000000": {
+            "11111111-1111-1111-1111-000000000000": {
+                "error": {},
+                "grid_x_int": 1,
+                "grid_y_int": 2,
+                "index": null,
+                "input": {},
+                "output": {},
+                "recommendation_id": null,
+                "rot_int": 0,
+                "rot_tail_int": 0,
+                "source": "snap category"
+            },
+            "11111111-1111-1111-1111-000000000001": {
                 "error": {},
                 "grid_x_int": 2,
-                "grid_y_int": 1,
+                "grid_y_int": 2,
                 "index": null,
                 "input": {},
                 "output": {},
@@ -164,22 +173,22 @@
                 "rot_tail_int": 0,
                 "source": "snap category"
             },
-            "22222222-2222-2222-2222-000000000001": {
+            "11111111-1111-1111-1111-000000000002": {
                 "error": {},
                 "grid_x_int": 3,
-                "grid_y_int": 1,
+                "grid_y_int": 3,
                 "index": null,
                 "input": {},
                 "output": {},
                 "recommendation_id": null,
-                "rot_int": 0,
-                "rot_tail_int": 0,
+                "rot_int": 90,
+                "rot_tail_int": 90,
                 "source": "snap category"
             },
-            "22222222-2222-2222-2222-000000000002": {
+            "11111111-1111-1111-1111-000000000003": {
                 "error": {},
                 "grid_x_int": 4,
-                "grid_y_int": 1,
+                "grid_y_int": 2,
                 "index": null,
                 "input": {},
                 "output": {},
@@ -188,10 +197,10 @@
                 "rot_tail_int": 0,
                 "source": "snap category"
             },
-            "22222222-2222-2222-2222-000000000003": {
+            "11111111-1111-1111-1111-000000000004": {
                 "error": {},
                 "grid_x_int": 5,
-                "grid_y_int": 1,
+                "grid_y_int": 2,
                 "index": null,
                 "input": {},
                 "output": {},
@@ -200,10 +209,10 @@
                 "rot_tail_int": 0,
                 "source": "snap category"
             },
-            "22222222-2222-2222-2222-000000000004": {
+            "11111111-1111-1111-1111-000000000005": {
                 "error": {},
                 "grid_x_int": 6,
-                "grid_y_int": 1,
+                "grid_y_int": 2,
                 "index": null,
                 "input": {},
                 "output": {},
@@ -212,10 +221,10 @@
                 "rot_tail_int": 0,
                 "source": "snap category"
             },
-            "22222222-2222-2222-2222-000000000005": {
+            "11111111-1111-1111-1111-000000000006": {
                 "error": {},
                 "grid_x_int": 7,
-                "grid_y_int": 1,
+                "grid_y_int": 2,
                 "index": null,
                 "input": {},
                 "output": {},
@@ -224,22 +233,10 @@
                 "rot_tail_int": 0,
                 "source": "snap category"
             },
-            "22222222-2222-2222-2222-000000000006": {
-                "error": {},
-                "grid_x_int": 10,
-                "grid_y_int": 1,
-                "index": null,
-                "input": {},
-                "output": {},
-                "recommendation_id": null,
-                "rot_int": 0,
-                "rot_tail_int": 0,
-                "source": "snap category"
-            },
-            "22222222-2222-2222-2222-000000000007": {
+            "11111111-1111-1111-1111-000000000007": {
                 "error": {},
                 "grid_x_int": 8,
-                "grid_y_int": 1,
+                "grid_y_int": 2,
                 "index": null,
                 "input": {},
                 "output": {},
@@ -248,10 +245,10 @@
                 "rot_tail_int": 0,
                 "source": "snap category"
             },
-            "22222222-2222-2222-2222-000000000008": {
+            "11111111-1111-1111-1111-000000000008": {
                 "error": {},
                 "grid_x_int": 9,
-                "grid_y_int": 1,
+                "grid_y_int": 2,
                 "index": null,
                 "input": {},
                 "output": {},
@@ -266,14 +263,27 @@
         "scale_ratio": 1
     },
     "snap_map": {
-        "22222222-2222-2222-2222-000000000000": {
+        "11111111-1111-1111-1111-000000000000": {
             "class_id": "com-snaplogic-snaps-salesforce-query",
             "class_version": 1,
-            "instance_id": "22222222-2222-2222-2222-000000000000",
+            "instance_id": "11111111-1111-1111-1111-000000000000",
             "property_map": {
                 "account": {
                     "account_ref": {
-                        "value": {}
+                        "value": {
+                            "label": {
+                                "expression": false,
+                                "label": "../shared/Salesforce SE EMEA",
+                                "value": "Salesforce SE EMEA"
+                            },
+                            "ref_class_id": {
+                                "value": "com-snaplogic-snaps-salesforce-salesforceaccount"
+                            },
+                            "ref_id": {
+                                "expression": false,
+                                "value": null
+                            }
+                        }
                     }
                 },
                 "error": {
@@ -297,6 +307,7 @@
                         "value": "Queries Salesforce for closed won opportunities from the last 31 days with EMEA region filter for solutions engineer analysis"
                     }
                 },
+                "input": {},
                 "output": {
                     "output0": {
                         "label": {
@@ -308,6 +319,9 @@
                     }
                 },
                 "settings": {
+                    "advancedProperties": {
+                        "value": []
+                    },
                     "batchSize": {
                         "value": 2000
                     },
@@ -323,10 +337,18 @@
                     "ignoreEmptyResult": {
                         "value": true
                     },
+                    "includeDeleted": {
+                        "value": false
+                    },
+                    "matchDataType": {
+                        "value": false
+                    },
                     "numberOfRetries": {
+                        "expression": false,
                         "value": 1
                     },
                     "objectType": {
+                        "expression": false,
                         "value": "Opportunity"
                     },
                     "passThrough": {
@@ -338,27 +360,32 @@
                     "pollingTimeout": {
                         "value": 3000
                     },
+                    "previewInBulkApi": {
+                        "value": false
+                    },
                     "retryInterval": {
+                        "expression": false,
                         "value": 1
                     },
                     "salesforceApi": {
                         "value": "REST API"
                     },
                     "serviceVersion": {
+                        "expression": false,
                         "value": "52.0"
                     },
                     "soqlQuery": {
                         "expression": true,
-                        "value": "\"SELECT Id, Name, AccountId, Account.Name, OwnerId, Owner.Name, StageName, Amount, CloseDate, CreatedDate, LastModifiedDate, Region__c, Type, LeadSource, Probability, ForecastCategoryName, Description, NextStep, CampaignId, Campaign.Name FROM Opportunity WHERE StageName = 'Closed Won' AND CloseDate >= LAST_N_DAYS:\" + _days_back + \" AND Region__c LIKE 'EMEA_%' ORDER BY CloseDate DESC\""
+                        "value": "\"SELECT Id, Name, AccountId, Account.Name, OwnerId, Owner.Name, StageName, Amount, CloseDate, CreatedDate, LastModifiedDate, Type, LeadSource, Probability, ForecastCategoryName, Description, NextStep, CampaignId, Campaign.Name FROM Opportunity WHERE StageName = 'Closed Won' AND CloseDate >= LAST_N_DAYS:\" + _days_back + \" ORDER BY CloseDate DESC\""
                     }
                 },
                 "view_serial": 100
             }
         },
-        "22222222-2222-2222-2222-000000000001": {
+        "11111111-1111-1111-1111-000000000001": {
             "class_id": "com-snaplogic-snaps-transform-datatransform",
             "class_version": 4,
-            "instance_id": "22222222-2222-2222-2222-000000000001",
+            "instance_id": "11111111-1111-1111-1111-000000000001",
             "property_map": {
                 "error": {
                     "error0": {
@@ -534,10 +561,10 @@
                 "view_serial": 100
             }
         },
-        "22222222-2222-2222-2222-000000000002": {
+        "11111111-1111-1111-1111-000000000002": {
             "class_id": "com-snaplogic-snaps-flow-filter",
             "class_version": 2,
-            "instance_id": "22222222-2222-2222-2222-000000000002",
+            "instance_id": "11111111-1111-1111-1111-000000000002",
             "property_map": {
                 "error": {
                     "error0": {
@@ -582,7 +609,7 @@
                 },
                 "settings": {
                     "execution_mode": {
-                        "value": "Validate & Execute"
+                        "value": "Disabled"
                     },
                     "filterExpression": {
                         "expression": true,
@@ -595,10 +622,10 @@
                 "view_serial": 100
             }
         },
-        "22222222-2222-2222-2222-000000000003": {
+        "11111111-1111-1111-1111-000000000003": {
             "class_id": "com-snaplogic-snaps-transform-groupbyn",
             "class_version": 1,
-            "instance_id": "22222222-2222-2222-2222-000000000003",
+            "instance_id": "11111111-1111-1111-1111-000000000003",
             "property_map": {
                 "error": {
                     "error0": {
@@ -654,11 +681,11 @@
                     "memorySensitivity": {
                         "value": "None"
                     },
-                    "minimumMemory": {
-                        "value": 500
-                    },
                     "minGroupSize": {
                         "value": 1
+                    },
+                    "minimumMemory": {
+                        "value": 500
                     },
                     "outOfResourceTimeout": {
                         "value": 30
@@ -670,10 +697,10 @@
                 "view_serial": 100
             }
         },
-        "22222222-2222-2222-2222-000000000004": {
+        "11111111-1111-1111-1111-000000000004": {
             "class_id": "com-snaplogic-snaps-awsbedrock-awsbedrockpromptgenerator",
             "class_version": 1,
-            "instance_id": "22222222-2222-2222-2222-000000000004",
+            "instance_id": "11111111-1111-1111-1111-000000000004",
             "property_map": {
                 "error": {
                     "error0": {
@@ -740,14 +767,27 @@
                 "view_serial": 100
             }
         },
-        "22222222-2222-2222-2222-000000000005": {
+        "11111111-1111-1111-1111-000000000005": {
             "class_id": "com-snaplogic-snaps-awsbedrock-awsbedrockconverseapi",
             "class_version": 1,
-            "instance_id": "22222222-2222-2222-2222-000000000005",
+            "instance_id": "11111111-1111-1111-1111-000000000005",
             "property_map": {
                 "account": {
                     "account_ref": {
-                        "value": {}
+                        "value": {
+                            "label": {
+                                "expression": false,
+                                "label": "../../shared/sedemo-bedrock-us-east-1_RECOMMENDED",
+                                "value": "sedemo-bedrock-us-east-1_RECOMMENDED"
+                            },
+                            "ref_class_id": {
+                                "value": "com-snaplogic-snaps-awsbedrock-awsbedrockaccount"
+                            },
+                            "ref_id": {
+                                "expression": false,
+                                "value": null
+                            }
+                        }
                     }
                 },
                 "error": {
@@ -795,9 +835,11 @@
                     "advancedPromptConfiguration": {
                         "value": {
                             "cacheSystem": {
+                                "expression": false,
                                 "value": false
                             },
                             "jsonMode": {
+                                "expression": false,
                                 "value": false
                             },
                             "systemPrompt": {
@@ -808,16 +850,20 @@
                     },
                     "advancedResponseConfiguration": {
                         "value": {
-                            "continuationRequests": {
-                                "value": true
-                            },
                             "continuationRequestLimit": {
+                                "expression": false,
                                 "value": 3
                             },
+                            "continuationRequests": {
+                                "expression": false,
+                                "value": true
+                            },
                             "debugMode": {
+                                "expression": false,
                                 "value": false
                             },
                             "simplifyResponse": {
+                                "expression": false,
                                 "value": false
                             }
                         }
@@ -828,9 +874,9 @@
                     "includeCrossRegionModels": {
                         "value": true
                     },
-                    "prompt": {
+                    "messages": {
                         "expression": true,
-                        "value": "$prompt"
+                        "value": null
                     },
                     "model": {
                         "expression": true,
@@ -838,19 +884,35 @@
                     },
                     "modelParameters": {
                         "value": {
+                            "budgetTokens": {
+                                "expression": false,
+                                "value": null
+                            },
                             "maximumTokens": {
-                                "value": 8000
+                                "expression": false,
+                                "value": null
+                            },
+                            "stopSequences": {
+                                "expression": false,
+                                "value": null
                             },
                             "temperature": {
+                                "expression": false,
                                 "value": 0.3
                             },
                             "thinking": {
+                                "expression": false,
                                 "value": false
                             },
                             "topP": {
+                                "expression": false,
                                 "value": 0.9
                             }
                         }
+                    },
+                    "prompt": {
+                        "expression": true,
+                        "value": "$prompt"
                     },
                     "useMessages": {
                         "value": false
@@ -859,10 +921,160 @@
                 "view_serial": 100
             }
         },
-        "22222222-2222-2222-2222-000000000006": {
+        "11111111-1111-1111-1111-000000000006": {
+            "class_id": "com-snaplogic-snaps-transform-datatransform",
+            "class_version": 4,
+            "instance_id": "11111111-1111-1111-1111-000000000006",
+            "property_map": {
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "Mapper - Extract Bedrock Response Content"
+                    },
+                    "notes": {
+                        "value": "Extracts the HTML content from AWS Bedrock response and formats it for binary conversion"
+                    }
+                },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "settings": {
+                    "execution_mode": {
+                        "value": "Validate & Execute"
+                    },
+                    "nullSafeAccess": {
+                        "value": true
+                    },
+                    "passThrough": {
+                        "value": false
+                    },
+                    "transformations": {
+                        "value": {
+                            "mappingRoot": {
+                                "value": "$"
+                            },
+                            "mappingTable": {
+                                "value": [
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "$output.message.content[0].text"
+                                        },
+                                        "targetPath": {
+                                            "value": "$content"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "view_serial": 100
+            }
+        },
+        "11111111-1111-1111-1111-000000000007": {
+            "class_id": "com-snaplogic-snaps-transform-documenttobinary",
+            "class_version": 1,
+            "instance_id": "11111111-1111-1111-1111-000000000007",
+            "property_map": {
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "Document to Binary - HTML Content"
+                    },
+                    "notes": {
+                        "value": "Converts the extracted HTML content from document format to binary format for file writing"
+                    }
+                },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "binary"
+                        }
+                    }
+                },
+                "settings": {
+                    "binaryHeaderProps": {
+                        "value": [
+                            {
+                                "expression": {
+                                    "expression": true,
+                                    "value": "\"text/html; charset=UTF-8\""
+                                },
+                                "targetPath": {
+                                    "value": "$['content-type']"
+                                }
+                            }
+                        ]
+                    },
+                    "codec": {
+                        "value": "NONE"
+                    },
+                    "execution_mode": {
+                        "value": "Validate & Execute"
+                    }
+                },
+                "view_serial": 100
+            }
+        },
+        "11111111-1111-1111-1111-000000000008": {
             "class_id": "com-snaplogic-snaps-binary-write",
             "class_version": 3,
-            "instance_id": "22222222-2222-2222-2222-000000000006",
+            "instance_id": "11111111-1111-1111-1111-000000000008",
             "property_map": {
                 "account": {
                     "account_ref": {
@@ -956,156 +1168,6 @@
                     },
                     "writeHeader": {
                         "value": false
-                    }
-                },
-                "view_serial": 100
-            }
-        },
-        "22222222-2222-2222-2222-000000000007": {
-            "class_id": "com-snaplogic-snaps-transform-datatransform",
-            "class_version": 4,
-            "instance_id": "22222222-2222-2222-2222-000000000007",
-            "property_map": {
-                "error": {
-                    "error0": {
-                        "label": {
-                            "value": "error0"
-                        },
-                        "view_type": {
-                            "value": "document"
-                        }
-                    },
-                    "error_behavior": {
-                        "value": "fail"
-                    }
-                },
-                "info": {
-                    "label": {
-                        "value": "Mapper - Extract Bedrock Response Content"
-                    },
-                    "notes": {
-                        "value": "Extracts the HTML content from AWS Bedrock response and formats it for binary conversion"
-                    }
-                },
-                "input": {
-                    "input0": {
-                        "label": {
-                            "value": "input0"
-                        },
-                        "view_type": {
-                            "value": "document"
-                        }
-                    }
-                },
-                "output": {
-                    "output0": {
-                        "label": {
-                            "value": "output0"
-                        },
-                        "view_type": {
-                            "value": "document"
-                        }
-                    }
-                },
-                "settings": {
-                    "execution_mode": {
-                        "value": "Validate & Execute"
-                    },
-                    "nullSafeAccess": {
-                        "value": true
-                    },
-                    "passThrough": {
-                        "value": false
-                    },
-                    "transformations": {
-                        "value": {
-                            "mappingRoot": {
-                                "value": "$"
-                            },
-                            "mappingTable": {
-                                "value": [
-                                    {
-                                        "expression": {
-                                            "expression": true,
-                                            "value": "$output.message.content[0].text"
-                                        },
-                                        "targetPath": {
-                                            "value": "$content"
-                                        }
-                                    }
-                                ]
-                            }
-                        }
-                    }
-                },
-                "view_serial": 100
-            }
-        },
-        "22222222-2222-2222-2222-000000000008": {
-            "class_id": "com-snaplogic-snaps-transform-documenttobinary",
-            "class_version": 1,
-            "instance_id": "22222222-2222-2222-2222-000000000008",
-            "property_map": {
-                "error": {
-                    "error0": {
-                        "label": {
-                            "value": "error0"
-                        },
-                        "view_type": {
-                            "value": "document"
-                        }
-                    },
-                    "error_behavior": {
-                        "value": "fail"
-                    }
-                },
-                "info": {
-                    "label": {
-                        "value": "Document to Binary - HTML Content"
-                    },
-                    "notes": {
-                        "value": "Converts the extracted HTML content from document format to binary format for file writing"
-                    }
-                },
-                "input": {
-                    "input0": {
-                        "label": {
-                            "value": "input0"
-                        },
-                        "view_type": {
-                            "value": "document"
-                        }
-                    }
-                },
-                "output": {
-                    "output0": {
-                        "label": {
-                            "value": "output0"
-                        },
-                        "view_type": {
-                            "value": "binary"
-                        }
-                    }
-                },
-                "settings": {
-                    "execution_mode": {
-                        "value": "Validate & Execute"
-                    },
-                    "codec": {
-                        "value": "NONE"
-                    },
-                    "binaryHeaderProps": {
-                        "value": [
-                            {
-                                "expression": {
-                                    "expression": true,
-                                    "value": "\"text/html; charset=UTF-8\""
-                                },
-                                "targetPath": {
-                                    "value": "$['content-type']"
-                                }
-                            }
-                        ]
                     }
                 },
                 "view_serial": 100
