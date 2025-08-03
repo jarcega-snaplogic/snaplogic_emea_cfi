@@ -286,7 +286,7 @@
         </div>
     </div>
     
-    <div class="version">v1.2.2</div>
+    <div class="version">v1.2.3</div>
     
     <script>
         let opportunitiesData = [];
@@ -425,6 +425,10 @@
             // Create select with cached SEs
             const select = document.createElement('select');
             select.className = 'se-editor';
+            // Add attributes to prevent extension interference
+            select.setAttribute('data-lpignore', 'true');
+            select.setAttribute('data-form-type', 'other');
+            select.setAttribute('autocomplete', 'off');
             
             // Add Unassigned option
             select.innerHTML = '<option value="">Unassigned</option>';
