@@ -355,7 +355,16 @@
                         "value": "Queries Salesforce for last fiscal quarter closed won opportunities with amount > $0"
                     }
                 },
-                "input": {},
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
                 "output": {
                     "output0": {
                         "label": {
@@ -383,17 +392,56 @@
             "class_version": 4,
             "instance_id": "11111111-1111-1111-1111-000000000001",
             "property_map": {
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
                 "info": {
                     "label": {
                         "value": "Mapper - Select Key Opportunity Fields"
+                    }
+                },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
                     }
                 },
                 "settings": {
                     "execution_mode": {
                         "value": "Validate & Execute"
                     },
+                    "passThrough": {
+                        "value": false
+                    },
                     "transformations": {
                         "value": {
+                            "mappingRoot": {
+                                "value": "$"
+                            },
                             "mappingTable": {
                                 "value": [
                                     {
@@ -499,12 +547,53 @@
             "class_version": 1,
             "instance_id": "11111111-1111-1111-1111-000000000002",
             "property_map": {
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
                 "info": {
                     "label": {
                         "value": "Copy - Split Data Flow"
                     },
                     "notes": {
                         "value": "Splits individual opportunity records: output0 for JSON export, output1 for LLM processing"
+                    }
+                },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "output1": {
+                        "label": {
+                            "value": "output1"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
                     }
                 },
                 "settings": {
@@ -517,20 +606,74 @@
         },
         "11111111-1111-1111-1111-000000000003": {
             "class_id": "com-snaplogic-snaps-transform-jsonformatter",
-            "class_version": 1,
+            "class_version": 2,
             "instance_id": "11111111-1111-1111-1111-000000000003",
             "property_map": {
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
                 "info": {
                     "label": {
                         "value": "JSON Formatter - Full Dataset"
                     }
                 },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "binary"
+                        }
+                    }
+                },
                 "settings": {
+                    "contentPath": {
+                        "value": "$"
+                    },
+                    "deriveSchemaLimit": {
+                        "value": "None"
+                    },
                     "execution_mode": {
                         "value": "Validate & Execute"
                     },
+                    "formatSingleDocument": {
+                        "value": false
+                    },
+                    "header": {
+                        "value": []
+                    },
+                    "ignoreEmptyStream": {
+                        "value": false
+                    },
+                    "jsonLines": {
+                        "value": false
+                    },
                     "prettyPrint": {
                         "value": true
+                    },
+                    "supportTypeExts": {
+                        "value": false
                     }
                 },
                 "view_serial": 100
@@ -541,17 +684,50 @@
             "class_version": 1,
             "instance_id": "11111111-1111-1111-1111-000000000004",
             "property_map": {
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
                 "info": {
                     "label": {
                         "value": "Head - Limit to 15 Records"
                     }
                 },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
                 "settings": {
-                    "execution_mode": {
-                        "value": "Validate & Execute"
-                    },
                     "documentCount": {
                         "value": 15
+                    },
+                    "execution_mode": {
+                        "value": "Validate & Execute"
                     }
                 },
                 "view_serial": 100
@@ -562,18 +738,77 @@
             "class_version": 3,
             "instance_id": "11111111-1111-1111-1111-000000000005",
             "property_map": {
+                "account": {
+                    "account_ref": {
+                        "value": {}
+                    }
+                },
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
                 "info": {
                     "label": {
-                        "value": "File Writer - JSON Data Export"  
+                        "value": "File Writer - JSON Data Export"
+                    }
+                },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "binary"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
                     }
                 },
                 "settings": {
+                    "cannedAcls": {
+                        "value": "None"
+                    },
+                    "executable_during_suggest": {
+                        "value": false
+                    },
                     "execution_mode": {
                         "value": "Execute only"
+                    },
+                    "fileAction": {
+                        "value": "OVERWRITE"
                     },
                     "filename": {
                         "expression": false,
                         "value": "opportunities.json"
+                    },
+                    "flushIntervalKb": {
+                        "value": -1
+                    },
+                    "preventURLEncoding": {
+                        "value": false
+                    },
+                    "retries": {
+                        "value": 0
+                    },
+                    "retryInterval": {
+                        "value": 1
                     }
                 },
                 "view_serial": 100
@@ -584,17 +819,65 @@
             "class_version": 1,
             "instance_id": "11111111-1111-1111-1111-000000000006",
             "property_map": {
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
                 "info": {
                     "label": {
                         "value": "Group By N - Collect Sample Data"
+                    }
+                },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
                     }
                 },
                 "settings": {
                     "execution_mode": {
                         "value": "Validate & Execute"
                     },
+                    "flushTimeoutSecs": {
+                        "value": 0
+                    },
                     "groupSize": {
                         "value": 0
+                    },
+                    "memorySensitivity": {
+                        "value": "None"
+                    },
+                    "minGroupSize": {
+                        "value": 1
+                    },
+                    "minimumMemory": {
+                        "value": 500
+                    },
+                    "outOfResourceTimeout": {
+                        "value": 30
                     },
                     "targetField": {
                         "value": "opportunities"
@@ -608,14 +891,47 @@
             "class_version": 1,
             "instance_id": "11111111-1111-1111-1111-000000000007",
             "property_map": {
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
                 "info": {
                     "label": {
                         "value": "Prompt Generator - Dynamic Dashboard"
                     }
                 },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
                 "settings": {
-                    "execution_mode": {
-                        "value": "Validate & Execute"
+                    "advancedMode": {
+                        "value": false
                     },
                     "content": {
                         "expression": true,
@@ -623,6 +939,9 @@
                     },
                     "editable_content": {
                         "value": "Create a dynamic HTML dashboard that loads opportunities.json and visualizes the data with charts and tables. Sample data structure: {{opportunities}}"
+                    },
+                    "execution_mode": {
+                        "value": "Validate & Execute"
                     }
                 },
                 "view_serial": 100
@@ -643,9 +962,42 @@
                         }
                     }
                 },
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
                 "info": {
                     "label": {
                         "value": "AWS Bedrock - Generate Dashboard"
+                    }
+                },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
                     }
                 },
                 "settings": {
@@ -672,17 +1024,56 @@
             "class_version": 4,
             "instance_id": "11111111-1111-1111-1111-000000000009",
             "property_map": {
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
                 "info": {
                     "label": {
                         "value": "Mapper - Extract HTML Content"
+                    }
+                },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
                     }
                 },
                 "settings": {
                     "execution_mode": {
                         "value": "Validate & Execute"
                     },
+                    "passThrough": {
+                        "value": false
+                    },
                     "transformations": {
                         "value": {
+                            "mappingRoot": {
+                                "value": "$"
+                            },
                             "mappingTable": {
                                 "value": [
                                     {
@@ -707,17 +1098,50 @@
             "class_version": 1,
             "instance_id": "11111111-1111-1111-1111-00000000000A",
             "property_map": {
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
                 "info": {
                     "label": {
                         "value": "Document to Binary - HTML"
                     }
                 },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "binary"
+                        }
+                    }
+                },
                 "settings": {
-                    "execution_mode": {
-                        "value": "Validate & Execute"
-                    },
                     "codec": {
                         "value": "NONE"
+                    },
+                    "execution_mode": {
+                        "value": "Validate & Execute"
                     }
                 },
                 "view_serial": 100
@@ -728,18 +1152,77 @@
             "class_version": 3,
             "instance_id": "11111111-1111-1111-1111-00000000000B",
             "property_map": {
+                "account": {
+                    "account_ref": {
+                        "value": {}
+                    }
+                },
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
                 "info": {
                     "label": {
                         "value": "File Writer - HTML Dashboard"
                     }
                 },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "binary"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
                 "settings": {
+                    "cannedAcls": {
+                        "value": "None"
+                    },
+                    "executable_during_suggest": {
+                        "value": false
+                    },
                     "execution_mode": {
                         "value": "Execute only"
+                    },
+                    "fileAction": {
+                        "value": "OVERWRITE"
                     },
                     "filename": {
                         "expression": false,
                         "value": "emea_opportunities_dashboard.html"
+                    },
+                    "flushIntervalKb": {
+                        "value": -1
+                    },
+                    "preventURLEncoding": {
+                        "value": false
+                    },
+                    "retries": {
+                        "value": 0
+                    },
+                    "retryInterval": {
+                        "value": 1
                     }
                 },
                 "view_serial": 100
