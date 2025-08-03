@@ -239,6 +239,7 @@
                     <label>Type</label>
                     <select id="filter-type">
                         <option value="">All Types</option>
+                        <option value="ACV">ACV (New + Add-on)</option>
                     </select>
                 </div>
                 <div class="filter-group">
@@ -285,7 +286,7 @@
         </div>
     </div>
     
-    <div class="version">v1.1.0</div>
+    <div class="version">v1.2.0</div>
     
     <script>
         let opportunitiesData = [];
@@ -361,10 +362,19 @@
                     }
                 }
                 
+                let typeMatch = true;
+                if (filters.type) {
+                    if (filters.type === 'ACV') {
+                        typeMatch = (opp.opportunity_type === 'New Business' || opp.opportunity_type === 'Add-on Business');
+                    } else {
+                        typeMatch = opp.opportunity_type === filters.type;
+                    }
+                }
+                
                 return (!filters.account || (opp.account_name || '').toLowerCase().includes(filters.account)) &&
                        (!filters.owner || (opp.owner_name || '').toLowerCase().includes(filters.owner)) &&
                        regionMatch &&
-                       (!filters.type || opp.opportunity_type === filters.type) &&
+                       typeMatch &&
                        (!filters.stage || opp.stage === filters.stage) &&
                        (!filters.se || (opp.Solutions_Engineer || '').toLowerCase().includes(filters.se));
             });
@@ -432,7 +442,11 @@
             
             cell.innerHTML = '';
             cell.appendChild(select);
-            select.focus();
+            
+            // Prevent immediate blur by using setTimeout
+            setTimeout(() => {
+                select.focus();
+            }, 10);
             
             function saveEdit() {
                 const newValue = select.value;
@@ -448,8 +462,20 @@
                 updateSEAggregation();
             }
             
-            select.addEventListener('blur', saveEdit);
+            // Only save on change, remove blur event to prevent immediate closing
             select.addEventListener('change', saveEdit);
+            
+            // Save on click outside (but with delay to allow selection)
+            document.addEventListener('click', function closeHandler(e) {
+                if (!select.contains(e.target)) {
+                    setTimeout(() => {
+                        if (document.contains(select)) {
+                            saveEdit();
+                        }
+                    }, 100);
+                    document.removeEventListener('click', closeHandler);
+                }
+            });
         }
         
         // Update SE aggregation
