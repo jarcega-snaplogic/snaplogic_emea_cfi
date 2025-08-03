@@ -331,6 +331,32 @@ When creating pipelines for optimal SnapLogic Designer canvas rendering and visu
 - **Structure**: Include descriptive label and correct view_type
 - **Purpose**: Makes data flow endpoints visible in Designer canvas
 
+#### Multi-View Snap Configuration Requirements
+**CRITICAL**: Several SnapLogic snaps have specific minimum requirements for input/output views that must be met for proper pipeline functionality:
+
+**Snaps with Multiple Output Views (Minimum Requirements)**:
+- **Copy Snap** (`com-snaplogic-snaps-flow-copy`): Minimum 2 output views (output0, output1)
+  - Purpose: Splits single input stream to multiple parallel processing paths
+  - Schema: `min_views: 2, max_views: 2147483647` for output views
+- **Router Snap** (`com-snaplogic-snaps-flow-router`): Multiple output views based on routing conditions
+  - Purpose: Conditional routing to different processing branches
+- **Diff Snap** (`com-snaplogic-snaps-transform-diff`): Multiple output views for different comparison results
+  - Purpose: Separates matching, added, and removed records
+
+**Snaps with Multiple Input Views (Minimum Requirements)**:
+- **Union Snap** (`com-snaplogic-snaps-flow-union`): Minimum 2 input views
+  - Purpose: Merges multiple input streams into single output stream
+- **Join Snap** (`com-snaplogic-snaps-transform-join`): Minimum 2 input views (left, right)
+  - Purpose: Performs relational join operations between datasets
+
+**Configuration Rules**:
+1. **Always verify minimum view requirements** when using these snaps
+2. **Use MCP Schema Tool** to check exact requirements: `mcp__snaplogic-schema__get_snap_schema`
+3. **Label views descriptively** to indicate their purpose in data flow
+4. **Connect all required views** - unused outputs can remain unconnected but must be defined
+
+**Common Error**: Adding Copy snap with only one output view will cause pipeline validation failure in SnapLogic Designer.
+
 #### JSON Formatting Standards
 - **Indentation**: Use 4-space indentation for readability
 - **Author Field**: Set to "jarcega@snaplogic.com" for consistency
