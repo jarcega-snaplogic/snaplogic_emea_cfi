@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +7,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/date-fns@2.29.3/index.min.js"></script>
     <style>
         :root {
             --primary-color: #2c3e50;
@@ -705,7 +703,7 @@
             }
 
             charts.leadSource = new Chart(ctx, {
-                type: 'horizontalBar',
+                type: 'bar',
                 data: {
                     labels: sources,
                     datasets: [{
@@ -717,6 +715,7 @@
                     }]
                 },
                 options: {
+                    indexAxis: 'y',
                     responsive: true,
                     maintainAspectRatio: false,
                     plugins: {
@@ -1001,50 +1000,3 @@
     </script>
 </body>
 </html>
-```
-
-This comprehensive HTML dashboard provides:
-
-## **Key Features:**
-
-### **1. Executive Summary**
-- Total revenue, deal count, average deal size
-- Top performing region identification
-- Real-time KPI calculations from full dataset
-
-### **2. Interactive Data Loading**
-- Fetches `opportunities.json` dynamically
-- Loading states and error handling
-- Automatic data processing and visualization updates
-
-### **3. Advanced Analytics**
-- Revenue trends by month with line charts
-- Regional performance with doughnut charts
-- Deal size distribution analysis
-- Lead source effectiveness comparison
-
-### **4. Solutions Engineer Insights**
-- Automated insight generation based on data patterns
-- Actionable recommendations for sales optimization
-- Risk factor identification and mitigation strategies
-- Customer concentration analysis
-
-### **5. Interactive Features**
-- Multi-dimensional filtering (region, type, lead source)
-- Sortable and searchable data tables
-- CSV export functionality
-- Real-time chart updates based on filters
-
-### **6. Professional Design**
-- Bootstrap 5 responsive framework
-- Executive-level presentation quality
-- Mobile-optimized interface
-- Consistent color coding and branding
-
-### **7. Technical Implementation**
-- Client-side data processing for scalability
-- Chart.js for interactive visualizations
-- Error handling and graceful degradation
-- Modern JavaScript with async/await patterns
-
-The dashboard automatically processes the complete dataset from `opportunities.json` and provides comprehensive business intelligence suitable for both executive decision-making and technical analysis.
