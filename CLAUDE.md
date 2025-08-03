@@ -357,6 +357,39 @@ When creating pipelines for optimal SnapLogic Designer canvas rendering and visu
 
 **Common Error**: Adding Copy snap with only one output view will cause pipeline validation failure in SnapLogic Designer.
 
+#### Render Map Output View Configuration
+**CRITICAL**: For multi-output snaps to display all output views properly in SnapLogic Designer GUI, the `render_map` must include output positioning configuration.
+
+**Required Pattern for Multi-Output Snaps**:
+```json
+"render_map": {
+  "detail_map": {
+    "snap_id": {
+      "output": {
+        "output1": {
+          "dx_int": 0,
+          "dy_int": 1,
+          "rot_int": 0
+        }
+      }
+    }
+  }
+}
+```
+
+**Key Rules**:
+- **Copy Snaps**: Must have `output1` positioning in render_map or only output0 will be visible
+- **Router/Diff Snaps**: May need similar output positioning for proper GUI display
+- **Positioning Values**: `dx_int: 0, dy_int: 1, rot_int: 0` positions output1 below output0
+- **Impact**: Missing render_map output config causes GUI to show only first output view
+
+**Symptoms of Missing Configuration**:
+- Multiple outputs defined in snap property_map but only one visible in Designer
+- Output1 appearing in output0's visual position
+- Pipeline validates correctly but GUI display is incorrect
+
+**Fix**: Always add render_map output positioning when creating multi-output snaps.
+
 #### JSON Formatting Standards
 - **Indentation**: Use 4-space indentation for readability
 - **Author Field**: Set to "jarcega@snaplogic.com" for consistency
