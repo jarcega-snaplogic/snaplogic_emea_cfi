@@ -60,7 +60,7 @@
             },
             "label": {},
             "notes": {
-                "value": "AI-powered Salesforce opportunities reporting pipeline: queries closed won opportunities from last 31 days, filters by EMEA region, groups all documents, selects key fields, and generates HTML dashboard via AWS Bedrock Claude for solutions engineer insights"
+                "value": "AI-powered Salesforce opportunities reporting pipeline: queries last fiscal quarter closed won opportunities with amount > $0, filters by opportunity types (Add-on, New Business, Renewal), groups all documents, selects key fields including stage and region, and generates HTML dashboard via AWS Bedrock Claude for solutions engineer insights"
             },
             "pipeline_doc_uri": {
                 "value": null
@@ -304,7 +304,7 @@
                         "value": "Salesforce SOQL - EMEA Closed Won Opportunities"
                     },
                     "notes": {
-                        "value": "Queries Salesforce for closed won opportunities from the last 31 days with EMEA region filter for solutions engineer analysis"
+                        "value": "Queries Salesforce for last fiscal quarter closed won opportunities with amount > $0, filtering by specific opportunity types (Add-on Business, New Business, Renewal) and closed won stages"
                     }
                 },
                 "input": {},
@@ -375,8 +375,8 @@
                         "value": "52.0"
                     },
                     "soqlQuery": {
-                        "expression": true,
-                        "value": "\"SELECT Id, Name, AccountId, Account.Name, OwnerId, Owner.Name, StageName, Amount, CloseDate, CreatedDate, LastModifiedDate, Type, LeadSource, Probability, ForecastCategoryName, Description, NextStep, CampaignId, Campaign.Name FROM Opportunity WHERE StageName = 'Closed Won' AND CloseDate >= LAST_N_DAYS:\" + _days_back + \" ORDER BY CloseDate DESC\""
+                        "expression": false,
+                        "value": "SELECT Id, Owner.Name, Name, Account.Name, Amount, CloseDate, StageName, LeadSource, Type, Region_from_Account__c FROM Opportunity WHERE CloseDate = LAST_FISCAL_QUARTER AND Amount > 0 AND Type IN ('Add-on Business', 'New Business', 'Renewal') AND StageName IN ('6 - Closed (Won)', '4 - Closed Won') ORDER BY CloseDate DESC"
                     }
                 },
                 "view_serial": 100
@@ -405,7 +405,7 @@
                         "value": "Mapper - Select Key Opportunity Fields"
                     },
                     "notes": {
-                        "value": "Selects and formats key opportunity fields for solutions engineer reporting: opportunity details, account info, financial data, and timeline"
+                        "value": "Selects and formats key opportunity fields for solutions engineer reporting: opportunity details, account info, financial data, stage, region, and timeline"
                     }
                 },
                 "input": {
@@ -502,10 +502,19 @@
                                     {
                                         "expression": {
                                             "expression": true,
-                                            "value": "$Region__c"
+                                            "value": "$Region_from_Account__c"
                                         },
                                         "targetPath": {
                                             "value": "$region"
+                                        }
+                                    },
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "$StageName"
+                                        },
+                                        "targetPath": {
+                                            "value": "$stage"
                                         }
                                     },
                                     {
