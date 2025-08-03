@@ -542,6 +542,18 @@ Merge (4-snap): {SourceA(3,0), SourceB(3,2)} → Union(4,1) → Writer(5,1)
 3. **Integration Failures**: Check account configurations and network connectivity
 4. **Performance Issues**: Review pipeline design and optimize data flow
 
+### SnapLogic Grouping and Data Flow Patterns
+
+**⚠️ IMPORTANT NOTE**: When working with Copy snaps, Group By N snaps, and data splitting patterns in SnapLogic, the order and placement of these snaps is critical for proper data flow. The grouping mechanism in SnapLogic has specific behaviors that require experience to understand correctly.
+
+**When in doubt about data grouping, splitting, or aggregation patterns, always ask the user for review and guidance before implementing complex data flow architectures.**
+
+Common patterns to verify:
+- Copy snap placement (before vs after grouping operations)
+- Head snap usage with individual documents vs grouped arrays
+- JSON Formatter input requirements (individual records vs grouped data)
+- Proper data flow for parallel processing branches
+
 ### Debug Strategies
 1. **Enable Debug Mode**: Use "Validate & Execute" with detailed logging
 2. **Incremental Testing**: Test individual snaps before full pipeline execution
