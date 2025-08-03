@@ -462,7 +462,7 @@
                     },
                     "soqlQuery": {
                         "expression": false,
-                        "value": "SELECT Id, Owner.Name, Name, Account.Name, Amount, CloseDate, StageName, LeadSource, Type, Region_from_Account__c FROM Opportunity WHERE CloseDate = THIS_FISCAL_YEAR AND Amount > 0 AND Type IN ('Add-on Business', 'New Business', 'Renewal', 'Pro Serv') AND StageName IN ('6 - Closed (Won)', '4 - Closed Won') ORDER BY CloseDate DESC"
+                        "value": "SELECT Id, Owner.Name, Name, Solutions_Engineer__r.Name, Account.Name, Amount, CloseDate, StageName, LeadSource, Type, Region_from_Account__c FROM Opportunity WHERE CloseDate = THIS_FISCAL_YEAR AND Amount > 0 AND Type IN ('Add-on Business', 'New Business', 'Renewal', 'Pro Serv') AND StageName IN ('6 - Closed (Won)', '4 - Closed Won') ORDER BY CloseDate DESC"
                     }
                 },
                 "view_serial": 100
@@ -646,6 +646,15 @@
                                         },
                                         "targetPath": {
                                             "value": "$created_date"
+                                        }
+                                    },
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "$Solutions_Engineer__r.Name"
+                                        },
+                                        "targetPath": {
+                                            "value": "Solutions_Engineer"
                                         }
                                     }
                                 ]
