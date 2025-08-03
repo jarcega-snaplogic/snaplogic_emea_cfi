@@ -286,7 +286,7 @@
         </div>
     </div>
     
-    <div class="version">v1.2.3</div>
+    <div class="version">v1.3.0</div>
     
     <script>
         let opportunitiesData = [];
@@ -334,6 +334,15 @@
             document.getElementById('filter-type').addEventListener('change', applyFilters);
             document.getElementById('filter-stage').addEventListener('change', applyFilters);
             document.getElementById('filter-se').addEventListener('input', applyFilters);
+            
+            // Add event delegation for editable cells
+            document.getElementById('table-body').addEventListener('click', function(e) {
+                if (e.target.classList.contains('editable')) {
+                    e.stopPropagation();
+                    const oppId = e.target.getAttribute('data-opp-id');
+                    editSE(oppId, e.target);
+                }
+            });
         }
         
         function populateSelect(selectId, options) {
@@ -410,7 +419,7 @@
                     <td>${opp.region || '-'}</td>
                     <td>${opp.stage || '-'}</td>
                     <td>${opp.opportunity_type || '-'}</td>
-                    <td class="editable" onclick="editSE('${opp.opportunity_id}', this)">
+                    <td class="editable" data-opp-id="${opp.opportunity_id}">
                         ${opp.Solutions_Engineer || 'Unassigned'}
                     </td>
                 </tr>
@@ -419,6 +428,11 @@
         
         // Edit Solutions Engineer
         function editSE(oppId, cell) {
+            // Prevent multiple dropdowns
+            if (cell.querySelector('select')) {
+                return;
+            }
+            
             const currentValue = cell.textContent.trim();
             const currentSE = currentValue === 'Unassigned' ? '' : currentValue;
             
@@ -448,8 +462,12 @@
             cell.innerHTML = '';
             cell.appendChild(select);
             
-            // Simple event handling - just save on change
-            select.addEventListener('change', function() {
+            // Focus the select to open dropdown
+            select.focus();
+            
+            // Event handling with proper cleanup
+            select.addEventListener('change', function(e) {
+                e.stopPropagation();
                 const newValue = this.value;
                 const displayValue = newValue || 'Unassigned';
                 
@@ -464,7 +482,21 @@
                 updateSEAggregation();
             });
             
-            // Don't auto-focus to avoid flickering
+            // Close dropdown when clicking outside
+            select.addEventListener('blur', function(e) {
+                // Small delay to allow for selection to register
+                setTimeout(() => {
+                    if (document.contains(select)) {
+                        const currentDisplayValue = cell.textContent.trim();
+                        if (currentDisplayValue !== currentValue) {
+                            // Value was changed, keep it
+                            return;
+                        }
+                        // Restore original value if no change
+                        cell.textContent = currentValue;
+                    }
+                }, 100);
+            });
         }
         
         // Update SE aggregation
