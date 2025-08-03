@@ -286,7 +286,7 @@
         </div>
     </div>
     
-    <div class="version">v1.2.0</div>
+    <div class="version">v1.2.1</div>
     
     <script>
         let opportunitiesData = [];
@@ -442,11 +442,7 @@
             
             cell.innerHTML = '';
             cell.appendChild(select);
-            
-            // Prevent immediate blur by using setTimeout
-            setTimeout(() => {
-                select.focus();
-            }, 10);
+            select.focus();
             
             function saveEdit() {
                 const newValue = select.value;
@@ -462,19 +458,12 @@
                 updateSEAggregation();
             }
             
-            // Only save on change, remove blur event to prevent immediate closing
+            // Save on selection change
             select.addEventListener('change', saveEdit);
             
-            // Save on click outside (but with delay to allow selection)
-            document.addEventListener('click', function closeHandler(e) {
-                if (!select.contains(e.target)) {
-                    setTimeout(() => {
-                        if (document.contains(select)) {
-                            saveEdit();
-                        }
-                    }, 100);
-                    document.removeEventListener('click', closeHandler);
-                }
+            // Save when losing focus, but with a small delay to allow for selection
+            select.addEventListener('blur', () => {
+                setTimeout(saveEdit, 150);
             });
         }
         
