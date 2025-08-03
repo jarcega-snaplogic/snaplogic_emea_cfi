@@ -58,6 +58,18 @@
             "dst_view_id": "input0",
             "src_id": "11111111-1111-1111-1111-000000000003",
             "src_view_id": "output0"
+        },
+        "link901": {
+            "dst_id": "11111111-1111-1111-1111-000000000004",
+            "dst_view_id": "input0",
+            "src_id": "11111111-1111-1111-1111-000000000003",
+            "src_view_id": "output1"
+        },
+        "link902": {
+            "dst_id": "11111111-1111-1111-1111-00000000000b",
+            "dst_view_id": "input0",
+            "src_id": "11111111-1111-1111-1111-000000000004",
+            "src_view_id": "output0"
         }
     },
     "property_map": {
@@ -102,15 +114,7 @@
             },
             "11111111-1111-1111-1111-000000000004_output0": {
                 "label": {
-                    "value": "Copy - output0"
-                },
-                "view_type": {
-                    "value": "document"
-                }
-            },
-            "11111111-1111-1111-1111-000000000004_output1": {
-                "label": {
-                    "value": "Copy - output1"
+                    "value": "File Writer - JSON Export - output0"
                 },
                 "view_type": {
                     "value": "document"
@@ -250,21 +254,27 @@
             },
             "11111111-1111-1111-1111-000000000004": {
                 "error": {},
-                "grid_x_int": 4,
+                "grid_x_int": 5,
                 "grid_y_int": 6,
                 "index": null,
                 "input": {},
-                "output": {
-                    "output1": {
-                        "dx_int": 0,
-                        "dy_int": 1,
-                        "rot_int": 0
-                    }
-                },
+                "output": {},
                 "recommendation_id": null,
                 "rot_int": 0,
                 "rot_tail_int": 0,
-                "source": "snap catagory"
+                "source": "snap category"
+            },
+            "11111111-1111-1111-1111-00000000000b": {
+                "error": {},
+                "grid_x_int": 6,
+                "grid_y_int": 6,
+                "index": null,
+                "input": {},
+                "output": {},
+                "recommendation_id": null,
+                "rot_int": 0,
+                "rot_tail_int": 0,
+                "source": "snap category"
             },
             "11111111-1111-1111-1111-000000000005": {
                 "error": {},
@@ -775,14 +785,48 @@
             }
         },
         "11111111-1111-1111-1111-000000000004": {
-            "class_id": "com-snaplogic-snaps-flow-copy",
-            "class_version": 1,
+            "class_id": "com-snaplogic-snaps-transform-jsonformatter",
+            "class_version": 2,
             "instance_id": "11111111-1111-1111-1111-000000000004",
             "property_map": {
                 "view_serial": 100,
                 "settings": {
                     "execution_mode": {
                         "value": "Validate & Execute"
+                    },
+                    "header": {
+                        "value": [
+                            {
+                                "expression": {
+                                    "expression": true,
+                                    "value": "\"application/json; charset=UTF-8\""
+                                },
+                                "targetPath": {
+                                    "value": "$['content-type']"
+                                }
+                            }
+                        ]
+                    },
+                    "contentPath": {
+                        "value": "$"
+                    },
+                    "ignoreEmptyStream": {
+                        "value": false
+                    },
+                    "formatSingleDocument": {
+                        "value": false
+                    },
+                    "jsonLines": {
+                        "value": false
+                    },
+                    "prettyPrint": {
+                        "value": true
+                    },
+                    "deriveSchemaLimit": {
+                        "value": "None"
+                    },
+                    "supportTypeExts": {
+                        "value": false
                     }
                 },
                 "input": {
@@ -798,18 +842,10 @@
                 "output": {
                     "output0": {
                         "view_type": {
-                            "value": "document"
+                            "value": "binary"
                         },
                         "label": {
                             "value": "output0"
-                        }
-                    },
-                    "output1": {
-                        "view_type": {
-                            "value": "document"
-                        },
-                        "label": {
-                            "value": "output1"
                         }
                     }
                 },
@@ -828,7 +864,112 @@
                 },
                 "info": {
                     "label": {
-                        "value": "Copy"
+                        "value": "JSON Formatter - Opportunities Export"
+                    },
+                    "notes": {
+                        "value": "Formats opportunity documents into JSON binary format for file export"
+                    }
+                }
+            }
+        },
+        "11111111-1111-1111-1111-00000000000b": {
+            "class_id": "com-snaplogic-snaps-binary-write",
+            "class_version": 3,
+            "instance_id": "11111111-1111-1111-1111-00000000000b",
+            "property_map": {
+                "view_serial": 100,
+                "settings": {
+                    "UserPermissionsKey": {
+                        "value": []
+                    },
+                    "advancedProperties": {
+                        "value": []
+                    },
+                    "cannedAcls": {
+                        "value": "None"
+                    },
+                    "createDir": {
+                        "value": true
+                    },
+                    "executable_during_suggest": {
+                        "value": false
+                    },
+                    "execution_mode": {
+                        "value": "Execute only"
+                    },
+                    "fileAction": {
+                        "value": "OVERWRITE"
+                    },
+                    "filename": {
+                        "expression": false,
+                        "value": "opportunities.json"
+                    },
+                    "flushIntervalKb": {
+                        "value": -1
+                    },
+                    "preventURLEncoding": {
+                        "value": false
+                    },
+                    "retries": {
+                        "value": 0
+                    },
+                    "retryInterval": {
+                        "value": 1
+                    },
+                    "validate": {
+                        "value": true
+                    },
+                    "writeEmptyFile": {
+                        "value": false
+                    },
+                    "writeHeader": {
+                        "value": false
+                    }
+                },
+                "account": {
+                    "account_ref": {
+                        "value": {}
+                    }
+                },
+                "input": {
+                    "input0": {
+                        "view_type": {
+                            "value": "binary"
+                        },
+                        "label": {
+                            "value": "input0"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "view_type": {
+                            "value": "document"
+                        },
+                        "label": {
+                            "value": "output0"
+                        }
+                    }
+                },
+                "error": {
+                    "error0": {
+                        "view_type": {
+                            "value": "document"
+                        },
+                        "label": {
+                            "value": "error0"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "File Writer - JSON Export"
+                    },
+                    "notes": {
+                        "value": "Writes JSON binary data to opportunities.json file in SLDB storage"
                     }
                 }
             }
