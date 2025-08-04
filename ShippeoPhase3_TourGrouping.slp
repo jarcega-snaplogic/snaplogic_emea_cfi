@@ -178,7 +178,7 @@
             }
         },
         "11111111-1111-1111-1111-000000000001": {
-            "class_id": "com-snaplogic-snaps-flow-groupbyn",
+            "class_id": "com-snaplogic-snaps-transform-groupbyn",
             "class_version": 1,
             "instance_id": "11111111-1111-1111-1111-000000000001",
             "property_map": {
@@ -227,8 +227,23 @@
                     "execution_mode": {
                         "value": "Validate & Execute"
                     },
+                    "flushTimeoutSecs": {
+                        "value": 0
+                    },
                     "groupSize": {
                         "value": 0
+                    },
+                    "memorySensitivity": {
+                        "value": "None"
+                    },
+                    "minGroupSize": {
+                        "value": 1
+                    },
+                    "minimumMemory": {
+                        "value": 1073741824
+                    },
+                    "outOfResourceTimeout": {
+                        "value": 30
                     },
                     "targetField": {
                         "value": "orders"
@@ -303,7 +318,7 @@
                                     {
                                         "expression": {
                                             "expression": true,
-                                            "value": "$orders.group($, $shipment_reference + '|' + $carrier_identifierZZ + '|' + $order_reference_DQ + '|' + $transportservicebuyer_ZZidentifier).mapValues(tourKey => {\n  tourOrders: $,\n  tourKey: tourKey,\n  firstOrder: $[0],\n  orderCount: $.length()\n}).values()"
+                                            "value": "{\n  \"allOrders\": $orders,\n  \"processingMode\": \"tour_grouping\",\n  \"totalOrderCount\": $orders.length()\n}"
                                         },
                                         "targetPath": {
                                             "value": "tours"
