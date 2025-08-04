@@ -1,0 +1,39 @@
+#!/bin/bash
+# Fast SnapLogic pipeline validation hook
+# Validates only changed .slp files for performance
+
+# Get list of .slp files being committed
+changed_slp_files=$(git diff --cached --name-only --diff-filter=ACM | grep '\.slp$')
+
+# Exit early if no .slp files changed
+if [ -z "$changed_slp_files" ]; then
+    exit 0
+fi
+
+# Get the directory where this script is located
+HOOK_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# Fast validation loop
+for file in $changed_slp_files; do
+    # Skip if file doesn't exist (deleted files)
+    if [ ! -f "$file" ]; then
+        continue
+    fi
+    
+    # 1. JSON syntax validation (fastest check first)
+    if ! python3 -m json.tool "$file" >/dev/null 2>&1; then
+        echo "❌ JSON syntax error in: $file"
+        echo "   Run: python3 -m json.tool $file"
+        exit 1
+    fi
+    
+    # 2. SnapLogic structure validation
+    if ! awk -f "$HOOK_DIR/validate_structure.awk" "$file" 2>/dev/null; then
+        echo "❌ SnapLogic structure error in: $file"
+        echo "   $(awk -f "$HOOK_DIR/validate_structure.awk" "$file" 2>&1)"
+        exit 1
+    fi
+done
+
+# Silent success for performance
+exit 0
