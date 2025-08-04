@@ -278,6 +278,25 @@ Data Prep → AI/ML Snap → Response Processing → Output Format
 Trigger → Router → Parallel Processing → Gate → Final Output
 ```
 
+## Critical Pipeline Architecture Lessons
+
+### CSV Data Processing Patterns
+**CRITICAL**: Understanding the difference between CSV Generator and CSV Parser is essential for correct pipeline design.
+
+#### CSV Generator vs CSV Parser
+| Snap | Input | Output | Use Case |
+|------|-------|--------|----------|
+| **CSV Generator** | Hardcoded CSV text in settings | Document data (structured) | Sample data, testing, small datasets |
+| **CSV Parser** | Binary CSV files | Document data (structured) | File-based CSV processing |
+
+**Common Error**: Never connect CSV Generator → CSV Parser
+- **Why it fails**: CSV Generator outputs documents, CSV Parser expects binary input
+- **Correct patterns**: 
+  - CSV Generator → Mapper → Processing
+  - File Reader → CSV Parser → Mapper → Processing
+
+**Discovered in**: Shippeo Phase 1 implementation - pipeline was rejected by SnapLogic Designer due to incompatible data types.
+
 ## Development Guidelines
 
 ### Pipeline Naming Convention

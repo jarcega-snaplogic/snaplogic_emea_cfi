@@ -102,6 +102,7 @@ A comprehensive reference guide for SnapLogic pipeline development best practice
 | **File Writer Failure** | Binary input required error | Document → File Writer directly | Insert Document to Binary conversion |
 | **Schema Validation Failure** | Missing required properties | Incomplete snap configuration | Use MCP tool for complete templates |
 | **Expression Evaluation Error** | Unquoted string literals | Invalid expression syntax | Wrap all strings in double quotes |
+| **CSV Generator → Parser Error** | Pipeline rejected by Designer | Data type mismatch | CSV Generator outputs documents, not binary - use Generator → Mapper directly |
 
 ## Version Control Best Practices
 
