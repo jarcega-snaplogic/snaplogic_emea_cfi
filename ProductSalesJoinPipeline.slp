@@ -351,7 +351,25 @@
                         "value": "sales"
                     }
                 },
-                "view_serial": 100
+                "view_map": {
+                    "input": {
+                        "input101": {
+                            "parent_type": "input",
+                            "parent_view": "input0"
+                        },
+                        "input102": {
+                            "parent_type": "input",
+                            "parent_view": "input1"
+                        }
+                    },
+                    "output": {
+                        "output101": {
+                            "parent_type": "output",
+                            "parent_view": "output0"
+                        }
+                    }
+                },
+                "view_serial": 102
             }
         },
         "11111111-1111-1111-1111-000000000003": {
