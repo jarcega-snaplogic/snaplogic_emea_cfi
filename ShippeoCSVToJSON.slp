@@ -2,29 +2,23 @@
     "class_id": "com-snaplogic-pipeline",
     "class_version": 9,
     "link_map": {
-        "11111111-1111-1111-1111-000000000001": {
-            "11111111-1111-1111-1111-000000000002": {
-                "dst_id": "11111111-1111-1111-1111-000000000002",
-                "dst_view_id": "input",
-                "src_id": "11111111-1111-1111-1111-000000000001",
-                "src_view_id": "output"
-            }
+        "link100": {
+            "dst_id": "11111111-1111-1111-1111-000000000002",
+            "dst_view_id": "input0",
+            "src_id": "11111111-1111-1111-1111-000000000001",
+            "src_view_id": "output0"
         },
-        "11111111-1111-1111-1111-000000000002": {
-            "11111111-1111-1111-1111-000000000003": {
-                "dst_id": "11111111-1111-1111-1111-000000000003",
-                "dst_view_id": "input",
-                "src_id": "11111111-1111-1111-1111-000000000002",
-                "src_view_id": "output"
-            }
+        "link200": {
+            "dst_id": "11111111-1111-1111-1111-000000000003",
+            "dst_view_id": "input0",
+            "src_id": "11111111-1111-1111-1111-000000000002",
+            "src_view_id": "output0"
         },
-        "11111111-1111-1111-1111-000000000003": {
-            "11111111-1111-1111-1111-000000000004": {
-                "dst_id": "11111111-1111-1111-1111-000000000004",
-                "dst_view_id": "input",
-                "src_id": "11111111-1111-1111-1111-000000000003",
-                "src_view_id": "output"
-            }
+        "link300": {
+            "dst_id": "11111111-1111-1111-1111-000000000004",
+            "dst_view_id": "input0",
+            "src_id": "11111111-1111-1111-1111-000000000003",
+            "src_view_id": "output0"
         }
     },
     "property_map": {
@@ -96,7 +90,7 @@
                 }
             },
             "view_map": {
-                "output": {
+                "output0": {
                     "view_type": {
                         "value": "document"
                     }
@@ -154,12 +148,12 @@
                 }
             },
             "view_map": {
-                "input": {
+                "input0": {
                     "view_type": {
                         "value": "document"
                     }
                 },
-                "output": {
+                "output0": {
                     "view_type": {
                         "value": "document"
                     }
@@ -203,12 +197,12 @@
                 }
             },
             "view_map": {
-                "input": {
+                "input0": {
                     "view_type": {
                         "value": "document"
                     }
                 },
-                "output": {
+                "output0": {
                     "view_type": {
                         "value": "document"
                     }
@@ -322,12 +316,12 @@
                 }
             },
             "view_map": {
-                "input": {
+                "input0": {
                     "view_type": {
                         "value": "document"
                     }
                 },
-                "output": {
+                "output0": {
                     "view_type": {
                         "value": "document"
                     }
