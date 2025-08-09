@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "snaplogic-schema": {
+      "command": "node",
+      "args": ["/home/jocel/llmapps/vibe-coding-snaplogic-new/mcp-tools/mcp-snaplogic-schema/index.js"],
+      "env": {
+        "SNAPLOGIC_USERNAME": "jarcega@snaplogic.com",
+        "SNAPLOGIC_PASSWORD": "ORJAcon_01"
+      }
+    },
+    "snaplogic-git": {
+      "command": "node", 
+      "args": ["/home/jocel/llmapps/vibe-coding-snaplogic-new/mcp-tools/mcp-snaplogic-git/index.js"],
+      "env": {
+        "SNAPLOGIC_USERNAME": "jarcega@snaplogic.com",
+        "SNAPLOGIC_PASSWORD": "ORJAcon_01"
+      }
+    }
+  }
+}

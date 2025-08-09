@@ -1,0 +1,22 @@
+{
+  "credentials": {
+    "username": "jarcega@snaplogic.com",
+    "password": "ORJAcon_01"
+  },
+  "schema_api": {
+    "base_url": "https://prodeu-connectfasterinc-cloud-fm.emea.snaplogic.io",
+    "org": "ConnectFasterInc"
+  },
+  "project_api": {
+    "base_url": "https://emea.snaplogic.com",
+    "org": "ConnectFasterInc",
+    "project_space": "tryGit",
+    "project_path": "snapLogic4snapLogic/tryGit",
+    "project_id": "855493"
+  },
+  "sync": {
+    "auto_commit": true,
+    "commit_prefix": "[SnapLogic Sync]",
+    "validate_before_push": true
+  }
+}
