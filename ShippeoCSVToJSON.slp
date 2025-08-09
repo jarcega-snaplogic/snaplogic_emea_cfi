@@ -1,745 +1,338 @@
 {
-  "class_id": "com-snaplogic-pipeline",
-  "class_version": 9,
-  "link_map": {
-    "link100": {
-      "dst_id": "11111111-1111-1111-1111-222222222222",
-      "dst_view_id": "input0",
-      "src_id": "11111111-1111-1111-1111-111111111111",
-      "src_view_id": "output0"
-    },
-    "link101": {
-      "dst_id": "11111111-1111-1111-1111-333333333333",
-      "dst_view_id": "input0",
-      "src_id": "11111111-1111-1111-1111-222222222222",
-      "src_view_id": "output0"
-    },
-    "link102": {
-      "dst_id": "11111111-1111-1111-1111-444444444444",
-      "dst_view_id": "input0",
-      "src_id": "11111111-1111-1111-1111-333333333333",
-      "src_view_id": "output0"
-    }
-  },
-  "property_map": {
-    "error": {
-      "error_behavior": {
-        "value": "none"
-      }
-    },
-    "info": {
-      "author": {
-        "value": "jarcega@snaplogic.com"
-      },
-      "label": {},
-      "notes": {
-        "value": "Single pipeline to transform Shippeo CSV data to OrderIn JSON format.\nCombines functionality of 4 previous pipelines into one streamlined process."
-      },
-      "pipeline_doc_uri": {
-        "value": null
-      },
-      "purpose": {
-        "value": "Transform CSV tour data into Shippeo OrderIn JSON format"
-      }
-    },
-    "input": {},
-    "output": {
-      "11111111-1111-1111-1111-444444444444_output0": {
-        "label": {
-          "value": "JSON Output"
+    "class_id": "com-snaplogic-pipeline",
+    "class_version": 9,
+    "link_map": {
+        "11111111-1111-1111-1111-000000000001": {
+            "11111111-1111-1111-1111-000000000002": {
+                "dst_id": "11111111-1111-1111-1111-000000000002",
+                "dst_view_id": "input",
+                "src_id": "11111111-1111-1111-1111-000000000001",
+                "src_view_id": "output"
+            }
         },
-        "view_type": {
-          "value": "document"
+        "11111111-1111-1111-1111-000000000002": {
+            "11111111-1111-1111-1111-000000000003": {
+                "dst_id": "11111111-1111-1111-1111-000000000003",
+                "dst_view_id": "input",
+                "src_id": "11111111-1111-1111-1111-000000000002",
+                "src_view_id": "output"
+            }
+        },
+        "11111111-1111-1111-1111-000000000003": {
+            "11111111-1111-1111-1111-000000000004": {
+                "dst_id": "11111111-1111-1111-1111-000000000004",
+                "dst_view_id": "input",
+                "src_id": "11111111-1111-1111-1111-000000000003",
+                "src_view_id": "output"
+            }
         }
-      }
     },
-    "settings": {
-      "error_param_table": {
-        "value": []
-      },
-      "error_pipeline": {
-        "expression": false,
-        "value": null
-      },
-      "param_table": {
-        "value": []
-      }
+    "property_map": {
+        "info": {
+            "author": {
+                "value": "jarcega@snaplogic.com"
+            },
+            "notes": {
+                "value": "Consolidated Shippeo pipeline: Reads CSV tour/delivery data, groups by tour reference, and outputs Shippeo OrderIn JSON format. Replaces 4 separate phase pipelines with single efficient solution."
+            },
+            "purpose": {
+                "value": "Transform CSV tour data into Shippeo OrderIn JSON format with proper meta, shipment and orders structure"
+            }
+        }
+    },
+    "render_map": {
+        "detail_map": {
+            "11111111-1111-1111-1111-000000000001": {
+                "grid_x_int": 2,
+                "grid_y_int": 1,
+                "index": 0,
+                "label": "CSV Generator",
+                "rot_int": 0
+            },
+            "11111111-1111-1111-1111-000000000002": {
+                "grid_x_int": 3,
+                "grid_y_int": 1,
+                "index": 1,
+                "label": "CSV Parser",
+                "rot_int": 0
+            },
+            "11111111-1111-1111-1111-000000000003": {
+                "grid_x_int": 4,
+                "grid_y_int": 1,
+                "index": 2,
+                "label": "Group By Tour",
+                "rot_int": 0
+            },
+            "11111111-1111-1111-1111-000000000004": {
+                "grid_x_int": 5,
+                "grid_y_int": 1,
+                "index": 3,
+                "label": "Shippeo JSON Mapper",
+                "rot_int": 0
+            }
+        }
+    },
+    "snap_map": {
+        "11111111-1111-1111-1111-000000000001": {
+            "class_id": "com-snaplogic-snaps-transform-csvgenerator",
+            "class_version": 1,
+            "instance_id": "11111111-1111-1111-1111-000000000001",
+            "property_map": {
+                "info": {
+                    "label": {
+                        "value": "CSV Generator"
+                    },
+                    "notes": {
+                        "value": "Generates sample Shippeo tour CSV data with semicolon delimiter (European format)"
+                    }
+                },
+                "settings": {
+                    "editable_content": {
+                        "value": "Tour reference;Carrier ID;Transport Order Ref;Customer ID;ADL reference;mode;licence_plate;Pick up ID;Pick up name;Pick up address1;Pick up Federal State;Pick up country;Pick up postalCode;Pick up city;Pick up latitude;Pick up longitude;Pick up Start;TimeZone;Pick up End;TimeZone;Consignee ID;Consignee name;Consignee address1;Consignee Federal State;Consignee country;Consignee postalCode;Consignee city;Consignee latitude;Consignee longitude;Consignee Start;TimeZone;Consignee End;TimeZone;Weight;HU trackingCode (optionnal);Tags;clientIdentification;Contact name;Contact phone number;Contact email;Goods description\n713621;John;08062025-713621-5213;ArlaDK_POC;;;DX53289;5213;Branderup Garage;Engdraget 4;;DK;6535;Branderup;;;08-06-2025 16:15;+02:00;08-06-2025 16:25;+02:00;112048622;Holdan Agro;Tyrholmvej 7;;DK;6230;Rodekro;;;08-06-2025 16:42;+02:00;;+02:00;;;;;;;;;\n713621;John;08062025-713621-112048622;ArlaDK_POC;;;DX53289;112048622;Holdan Agro;Tyrholmvej 7;;DK;6230;Rodekro;;;08-06-2025 16:42;+02:00;08-06-2025 17:14;+02:00;112051189;Hojset;Hojsetvej 3;;DK;6534;Agerskov;;;08-06-2025 17:29;+02:00;;+02:00;;;;;;;;;\n713621;John;08062025-713621-112051189;ArlaDK_POC;;;DX53289;112051189;Hojset;Hojsetvej 3;;DK;6534;Agerskov;;;08-06-2025 17:29;+02:00;08-06-2025 17:35;+02:00;99878;Branderup;Engdraget 4;;DK;6535;Branderup;;;08-06-2025 17:43;+02:00;;+02:00;;;;;;;;;\n713622;John;08062025-713622-99878;ArlaDK_POC;;;DX53289;99878;Branderup;Engdraget 4;;DK;6535;Branderup;;;08-06-2025 17:43;+02:00;08-06-2025 18:32;+02:00;112035434;Uwe Matzen;Bjerndrupvej 17;;DK;6240;Logumkloster;;;08-06-2025 18:41;+02:00;;+02:00;;;;;;;;;\n713622;John;08062025-713622-112035434;ArlaDK_POC;;;DX53289;112035434;Uwe Matzen;Bjerndrupvej 17;;DK;6240;Logumkloster;;;08-06-2025 18:41;+02:00;08-06-2025 18:53;+02:00;112050495;Lene Andersen;Klojingvej 10;;DK;6240;Logumkloster;;;08-06-2025 19:01;+02:00;;+02:00;;;;;;;;"
+                    },
+                    "execution_mode": {
+                        "value": "Validate & Execute"
+                    }
+                }
+            },
+            "view_map": {
+                "output": {
+                    "view_type": {
+                        "value": "document"
+                    }
+                }
+            }
+        },
+        "11111111-1111-1111-1111-000000000002": {
+            "class_id": "com-snaplogic-snaps-transform-csvparser",
+            "class_version": 3,
+            "instance_id": "11111111-1111-1111-1111-000000000002",
+            "property_map": {
+                "info": {
+                    "label": {
+                        "value": "CSV Parser"
+                    },
+                    "notes": {
+                        "value": "Parses CSV with semicolon delimiter (European format) and header row"
+                    }
+                },
+                "settings": {
+                    "charset": {
+                        "value": "Auto BOM detect"
+                    },
+                    "containsHeader": {
+                        "value": true
+                    },
+                    "delimiter": {
+                        "expression": false,
+                        "value": ";"
+                    },
+                    "errorPolicy": {
+                        "value": "Both"
+                    },
+                    "escapeChar": {
+                        "expression": false,
+                        "value": "\\"
+                    },
+                    "execution_mode": {
+                        "value": "Validate & Execute"
+                    },
+                    "ignoreEmptyData": {
+                        "value": true
+                    },
+                    "quoteCharacter": {
+                        "expression": false,
+                        "value": "\""
+                    },
+                    "skipLines": {
+                        "expression": false,
+                        "value": 0
+                    },
+                    "validateHeaders": {
+                        "value": false
+                    }
+                }
+            },
+            "view_map": {
+                "input": {
+                    "view_type": {
+                        "value": "document"
+                    }
+                },
+                "output": {
+                    "view_type": {
+                        "value": "document"
+                    }
+                }
+            }
+        },
+        "11111111-1111-1111-1111-000000000003": {
+            "class_id": "com-snaplogic-snaps-transform-groupbyfields",
+            "class_version": 1,
+            "instance_id": "11111111-1111-1111-1111-000000000003",
+            "property_map": {
+                "info": {
+                    "label": {
+                        "value": "Group By Tour"
+                    },
+                    "notes": {
+                        "value": "Groups CSV rows by Tour reference to create shipments with multiple orders per tour"
+                    }
+                },
+                "settings": {
+                    "execution_mode": {
+                        "value": "Validate & Execute"
+                    },
+                    "groupFields": {
+                        "value": [
+                            {
+                                "expression": false,
+                                "value": "$\"Tour reference\""
+                            }
+                        ]
+                    },
+                    "groupsOutput": {
+                        "value": "orders"
+                    },
+                    "nullSafeAccess": {
+                        "value": true
+                    },
+                    "passThroughGroupingFieldValues": {
+                        "value": true
+                    }
+                }
+            },
+            "view_map": {
+                "input": {
+                    "view_type": {
+                        "value": "document"
+                    }
+                },
+                "output": {
+                    "view_type": {
+                        "value": "document"
+                    }
+                }
+            }
+        },
+        "11111111-1111-1111-1111-000000000004": {
+            "class_id": "com-snaplogic-snaps-transform-datatransform",
+            "class_version": 4,
+            "instance_id": "11111111-1111-1111-1111-000000000004",
+            "property_map": {
+                "info": {
+                    "label": {
+                        "value": "Shippeo JSON Mapper"
+                    },
+                    "notes": {
+                        "value": "Transforms grouped tour data into complete Shippeo OrderIn JSON format with meta, shipment, and orders structure"
+                    }
+                },
+                "settings": {
+                    "execution_mode": {
+                        "value": "Validate & Execute"
+                    },
+                    "nullSafeAccess": {
+                        "value": true
+                    },
+                    "passThrough": {
+                        "value": false
+                    },
+                    "transformations": {
+                        "value": {
+                            "mappingRoot": {
+                                "value": "$"
+                            },
+                            "mappingTable": [
+                                {
+                                    "expression": {
+                                        "expression": true,
+                                        "value": "{\"senderId\": \"snaplogic\", \"duplicateReceiverId\": \"shippeo\", \"messageType\": \"GTF511\", \"messageDate\": Date.now().toLocaleDateString(\"sv-SE\") + \"T\" + Date.now().toLocaleTimeString(\"sv-SE\") + \"+0200\", \"messageReference\": java.util.UUID.randomUUID().toString(), \"messageFunction\": \"0\"}"
+                                    },
+                                    "targetPath": {
+                                        "value": "meta"
+                                    }
+                                },
+                                {
+                                    "expression": {
+                                        "expression": true,
+                                        "value": "$orders != null && $orders.length > 0 ? $orders[0][\"Tour reference\"] : null"
+                                    },
+                                    "targetPath": {
+                                        "value": "shipment.technicalReference"
+                                    }
+                                },
+                                {
+                                    "expression": {
+                                        "expression": true,
+                                        "value": "$orders != null && $orders.length > 0 ? $orders[0][\"Tour reference\"] : null"
+                                    },
+                                    "targetPath": {
+                                        "value": "shipment.reference"
+                                    }
+                                },
+                                {
+                                    "expression": {
+                                        "expression": true,
+                                        "value": "$orders != null && $orders.length > 0 ? [{\"identifier\": $orders[0][\"Customer ID\"], \"qualifier\": \"ZZ\"}] : []"
+                                    },
+                                    "targetPath": {
+                                        "value": "shipment.transportServiceBuyer"
+                                    }
+                                },
+                                {
+                                    "expression": {
+                                        "expression": true,
+                                        "value": "$orders != null && $orders.length > 0 ? [{\"identifier\": $orders[0][\"Carrier ID\"], \"qualifier\": \"ZZ\"}] : []"
+                                    },
+                                    "targetPath": {
+                                        "value": "shipment.carrier"
+                                    }
+                                },
+                                {
+                                    "expression": {
+                                        "expression": true,
+                                        "value": "$orders != null && $orders.length > 0 ? [{\"qualifier\": \"truck\", \"identifier\": $orders[0][\"licence_plate\"], \"isTrackable\": true}] : []"
+                                    },
+                                    "targetPath": {
+                                        "value": "shipment.transportMean"
+                                    }
+                                },
+                                {
+                                    "expression": {
+                                        "expression": true,
+                                        "value": "$orders != null && $orders.length > 0 ? $orders[0][\"mode\"] : \"\""
+                                    },
+                                    "targetPath": {
+                                        "value": "shipment.transportMode"
+                                    }
+                                },
+                                {
+                                    "expression": {
+                                        "expression": true,
+                                        "value": "$orders != null ? $orders.map(order => {\n  var result = {};\n  result[\"references\"] = [{\"reference\": order[\"Transport Order Ref\"], \"qualifier\": \"DQ\"}];\n  result[\"pickUp\"] = {\n    \"identifications\": [{\"identifier\": order[\"Pick up ID\"], \"qualifier\": \"ZZ\"}],\n    \"name\": order[\"Pick up name\"],\n    \"address1\": order[\"Pick up address1\"],\n    \"country\": order[\"Pick up country\"],\n    \"postalCode\": order[\"Pick up postalCode\"],\n    \"city\": order[\"Pick up city\"],\n    \"dates\": []\n  };\n  result[\"consignee\"] = {\n    \"identifications\": [{\"identifier\": order[\"Consignee ID\"], \"qualifier\": \"ZZ\"}],\n    \"name\": order[\"Consignee name\"],\n    \"address1\": order[\"Consignee address1\"],\n    \"country\": order[\"Consignee country\"],\n    \"postalCode\": order[\"Consignee postalCode\"],\n    \"city\": order[\"Consignee city\"],\n    \"dates\": []\n  };\n  result[\"goodsDescription\"] = \"general goods\";\n  return result;\n}) : []"
+                                    },
+                                    "targetPath": {
+                                        "value": "shipment.orders"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "view_map": {
+                "input": {
+                    "view_type": {
+                        "value": "document"
+                    }
+                },
+                "output": {
+                    "view_type": {
+                        "value": "document"
+                    }
+                }
+            }
+        }
     }
-  },
-  "render_map": {
-    "default_snaplex": null,
-    "detail_map": {
-      "11111111-1111-1111-1111-111111111111": {
-        "error": {},
-        "grid_x_int": 2,
-        "grid_y_int": 1,
-        "index": null,
-        "input": {},
-        "output": {},
-        "recommendation_id": null,
-        "rot_int": 0,
-        "rot_tail_int": 0,
-        "source": "snap catagory"
-      },
-      "11111111-1111-1111-1111-222222222222": {
-        "error": {},
-        "grid_x_int": 3,
-        "grid_y_int": 1,
-        "index": null,
-        "input": {},
-        "output": {},
-        "recommendation_id": null,
-        "rot_int": 0,
-        "rot_tail_int": 0,
-        "source": "snap catagory"
-      },
-      "11111111-1111-1111-1111-333333333333": {
-        "error": {},
-        "grid_x_int": 4,
-        "grid_y_int": 1,
-        "index": null,
-        "input": {},
-        "output": {},
-        "recommendation_id": null,
-        "rot_int": 0,
-        "rot_tail_int": 0,
-        "source": "snap catagory"
-      },
-      "11111111-1111-1111-1111-444444444444": {
-        "error": {},
-        "grid_x_int": 5,
-        "grid_y_int": 1,
-        "index": null,
-        "input": {},
-        "output": {},
-        "recommendation_id": null,
-        "rot_int": 0,
-        "rot_tail_int": 0,
-        "source": "snap catagory"
-      }
-    },
-    "pan_x_num": 0,
-    "pan_y_num": 0,
-    "scale_ratio": 1
-  },
-  "snap_map": {
-    "11111111-1111-1111-1111-111111111111": {
-      "class_id": "com-snaplogic-snaps-transform-csvparser",
-      "class_version": 2,
-      "instance_id": "11111111-1111-1111-1111-111111111111",
-      "property_map": {
-        "error": {
-          "error0": {
-            "label": {
-              "value": "error0"
-            },
-            "view_type": {
-              "value": "document"
-            }
-          },
-          "error_behavior": {
-            "value": "fail"
-          }
-        },
-        "info": {
-          "label": {
-            "value": "CSV Parser"
-          },
-          "notes": {}
-        },
-        "output": {
-          "output0": {
-            "label": {
-              "value": "output0"
-            },
-            "view_type": {
-              "value": "document"
-            }
-          }
-        },
-        "settings": {
-          "advancedProperties": {
-            "value": []
-          },
-          "charset": {
-            "value": "UTF-8"
-          },
-          "delimiter": {
-            "value": ";"
-          },
-          "escape_char": {
-            "value": "\\"
-          },
-          "header": {
-            "value": true
-          },
-          "ignoreEmptyStream": {
-            "value": false
-          },
-          "inputHeader": {
-            "value": false
-          },
-          "outputHeader": {
-            "value": false
-          },
-          "preview_size": {
-            "value": 50
-          },
-          "quote_char": {
-            "value": "\""
-          },
-          "skipLines": {
-            "value": 0
-          },
-          "trimValues": {
-            "value": false
-          }
-        },
-        "view_serial": 100
-      }
-    },
-    "11111111-1111-1111-1111-222222222222": {
-      "class_id": "com-snaplogic-snaps-transform-mapper",
-      "class_version": 2,
-      "instance_id": "11111111-1111-1111-1111-222222222222",
-      "property_map": {
-        "error": {
-          "error0": {
-            "label": {
-              "value": "error0"
-            },
-            "view_type": {
-              "value": "document"
-            }
-          },
-          "error_behavior": {
-            "value": "fail"
-          }
-        },
-        "info": {
-          "label": {
-            "value": "Field Preparation"
-          },
-          "notes": {
-            "value": "Prepare fields for Script processing"
-          }
-        },
-        "input": {
-          "input0": {
-            "label": {
-              "value": "input0"
-            },
-            "view_type": {
-              "value": "document"
-            }
-          }
-        },
-        "output": {
-          "output0": {
-            "label": {
-              "value": "output0"
-            },
-            "view_type": {
-              "value": "document"
-            }
-          }
-        },
-        "settings": {
-          "execution_mode": {
-            "value": "Validate & Execute"
-          },
-          "null-safe": {
-            "value": false
-          },
-          "passThrough": {
-            "value": false
-          },
-          "transformations": {
-            "value": {
-              "mappingRoot": {
-                "value": "$"
-              },
-              "mappingTable": {
-                "value": [
-                  {
-                    "expression": {
-                      "expression": true,
-                      "value": "$['Tour reference']"
-                    },
-                    "targetPath": {
-                      "value": "$tourReference"
-                    }
-                  },
-                  {
-                    "expression": {
-                      "expression": true,
-                      "value": "$['Carrier ID']"
-                    },
-                    "targetPath": {
-                      "value": "$carrierId"
-                    }
-                  },
-                  {
-                    "expression": {
-                      "expression": true,
-                      "value": "$['Transport Order Ref']"
-                    },
-                    "targetPath": {
-                      "value": "$transportOrderRef"
-                    }
-                  },
-                  {
-                    "expression": {
-                      "expression": true,
-                      "value": "$['Customer ID']"
-                    },
-                    "targetPath": {
-                      "value": "$customerId"
-                    }
-                  },
-                  {
-                    "expression": {
-                      "expression": true,
-                      "value": "$['ADL reference']"
-                    },
-                    "targetPath": {
-                      "value": "$adlReference"
-                    }
-                  },
-                  {
-                    "expression": {
-                      "expression": true,
-                      "value": "$mode"
-                    },
-                    "targetPath": {
-                      "value": "$transportMode"
-                    }
-                  },
-                  {
-                    "expression": {
-                      "expression": true,
-                      "value": "$licence_plate"
-                    },
-                    "targetPath": {
-                      "value": "$licencePlate"
-                    }
-                  },
-                  {
-                    "expression": {
-                      "expression": true,
-                      "value": "$['Pick up ID']"
-                    },
-                    "targetPath": {
-                      "value": "$pickupId"
-                    }
-                  },
-                  {
-                    "expression": {
-                      "expression": true,
-                      "value": "$['Pick up name']"
-                    },
-                    "targetPath": {
-                      "value": "$pickupName"
-                    }
-                  },
-                  {
-                    "expression": {
-                      "expression": true,
-                      "value": "$['Pick up address1']"
-                    },
-                    "targetPath": {
-                      "value": "$pickupAddress1"
-                    }
-                  },
-                  {
-                    "expression": {
-                      "expression": true,
-                      "value": "$['Pick up Federal State']"
-                    },
-                    "targetPath": {
-                      "value": "$pickupState"
-                    }
-                  },
-                  {
-                    "expression": {
-                      "expression": true,
-                      "value": "$['Pick up country']"
-                    },
-                    "targetPath": {
-                      "value": "$pickupCountry"
-                    }
-                  },
-                  {
-                    "expression": {
-                      "expression": true,
-                      "value": "$['Pick up postalCode']"
-                    },
-                    "targetPath": {
-                      "value": "$pickupPostalCode"
-                    }
-                  },
-                  {
-                    "expression": {
-                      "expression": true,
-                      "value": "$['Pick up city']"
-                    },
-                    "targetPath": {
-                      "value": "$pickupCity"
-                    }
-                  },
-                  {
-                    "expression": {
-                      "expression": true,
-                      "value": "$['Pick up latitude']"
-                    },
-                    "targetPath": {
-                      "value": "$pickupLatitude"
-                    }
-                  },
-                  {
-                    "expression": {
-                      "expression": true,
-                      "value": "$['Pick up longitude']"
-                    },
-                    "targetPath": {
-                      "value": "$pickupLongitude"
-                    }
-                  },
-                  {
-                    "expression": {
-                      "expression": true,
-                      "value": "$['Pick up Start']"
-                    },
-                    "targetPath": {
-                      "value": "$pickupStart"
-                    }
-                  },
-                  {
-                    "expression": {
-                      "expression": true,
-                      "value": "$['TimeZone']"
-                    },
-                    "targetPath": {
-                      "value": "$pickupTimezone"
-                    }
-                  },
-                  {
-                    "expression": {
-                      "expression": true,
-                      "value": "$['Pick up End']"
-                    },
-                    "targetPath": {
-                      "value": "$pickupEnd"
-                    }
-                  },
-                  {
-                    "expression": {
-                      "expression": true,
-                      "value": "$['Consignee ID']"
-                    },
-                    "targetPath": {
-                      "value": "$consigneeId"
-                    }
-                  },
-                  {
-                    "expression": {
-                      "expression": true,
-                      "value": "$['Consignee name']"
-                    },
-                    "targetPath": {
-                      "value": "$consigneeName"
-                    }
-                  },
-                  {
-                    "expression": {
-                      "expression": true,
-                      "value": "$['Consignee address1']"
-                    },
-                    "targetPath": {
-                      "value": "$consigneeAddress1"
-                    }
-                  },
-                  {
-                    "expression": {
-                      "expression": true,
-                      "value": "$['Consignee Federal State']"
-                    },
-                    "targetPath": {
-                      "value": "$consigneeState"
-                    }
-                  },
-                  {
-                    "expression": {
-                      "expression": true,
-                      "value": "$['Consignee country']"
-                    },
-                    "targetPath": {
-                      "value": "$consigneeCountry"
-                    }
-                  },
-                  {
-                    "expression": {
-                      "expression": true,
-                      "value": "$['Consignee postalCode']"
-                    },
-                    "targetPath": {
-                      "value": "$consigneePostalCode"
-                    }
-                  },
-                  {
-                    "expression": {
-                      "expression": true,
-                      "value": "$['Consignee city']"
-                    },
-                    "targetPath": {
-                      "value": "$consigneeCity"
-                    }
-                  },
-                  {
-                    "expression": {
-                      "expression": true,
-                      "value": "$['Consignee latitude']"
-                    },
-                    "targetPath": {
-                      "value": "$consigneeLatitude"
-                    }
-                  },
-                  {
-                    "expression": {
-                      "expression": true,
-                      "value": "$['Consignee longitude']"
-                    },
-                    "targetPath": {
-                      "value": "$consigneeLongitude"
-                    }
-                  },
-                  {
-                    "expression": {
-                      "expression": true,
-                      "value": "$['Consignee Start']"
-                    },
-                    "targetPath": {
-                      "value": "$consigneeStart"
-                    }
-                  },
-                  {
-                    "expression": {
-                      "expression": true,
-                      "value": "$['Consignee End']"
-                    },
-                    "targetPath": {
-                      "value": "$consigneeEnd"
-                    }
-                  },
-                  {
-                    "expression": {
-                      "expression": true,
-                      "value": "$Weight"
-                    },
-                    "targetPath": {
-                      "value": "$weight"
-                    }
-                  },
-                  {
-                    "expression": {
-                      "expression": true,
-                      "value": "$['HU trackingCode (optionnal)']"
-                    },
-                    "targetPath": {
-                      "value": "$huTrackingCode"
-                    }
-                  },
-                  {
-                    "expression": {
-                      "expression": true,
-                      "value": "$Tags"
-                    },
-                    "targetPath": {
-                      "value": "$tags"
-                    }
-                  },
-                  {
-                    "expression": {
-                      "expression": true,
-                      "value": "$clientIdentification"
-                    },
-                    "targetPath": {
-                      "value": "$clientIdentification"
-                    }
-                  },
-                  {
-                    "expression": {
-                      "expression": true,
-                      "value": "$['Contact name']"
-                    },
-                    "targetPath": {
-                      "value": "$contactName"
-                    }
-                  },
-                  {
-                    "expression": {
-                      "expression": true,
-                      "value": "$['Contact phone number']"
-                    },
-                    "targetPath": {
-                      "value": "$contactPhoneNumber"
-                    }
-                  },
-                  {
-                    "expression": {
-                      "expression": true,
-                      "value": "$['Contact email']"
-                    },
-                    "targetPath": {
-                      "value": "$contactEmail"
-                    }
-                  },
-                  {
-                    "expression": {
-                      "expression": true,
-                      "value": "$['Goods description'] || \"general goods\""
-                    },
-                    "targetPath": {
-                      "value": "$goodsDescription"
-                    }
-                  }
-                ]
-              }
-            }
-          }
-        },
-        "view_serial": 100
-      }
-    },
-    "11111111-1111-1111-1111-333333333333": {
-      "class_id": "com-snaplogic-snaps-script-script",
-      "class_version": 2,
-      "instance_id": "11111111-1111-1111-1111-333333333333",
-      "property_map": {
-        "error": {
-          "error0": {
-            "label": {
-              "value": "error0"
-            },
-            "view_type": {
-              "value": "document"
-            }
-          },
-          "error_behavior": {
-            "value": "fail"
-          }
-        },
-        "info": {
-          "label": {
-            "value": "Tour Grouping Script"
-          },
-          "notes": {
-            "value": "Groups orders by tour reference and creates Shippeo JSON structure"
-          }
-        },
-        "input": {
-          "input0": {
-            "label": {
-              "value": "input0"
-            },
-            "view_type": {
-              "value": "document"
-            }
-          }
-        },
-        "output": {
-          "output0": {
-            "label": {
-              "value": "output0"
-            },
-            "view_type": {
-              "value": "document"
-            }
-          }
-        },
-        "settings": {
-          "executable": {
-            "value": "execute"
-          },
-          "language": {
-            "value": "python"
-          },
-          "script": {
-            "value": "# Import required modules\nfrom com.snaplogic.scripting.language import ScriptHook\nimport uuid\nfrom datetime import datetime\nimport pytz\n\nclass TransformScript(ScriptHook):\n    def __init__(self, input, output, error, log):\n        self.input = input\n        self.output = output\n        self.error = error\n        self.log = log\n        \n    def execute(self):\n        self.log.info(\"Starting Shippeo tour grouping transformation\")\n        \n        # Collect all input documents and group by tour reference\n        shipments = {}\n        \n        while self.input.hasNext():\n            try:\n                in_doc = self.input.next()\n                tour_ref = in_doc.get('tourReference')\n                \n                if tour_ref not in shipments:\n                    # Create new shipment structure\n                    shipment = {\n                        \"meta\": {\n                            \"senderId\": \"snaplogic\",\n                            \"duplicateReceiverId\": \"shippeo\",\n                            \"messageType\": \"GTF511\",\n                            \"messageDate\": datetime.now(pytz.timezone('Europe/Paris')).strftime('%Y-%m-%dT%H:%M:%S%z'),\n                            \"messageReference\": str(uuid.uuid4()),\n                            \"messageFunction\": \"0\"\n                        },\n                        \"shipment\": {\n                            \"technicalReference\": tour_ref,\n                            \"reference\": tour_ref,\n                            \"transportServiceBuyer\": [\n                                {\n                                    \"identifier\": in_doc.get('customerId', ''),\n                                    \"qualifier\": \"ZZ\"\n                                }\n                            ],\n                            \"carrier\": [\n                                {\n                                    \"identifier\": in_doc.get('carrierId', ''),\n                                    \"qualifier\": \"ZZ\"\n                                }\n                            ],\n                            \"transportMean\": [],\n                            \"transportMode\": in_doc.get('transportMode', ''),\n                            \"orders\": []\n                        }\n                    }\n                    \n                    # Add transport mean if licence plate exists\n                    if in_doc.get('licencePlate'):\n                        shipment[\"shipment\"][\"transportMean\"].append({\n                            \"qualifier\": \"truck\",\n                            \"identifier\": in_doc['licencePlate'],\n                            \"isTrackable\": True\n                        })\n                    \n                    shipments[tour_ref] = shipment\n                \n                # Create order structure\n                order = {\n                    \"references\": [\n                        {\n                            \"reference\": in_doc.get('transportOrderRef', ''),\n                            \"qualifier\": \"DQ\"\n                        }\n                    ],\n                    \"pickUp\": {\n                        \"identifications\": [\n                            {\n                                \"identifier\": in_doc.get('pickupId', ''),\n                                \"qualifier\": \"ZZ\"\n                            }\n                        ],\n                        \"name\": self._truncate_string(in_doc.get('pickupName', ''), 35),\n                        \"address1\": self._handle_address(in_doc.get('pickupAddress1', ''), 35)[0],\n                        \"country\": in_doc.get('pickupCountry', ''),\n                        \"postalCode\": in_doc.get('pickupPostalCode', ''),\n                        \"city\": in_doc.get('pickupCity', ''),\n                        \"dates\": []\n                    },\n                    \"consignee\": {\n                        \"identifications\": [\n                            {\n                                \"identifier\": in_doc.get('consigneeId', ''),\n                                \"qualifier\": \"ZZ\"\n                            }\n                        ],\n                        \"name\": self._truncate_string(in_doc.get('consigneeName', ''), 35),\n                        \"address1\": self._handle_address(in_doc.get('consigneeAddress1', ''), 35)[0],\n                        \"country\": in_doc.get('consigneeCountry', ''),\n                        \"postalCode\": in_doc.get('consigneePostalCode', ''),\n                        \"city\": in_doc.get('consigneeCity', ''),\n                        \"dates\": []\n                    },\n                    \"goodsDescription\": in_doc.get('goodsDescription', 'general goods')\n                }\n                \n                # Add optional fields if they exist\n                if in_doc.get('adlReference'):\n                    order[\"references\"].append({\n                        \"reference\": in_doc['adlReference'],\n                        \"qualifier\": \"ADL\"\n                    })\n                \n                # Handle address2 if address1 is too long\n                pickup_address = self._handle_address(in_doc.get('pickupAddress1', ''), 35)\n                if pickup_address[1]:\n                    order[\"pickUp\"][\"address2\"] = pickup_address[1]\n                    \n                consignee_address = self._handle_address(in_doc.get('consigneeAddress1', ''), 35)\n                if consignee_address[1]:\n                    order[\"consignee\"][\"address2\"] = consignee_address[1]\n                \n                # Add optional location fields\n                for prefix in ['pickup', 'consignee']:\n                    location_key = 'pickUp' if prefix == 'pickup' else 'consignee'\n                    \n                    if in_doc.get(f'{prefix}State'):\n                        order[location_key]['state'] = in_doc[f'{prefix}State']\n                    if in_doc.get(f'{prefix}Latitude'):\n                        order[location_key]['latitude'] = in_doc[f'{prefix}Latitude']\n                    if in_doc.get(f'{prefix}Longitude'):\n                        order[location_key]['longitude'] = in_doc[f'{prefix}Longitude']\n                \n                # Add order to shipment\n                shipments[tour_ref][\"shipment\"][\"orders\"].append(order)\n                \n            except Exception as e:\n                self.log.error(f\"Error processing document: {str(e)}\")\n                self.error.write(in_doc)\n                \n        # Output all shipments\n        for shipment in shipments.values():\n            self.output.write(shipment)\n            \n        self.log.info(f\"Completed processing. Created {len(shipments)} shipments\")\n    \n    def _truncate_string(self, s, max_length):\n        \"\"\"Truncate string to max length\"\"\"\n        if s and len(s) > max_length:\n            return s[:max_length]\n        return s or ''\n    \n    def _handle_address(self, address, max_length):\n        \"\"\"Split address into address1 and address2 if too long\"\"\"\n        if not address:\n            return ('', None)\n        \n        if len(address) <= max_length:\n            return (address, None)\n        \n        # Split at max_length\n        address1 = address[:max_length]\n        address2 = address[max_length:min(len(address), max_length*2)]\n        return (address1, address2)\n\n# Main hook\nhook = TransformScript(input, output, error, log)\nhook.execute()"
-          }
-        },
-        "view_serial": 100
-      }
-    },
-    "11111111-1111-1111-1111-444444444444": {
-      "class_id": "com-snaplogic-snaps-transform-jsonformatter",
-      "class_version": 2,
-      "instance_id": "11111111-1111-1111-1111-444444444444",
-      "property_map": {
-        "error": {
-          "error0": {
-            "label": {
-              "value": "error0"
-            },
-            "view_type": {
-              "value": "document"
-            }
-          },
-          "error_behavior": {
-            "value": "fail"
-          }
-        },
-        "info": {
-          "label": {
-            "value": "JSON Formatter"
-          },
-          "notes": {}
-        },
-        "input": {
-          "input0": {
-            "label": {
-              "value": "input0"
-            },
-            "view_type": {
-              "value": "document"
-            }
-          }
-        },
-        "output": {
-          "output0": {
-            "label": {
-              "value": "output0"
-            },
-            "view_type": {
-              "value": "binary"
-            }
-          }
-        },
-        "settings": {
-          "binaryHeader": {
-            "value": false
-          },
-          "contentType": {
-            "value": "application/json"
-          },
-          "formatAsArray": {
-            "value": false
-          },
-          "ignoreEmptyStream": {
-            "value": false
-          },
-          "jsonLines": {
-            "value": true
-          },
-          "prettyPrint": {
-            "value": true
-          },
-          "writePreamble": {
-            "value": false
-          }
-        },
-        "view_serial": 100
-      }
-    }
-  }
 }
