@@ -1,0 +1,17 @@
+{
+  "credentials": {
+    "username": "jarcega@snaplogic.com",
+    "password": "ORJAcon_01"
+  },
+  "api": {
+    "base_url": "https://emea.snaplogic.com",
+    "org": "ConnectFasterInc",
+    "project_space": "tryGit",
+    "project_id": "21818"
+  },
+  "sync": {
+    "auto_commit": true,
+    "commit_prefix": "[SnapLogic Sync]",
+    "validate_before_push": true
+  }
+}

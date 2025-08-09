@@ -76,37 +76,37 @@ Load specific rule files based on task context:
 
 ### Environment Variable Setup (REQUIRED)
 
-**Before using SnapLogic MCP tools, you must export these environment variables:**
+**✅ COMPLETED**: SnapLogic environment variables have been added to your shell profile (`~/.bashrc`). 
 
+**To activate the environment variables:**
+
+1. **Reload your shell profile:**
+   ```bash
+   source ~/.bashrc
+   ```
+
+2. **Or restart your terminal** to automatically load the new variables
+
+3. **Restart Claude Code** to ensure MCP tools pick up the environment variables
+
+**Verify environment variables are loaded:**
 ```bash
-# Quick setup - automatically export from config file
-export SNAPLOGIC_USERNAME="$(jq -r '.credentials.username' .snaplogic-config.json)"
-export SNAPLOGIC_PASSWORD="$(jq -r '.credentials.password' .snaplogic-config.json)"
-export SNAPLOGIC_SCHEMA_BASE_URL="https://prodeu-connectfasterinc-cloud-fm.emea.snaplogic.io"
-export SNAPLOGIC_SCHEMA_ORG="ConnectFasterInc"
-export SNAPLOGIC_PROJECT_BASE_URL="$(jq -r '.api.base_url' .snaplogic-config.json)"
-export SNAPLOGIC_PROJECT_ORG="$(jq -r '.api.org' .snaplogic-config.json)"
-export SNAPLOGIC_PROJECT_SPACE="$(jq -r '.api.project_space' .snaplogic-config.json)"
-export SNAPLOGIC_PROJECT_ID="$(jq -r '.api.project_id' .snaplogic-config.json)"
-export SNAPLOGIC_PROJECT_PATH="snapLogic4snapLogic/${SNAPLOGIC_PROJECT_SPACE}"
+echo "Username: $SNAPLOGIC_USERNAME"
+echo "Schema URL: $SNAPLOGIC_SCHEMA_BASE_URL" 
+echo "Project Space: $SNAPLOGIC_PROJECT_SPACE"
 ```
 
-**Manual setup (if jq not available):**
-```bash
-export SNAPLOGIC_USERNAME="jarcega@snaplogic.com"
-export SNAPLOGIC_PASSWORD="ORJAcon_01"
-export SNAPLOGIC_SCHEMA_BASE_URL="https://prodeu-connectfasterinc-cloud-fm.emea.snaplogic.io"
-export SNAPLOGIC_SCHEMA_ORG="ConnectFasterInc"
-export SNAPLOGIC_PROJECT_BASE_URL="https://emea.snaplogic.com"
-export SNAPLOGIC_PROJECT_ORG="ConnectFasterInc"
-export SNAPLOGIC_PROJECT_SPACE="tryGit"
-export SNAPLOGIC_PROJECT_ID="21818"
-export SNAPLOGIC_PROJECT_PATH="snapLogic4snapLogic/tryGit"
+**Expected output:**
+```
+Username: jarcega@snaplogic.com
+Schema URL: https://emea.snaplogic.com
+Project Space: tryGit
 ```
 
-**💡 Tip**: Add these exports to your `~/.bashrc` or `~/.zshrc` for persistence across sessions.
-
-**⚠️ Important**: The MCP tools require these environment variables to be set before Claude Code starts. If you change environment variables, restart Claude Code to pick up the new values.
+**⚠️ Troubleshooting:**
+- If variables show as empty, restart your terminal and Claude Code
+- MCP tools will fail to connect if environment variables are not set
+- Variables are automatically loaded in new terminal sessions
 
 ### Validation Infrastructure
 - **Git Hooks**: Automatic .slp validation on commit (<100ms)

@@ -6,15 +6,15 @@
     "class_version": 9,
     "link_map": {
         "link100": {
-            "dst_id": "11111111-1111-1111-1111-000000000001",
+            "dst_id": "22222222-2222-2222-2222-000000000001",
             "dst_view_id": "input0",
-            "src_id": "11111111-1111-1111-1111-000000000000",
+            "src_id": "22222222-2222-2222-2222-000000000000",
             "src_view_id": "output0"
         },
         "link200": {
-            "dst_id": "11111111-1111-1111-1111-000000000002",
+            "dst_id": "22222222-2222-2222-2222-000000000002",
             "dst_view_id": "input0",
-            "src_id": "11111111-1111-1111-1111-000000000001",
+            "src_id": "22222222-2222-2222-2222-000000000001",
             "src_view_id": "output0"
         }
     },
@@ -26,24 +26,24 @@
         },
         "info": {
             "author": {
-                "value": "jarcega@snaplogic.com"
+                "value": "claude@anthropic.com"
             },
             "label": {},
             "notes": {
-                "value": "CSV data generation pipeline: generates sample data, formats as CSV, and writes to file - Created using MCP SnapLogic Schema Tool"
+                "value": "Sample data processing pipeline for CICD testing - reads JSON data, transforms fields, and outputs processed results"
             },
             "pipeline_doc_uri": {
                 "value": null
             },
             "purpose": {
-                "value": "Generate and export sample CSV dataset using schema-validated snaps"
+                "value": "Demonstrate CICD workflow with a simple 3-snap data processing pipeline"
             }
         },
         "input": {},
         "output": {
-            "11111111-1111-1111-1111-000000000002_output0": {
+            "22222222-2222-2222-2222-000000000002_output0": {
                 "label": {
-                    "value": "File Writer - CSV Export - output0"
+                    "value": "Processed Data Output"
                 },
                 "view_type": {
                     "value": "document"
@@ -74,16 +74,16 @@
                             "value": "string"
                         },
                         "description": {
-                            "value": "Output file path for the generated CSV file"
+                            "value": "Environment for data processing (dev, test, prod)"
                         },
                         "key": {
-                            "value": "output_file_path"
+                            "value": "_environment"
                         },
                         "required": {
                             "value": false
                         },
                         "value": {
-                            "value": "/tmp/sample_data.csv"
+                            "value": "dev"
                         }
                     }
                 ]
@@ -99,10 +99,22 @@
     "render_map": {
         "default_snaplex": null,
         "detail_map": {
-            "11111111-1111-1111-1111-000000000000": {
+            "22222222-2222-2222-2222-000000000000": {
+                "error": {},
+                "grid_x_int": 1,
+                "grid_y_int": 2,
+                "index": null,
+                "input": {},
+                "output": {},
+                "recommendation_id": null,
+                "rot_int": 0,
+                "rot_tail_int": 0,
+                "source": "snap category"
+            },
+            "22222222-2222-2222-2222-000000000001": {
                 "error": {},
                 "grid_x_int": 2,
-                "grid_y_int": 1,
+                "grid_y_int": 2,
                 "index": null,
                 "input": {},
                 "output": {},
@@ -111,22 +123,10 @@
                 "rot_tail_int": 0,
                 "source": "snap category"
             },
-            "11111111-1111-1111-1111-000000000001": {
+            "22222222-2222-2222-2222-000000000002": {
                 "error": {},
                 "grid_x_int": 3,
-                "grid_y_int": 1,
-                "index": null,
-                "input": {},
-                "output": {},
-                "recommendation_id": null,
-                "rot_int": 0,
-                "rot_tail_int": 0,
-                "source": "snap category"
-            },
-            "11111111-1111-1111-1111-000000000002": {
-                "error": {},
-                "grid_x_int": 4,
-                "grid_y_int": 1,
+                "grid_y_int": 2,
                 "index": null,
                 "input": {},
                 "output": {},
@@ -141,10 +141,10 @@
         "scale_ratio": 1
     },
     "snap_map": {
-        "11111111-1111-1111-1111-000000000000": {
-            "class_id": "com-snaplogic-snaps-transform-csvgenerator",
+        "22222222-2222-2222-2222-000000000000": {
+            "class_id": "com-snaplogic-snaps-transform-jsonparser",
             "class_version": 1,
-            "instance_id": "11111111-1111-1111-1111-000000000000",
+            "instance_id": "22222222-2222-2222-2222-000000000000",
             "property_map": {
                 "error": {
                     "error0": {
@@ -161,10 +161,20 @@
                 },
                 "info": {
                     "label": {
-                        "value": "CSV Generator - Product Catalog"
+                        "value": "JSON Parser"
                     },
                     "notes": {
-                        "value": "Generates sample product catalog data with 10 records"
+                        "value": "Parses incoming JSON data for processing"
+                    }
+                },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "binary"
+                        }
                     }
                 },
                 "output": {
@@ -178,20 +188,20 @@
                     }
                 },
                 "settings": {
-                    "editable_content": {
-                        "value": "Product ID,Product Name,Category,Price,Stock Quantity,Supplier,Date Added\n1001,Wireless Headphones,Electronics,99.99,150,TechCorp,2024-01-15\n1002,Coffee Maker,Appliances,79.99,75,HomeGoods Inc,2024-01-18\n1003,Running Shoes,Sports,129.99,200,SportMax,2024-01-20\n1004,Desk Lamp,Furniture,45.99,120,LightCorp,2024-01-22\n1005,Smartphone Case,Electronics,19.99,300,AccessoryPro,2024-01-25\n1006,Yoga Mat,Sports,29.99,180,FitnessPro,2024-01-28\n1007,Blender,Appliances,149.99,60,KitchenMaster,2024-02-01\n1008,Office Chair,Furniture,299.99,45,OfficeMax,2024-02-05\n1009,Bluetooth Speaker,Electronics,59.99,220,AudioTech,2024-02-08\n1010,Water Bottle,Sports,24.99,350,HydroFlow,2024-02-12"
-                    },
                     "execution_mode": {
                         "value": "Validate & Execute"
+                    },
+                    "ignoreEmptyStream": {
+                        "value": false
                     }
                 },
                 "view_serial": 100
             }
         },
-        "11111111-1111-1111-1111-000000000001": {
-            "class_id": "com-snaplogic-snaps-transform-csvformatter",
-            "class_version": 3,
-            "instance_id": "11111111-1111-1111-1111-000000000001",
+        "22222222-2222-2222-2222-000000000001": {
+            "class_id": "com-snaplogic-snaps-transform-mapper",
+            "class_version": 4,
+            "instance_id": "22222222-2222-2222-2222-000000000001",
             "property_map": {
                 "error": {
                     "error0": {
@@ -208,10 +218,10 @@
                 },
                 "info": {
                     "label": {
-                        "value": "CSV Formatter"
+                        "value": "Data Mapper"
                     },
                     "notes": {
-                        "value": "Formats document data into CSV binary format with proper encoding"
+                        "value": "Transforms and maps data fields with environment-based processing"
                     }
                 },
                 "input": {
@@ -230,78 +240,75 @@
                             "value": "output0"
                         },
                         "view_type": {
-                            "value": "binary"
+                            "value": "document"
                         }
                     }
                 },
                 "settings": {
-                    "charset": {
-                        "value": "UTF-8"
-                    },
-                    "delimiter": {
-                        "expression": false,
-                        "value": ","
-                    },
-                    "errorPolicy": {
-                        "value": "Default"
-                    },
-                    "escapeChar": {
-                        "value": "\\"
-                    },
                     "execution_mode": {
                         "value": "Validate & Execute"
                     },
                     "ignoreEmptyStream": {
                         "value": false
                     },
-                    "newlineCharacter": {
-                        "value": "LF"
+                    "mappingRoot": {
+                        "value": "$"
                     },
-                    "outputHeader": {
+                    "mappingTable": {
                         "value": [
                             {
                                 "expression": {
                                     "expression": true,
-                                    "value": "\"text/csv; charset=UTF-8\""
+                                    "value": "$id"
                                 },
                                 "targetPath": {
-                                    "value": "$['content-type']"
+                                    "value": "$.record_id"
+                                }
+                            },
+                            {
+                                "expression": {
+                                    "expression": true,
+                                    "value": "$name"
+                                },
+                                "targetPath": {
+                                    "value": "$.record_name"
+                                }
+                            },
+                            {
+                                "expression": {
+                                    "expression": true,
+                                    "value": "_environment"
+                                },
+                                "targetPath": {
+                                    "value": "$.environment"
+                                }
+                            },
+                            {
+                                "expression": {
+                                    "expression": true,
+                                    "value": "Date.now()"
+                                },
+                                "targetPath": {
+                                    "value": "$.processed_timestamp"
                                 }
                             }
                         ]
                     },
-                    "quoteCharacter": {
-                        "value": "\""
-                    },
-                    "quoteMode": {
-                        "value": "MINIMAL"
-                    },
-                    "useDefinedHeader": {
+                    "nullSafeAccess": {
                         "value": false
                     },
-                    "userDefinedHeader": {
-                        "value": []
-                    },
-                    "writeBOM": {
+                    "passThrough": {
                         "value": false
-                    },
-                    "writeHeader": {
-                        "value": true
                     }
                 },
                 "view_serial": 100
             }
         },
-        "11111111-1111-1111-1111-000000000002": {
-            "class_id": "com-snaplogic-snaps-binary-write",
-            "class_version": 3,
-            "instance_id": "11111111-1111-1111-1111-000000000002",
+        "22222222-2222-2222-2222-000000000002": {
+            "class_id": "com-snaplogic-snaps-binary-trash",
+            "class_version": 1,
+            "instance_id": "22222222-2222-2222-2222-000000000002",
             "property_map": {
-                "account": {
-                    "account_ref": {
-                        "value": {}
-                    }
-                },
                 "error": {
                     "error0": {
                         "label": {
@@ -317,10 +324,10 @@
                 },
                 "info": {
                     "label": {
-                        "value": "File Writer - CSV Export"
+                        "value": "Output Sink"
                     },
                     "notes": {
-                        "value": "Writes formatted CSV binary data to specified file with validation"
+                        "value": "Final output destination for processed data"
                     }
                 },
                 "input": {
@@ -329,66 +336,14 @@
                             "value": "input0"
                         },
                         "view_type": {
-                            "value": "binary"
-                        }
-                    }
-                },
-                "output": {
-                    "output0": {
-                        "label": {
-                            "value": "output0"
-                        },
-                        "view_type": {
                             "value": "document"
                         }
                     }
                 },
+                "output": {},
                 "settings": {
-                    "UserPermissionsKey": {
-                        "value": []
-                    },
-                    "advancedProperties": {
-                        "value": []
-                    },
-                    "cannedAcls": {
-                        "value": "None"
-                    },
-                    "createDir": {
-                        "value": true
-                    },
-                    "executable_during_suggest": {
-                        "value": false
-                    },
                     "execution_mode": {
-                        "value": "Execute only"
-                    },
-                    "fileAction": {
-                        "value": "OVERWRITE"
-                    },
-                    "filename": {
-                        "expression": true,
-                        "value": "$output_file_path"
-                    },
-                    "flushIntervalKb": {
-                        "value": -1
-                    },
-                    "preventURLEncoding": {
-                        "value": false
-                    },
-                    "retries": {
-                        "value": 0
-                    },
-                    "retryInterval": {
-                        "value": 1
-                    },
-                    "validate": {
-                        "value": true
-                    },
-                    "writeEmptyFile": {
-                        "value": false
-                    },
-                    "writeHeader": {
-                        "value": false
+                        "value": "Validate & Execute"
                     }
                 },
                 "view_serial": 100
