@@ -1,0 +1,629 @@
+{
+    "ai_map": {
+        "footprint": "H4sIAAAAAAAAA8srzckBAE/8yyUEAAAA"
+    },
+    "class_id": "com-snaplogic-pipeline",
+    "class_version": 9,
+    "link_map": {
+        "link301": {
+            "dst_id": "11111111-1111-1111-1111-000000000001",
+            "dst_view_id": "input0",
+            "src_id": "11111111-1111-1111-1111-000000000000",
+            "src_view_id": "output0"
+        },
+        "link302": {
+            "dst_id": "11111111-1111-1111-1111-000000000002",
+            "dst_view_id": "input0",
+            "src_id": "11111111-1111-1111-1111-000000000001",
+            "src_view_id": "output0"
+        },
+        "link303": {
+            "dst_id": "11111111-1111-1111-1111-000000000003",
+            "dst_view_id": "input0",
+            "src_id": "11111111-1111-1111-1111-000000000002",
+            "src_view_id": "output0"
+        }
+    },
+    "property_map": {
+        "error": {
+            "error_behavior": {
+                "value": "none"
+            }
+        },
+        "info": {
+            "author": {
+                "value": "jarcega@snaplogic.com"
+            },
+            "label": {},
+            "notes": {
+                "value": "Comprehensive JSON to CSV pipeline demonstrating MCP tool usage for maximum accuracy. Includes JSON parsing, complex field transformations, and CSV output generation with production-ready configuration."
+            },
+            "pipeline_doc_uri": {
+                "value": null
+            },
+            "purpose": {
+                "value": "Production-grade JSON to CSV transformation with complex field mappings, data validation, and error handling"
+            }
+        },
+        "input": {},
+        "output": {
+            "11111111-1111-1111-1111-000000000003_output0": {
+                "label": {
+                    "value": "CSV Output"
+                },
+                "view_type": {
+                    "value": "binary"
+                }
+            }
+        },
+        "settings": {
+            "cache_pipelines": {
+                "value": []
+            },
+            "error_param_table": {
+                "value": []
+            },
+            "error_pipeline": {
+                "expression": false,
+                "value": null
+            },
+            "imports": {
+                "value": []
+            },
+            "param_table": {
+                "value": [
+                    {
+                        "description": {
+                            "value": "Default value for missing customer names"
+                        },
+                        "key": {
+                            "value": "_defaultCustomerName"
+                        },
+                        "value": {
+                            "expression": false,
+                            "value": "Unknown Customer"
+                        }
+                    },
+                    {
+                        "description": {
+                            "value": "Minimum order amount threshold for processing"
+                        },
+                        "key": {
+                            "value": "_minimumOrderAmount"
+                        },
+                        "value": {
+                            "expression": false,
+                            "value": 10.0
+                        }
+                    }
+                ]
+            },
+            "suspendable": {
+                "value": false
+            },
+            "test_pipeline": {
+                "value": false
+            }
+        }
+    },
+    "render_map": {
+        "default_snaplex": null,
+        "detail_map": {
+            "11111111-1111-1111-1111-000000000000": {
+                "error": {},
+                "grid_x_int": 2,
+                "grid_y_int": 1,
+                "index": null,
+                "input": {},
+                "output": {},
+                "recommendation_id": null,
+                "rot_int": 0,
+                "rot_tail_int": 0,
+                "source": "snap category"
+            },
+            "11111111-1111-1111-1111-000000000001": {
+                "error": {},
+                "grid_x_int": 3,
+                "grid_y_int": 1,
+                "index": null,
+                "input": {},
+                "output": {},
+                "recommendation_id": null,
+                "rot_int": 0,
+                "rot_tail_int": 0,
+                "source": "snap category"
+            },
+            "11111111-1111-1111-1111-000000000002": {
+                "error": {},
+                "grid_x_int": 4,
+                "grid_y_int": 1,
+                "index": null,
+                "input": {},
+                "output": {},
+                "recommendation_id": null,
+                "rot_int": 0,
+                "rot_tail_int": 0,
+                "source": "snap category"
+            },
+            "11111111-1111-1111-1111-000000000003": {
+                "error": {},
+                "grid_x_int": 5,
+                "grid_y_int": 1,
+                "index": null,
+                "input": {},
+                "output": {},
+                "recommendation_id": null,
+                "rot_int": 0,
+                "rot_tail_int": 0,
+                "source": "snap category"
+            }
+        },
+        "pan_x_num": 0,
+        "pan_y_num": 0,
+        "scale_ratio": 1
+    },
+    "snap_map": {
+        "11111111-1111-1111-1111-000000000000": {
+            "class_id": "com-snaplogic-snaps-transform-jsongenerator",
+            "class_version": 2,
+            "instance_id": "11111111-1111-1111-1111-000000000000",
+            "property_map": {
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "JSON Generator"
+                    },
+                    "notes": {
+                        "value": "Generates sample JSON data for processing demonstration"
+                    }
+                },
+                "input": {},
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "binary"
+                        }
+                    }
+                },
+                "settings": {
+                    "editable_content": {
+                        "value": "[\n  {\n    \"order_id\": \"ORD-001\",\n    \"customer_info\": {\n      \"name\": \"John Smith\",\n      \"email\": \"john.smith@example.com\",\n      \"phone\": \"+1-555-0123\"\n    },\n    \"order_details\": {\n      \"product_name\": \"Premium Widget\",\n      \"quantity\": 5,\n      \"unit_price\": 29.99,\n      \"total_amount\": 149.95\n    },\n    \"order_date\": \"2024-01-15T10:30:00Z\",\n    \"shipping_address\": {\n      \"street\": \"123 Main St\",\n      \"city\": \"Springfield\",\n      \"state\": \"IL\",\n      \"zip_code\": \"62701\",\n      \"country\": \"USA\"\n    },\n    \"status\": \"shipped\",\n    \"tracking_number\": \"TRK123456789\"\n  },\n  {\n    \"order_id\": \"ORD-002\",\n    \"customer_info\": {\n      \"name\": \"Jane Doe\",\n      \"email\": \"jane.doe@example.com\",\n      \"phone\": \"+1-555-0456\"\n    },\n    \"order_details\": {\n      \"product_name\": \"Standard Widget\",\n      \"quantity\": 3,\n      \"unit_price\": 19.99,\n      \"total_amount\": 59.97\n    },\n    \"order_date\": \"2024-01-16T14:20:00Z\",\n    \"shipping_address\": {\n      \"street\": \"456 Oak Ave\",\n      \"city\": \"Portland\",\n      \"state\": \"OR\",\n      \"zip_code\": \"97201\",\n      \"country\": \"USA\"\n    },\n    \"status\": \"processing\",\n    \"tracking_number\": null\n  },\n  {\n    \"order_id\": \"ORD-003\",\n    \"customer_info\": {\n      \"name\": \"Bob Johnson\",\n      \"email\": \"bob.johnson@example.com\",\n      \"phone\": \"+1-555-0789\"\n    },\n    \"order_details\": {\n      \"product_name\": \"Deluxe Widget Set\",\n      \"quantity\": 1,\n      \"unit_price\": 89.99,\n      \"total_amount\": 89.99\n    },\n    \"order_date\": \"2024-01-17T09:15:00Z\",\n    \"shipping_address\": {\n      \"street\": \"789 Pine Blvd\",\n      \"city\": \"Denver\",\n      \"state\": \"CO\",\n      \"zip_code\": \"80202\",\n      \"country\": \"USA\"\n    },\n    \"status\": \"delivered\",\n    \"tracking_number\": \"TRK987654321\"\n  }\n]"
+                    },
+                    "execution_mode": {
+                        "value": "Validate & Execute"
+                    }
+                },
+                "view_serial": 100
+            }
+        },
+        "11111111-1111-1111-1111-000000000001": {
+            "class_id": "com-snaplogic-snaps-transform-jsonparser",
+            "class_version": 1,
+            "instance_id": "11111111-1111-1111-1111-000000000001",
+            "property_map": {
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "JSON Parser"
+                    },
+                    "notes": {
+                        "value": "Parses JSON binary data into document format for field-level access"
+                    }
+                },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "binary"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "settings": {
+                    "execution_mode": {
+                        "value": "Validate & Execute"
+                    }
+                },
+                "view_serial": 100
+            }
+        },
+        "11111111-1111-1111-1111-000000000002": {
+            "class_id": "com-snaplogic-snaps-transform-datatransform",
+            "class_version": 4,
+            "instance_id": "11111111-1111-1111-1111-000000000002",
+            "property_map": {
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "Data Transform Mapper"
+                    },
+                    "notes": {
+                        "value": "Complex field transformations with business logic, data validation, and computed fields"
+                    }
+                },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "settings": {
+                    "execution_mode": {
+                        "value": "Validate & Execute"
+                    },
+                    "nullSafeAccess": {
+                        "value": true
+                    },
+                    "passThrough": {
+                        "value": false
+                    },
+                    "transformations": {
+                        "value": {
+                            "mappingRoot": {
+                                "value": "$"
+                            },
+                            "mappingTable": {
+                                "value": [
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "$order_id"
+                                        },
+                                        "targetPath": {
+                                            "value": "order_number"
+                                        }
+                                    },
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "$customer_info.name != null ? $customer_info.name : _defaultCustomerName"
+                                        },
+                                        "targetPath": {
+                                            "value": "customer_name"
+                                        }
+                                    },
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "$customer_info.email"
+                                        },
+                                        "targetPath": {
+                                            "value": "email_address"
+                                        }
+                                    },
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "$customer_info.phone"
+                                        },
+                                        "targetPath": {
+                                            "value": "phone_number"
+                                        }
+                                    },
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "$order_details.product_name"
+                                        },
+                                        "targetPath": {
+                                            "value": "product"
+                                        }
+                                    },
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "$order_details.quantity"
+                                        },
+                                        "targetPath": {
+                                            "value": "qty"
+                                        }
+                                    },
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "$order_details.unit_price"
+                                        },
+                                        "targetPath": {
+                                            "value": "price_per_unit"
+                                        }
+                                    },
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "$order_details.total_amount >= _minimumOrderAmount ? $order_details.total_amount : 0.00"
+                                        },
+                                        "targetPath": {
+                                            "value": "order_total"
+                                        }
+                                    },
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "$order_date != null ? Date.parse($order_date).toLocaleDateString() : \"\""
+                                        },
+                                        "targetPath": {
+                                            "value": "order_date_formatted"
+                                        }
+                                    },
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "$shipping_address.street + \", \" + $shipping_address.city + \", \" + $shipping_address.state + \" \" + $shipping_address.zip_code"
+                                        },
+                                        "targetPath": {
+                                            "value": "shipping_full_address"
+                                        }
+                                    },
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "$shipping_address.country"
+                                        },
+                                        "targetPath": {
+                                            "value": "country"
+                                        }
+                                    },
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "$status != null && $status.length() > 0 ? $status.toUpperCase() : \"UNKNOWN\""
+                                        },
+                                        "targetPath": {
+                                            "value": "order_status"
+                                        }
+                                    },
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "$tracking_number != null ? $tracking_number : \"N/A\""
+                                        },
+                                        "targetPath": {
+                                            "value": "tracking_id"
+                                        }
+                                    },
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "$order_details.total_amount > 100 ? \"HIGH_VALUE\" : \"STANDARD\""
+                                        },
+                                        "targetPath": {
+                                            "value": "order_priority"
+                                        }
+                                    },
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "Date.now().toLocaleDateString()"
+                                        },
+                                        "targetPath": {
+                                            "value": "processed_date"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "view_serial": 100
+            }
+        },
+        "11111111-1111-1111-1111-000000000003": {
+            "class_id": "com-snaplogic-snaps-transform-csvformatter",
+            "class_version": 3,
+            "instance_id": "11111111-1111-1111-1111-000000000003",
+            "property_map": {
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "CSV Formatter"
+                    },
+                    "notes": {
+                        "value": "Converts document data to CSV binary format for output generation"
+                    }
+                },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "binary"
+                        }
+                    }
+                },
+                "settings": {
+                    "charset": {
+                        "value": "UTF-8"
+                    },
+                    "columnList": {
+                        "value": [
+                            {
+                                "columnName": {
+                                    "value": "order_number"
+                                }
+                            },
+                            {
+                                "columnName": {
+                                    "value": "customer_name"
+                                }
+                            },
+                            {
+                                "columnName": {
+                                    "value": "email_address"
+                                }
+                            },
+                            {
+                                "columnName": {
+                                    "value": "phone_number"
+                                }
+                            },
+                            {
+                                "columnName": {
+                                    "value": "product"
+                                }
+                            },
+                            {
+                                "columnName": {
+                                    "value": "qty"
+                                }
+                            },
+                            {
+                                "columnName": {
+                                    "value": "price_per_unit"
+                                }
+                            },
+                            {
+                                "columnName": {
+                                    "value": "order_total"
+                                }
+                            },
+                            {
+                                "columnName": {
+                                    "value": "order_date_formatted"
+                                }
+                            },
+                            {
+                                "columnName": {
+                                    "value": "shipping_full_address"
+                                }
+                            },
+                            {
+                                "columnName": {
+                                    "value": "country"
+                                }
+                            },
+                            {
+                                "columnName": {
+                                    "value": "order_status"
+                                }
+                            },
+                            {
+                                "columnName": {
+                                    "value": "tracking_id"
+                                }
+                            },
+                            {
+                                "columnName": {
+                                    "value": "order_priority"
+                                }
+                            },
+                            {
+                                "columnName": {
+                                    "value": "processed_date"
+                                }
+                            }
+                        ]
+                    },
+                    "delimiter": {
+                        "expression": false,
+                        "value": ","
+                    },
+                    "escapeChar": {
+                        "expression": false,
+                        "value": "\\"
+                    },
+                    "execution_mode": {
+                        "value": "Validate & Execute"
+                    },
+                    "includeHeader": {
+                        "value": true
+                    },
+                    "quoteCharacter": {
+                        "expression": false,
+                        "value": "\""
+                    },
+                    "quoteMode": {
+                        "value": "MINIMAL"
+                    }
+                },
+                "view_serial": 100
+            }
+        }
+    }
+}

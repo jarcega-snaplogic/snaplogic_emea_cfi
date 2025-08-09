@@ -1,0 +1,122 @@
+
+package routines;
+
+import java.util.HashMap;
+import java.util.Map;
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+    "handlingUnitNumber",
+    "type",
+    "customType",
+    "grossWeight",
+    "productReference",
+    "productDescription",
+    "productItem"
+})
+public class OrderIn_Packing {
+
+    @JsonProperty("handlingUnitNumber")
+    private Integer handlingUnitNumber;
+    @JsonProperty("type")
+    private String type;
+    @JsonProperty("customType")
+    private String customType;
+    @JsonProperty("grossWeight")
+    private Float grossWeight;
+    @JsonProperty("productReference")
+    private String productReference;
+    @JsonProperty("productDescription")
+    private String productDescription;
+    @JsonProperty("productItem")
+    private Integer productItem;
+    @JsonIgnore
+    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+
+    @JsonProperty("handlingUnitNumber")
+    public Integer getHandlingUnitNumber() {
+        return handlingUnitNumber;
+    }
+
+    @JsonProperty("handlingUnitNumber")
+    public void setHandlingUnitNumber(Integer handlingUnitNumber) {
+        this.handlingUnitNumber = handlingUnitNumber;
+    }
+
+    @JsonProperty("type")
+    public String getType() {
+        return type;
+    }
+
+    @JsonProperty("type")
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    @JsonProperty("customType")
+    public String getCustomType() {
+        return customType;
+    }
+
+    @JsonProperty("customType")
+    public void setCustomType(String customType) {
+        this.customType = customType;
+    }
+
+    @JsonProperty("grossWeight")
+    public Float getGrossWeight() {
+        return grossWeight;
+    }
+
+    @JsonProperty("grossWeight")
+    public void setGrossWeight(Float grossWeight) {
+        this.grossWeight = grossWeight;
+    }
+
+    @JsonProperty("productReference")
+    public String getProductReference() {
+        return productReference;
+    }
+
+    @JsonProperty("productReference")
+    public void setProductReference(String productReference) {
+        this.productReference = productReference;
+    }
+
+    @JsonProperty("productDescription")
+    public String getProductDescription() {
+        return productDescription;
+    }
+
+    @JsonProperty("productDescription")
+    public void setProductDescription(String productDescription) {
+        this.productDescription = productDescription;
+    }
+
+    @JsonProperty("productItem")
+    public Integer getProductItem() {
+        return productItem;
+    }
+
+    @JsonProperty("productItem")
+    public void setProductItem(Integer productItem) {
+        this.productItem = productItem;
+    }
+
+    @JsonAnyGetter
+    public Map<String, Object> getAdditionalProperties() {
+        return this.additionalProperties;
+    }
+
+    @JsonAnySetter
+    public void setAdditionalProperty(String name, Object value) {
+        this.additionalProperties.put(name, value);
+    }
+
+}

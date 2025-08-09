@@ -1,0 +1,274 @@
+{
+    "ai_map": {
+        "footprint": "H4sIAAAAAAAAA8srzckBAE/8yyUEAAAA"
+    },
+    "class_id": "com-snaplogic-pipeline",
+    "class_version": 9,
+    "link_map": {
+        "link301": {
+            "dst_id": "11111111-1111-1111-1111-000000000001",
+            "dst_view_id": "input0",
+            "src_id": "11111111-1111-1111-1111-000000000000",
+            "src_view_id": "output0"
+        }
+    },
+    "property_map": {
+        "error": {
+            "error_behavior": {
+                "value": "none"
+            }
+        },
+        "info": {
+            "author": {
+                "value": "jarcega@snaplogic.com"
+            },
+            "label": {},
+            "notes": {
+                "value": "Text-to-Speech pipeline using ElevenLabs API - Sample payload preparation for TTS conversion"
+            },
+            "pipeline_doc_uri": {
+                "value": null
+            },
+            "purpose": {
+                "value": "Generate ElevenLabs API payload for text-to-speech conversion"
+            }
+        },
+        "input": {
+            "11111111-1111-1111-1111-000000000000_input0": {
+                "label": {
+                    "value": "Text Input"
+                },
+                "view_type": {
+                    "value": "document"
+                }
+            }
+        },
+        "output": {
+            "11111111-1111-1111-1111-000000000001_outputResponse": {
+                "label": {
+                    "value": "Audio File"
+                },
+                "view_type": {
+                    "value": "binary"
+                }
+            }
+        },
+        "settings": {
+            "cache_pipelines": {
+                "value": []
+            },
+            "error_param_table": {
+                "value": []
+            },
+            "error_pipeline": {
+                "expression": false,
+                "value": null
+            },
+            "imports": {
+                "value": []
+            },
+            "param_table": {
+                "value": [
+                    {
+                        "capture": {
+                            "value": false
+                        },
+                        "data_type": {
+                            "value": "string"
+                        },
+                        "description": {
+                            "value": "Text content to convert to speech"
+                        },
+                        "key": {
+                            "value": "text_content"
+                        },
+                        "required": {
+                            "value": false
+                        },
+                        "value": {
+                            "value": "Hello, this is a sample text-to-speech conversion using ElevenLabs API."
+                        }
+                    },
+                    {
+                        "capture": {
+                            "value": false
+                        },
+                        "data_type": {
+                            "value": "string"
+                        },
+                        "description": {
+                            "value": "ElevenLabs voice ID to use for speech generation"
+                        },
+                        "key": {
+                            "value": "voice_id"
+                        },
+                        "required": {
+                            "value": false
+                        },
+                        "value": {
+                            "value": "21m00Tcm4TlvDq8ikWAM"
+                        }
+                    }
+                ]
+            },
+            "suspendable": {
+                "value": false
+            },
+            "test_pipeline": {
+                "value": false
+            }
+        }
+    },
+    "render_map": {
+        "default_snaplex": null,
+        "detail_map": {
+            "11111111-1111-1111-1111-000000000000": {
+                "error": {},
+                "grid_x_int": 5,
+                "grid_y_int": 5,
+                "index": null,
+                "input": {},
+                "output": {},
+                "recommendation_id": null,
+                "rot_int": 0,
+                "rot_tail_int": 0,
+                "source": "snap catagory"
+            },
+            "11111111-1111-1111-1111-000000000001": {
+                "error": {},
+                "grid_x_int": 7,
+                "grid_y_int": 5,
+                "index": null,
+                "input": {},
+                "output": {},
+                "recommendation_id": null,
+                "rot_int": 0,
+                "rot_tail_int": 0,
+                "source": "snap catagory"
+            }
+        },
+        "pan_x_num": 0,
+        "pan_y_num": 0,
+        "scale_ratio": 1
+    },
+    "snap_map": {
+        "11111111-1111-1111-1111-000000000000": {
+            "class_id": "com-snaplogic-snaps-transform-jsongenerator",
+            "class_version": 2,
+            "instance_id": "11111111-1111-1111-1111-000000000000",
+            "property_map": {
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "ElevenLabs Payload Generator"
+                    },
+                    "notes": {}
+                },
+                "input": {},
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "settings": {
+                    "arrayElementsAsDocuments": {
+                        "value": true
+                    },
+                    "editable_content": {
+                        "value": "[\n    {\n        \"api_endpoint\": \"https://api.elevenlabs.io/v1/text-to-speech/21m00Tcm4TlvDq8ikWAM\",\n        \"method\": \"POST\",\n        \"headers\": {\n            \"Content-Type\": \"application/json\",\n            \"Accept\": \"audio/mpeg\",\n            \"xi-api-key\": \"[ADD_YOUR_ELEVENLABS_API_KEY_HERE]\"\n        },\n        \"payload\": {\n            \"text\": \"Welcome to SnapLogic's advanced integration platform. This text-to-speech demonstration showcases our ability to integrate with AI services like ElevenLabs. Our platform enables seamless data transformation and API orchestration across enterprise systems with powerful workflow automation capabilities.\",\n            \"model_id\": \"eleven_multilingual_v2\",\n            \"voice_settings\": {\n                \"stability\": 0.5,\n                \"similarity_boost\": 0.8,\n                \"style\": 0.0,\n                \"use_speaker_boost\": true\n            },\n            \"pronunciation_dictionary_locators\": [],\n            \"seed\": null,\n            \"previous_text\": null,\n            \"next_text\": null,\n            \"previous_request_ids\": [],\n            \"next_request_ids\": []\n        },\n        \"voice_options\": {\n            \"Rachel\": \"21m00Tcm4TlvDq8ikWAM\",\n            \"Drew\": \"29vD33N1CtxCmqQRPOHJ\",\n            \"Clyde\": \"2EiwWnXFnvU5JabPnv8n\",\n            \"Paul\": \"5Q0t7uMcjvnagumLfvZi\",\n            \"Domi\": \"AZnzlk1XvdvUeBnXmlld\",\n            \"Dave\": \"CYw3kZ02Hs0563khs1Fj\",\n            \"Fin\": \"D38z5RcWu1voky8qkItS\",\n            \"Sarah\": \"EXAVITQu4vr4xnSDxMaL\",\n            \"Antoni\": \"ErXwobaYiN019PkySvjV\",\n            \"Thomas\": \"GBv7mTt0atIp3Br8iCZE\"\n        },\n        \"response_format\": \"audio/mpeg\",\n        \"expected_output\": \"Binary MP3 audio file\",\n        \"notes\": \"Ready-to-use payload for ElevenLabs Text-to-Speech API. Add your API key and use with HTTP Client snap.\"\n    }\n]"
+                    },
+                    "execution_mode": {
+                        "value": "Validate & Execute"
+                    },
+                    "passThroughProp": {
+                        "value": false
+                    },
+                    "supportTypeExts": {
+                        "value": false
+                    }
+                },
+                "view_serial": 100
+            }
+        },
+        "11111111-1111-1111-1111-000000000001": {
+            "class_id": "com-snaplogic-snaps-transform-datatransform",
+            "class_version": 4,
+            "instance_id": "11111111-1111-1111-1111-000000000001",
+            "property_map": {
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "API Request Formatter"
+                    },
+                    "notes": {}
+                },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "settings": {
+                    "execution_mode": {
+                        "value": "Validate & Execute"
+                    },
+                    "passThrough": {
+                        "value": true
+                    },
+                    "transformations": {
+                        "value": {
+                            "mappingRoot": {
+                                "value": "$"
+                            },
+                            "mappingTable": {}
+                        }
+                    }
+                },
+                "view_serial": 100
+            }
+        }
+    }
+}

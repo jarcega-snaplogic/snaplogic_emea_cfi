@@ -1,0 +1,101 @@
+
+package routines;
+
+import java.math.BigDecimal;
+import java.math.MathContext;
+import java.util.HashMap;
+import java.util.Map;
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+    "grossWeight",
+    "grossVolume",
+    "loadingMeters",
+    "palletGround",
+    "fullLoad"
+})
+public class OrderIn_Quantity {
+
+    @JsonProperty("grossWeight")
+    private Float grossWeight;
+    @JsonProperty("grossVolume")
+    private BigDecimal grossVolume;
+    @JsonProperty("loadingMeters")
+    private Float loadingMeters;
+    @JsonProperty("palletGround")
+    private Integer palletGround;
+    @JsonProperty("fullLoad")
+    private Boolean fullLoad;
+    @JsonIgnore
+    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+
+    @JsonProperty("grossWeight")
+    public Float getGrossWeight() {
+        return grossWeight;
+    }
+
+    @JsonProperty("grossWeight")
+    public void setGrossWeight(Float grossWeight) {
+        this.grossWeight = grossWeight;
+    }
+
+    @JsonProperty("grossVolume")
+    public BigDecimal getGrossVolume() {
+        return grossVolume;
+    }
+
+    @JsonProperty("grossVolume")
+    public void setGrossVolume(Float grossVolume) {
+    	if ( grossVolume != null) 
+    	{
+    		this.grossVolume = new BigDecimal (grossVolume.doubleValue()).round(new MathContext(6)).stripTrailingZeros();
+    	}
+    }
+
+    @JsonProperty("loadingMeters")
+    public Float getLoadingMeters() {
+        return loadingMeters;
+    }
+
+    @JsonProperty("loadingMeters")
+    public void setLoadingMeters(Float loadingMeters) {
+        this.loadingMeters = loadingMeters;
+    }
+
+	@JsonProperty("palletGround")
+    public Integer getPalletGround() {
+        return palletGround;
+    }
+
+    @JsonProperty("palletGround")
+    public void setPalletGround(Integer palletGround) {
+        this.palletGround = palletGround;
+    }
+
+    @JsonProperty("fullLoad")
+    public Boolean getFullLoad() {
+        return fullLoad;
+    }
+
+    @JsonProperty("fullLoad")
+    public void setFullLoad(Boolean fullLoad) {
+        this.fullLoad = fullLoad;
+    }
+
+    @JsonAnyGetter
+    public Map<String, Object> getAdditionalProperties() {
+        return this.additionalProperties;
+    }
+
+    @JsonAnySetter
+    public void setAdditionalProperty(String name, Object value) {
+        this.additionalProperties.put(name, value);
+    }
+
+}

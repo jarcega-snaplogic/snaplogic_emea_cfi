@@ -1,0 +1,237 @@
+
+package routines;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({ "ADR", "class", "classificationCode", "UNDG", "packingGroup", "labels", "packingInstruction",
+		"cargoTransportAuthorisation", "tunnelRestrictionCode", "additionalInformation", "technicalName",
+		"complementaryInformation", "netQuantity", "grossWeight", "limitedQuantity", "exceptedQuantity", "packaging" })
+public class OrderIn_DangerousGood {
+
+	@JsonProperty("ADR")
+	private String adr;
+	@JsonProperty("class")
+	private String _class;
+	@JsonProperty("classificationCode")
+	private String classificationCode;
+	@JsonProperty("UNDG")
+	private Integer undg;
+	@JsonProperty("packingGroup")
+	private Integer packingGroup;
+	@JsonProperty("labels")
+	private List<OrderIn_Label> labels = null;
+	@JsonProperty("packingInstruction")
+	private String packingInstruction;
+	@JsonProperty("cargoTransportAuthorisation")
+	private String cargoTransportAuthorisation;
+	@JsonProperty("tunnelRestrictionCode")
+	private String tunnelRestrictionCode;
+	@JsonProperty("additionalInformation")
+	private OrderIn_AdditionalInformation additionalInformation;
+	@JsonProperty("technicalName")
+	private OrderIn_TechnicalName technicalName;
+	@JsonProperty("complementaryInformation")
+	private List<OrderIn_ComplementaryInformation> complementaryInformation = null;
+	@JsonProperty("netQuantity")
+	private OrderIn_NetQuantity netQuantity;
+	@JsonProperty("grossWeight")
+	private Integer grossWeight;
+	@JsonProperty("limitedQuantity")
+	private Integer limitedQuantity;
+	@JsonProperty("exceptedQuantity")
+	private Integer exceptedQuantity;
+	@JsonProperty("packaging")
+	private OrderIn_Packaging packaging;
+	@JsonIgnore
+	private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+
+	@JsonProperty("ADR")
+	public String getAdr() {
+		return adr;
+	}
+
+	@JsonProperty("ADR")
+	public void setAdr(String adr) {
+		this.adr = adr;
+	}
+
+	@JsonProperty("class")
+	public String getClass_() {
+		return _class;
+	}
+
+	@JsonProperty("class")
+	public void setClass_(String _class) {
+		this._class = _class;
+	}
+
+	@JsonProperty("classificationCode")
+	public String getClassificationCode() {
+		return classificationCode;
+	}
+
+	@JsonProperty("classificationCode")
+	public void setClassificationCode(String classificationCode) {
+		this.classificationCode = classificationCode;
+	}
+
+	@JsonProperty("UNDG")
+	public Integer getUndg() {
+		return undg;
+	}
+
+	@JsonProperty("UNDG")
+	public void setUndg(Integer undg) {
+		this.undg = undg;
+	}
+
+	@JsonProperty("packingGroup")
+	public Integer getPackingGroup() {
+		return packingGroup;
+	}
+
+	@JsonProperty("packingGroup")
+	public void setPackingGroup(Integer packingGroup) {
+		this.packingGroup = packingGroup;
+	}
+
+	@JsonProperty("labels")
+	public List<OrderIn_Label> getLabels() {
+		return labels;
+	}
+
+	@JsonProperty("labels")
+	public void setLabels(List<OrderIn_Label> labels) {
+		this.labels = labels;
+	}
+
+	@JsonProperty("packingInstruction")
+	public String getPackingInstruction() {
+		return packingInstruction;
+	}
+
+	@JsonProperty("packingInstruction")
+	public void setPackingInstruction(String packingInstruction) {
+		this.packingInstruction = packingInstruction;
+	}
+
+	@JsonProperty("cargoTransportAuthorisation")
+	public String getCargoTransportAuthorisation() {
+		return cargoTransportAuthorisation;
+	}
+
+	@JsonProperty("cargoTransportAuthorisation")
+	public void setCargoTransportAuthorisation(String cargoTransportAuthorisation) {
+		this.cargoTransportAuthorisation = cargoTransportAuthorisation;
+	}
+
+	@JsonProperty("tunnelRestrictionCode")
+	public String getTunnelRestrictionCode() {
+		return tunnelRestrictionCode;
+	}
+
+	@JsonProperty("tunnelRestrictionCode")
+	public void setTunnelRestrictionCode(String tunnelRestrictionCode) {
+		this.tunnelRestrictionCode = tunnelRestrictionCode;
+	}
+
+	@JsonProperty("additionalInformation")
+	public OrderIn_AdditionalInformation getAdditionalInformation() {
+		return additionalInformation;
+	}
+
+	@JsonProperty("additionalInformation")
+	public void setAdditionalInformation(OrderIn_AdditionalInformation additionalInformation) {
+		this.additionalInformation = additionalInformation;
+	}
+
+	@JsonProperty("technicalName")
+	public OrderIn_TechnicalName getTechnicalName() {
+		return technicalName;
+	}
+
+	@JsonProperty("technicalName")
+	public void setTechnicalName(OrderIn_TechnicalName technicalName) {
+		this.technicalName = technicalName;
+	}
+
+	@JsonProperty("complementaryInformation")
+	public List<OrderIn_ComplementaryInformation> getComplementaryInformation() {
+		return complementaryInformation;
+	}
+
+	@JsonProperty("complementaryInformation")
+	public void setComplementaryInformation(List<OrderIn_ComplementaryInformation> complementaryInformation) {
+		this.complementaryInformation = complementaryInformation;
+	}
+
+	@JsonProperty("netQuantity")
+	public OrderIn_NetQuantity getNetQuantity() {
+		return netQuantity;
+	}
+
+	@JsonProperty("netQuantity")
+	public void setNetQuantity(OrderIn_NetQuantity netQuantity) {
+		this.netQuantity = netQuantity;
+	}
+
+	@JsonProperty("grossWeight")
+	public Integer getGrossWeight() {
+		return grossWeight;
+	}
+
+	@JsonProperty("grossWeight")
+	public void setGrossWeight(Integer grossWeight) {
+		this.grossWeight = grossWeight;
+	}
+
+	@JsonProperty("limitedQuantity")
+	public Integer getLimitedQuantity() {
+		return limitedQuantity;
+	}
+
+	@JsonProperty("limitedQuantity")
+	public void setLimitedQuantity(Integer limitedQuantity) {
+		this.limitedQuantity = limitedQuantity;
+	}
+
+	@JsonProperty("exceptedQuantity")
+	public Integer getExceptedQuantity() {
+		return exceptedQuantity;
+	}
+
+	@JsonProperty("exceptedQuantity")
+	public void setExceptedQuantity(Integer exceptedQuantity) {
+		this.exceptedQuantity = exceptedQuantity;
+	}
+
+	@JsonProperty("packaging")
+	public OrderIn_Packaging getPackaging() {
+		return packaging;
+	}
+
+	@JsonProperty("packaging")
+	public void setPackaging(OrderIn_Packaging packaging) {
+		this.packaging = packaging;
+	}
+
+	@JsonAnyGetter
+	public Map<String, Object> getAdditionalProperties() {
+		return this.additionalProperties;
+	}
+
+	@JsonAnySetter
+	public void setAdditionalProperty(String name, Object value) {
+		this.additionalProperties.put(name, value);
+	}
+
+}

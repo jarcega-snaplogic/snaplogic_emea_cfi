@@ -1,0 +1,62 @@
+
+package routines;
+
+import java.util.HashMap;
+import java.util.Map;
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+    "meta",
+    "shipment"
+})
+public class OrderIn_RootOrderIn {
+
+    @JsonProperty("meta")
+    private OrderIn_Meta meta;
+    @JsonProperty("shipment")
+    private OrderIn_Shipment shipment;
+    @JsonIgnore
+    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    
+    public OrderIn_RootOrderIn() {
+		meta = new OrderIn_Meta();
+		shipment = new OrderIn_Shipment();
+    }
+
+    @JsonProperty("meta")
+    public OrderIn_Meta getMeta() {
+        return meta;
+    }
+
+    @JsonProperty("meta")
+    public void setMeta(OrderIn_Meta meta) {
+        this.meta = meta;
+    }
+
+    @JsonProperty("shipment")
+    public OrderIn_Shipment getShipment() {
+        return shipment;
+    }
+
+    @JsonProperty("shipment")
+    public void setShipment(OrderIn_Shipment shipment) {
+        this.shipment = shipment;
+    }
+
+    @JsonAnyGetter
+    public Map<String, Object> getAdditionalProperties() {
+        return this.additionalProperties;
+    }
+
+    @JsonAnySetter
+    public void setAdditionalProperty(String name, Object value) {
+        this.additionalProperties.put(name, value);
+    }
+
+}

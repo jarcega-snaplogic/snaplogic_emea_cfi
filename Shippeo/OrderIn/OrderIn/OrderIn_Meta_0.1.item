@@ -1,0 +1,109 @@
+
+package routines;
+
+import java.util.HashMap;
+import java.util.Map;
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+    "senderId",
+    "duplicateReceiverId",
+    "messageType",
+    "messageDate",
+    "messageReference",
+    "messageFunction"
+})
+public class OrderIn_Meta {
+
+    @JsonProperty("senderId")
+    private String senderId;
+    @JsonProperty("duplicateReceiverId")
+    private String duplicateReceiverId;
+    @JsonProperty("messageType")
+    private String messageType;
+    @JsonProperty("messageDate")
+    private String messageDate;
+    @JsonProperty("messageReference")
+    private String messageReference;
+    @JsonProperty("messageFunction")
+    private String messageFunction;
+    @JsonIgnore
+    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+
+    @JsonProperty("senderId")
+    public String getSenderId() {
+        return senderId;
+    }
+
+    @JsonProperty("senderId")
+    public void setSenderId(String senderId) {
+        this.senderId = senderId;
+    }
+
+    @JsonProperty("duplicateReceiverId")
+    public String getDuplicateReceiverId() {
+        return duplicateReceiverId;
+    }
+
+    @JsonProperty("duplicateReceiverId")
+    public void setDuplicateReceiverId(String duplicateReceiverId) {
+        this.duplicateReceiverId = duplicateReceiverId;
+    }
+
+    @JsonProperty("messageType")
+    public String getMessageType() {
+        return messageType;
+    }
+
+    @JsonProperty("messageType")
+    public void setMessageType(String messageType) {
+        this.messageType = messageType;
+    }
+
+    @JsonProperty("messageDate")
+    public String getMessageDate() {
+        return messageDate;
+    }
+
+    @JsonProperty("messageDate")
+    public void setMessageDate(String messageDate) {
+        this.messageDate = messageDate;
+    }
+
+    @JsonProperty("messageReference")
+    public String getMessageReference() {
+        return messageReference;
+    }
+
+    @JsonProperty("messageReference")
+    public void setMessageReference(String messageReference) {
+        this.messageReference = messageReference;
+    }
+
+    @JsonProperty("messageFunction")
+    public String getMessageFunction() {
+        return messageFunction;
+    }
+
+    @JsonProperty("messageFunction")
+    public void setMessageFunction(String messageFunction) {
+        this.messageFunction = messageFunction;
+    }
+
+    @JsonAnyGetter
+    public Map<String, Object> getAdditionalProperties() {
+        return this.additionalProperties;
+    }
+
+    @JsonAnySetter
+    public void setAdditionalProperty(String name, Object value) {
+        this.additionalProperties.put(name, value);
+    }
+
+}

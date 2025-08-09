@@ -1,0 +1,122 @@
+
+package routines;
+
+import java.util.HashMap;
+import java.util.Map;
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+    "serviceCode",
+    "qualifier",
+    "isChargeFree",
+    "taxableUnitsNumber",
+    "text",
+    "amount",
+    "currency"
+})
+public class OrderIn_ComplementaryService {
+
+    @JsonProperty("serviceCode")
+    private String serviceCode;
+    @JsonProperty("qualifier")
+    private String qualifier;
+    @JsonProperty("isChargeFree")
+    private Boolean isChargeFree;
+    @JsonProperty("taxableUnitsNumber")
+    private Integer taxableUnitsNumber;
+    @JsonProperty("text")
+    private String text;
+    @JsonProperty("amount")
+    private Integer amount;
+    @JsonProperty("currency")
+    private String currency;
+    @JsonIgnore
+    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+
+    @JsonProperty("serviceCode")
+    public String getServiceCode() {
+        return serviceCode;
+    }
+
+    @JsonProperty("serviceCode")
+    public void setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+    }
+
+    @JsonProperty("qualifier")
+    public String getQualifier() {
+        return qualifier;
+    }
+
+    @JsonProperty("qualifier")
+    public void setQualifier(String qualifier) {
+        this.qualifier = qualifier;
+    }
+
+    @JsonProperty("isChargeFree")
+    public Boolean getIsChargeFree() {
+        return isChargeFree;
+    }
+
+    @JsonProperty("isChargeFree")
+    public void setIsChargeFree(Boolean isChargeFree) {
+        this.isChargeFree = isChargeFree;
+    }
+
+    @JsonProperty("taxableUnitsNumber")
+    public Integer getTaxableUnitsNumber() {
+        return taxableUnitsNumber;
+    }
+
+    @JsonProperty("taxableUnitsNumber")
+    public void setTaxableUnitsNumber(Integer taxableUnitsNumber) {
+        this.taxableUnitsNumber = taxableUnitsNumber;
+    }
+
+    @JsonProperty("text")
+    public String getText() {
+        return text;
+    }
+
+    @JsonProperty("text")
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    @JsonProperty("amount")
+    public Integer getAmount() {
+        return amount;
+    }
+
+    @JsonProperty("amount")
+    public void setAmount(Integer amount) {
+        this.amount = amount;
+    }
+
+    @JsonProperty("currency")
+    public String getCurrency() {
+        return currency;
+    }
+
+    @JsonProperty("currency")
+    public void setCurrency(String currency) {
+        this.currency = currency;
+    }
+
+    @JsonAnyGetter
+    public Map<String, Object> getAdditionalProperties() {
+        return this.additionalProperties;
+    }
+
+    @JsonAnySetter
+    public void setAdditionalProperty(String name, Object value) {
+        this.additionalProperties.put(name, value);
+    }
+
+}

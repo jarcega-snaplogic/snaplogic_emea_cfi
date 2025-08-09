@@ -1,0 +1,71 @@
+package routines;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({ "reference", "EAN", "description", "quantity", "unit", "purchaseOrder" })
+public class OrderIn_ShipmentItem {
+
+	@JsonProperty("reference")
+	private String reference;
+	@JsonProperty("EAN")
+	private String ean;
+	@JsonProperty("description")
+	private String description;
+	@JsonProperty("quantity")
+	private Float quantity;
+	@JsonProperty("unit")
+	private String unit;
+	@JsonProperty("purchaseOrder")
+	private String purchaseOrder;
+
+	public String getReference() {
+		return reference;
+	}
+
+	public void setReference(String reference) {
+		this.reference = reference;
+	}
+
+	public String getEan() {
+		return ean;
+	}
+
+	public void setEan(String ean) {
+		this.ean = ean;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public Float getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(Float quantity) {
+		this.quantity = quantity;
+	}
+
+	public String getUnit() {
+		return unit;
+	}
+
+	public void setUnit(String unit) {
+		this.unit = unit;
+	}
+
+	public String getPurchaseOrder() {
+		return purchaseOrder;
+	}
+
+	public void setPurchaseOrder(String purchaseOrder) {
+		this.purchaseOrder = purchaseOrder;
+	}
+}
