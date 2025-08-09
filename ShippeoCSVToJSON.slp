@@ -241,7 +241,7 @@
                                 {
                                     "expression": {
                                         "expression": true,
-                                        "value": "{\"senderId\": \"snaplogic\", \"duplicateReceiverId\": \"shippeo\", \"messageType\": \"GTF511\", \"messageDate\": Date.now().toLocaleDateString(\"sv-SE\") + \"T\" + Date.now().toLocaleTimeString(\"sv-SE\") + \"+0200\", \"messageReference\": java.util.UUID.randomUUID().toString(), \"messageFunction\": \"0\"}"
+                                        "value": "{\"senderId\": \"snaplogic\", \"duplicateReceiverId\": \"shippeo\", \"messageType\": \"GTF511\", \"messageDate\": \"\" + Date.now().toLocaleDateString(\"sv-SE\") + \"T\" + Date.now().toLocaleTimeString(\"sv-SE\") + \"+0200\", \"messageReference\": \"\" + java.util.UUID.randomUUID().toString(), \"messageFunction\": \"0\"}"
                                     },
                                     "targetPath": {
                                         "value": "meta"
